@@ -24,6 +24,10 @@ File: style.css
   opacity: 0.6;
 }
 
+.edit-title{
+  text-align: center;
+}
+
 .modal-title{
   margin-left: 20% !important;
 }
@@ -36,6 +40,39 @@ File: style.css
   margin-left: 50%;
 }
 
+.reg-btn-case-mg{
+  margin-left: 400% !important;
+}
+
+.btn-edit-client{
+  margin-left: 600% !important;
+}
+
+.choose-options{
+  margin-left: 20px !important;
+}
+
+.no-data{
+  margin: 0 auto;
+}
+
+.case-mg-photo-view{
+  margin-left: 30% !important;
+  width: 100px;
+  height: 100px;
+  border-radius: 10% !important;
+}
+
+.manager-name{
+  text-align: center;
+}
+
+.loading-img{
+  height: 25px;
+  width: 25px;
+  display: none;
+}
+
 .edit-form{
   margin-top: 100px;
   margin-left: 20%;
@@ -44,8 +81,8 @@ File: style.css
 }
 
 label{
-  color: black;
-  font-weight: bold;
+  color: black !important;
+  font-weight: bold !important;
 }
 
 @font-face {

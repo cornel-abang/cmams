@@ -3,7 +3,7 @@
 @section('content')
                     <div class="row">
                        <div class="col-md-7 edit-form">
-                        <h3 class="mt-5 modal-title">Edit <span class="styled-header">{{$facility->name}}</span> facility</h3>
+                        <h3 class="mt-5 edit-title">Edit <span class="styled-header">{{$facility->name}}</span> facility</h3>
                             <hr>
                             <form action="" method="post">
                                 @csrf

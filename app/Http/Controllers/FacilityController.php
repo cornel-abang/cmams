@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Datatables;
 use Validator;
 use App\Facility;
+use App\CaseManager;
 
 class FacilityController extends Controller
 {
@@ -94,10 +95,25 @@ class FacilityController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Request $request)
     {
-        $facility = Facility::find($id);
+        $facility = Facility::find($request->id);
         $facility->delete();
         return true;
+    }
+
+    public function viewCaseManagers($id)
+    {
+        $facility = Facility::find($id);
+        $title = 'Case Managers in '.$facility->name.' facility';
+        return view('facility.case_managers', compact('title','facility'));
+    }
+
+    public function viewClients($id)
+    {
+        $facility = Facility::find($id);
+        $title = 'Clients in '.$facility->name.' facility';
+        $managers = CaseManager::where('facility_id',$facility->id)->get();
+        return view('facility.clients', compact('title','facility','managers'));
     }
 }

@@ -19,6 +19,11 @@ if ( ! function_exists('pageJsonData')){
 
         $data = [
             'facility_reg_valid_fail'     => session('facility_reg_valid_fail'),
+            'client_reg_valid_fail'       => session('client_reg_valid_fail'),
+            'case_manager_reg_valid_fail' => session('case_manager_reg_valid_fail'),
+            'home_url'                    => route('home'),
+            'asset_url'                   => asset('assets'),
+            'csrf_token'                  => csrf_token(),
         ];
 
         $routeLists = \Illuminate\Support\Facades\Route::getRoutes();
@@ -31,31 +36,6 @@ if ( ! function_exists('pageJsonData')){
 
         return json_encode($data);
     }
-}
-
-function avatar_img_url($img = '', $source){
-    $url_path = '';
-    if ($img){
-        if ($source == 'public'){
-            $url_path = asset('uploads/avatar/'.$img);
-        }elseif ($source == 's3'){
-            $url_path = \Illuminate\Support\Facades\Storage::disk('s3')->url('uploads/avatar/'.$img);
-        }
-    }
-    return $url_path;
-}
-
-
-/**
- * @param string $option_key
- * @return string
- */
-function get_option($option_key = '', $default = false){
-    $options = config('options');
-    if(isset($options[$option_key])) {
-        return $options[$option_key];
-    }
-    return $default;
 }
 
 
@@ -90,57 +70,6 @@ function unique_slug($title = '', $model = 'Job', $col = 'slug'){
         $newSlug = $slug;
     }
     return $newSlug;
-}
-
-/**
- * @param string $type
- * @return string
- *
- * @return stripe secret key or test key
- */
-
-function get_stripe_key($type = 'publishable'){
-    $stripe_key = '';
-
-    if ($type == 'publishable'){
-        if (get_option('stripe_test_mode') == 1){
-            $stripe_key = get_option('stripe_test_publishable_key');
-        }else{
-            $stripe_key = get_option('stripe_live_publishable_key');
-        }
-    }elseif ($type == 'secret'){
-        if (get_option('stripe_test_mode') == 1){
-            $stripe_key = get_option('stripe_test_secret_key');
-        }else{
-            $stripe_key = get_option('sk_live_ojldRoMZ3j14I5pwpfCxidvT');
-        }
-    }
-
-    return $stripe_key;
-}
-
-/**
- * @param int $ad_id
- * @param string $status
- */
-function ad_status_change($ad_id = 0, $status = 1){
-    if ($ad_id > 0){
-        $ad = \App\Ad::find($ad_id);
-        
-        if ($ad){
-            $previous_status = $ad->status;
-            //Publish ad
-            $ad->status = $status;
-            $ad->save();
-        }
-    }
-
-    return false;
-}
-function update_option($key, $value){
-    $option = \App\Option::firstOrCreate(['option_key' => $key]);
-    $option -> option_value = $value;
-    return $option->save();
 }
 
 function e_form_error($field = '', $errors){

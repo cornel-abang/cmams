@@ -13,14 +13,16 @@
     <!-- Favicon icon -->
     <link rel="icon" href="{{asset('assets/images/favicon.ico')}}" type="image/x-icon">
 
+    {{-- Sweet Alert --}}
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+
     <!-- vendor css -->
     <link rel="stylesheet" href="{{asset('assets/css/style.css')}}">
 
     {{-- Fonts --}}
     <link href="{{ asset('assets/line-awesome/css/line-awesome.min.css')}}" rel="stylesheet">
     <script type='text/javascript'>
-        {{-- var page_data = {!! pageJsonData() !!}; --}}
-        var csrf_token = {{ csrf_token() }}
+        var page_data = {!! pageJsonData() !!};
     </script>
    @yield('sweet-alert-area')
 </head>
@@ -63,7 +65,16 @@
 
 					<li class="nav-item">
 					    <a href="{{route('facilities')}}" class="nav-link "><span class="pcoded-micon">
-					    	<i class="la la-hospital"></i></span><span class="pcoded-mtext">Facilty</span></a>
+					    	<i class="la la-hospital"></i></span><span class="pcoded-mtext">Facilities</span></a>
+					</li>
+
+					<li class="nav-item">
+					    <a href="{{route('case-managers')}}" class="nav-link "><span class="pcoded-micon">
+					    	<i class="la la-briefcase-medical"></i></span><span class="pcoded-mtext">Case Managers</span></a>
+					</li>
+					<li class="nav-item">
+					    <a href="{{route('clients')}}" class="nav-link "><span class="pcoded-micon">
+					    	<i class="la la-users"></i></span><span class="pcoded-mtext">Clients</span></a>
 					</li>
 					<li class="nav-item pcoded-hasmenu">
 					    <a href="#!" class="nav-link "><span class="pcoded-micon"><i class="feather icon-layout"></i></span><span class="pcoded-mtext">Page layouts</span></a>
