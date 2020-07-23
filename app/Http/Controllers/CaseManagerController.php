@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\CaseManager;
 use App\Facility;
+use App\Client;
 
 class CaseManagerController extends Controller
 {
@@ -16,7 +17,7 @@ class CaseManagerController extends Controller
     public function index()
     {
         $title = 'Case Managers';
-        $facilities = Facility::all();
+        $facilities = Facility::all();  
         $case_managers = CaseManager::orderBy('name','asc')->get();
         return view('case_manager.index', compact('title', 'case_managers','facilities'));
     }
@@ -133,5 +134,19 @@ class CaseManagerController extends Controller
         $manager = CaseManager::find($id);
         $title = 'Clients assigned to '.$manager->name.' facility';
         return view('case_manager.clients', compact('title','manager'));
+    }
+
+     public function search(Request $request)
+    {
+        $res = false;
+        $case_manager = false;
+        $client = Client::where('clientID',$request->clientID)
+                         ->where('facility_id',$request->facility_id)
+                         ->first();
+        if ($client) {
+            $res = true;
+            $case_manager = $client->caseManager->name;
+        }
+        return ['status'=>$res, 'client'=>$client, 'case_manager'=>$case_manager];
     }
 }

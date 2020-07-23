@@ -29,7 +29,8 @@ File: style.css
 }
 
 .modal-title{
-  margin-left: 20% !important;
+ /* margin-left: 20% !important;*/
+ text-align: center;
 }
 
 .styled-header{
@@ -38,6 +39,14 @@ File: style.css
 
 .reg-btn{
   margin-left: 50%;
+}
+
+.assign-btn{
+  margin-left: 350%;
+}
+
+#assgnBtnArea{
+  display: none;
 }
 
 .reg-btn-case-mg{
@@ -68,8 +77,8 @@ File: style.css
 }
 
 .loading-img{
-  height: 25px;
-  width: 25px;
+  height: 20px;
+  width: 100px;
   display: none;
 }
 
@@ -78,6 +87,23 @@ File: style.css
   margin-left: 20%;
   border: 1px solid #ced4da;
   padding: 20px;
+}
+
+.client-info{
+  display: none;
+}
+
+.no-match{
+  display: none;
+  text-align: center;
+}
+
+.no-match h5{
+  color: red;
+}
+
+.no-match p{
+  margin-top: -10px;
 }
 
 label{

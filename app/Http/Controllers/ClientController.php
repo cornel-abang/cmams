@@ -145,4 +145,13 @@ class ClientController extends Controller
         $client->delete();
         return true;
     }
+
+    public function assignToCm(Request $request)
+    {
+        $client = Client::where('clientID',$request->clientID)->first();
+        $client->case_manager_id = $request->manager_id;
+        $client->save();
+        return redirect()->route('view_clients_cm',$request->manager_id)
+               ->with('success','Client successfully assigned to case manager');
+    }
 }

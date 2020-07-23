@@ -135,14 +135,12 @@
     var route = $(handler).attr('title');
     var facility_id = $(this).val();
     $(handler).empty();
-    console.log(facility_id);
     $(handler).attr('disabled',true);
     $('.loading-img').css('display','inline');
-    var csrf_token = $('#csrf_area').attr('content');
       $.ajax({
               type : "GET",
               url : route,
-              data : { id : facility_id, _token : csrf_token},
+              data : { id : facility_id, _token : page_data.csrf_token},
               success: function(data){
                 console.log(data);
                 if (data.status) {
@@ -152,6 +150,42 @@
                   data.managers.forEach(function(mg){
                   $(handler).append('<option value="'+mg.id+'">'+mg.name+'</option>');
                   });
+                }
+              }
+      });
+  });
+
+  // Assign client to case manager frm modal
+  $(document).on('change', '#clientIDSearch', function(){
+    $('.loading-img').css('display','inline');
+    $('.client-info').fadeOut(500);
+    $('.no-match').fadeOut(500);
+    $('#assgnBtnArea').fadeOut(500);
+    var clientID = $(this).val();
+    var facility_id = $('#mg_facility').val();
+    $.ajax({
+              type : "POST",
+              url : page_data.routes.search_client,
+              data : { clientID, facility_id, _token : page_data.csrf_token},
+              success: function(data){
+                console.log(data);
+                if (data.status) {
+                  $('.loading-img').css('display','none');
+                  $('.client-info').css('display','inline-block');
+                  $('#assgnBtnArea').fadeIn(500);
+                  $('#assgnBtnArea').css('display','inline-block');
+                  $('#clientName').text(data.client.name);
+                  $('#clientPhone').text(data.client.phone);
+                  $('#clientOpc').text(data.client.opc_phone);
+                  $('#clientAddress').text(data.client.address);
+                  $('#clientCm').text(data.case_manager);
+                }else{
+                  //   Swal.fire(
+                  //     'No client found',
+                  //     'Please make sure the client is in the same facility as the case manager',
+                  //     'error'
+                  $('.loading-img').css('display','none');
+                  $('.no-match').fadeIn(500);
                 }
               }
       });

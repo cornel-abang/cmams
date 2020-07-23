@@ -44,6 +44,7 @@ Route::group(['middleware'=>'auth:web'], function(){
 		Route::post('edit-case_mg/{id}', 'CaseManagerController@update');
 		Route::post('destroy_manager','CaseManagerController@destroy')->name('destroy_manager');
 		Route::get('{id}/view_clients', 'CaseManagerController@viewClients')->name('view_clients_cm');
+		Route::any('search_client', 'CaseManagerController@search')->name('search_client');
 	});
 
 	Route::group(['prefix'=>'clients'], function(){
@@ -53,5 +54,6 @@ Route::group(['middleware'=>'auth:web'], function(){
 		Route::post('edit-client/{id}', 'ClientController@update');
 		Route::get('find_case_managers', 'ClientController@findCaseManager')->name('find_case_managers');
 		Route::post('destroy_client','ClientController@destroy')->name('destroy_client');
+		Route::post('assign-client','ClientController@assignToCm')->name('assign-client');
 	});
 });
