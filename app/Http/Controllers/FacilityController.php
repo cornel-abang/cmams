@@ -53,7 +53,7 @@ class FacilityController extends Controller
      */
     public function show($id)
     {
-        //
+        
     }
 
     /**

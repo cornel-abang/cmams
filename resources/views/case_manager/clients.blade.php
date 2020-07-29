@@ -73,7 +73,7 @@
           <div class="modal-dialog" role="document">
             <div class="modal-content">
               <div class="modal-header">
-                <h4 class="modal-title" id="exampleModalLabel">
+                <h4 class="modal-title client_view_title" id="exampleModalLabel">
                     <i class="la la-user"></i> {{$client->name}} 
                 </h4><span class="badge badge-pill badge-info client-status"> {{$client->status}}</span>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">

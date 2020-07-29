@@ -11,6 +11,10 @@
       $("#add-facility-form").modal("show");
     }
 
+    if (page_data.report_valid_fail) {
+      $("#add-report-form").modal("show");
+    }
+
 		$('#entry-table').DataTable( {         
 					"ordering": false
 				} ); 
@@ -190,4 +194,32 @@
               }
       });
   });
+
+  $(document).on('keyup', '#case_manager_name', function(){
+    var suggestions_area = $('#suggestions');
+    $(suggestions_area).empty();
+    var case_mg_name = $(this).val();
+    if (case_mg_name !== '') {
+      $.ajax({
+              type : "GET",
+              url : page_data.routes.get_case_manager,
+              data : { name : case_mg_name, _token : page_data.csrf_token},
+              success: function(res){
+                if (res.status) {
+                  res.data.forEach(function(sug){
+                     $(suggestions_area).append('<tr class="picked" id="'+sug.id+'"><td>'+sug.name+'</td></tr>');
+                  });
+                }
+              }
+      });
+    }
+  });
+
+  $(document).on('click','.picked', function(){
+    var case_manager_id = $(this).attr('id');
+    var case_manager_name = $(this).text();
+    $('#suggestions').empty();
+    $('#case_manager_name').val(case_manager_name);
+    $('#case_manager_id').val(case_manager_id);
+  })
 })( jQuery );

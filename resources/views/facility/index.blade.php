@@ -31,7 +31,7 @@
                                     @foreach($facilities as $facility)
                                     <tr id="de-{{$facility->id}}">
                                         <td>{{$facility->id}}</td>
-                                        <td>{{$facility->name}}</td>
+                                        <td>{{ $facility->name }}</td>
                                         <td>{{$facility->backstop}}</td>
                                         <td>
                                             @if($facility->caseManagers->count() > 0)
@@ -87,7 +87,7 @@
           <div class="modal-dialog" role="document">
             <div class="modal-content">
               <div class="modal-header">
-                <h3 class="modal-title" id="exampleModalLabel">
+                <h3 class="modal-title view-title" id="exampleModalLabel">
                     <i class="la la-hospital"></i> {{$facility->name}}
                 </h3>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -132,7 +132,7 @@
               <div class="modal-dialog" role="document">
                 <div class="modal-content">
                   <div class="modal-header">
-                    <h3 class="modal-title" id="exampleModalLabel">Register New Facility</h3>
+                    <h3 class="modal-title view-title" id="exampleModalLabel">Register New Facility</h3>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                       <span aria-hidden="true">&times;</span>
                     </button>

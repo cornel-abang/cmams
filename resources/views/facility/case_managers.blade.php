@@ -146,7 +146,7 @@
                                         <div class="input-group-prepend">
                                             <label class="input-group-text" for="inputGroupSelect01">Facility</label>
                                         </div>
-                                        <select class="custom-select{{ $errors->has('facility') ? ' is-invalid' : '' }}" name="facility" id="inputGroupSelect01" disabled>
+                                        <select class="custom-select{{ $errors->has('facility') ? ' is-invalid' : '' }}" name="facility" id="inputGroupSelect01">
                                             <option value="{{$facility->id}}" selected>{{$facility->name}}</option>
                                         </select>
                                         @if ($errors->has('facility'))

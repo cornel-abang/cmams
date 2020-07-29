@@ -21,6 +21,7 @@ if ( ! function_exists('pageJsonData')){
             'facility_reg_valid_fail'     => session('facility_reg_valid_fail'),
             'client_reg_valid_fail'       => session('client_reg_valid_fail'),
             'case_manager_reg_valid_fail' => session('case_manager_reg_valid_fail'),
+            'report_valid_fail'           => session('report_valid_fail'),
             'home_url'                    => route('home'),
             'asset_url'                   => asset('assets'),
             'csrf_token'                  => csrf_token(),

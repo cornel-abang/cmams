@@ -17,4 +17,9 @@ class CaseManager extends Model
     {
     	return $this->hasMany(Client::class);
     }
+
+    public function reports()
+    {
+    	return $this->hasMany(Report::class);
+    }
 }

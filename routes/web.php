@@ -35,6 +35,7 @@ Route::group(['middleware'=>'auth:web'], function(){
 		Route::post('destroy_facility', 'FacilityController@destroy')->name('destroy_facility');
 		Route::get('{id}/view_case_managers', 'FacilityController@viewCaseManagers')->name('view_case_managers');
 		Route::get('{id}/view_clients', 'FacilityController@viewClients')->name('view_clients');
+		Route::get('{id}/view_facility', 'FacilityController@show')->name('view_facility');
 	});
 
 	Route::group(['prefix'=>'case-managers'], function(){
@@ -55,5 +56,11 @@ Route::group(['middleware'=>'auth:web'], function(){
 		Route::get('find_case_managers', 'ClientController@findCaseManager')->name('find_case_managers');
 		Route::post('destroy_client','ClientController@destroy')->name('destroy_client');
 		Route::post('assign-client','ClientController@assignToCm')->name('assign-client');
+	});
+
+	Route::group(['prefix'=>'reports'], function(){
+		Route::get('/', 'ReportController@index')->name('daily');
+		Route::post('/', 'ReportController@store');
+		Route::get('get_case_manager', 'ReportController@getCaseManager')->name('get_case_manager');
 	});
 });

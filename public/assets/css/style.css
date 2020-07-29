@@ -24,13 +24,32 @@ File: style.css
   opacity: 0.6;
 }
 
+td code{
+  color: white;
+}
+
+.badge-pill{
+  font-weight: bold;
+}
+
+.report_view_title{
+  margin-left: 30%;
+  text-align: center;
+}
+
+.jumbotron{
+  word-wrap: break-word;
+  border-bottom-left-radius: 10% !important;
+  border-top-right-radius: 10% !important;
+  padding-top: 10px !important;
+}
+
 .edit-title{
   text-align: center;
 }
 
-.modal-title{
- /* margin-left: 20% !important;*/
- text-align: center;
+.add-report-title{
+  margin-left: 40%;
 }
 
 .styled-header{
@@ -41,12 +60,24 @@ File: style.css
   margin-left: 50%;
 }
 
+.featured{
+  margin-top: 25px !important;
+}
+
 .assign-btn{
   margin-left: 350%;
 }
 
 #assgnBtnArea{
   display: none;
+}
+
+.view-title{
+  margin-left: 25% !important;
+}
+
+.cm_view-title{
+  margin-left: 20% !important;
 }
 
 .reg-btn-case-mg{
@@ -66,10 +97,19 @@ File: style.css
 }
 
 .case-mg-photo-view{
-  margin-left: 30% !important;
   width: 100px;
   height: 100px;
   border-radius: 10% !important;
+}
+
+.client_view_title{
+  margin-left: 20%;
+}
+
+.cm-suggestions-area{
+  background-color: white;
+  color: black;
+  font-weight: bold;
 }
 
 .manager-name{

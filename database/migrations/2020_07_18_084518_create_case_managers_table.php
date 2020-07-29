@@ -16,7 +16,7 @@ class CreateCaseManagersTable extends Migration
         Schema::create('case_managers', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->integer('facility_id')->unsigned();
+            $table->unsignedBigInteger('facility_id');
             $table->string('profile_photo');
             $table->timestamps();
             $table->foreign('facility_id')->references('id')->on('facilities');
