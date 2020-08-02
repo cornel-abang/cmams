@@ -20,10 +20,17 @@
 				} ); 
 	});
 
+  // Ajax Call loading screen
+  var loading_area = $('.pcoded-main-container');
+  $(document).on({
+    ajaxStart: function() { $(loading_area).addClass('loading'); },
+    ajaxStop: function() { $(loading_area).removeClass('loading'); }
+  });
+
 
 	$(document).on('click', '#close-msg', function(e){
 		e.preventDefault();
-		$(this).parent('div').fadeOut(1000);
+		$(this).parent('div').fadeOut(500);
 	});
 
 	// Delete facility
@@ -133,6 +140,40 @@
         
   });
 
+  // Delete report
+  $(document).on('click', '.delete-btn-report', function(e){
+    var handler = $(this);
+    var report_id = handler.attr('id');
+    swal({
+             title: "Are you sure?",
+              text: "This is an irriversible action",
+              type: "warning",
+              showCancelButton: true,
+              confirmButtonColor: "#DD6B55",
+              confirmButtonText: "Yes, delete it!",
+            })
+            .then((willDelete) => {
+              if (willDelete.value === true) {
+                $.ajax({
+                    type : "POST",
+                    url : page_data.routes.destroy_report,
+                    data : { id : report_id, _token : page_data.csrf_token},
+                    success: function(data){
+                      $(handler).closest('tr').fadeOut(500, function(){
+                        Swal.fire(
+                            'Done!',
+                            'Report info deleted!',
+                            'success'
+                          )
+                      }); 
+                    }
+                });
+            
+              }
+        });
+        
+  });
+
   // select case managers based on facility choosen
   $(document).on('change', '.sel_facility', function(){
     var handler = $('.case_managers_select');
@@ -155,7 +196,8 @@
                   $(handler).append('<option value="'+mg.id+'">'+mg.name+'</option>');
                   });
                 }
-              }
+              },
+              global: false
       });
   });
 
@@ -184,14 +226,11 @@
                   $('#clientAddress').text(data.client.address);
                   $('#clientCm').text(data.case_manager);
                 }else{
-                  //   Swal.fire(
-                  //     'No client found',
-                  //     'Please make sure the client is in the same facility as the case manager',
-                  //     'error'
                   $('.loading-img').css('display','none');
                   $('.no-match').fadeIn(500);
                 }
-              }
+              },
+              global: false
       });
   });
 
@@ -210,7 +249,7 @@
                      $(suggestions_area).append('<tr class="picked" id="'+sug.id+'"><td>'+sug.name+'</td></tr>');
                   });
                 }
-              }
+              },
       });
     }
   });
@@ -221,5 +260,58 @@
     $('#suggestions').empty();
     $('#case_manager_name').val(case_manager_name);
     $('#case_manager_id').val(case_manager_id);
+  })
+
+  // Sort reports by day
+  $(document).on('change','#report_date', function(){
+    var theDay = $(this).val();
+    $.ajax({
+      type : "GET",
+      url : page_data.routes.reports_by_date,
+      data : { theDay, _token : page_data.csrf_token},
+      success: function(data){
+        if (data.status) {
+          Swal.fire(
+                Object.keys(data.reports).length+' report(s) found on <br>'+(new Date(theDay).toDateString())+'</b>',
+                'Loading content now...',
+                'success'
+              )
+          $('#date_sort_form').submit();
+        }else{
+            Swal.fire(
+                'Oops...',
+                'Could not find any report on <b>'+(new Date(theDay).toDateString())+'</b>',
+                'error' 
+              )
+        }
+      }
+    });
+  })
+
+  $(document).on('blur','#report_week', function(){
+    var week = $(this).val();
+    if (week !== '') {
+      $.ajax({
+        type : "GET",
+        url : page_data.routes.reports_by_week,
+        data : { week, _token : page_data.csrf_token},
+        success: function(data){
+          if (data.status) {
+            Swal.fire(
+                  Object.keys(data.reports).length+' report(s) found <b>'+week+' week(s) back',
+                  'Loading content now...',
+                  'success'
+                )
+            $('#week_sort_form').submit();
+          }else{
+              Swal.fire(
+                  'Oops...',
+                  'Could not find any report <b>'+week+' week(s) back</b>',
+                  'error' 
+                )
+          }
+        }
+      });
+    }
   })
 })( jQuery );

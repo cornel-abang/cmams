@@ -30,10 +30,11 @@ td code{
 
 .badge-pill{
   font-weight: bold;
+  font-size: 10px;
 }
 
 .report_view_title{
-  margin-left: 30%;
+  margin-left: 25%;
   text-align: center;
 }
 
@@ -54,6 +55,15 @@ td code{
 
 .styled-header{
   color: #4680ff;
+}
+
+.edit-report-small{
+  color: #4680ff;
+}
+
+.date-report-search{
+  margin-top: 30px;
+  margin-bottom: 0;
 }
 
 .reg-btn{
@@ -150,6 +160,27 @@ label{
   color: black !important;
   font-weight: bold !important;
 }
+
+/*Ajax Loading screen*/
+.load-screen{
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgb(255, 255, 255, .8) url('../images/loading.gif') 50% 50% no-repeat;
+}
+
+.pcoded-main-container.loading .load-screen{
+  overflow: hidden;
+}
+
+.pcoded-main-container.loading .load-screen{
+  display: block;
+}
+/*Loading screen ends*/
 
 @font-face {
     font-family: 'Open Sans';

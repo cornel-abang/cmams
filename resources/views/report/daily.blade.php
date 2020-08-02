@@ -9,9 +9,54 @@
                 <div class="card">
                     <div class="card-header">
                         <h5>Daily report area</h5>
-                        <span class="d-block m-t-5">There are a total of <b><code>{{$reports->count()}}</code></b> report(s) today</span>
-                        <button type="button" class="btn btn-info btn-sm add-btn" data-toggle="modal" data-target="#add-report-form">
-                            <i class="la la-plus-circle"></i> Add Report</button>
+                        <span class="d-block m-t-5">
+                            A total of <b><code>{{$reports->count()}}</code></b> report(s) 
+                            @if(!empty($theDay))
+                                found on {{ Carbon\Carbon::parse($theDay)->format('l jS \of F Y') }}
+                            @elseif(!empty($week))
+                                found from <b>{{ Carbon\Carbon::now()->subWeek($week)->format('l jS \of F Y') }}</b> to date
+                            @else
+                                found so far
+                            @endif
+                            {{-- {!! !empty($theDay) ? ' found on '.Carbon\Carbon::parse($theDay)->format('l jS \of F Y') : 'found so far'  !!}  --}}
+                        </span>
+                        
+                        {{-- Sorting Area --}}
+                        <div class="row">
+                            {{-- Sort report by day area --}}
+                            <form action="{{route('reports_by_date')}}" method="post" id="date_sort_form" class="col-md-4">
+                                @csrf
+                                <div class="row date-report-search">
+                                    <div class="form-group row">
+                                            <label for="inputEmail3" class="col-sm-5 col-form-label">Sort by day</label>
+                                            <div class="col-sm-7">
+                                                <input type="date" class="form-control" id="report_date" name="theDay" 
+                                                value="{!! !empty($theDay) ? $theDay : now()->toDateString() !!}">
+                                            </div>
+                                        </div>
+                                </div>
+                            </form>
+                            {{-- Sort report by weeek --}}
+                            <form action="{{route('reports_by_week')}}" method="post" id="week_sort_form" class="col-md-4">
+                                @csrf
+                                <div class="row date-report-search">
+                                    <div class="form-group row">
+                                            <label for="inputEmail3" class="col-sm-5 col-form-label">Sort by week</label>
+                                            <div class="col-sm-7">
+                                                <input type="number" class="form-control" id="report_week" name="week" 
+                                                value="{!! $week ?? '' !!}" placeholder="enter number of weeks back">
+                                                <small><code>{{ !empty($week)? $week.' week(s) back':''}}</code></small>
+                                            </div>
+                                        </div>
+                                </div>
+                            </form>
+                            {{-- Sorting ends --}}
+                            <div class="col-md-4">
+                                <button type="button" class="btn btn-info btn-sm add-btn" data-toggle="modal" data-target=" #add-report-form">
+                                    <i class="la la-plus-circle"></i> Add Report
+                                </button>
+                            </div>
+                        </div>
                     </div>
  
                     <div class="card-body table-border-style">
@@ -20,6 +65,7 @@
                             <table class="table table-striped" id="entry-table">
                                 <thead>
                                     <tr>
+                                        <th>Date</th>
                                         <th>Case Manager</th>
                                         <th>Attendance</th>
                                         <th>Refill</th>
@@ -33,6 +79,7 @@
                                 <tbody>
                                     @foreach($reports as $report)
                                     <tr id="de-{{$report->id}}">
+                                        <td>{{$report->created_at->format('l jS \of F Y')}}</td>
                                         <td>{{$report->caseManager->name}}</td>
                                         <td> 1/1 <span class="badge-pill badge-success">{{$report->attendance}}<code>%</code></span></td>
                                         <td>
@@ -87,40 +134,32 @@
                                                 {!! ceil(($report->tpt_numo / $report->tpt_deno)*100) !!}<code>%</code>
                                             </span>
                                         </td>
-                                        <td>
-                                            @php 
-                                                $score = collect(
-                                                    ceil(($report->viral_load_numo / $report->viral_load_deno)*100),
-                                                    ceil(($report->refill_numo / $report->refill_deno)*100),
-                                                    ceil(($report->ict_numo / $report->ict_deno)*100),
-                                                    ceil(($report->tpt_numo / $report->tpt_deno)*100)
-                                                );  
-                                            @endphp
-                                            @if($score->average() > 69)
+                                        <td class="{{$score = calcAverage($report)}}">
+                                            @if($score > 69)
                                                 <span class="badge-pill badge-success">
-                                            @elseif($score->average() > 49 && $score->average() < 70)
+                                            @elseif($score > 49 && $score < 70)
                                                 <span class="badge-pill badge-info">
-                                            @elseif($score->average() < 50)
+                                            @elseif($score < 50)
                                                 <span class="badge-pill badge-danger">
                                             @endif
-                                            {{$score->average() }}<code>%</code>
-                                            </span>
+                                            {{$score }}<code>%</code>
+                                                </span>
                                         </td>
                                         <td>
                                             <div class="row">
                                                 <div class="col-md-4">
-                                                    <button type="button" class="btn btn-info btn-sm" data-toggle="tooltip" title="Edit client info" onclick="window.location.href=''"><i class="la la-edit"></i>
+                                                    <button type="button" class="btn btn-info btn-sm" data-toggle="tooltip" title="Edit report info" onclick="window.location.href='{{route('edit_report',$report->id)}}'"><i class="la la-edit"></i>
                                                     </button>
                                                 </div>
                                                 <div class="col-md-4">
                                                 <span data-toggle="modal" data-target="#rep{{$report->id}}">
-                                                    <button type="button" class="btn btn-primary btn-sm" data-toggle="tooltip" data-placement="top" title="View client summary">
+                                                    <button type="button" class="btn btn-primary btn-sm" data-toggle="tooltip" data-placement="top" title="View report summary">
                                                         <i class="la la-eye"></i>
                                                     </button>
                                                 </span>
                                                 </div>
                                                 <div class="col-md-4">
-                                                    <button type="button" id="{{$report->id}}" class="btn btn-danger btn-sm delete-btn-client" data-toggle="tooltip" title="Delete client info">
+                                                    <button type="button" id="{{$report->id}}" class="btn btn-danger btn-sm delete-btn-report" data-toggle="tooltip" title="Delete report">
                                                         <i class="la la-trash"></i>
                                                     </button>
                                                 </div>
@@ -154,6 +193,7 @@
                             <div class="card">
                                 <div class="card-body">
                                     <table class="table table-bordered table-striped">
+                                        <tr><th>{{$report->created_at->format('l jS \of F Y')}}</th></tr>
                                         <tr>
                                             <th>Attendance</th>
                                             <td>
@@ -226,16 +266,16 @@
                                         </tr>
                                         <tr>
                                             <th>Performance</th>
-                                            <td>
-                                            @if($score->average() > 69)
+                                            <td class="{{$score = calcAverage($report)}}">
+                                            @if($score > 69)
                                                 <span class="badge-pill badge-success">
-                                            @elseif($score->average() > 49 && $score->average() < 70)
+                                            @elseif($score > 49 && $score < 70)
                                                 <span class="badge-pill badge-info">
-                                            @elseif($score->average() < 50)
+                                            @elseif($score < 50)
                                                 <span class="badge-pill badge-danger">
                                             @endif
-                                            {{$score->average() }}<code>%</code>
-                                            </span>
+                                            {{$score }}<code>%</code>
+                                                </span>
                                             </td>
                                         </tr>
                                     </table>
@@ -302,10 +342,10 @@
                                         @endif
                                     </div>
                                     <div class="col-sm-4">
-                                        <input type="number" class="form-control{{ $errors->has('refill-numo') ? ' is-invalid' : '' }}" name="refill_numo" value="{{old('refill-numo')}}" placeholder="No. refilled">
-                                        @if ($errors->has('refill-numo'))
+                                        <input type="number" class="form-control{{ $errors->has('refill_numo') ? ' is-invalid' : '' }}" name="refill_numo" value="{{old('refill_numo')}}" placeholder="No. refilled">
+                                        @if ($errors->has('refill_numo'))
                                             <span class="invalid-feedback" role="alert">
-                                                <strong>{{ $errors->first('refill-numo') }}</strong>
+                                                <strong>{{ $errors->first('refill_numo') }}</strong>
                                             </span>
                                         @endif
                                     </div>
@@ -370,7 +410,7 @@
                                 <div class="form-group row">
                                     <label for="inputEmail3" class="col-sm-3 col-form-label">Comment</label>
                                     <div class="col-sm-9">
-                                        <textarea class="form-control{{ $errors->has('comment') ? ' is-invalid' : '' }}" name="comment" value="{{old('comment')}}" placeholder="Any comment?"></textarea>
+                                        <textarea class="form-control{{ $errors->has('comment') ? ' is-invalid' : '' }}" name="comment" value="{{old('comment')}}" placeholder="Comment here.."></textarea>
                                         @if ($errors->has('comment'))
                                             <span class="invalid-feedback" role="alert">
                                                 <strong>{{ $errors->first('comment') }}</strong>

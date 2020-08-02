@@ -39,6 +39,18 @@ if ( ! function_exists('pageJsonData')){
     }
 }
 
+function calcAverage($report)
+{
+   $collection = collect([
+                    ceil(($report->viral_load_numo / $report->viral_load_deno)*100),
+                    ceil(($report->refill_numo / $report->refill_deno)*100),
+                    ceil(($report->ict_numo / $report->ict_deno)*100),
+                    ceil(($report->tpt_numo / $report->tpt_deno)*100),
+                    100
+                ]);
+   return ceil($collection->average());
+}
+
 
 /**
  * @param string $title

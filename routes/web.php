@@ -62,5 +62,10 @@ Route::group(['middleware'=>'auth:web'], function(){
 		Route::get('/', 'ReportController@index')->name('daily');
 		Route::post('/', 'ReportController@store');
 		Route::get('get_case_manager', 'ReportController@getCaseManager')->name('get_case_manager');
+		Route::get('edit/{id}', 'ReportController@edit')->name('edit_report');
+		Route::post('edit/{id}', 'ReportController@update');
+		Route::post('destroy_report', 'ReportController@destroy')->name('destroy_report');
+		Route::any('reports_by_date', 'ReportController@getReportByDate')->name('reports_by_date');
+		Route::any('reports_by_week', 'ReportController@getReportByWeek')->name('reports_by_week');
 	});
 });

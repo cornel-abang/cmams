@@ -277,6 +277,8 @@
     </div> --}}
 <!-- [ Main Content ] start -->
 <div class="pcoded-main-container">
+	{{-- Ajax Call Screen Wait Area --}}
+   <div class="load-screen"></div>
 	@yield('content')
 </div>
 <!-- [ Main Content ] end -->

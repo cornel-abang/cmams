@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Report;
 use App\CaseManager;
+use Carbon\Carbon;
 
 class ReportController extends Controller
 {
@@ -107,7 +108,9 @@ class ReportController extends Controller
      */
     public function edit($id)
     {
-        //
+        $title = 'Edit Report';
+        $report = Report::find($id);
+        return view('report.edit', compact('title','report'));
     }
 
     /**
@@ -119,7 +122,25 @@ class ReportController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+         $rules = [
+            'case_manager_name'     => ['required', 'string','max:30'],
+            'refill_deno'           => ['required', 'integer'],
+            'refill_numo'           => ['required', 'integer'],
+            'viral_load_deno'       => ['required', 'integer'],
+            'viral_load_numo'       => ['required', 'integer'],
+            'ict_deno'              => ['required', 'integer'],
+            'ict_numo'              => ['required', 'integer'],
+            'tpt_numo'              => ['required', 'integer'],
+            'tpt_deno'              => ['required', 'integer'],
+        ];
+
+        $validator = validator()->make($request->all(), $rules);
+        $report = Report::find($id);
+        $report->update($request->all());
+        $report->tag = isset($request->tag)?'on':'off';
+        $report->save();
+        session()->flash('success','Report updated!');
+        return redirect()->route('daily');
     }
 
     /**
@@ -128,8 +149,46 @@ class ReportController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Request $request)
     {
-        //
+        $report = Report::find($request->id);
+        $report->delete();
+        return true;
+    }
+
+    public function getReportByDate(Request $request)
+    {
+        $status = false;
+        $reports = Report::where('created_at', 'like', '%'.$request->theDay.'%')->get();
+        if ($reports->count() > 0) {
+            $status = true;
+        }
+        if ($request->ajax()) {
+         return compact('status','reports');   
+        }
+        //if request is not ajax
+        $title = 'Reports submitted on '.Carbon::parse($request->theDay)->format('l jS \of F Y'); 
+        $theDay = $request->theDay;
+        return view('report.daily', compact('title', 'reports','theDay'));
+    }
+
+    public function getReportByWeek(Request $request)
+    {
+        $status = false;
+        // dd(Carbon::now()->subWeek($request->week)->format('l jS \of F Y'));
+        $reports = Report::whereBetween('created_at', [
+                            Carbon::now()->startOfWeek(), 
+                            Carbon::now()->subWeek(-$request->week)
+                        ])->get();
+        if ($reports->count() > 0) {
+            $status = true;
+        }
+        if ($request->ajax()) {
+         return compact('status','reports');   
+        }
+        //if request is not ajax
+        $title = 'Reports submitted '.$request->week.' week(s) back'; 
+        $week = $request->week;
+        return view('report.daily', compact('title', 'reports','week'));
     }
 }
