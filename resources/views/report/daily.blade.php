@@ -8,54 +8,113 @@
             <div class="col-xl-12">
                 <div class="card">
                     <div class="card-header">
-                        <h5>Daily report area</h5>
+                        <h5>Report area</h5>
                         <span class="d-block m-t-5">
                             A total of <b><code>{{$reports->count()}}</code></b> report(s) 
                             @if(!empty($theDay))
-                                found on {{ Carbon\Carbon::parse($theDay)->format('l jS \of F Y') }}
+                                found on <b>{{ Carbon\Carbon::parse($theDay)->format('l jS \of F Y') }}</b>
                             @elseif(!empty($week))
                                 found from <b>{{ Carbon\Carbon::now()->subWeek($week)->format('l jS \of F Y') }}</b> to date
+                            @elseif(!empty($month))
+                                found for the month of <b>{{$month}}</b>
                             @else
                                 found so far
                             @endif
                             {{-- {!! !empty($theDay) ? ' found on '.Carbon\Carbon::parse($theDay)->format('l jS \of F Y') : 'found so far'  !!}  --}}
                         </span>
-                        
-                        {{-- Sorting Area --}}
-                        <div class="row">
-                            {{-- Sort report by day area --}}
-                            <form action="{{route('reports_by_date')}}" method="post" id="date_sort_form" class="col-md-4">
-                                @csrf
-                                <div class="row date-report-search">
-                                    <div class="form-group row">
-                                            <label for="inputEmail3" class="col-sm-5 col-form-label">Sort by day</label>
-                                            <div class="col-sm-7">
-                                                <input type="date" class="form-control" id="report_date" name="theDay" 
-                                                value="{!! !empty($theDay) ? $theDay : now()->toDateString() !!}">
-                                            </div>
-                                        </div>
-                                </div>
-                            </form>
-                            {{-- Sort report by weeek --}}
-                            <form action="{{route('reports_by_week')}}" method="post" id="week_sort_form" class="col-md-4">
-                                @csrf
-                                <div class="row date-report-search">
-                                    <div class="form-group row">
-                                            <label for="inputEmail3" class="col-sm-5 col-form-label">Sort by week</label>
-                                            <div class="col-sm-7">
-                                                <input type="number" class="form-control" id="report_week" name="week" 
-                                                value="{!! $week ?? '' !!}" placeholder="enter number of weeks back">
-                                                <small><code>{{ !empty($week)? $week.' week(s) back':''}}</code></small>
-                                            </div>
-                                        </div>
-                                </div>
-                            </form>
-                            {{-- Sorting ends --}}
-                            <div class="col-md-4">
-                                <button type="button" class="btn btn-info btn-sm add-btn" data-toggle="modal" data-target=" #add-report-form">
+                        <button type="button" class="btn btn-info btn-sm add-btn" data-toggle="modal" data-target=" #add-report-form">
                                     <i class="la la-plus-circle"></i> Add Report
                                 </button>
+                        {{-- Sorting Area --}}
+                        <div class="row">
+                            <div class="col-md-2 sort_header">
+                                <h4 class="la la-sort-alpha-up-alt">Sort By:</h4>
                             </div>
+                            {{-- Sort report by day area --}}
+                            <div class="col-md-10">
+                                <div class="row">
+                                <form action="{{route('reports_by_date')}}" method="post" id="date_sort_form" class="col-md-3">
+                                    @csrf
+                                    <div class="row date-report-search">
+                                        <div class="form-group row sort">
+                                                <label for="inputEmail3" class="col-sm-3 col-form-label">Day</label>
+                                                <div class="col-sm-7">
+                                                    <input type="date" class="form-control" id="report_date" name="theDay" 
+                                                    value="{!! !empty($theDay) ? $theDay : now()->toDateString() !!}">
+                                                </div>
+                                            </div>
+                                    </div>
+                                </form>
+                                {{-- Sort report by weeek --}}
+                                <form action="{{route('reports_by_week')}}" method="post" id="week_sort_form" class="col-md-3">
+                                    @csrf
+                                    <div class="row date-report-search">
+                                        <div class="form-group row sort">
+                                                <label for="inputEmail3" class="col-sm-3 col-form-label">Week</label>
+                                                <div class="col-sm-7">
+                                                    <input type="number" class="form-control" id="report_week" name="week" 
+                                                    value="{!! $week ?? '' !!}" placeholder="Enter number of weeks back">
+                                                    <small><code>{{ !empty($week)? $week.' week(s) back':''}}</code></small>
+                                                </div>
+                                            </div>
+                                    </div>
+                                </form>
+                                <form action="{{route('reports_by_month')}}" method="post" id="month_sort_form" class="col-md-3">
+                                    @csrf
+                                    <div class="row date-report-search">
+                                        <div class="form-group row sort">
+                                                <label for="inputEmail3" class="col-sm-4 col-form-label">Month</label>
+                                                <div class="col-sm-7">
+                                                    <select class="form-control" id="report_month" name="month">
+                                                        <option value="">--Select month--</option>
+                                                        <option value="01"{{!empty($month) && $month === 1?'selected':''}}>January</option>
+                                                        <option value="02"{{!empty($month) && $month === 2?'selected':''}}>Febraury</option>
+                                                        <option value="03"{{!empty($month) && $month === 3?'selected':''}}>March</option>
+                                                        <option value="04"{{!empty($month) && $month === 4?'selected':''}}>April</option>
+                                                        <option value="05"{{!empty($month) && $month === 5?'selected':''}}>May</option>
+                                                        <option value="06"{{!empty($month) && $month === 6?'selected':''}}>June</option>
+                                                        <option value="07"{{!empty($month) && $month === 7?'selected':''}}>July</option>
+                                                        <option value="08"{{!empty($month) && $month === 8?'selected':''}}>August</option>
+                                                        <option value="09"{{!empty($month) && $month === 9?'selected':''}}>September</option>
+                                                        <option value="10"{{!empty($month) && $month === 10?'selected':''}}>October</option>
+                                                        <option value="11"{{!empty($month) && $month === 11?'selected':''}}>November</option>
+                                                        <option value="12"{{!empty($month) && $month === 12?'selected':''}}>December</option>
+                                                    </select>
+                                                    <small><code>{{ !empty($month) ? $month.' reports':''}}</code></small>
+                                                </div>
+                                            </div>
+                                    </div>
+                                </form>
+
+                                <form action="{{route('reports_by_week')}}" method="post" id="week_sort_form" class="col-md-3">
+                                    @csrf
+                                    <div class="row date-report-search">
+                                        <div class="form-group row sort">
+                                                <label for="inputEmail3" class="col-sm-3 col-form-label">Year</label>
+                                                <div class="col-sm-7">
+                                                    <select class="form-control" id="report_month" name="month">
+                                                        <option value="">--Select month--</option>
+                                                        <option value="1"{{!empty($month) && $month === 1?'selected':''}}>January</option>
+                                                        <option value="2"{{!empty($month) && $month === 2?'selected':''}}>Febraury</option>
+                                                        <option value="3"{{!empty($month) && $month === 3?'selected':''}}>March</option>
+                                                        <option value="4"{{!empty($month) && $month === 4?'selected':''}}>April</option>
+                                                        <option value="5"{{!empty($month) && $month === 5?'selected':''}}>May</option>
+                                                        <option value="6"{{!empty($month) && $month === 6?'selected':''}}>June</option>
+                                                        <option value="7"{{!empty($month) && $month === 7?'selected':''}}>July</option>
+                                                        <option value="8"{{!empty($month) && $month === 8?'selected':''}}>August</option>
+                                                        <option value="9"{{!empty($month) && $month === 9?'selected':''}}>September</option>
+                                                        <option value="10"{{!empty($month) && $month === 10?'selected':''}}>October</option>
+                                                        <option value="11"{{!empty($month) && $month === 11?'selected':''}}>November</option>
+                                                        <option value="12"{{!empty($month) && $month === 12?'selected':''}}>December</option>
+                                                    </select>
+                                                    <small><code>{{ !empty($month) ? $month.' reports':''}}</code></small>
+                                                </div>
+                                            </div>
+                                    </div>
+                                </form>
+                                </div>
+                            </div>
+                            {{-- Sorting ends --}}
                         </div>
                     </div>
  
@@ -311,7 +370,7 @@
                   <div class="modal-body">
                     <div class="row">
                        <div class="col-md-12">
-                            <form action="" method="post">
+                            <form action="{{route('store')}}" method="post">
                                 @csrf
                                 <div class="form-group row">
                                     <label for="inputEmail3" class="col-sm-3 col-form-label">Case Manager Name</label>
@@ -437,7 +496,16 @@
                 </div>
               </div>
             </div>
+<style type="text/css">
+    .sort label{
+        font-size: 9px !important;
+        color: #00acc1 !important;
+    }
 
+    .sort_header{
+        margin-top: 25px;
+    }
+</style>
 
 
             {{-- Add Facility Modal ends

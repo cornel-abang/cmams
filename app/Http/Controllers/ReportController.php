@@ -191,4 +191,36 @@ class ReportController extends Controller
         $week = $request->week;
         return view('report.daily', compact('title', 'reports','week'));
     }
+
+     public function getReportByMonth(Request $request)
+    {
+        $status = false;
+        $reports = Report::where('created_at', 'like', '%2020-'.$request->month.'%')->get();
+        //set month arrays
+        $months = [
+                    '01'=>'January', 
+                    '02'=>'February', 
+                    '03'=>'March', 
+                    '04'=>'April', 
+                    '05'=>'May', 
+                    '06'=>'June', 
+                    '07'=>'July', 
+                    '08'=>'August', 
+                    '09'=>'September', 
+                    '10'=>'October', 
+                    '11'=>'November', 
+                    '12'=>'December'
+                ];
+        $month = $months["$request->month"];
+        if ($reports->count() > 0) {
+            $status = true;
+        }
+        if ($request->ajax()) {
+         return compact('status','reports','month');   
+        }
+        //if request is not ajax
+        $title = $month.' reports'; 
+        $week = $request->week;
+        return view('report.daily', compact('title', 'reports','month'));
+    }
 }

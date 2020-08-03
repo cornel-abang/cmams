@@ -288,6 +288,7 @@
     });
   })
 
+  //Sort reports by week(s)
   $(document).on('blur','#report_week', function(){
     var week = $(this).val();
     if (week !== '') {
@@ -307,6 +308,34 @@
               Swal.fire(
                   'Oops...',
                   'Could not find any report <b>'+week+' week(s) back</b>',
+                  'error' 
+                )
+          }
+        }
+      });
+    }
+  })
+
+  // Sort reports by month
+   $(document).on('change','#report_month', function(){
+    var month = $(this).val();
+    if (month !== '') {
+      $.ajax({
+        type : "GET",
+        url : page_data.routes.reports_by_month,
+        data : { month, _token : page_data.csrf_token},
+        success: function(data){
+          if (data.status) {
+            Swal.fire(
+                  Object.keys(data.reports).length+' report(s) found for <b>'+data.month+'</b>',
+                  'Loading content now...',
+                  'success'
+                )
+            $('#month_sort_form').submit();
+          }else{
+              Swal.fire(
+                  'Oops...',
+                  'Could not find any report for <b>'+data.month+'</b>',
                   'error' 
                 )
           }
