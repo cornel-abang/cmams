@@ -68,5 +68,6 @@ Route::group(['middleware'=>'auth:web'], function(){
 		Route::any('by_date', 'ReportController@getReportByDate')->name('reports_by_date');
 		Route::any('by_week', 'ReportController@getReportByWeek')->name('reports_by_week');
 		Route::any('by_month', 'ReportController@getReportByMonth')->name('reports_by_month');
+		Route::any('by_year', 'ReportController@getReportByYear')->name('reports_by_year');
 	});
 });

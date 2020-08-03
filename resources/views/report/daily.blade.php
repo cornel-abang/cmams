@@ -37,7 +37,9 @@
                                     @csrf
                                     <div class="row date-report-search">
                                         <div class="form-group row sort">
-                                                <label for="inputEmail3" class="col-sm-3 col-form-label">Day</label>
+                                                <label for="inputEmail3" class="col-sm-4 col-form-label">
+                                                   <span class="badge-pill badge-info">Day</span>
+                                                </label>
                                                 <div class="col-sm-7">
                                                     <input type="date" class="form-control" id="report_date" name="theDay" 
                                                     value="{!! !empty($theDay) ? $theDay : now()->toDateString() !!}">
@@ -50,7 +52,9 @@
                                     @csrf
                                     <div class="row date-report-search">
                                         <div class="form-group row sort">
-                                                <label for="inputEmail3" class="col-sm-3 col-form-label">Week</label>
+                                                <label for="inputEmail3" class="col-sm-4 col-form-label">
+                                                    <span class="badge-pill badge-info">Week</span>
+                                                </label>
                                                 <div class="col-sm-7">
                                                     <input type="number" class="form-control" id="report_week" name="week" 
                                                     value="{!! $week ?? '' !!}" placeholder="Enter number of weeks back">
@@ -63,22 +67,48 @@
                                     @csrf
                                     <div class="row date-report-search">
                                         <div class="form-group row sort">
-                                                <label for="inputEmail3" class="col-sm-4 col-form-label">Month</label>
+                                                <label for="inputEmail3" class="col-sm-4 col-form-label">
+                                                   <span class="badge-pill badge-info">Month</span>
+                                                </label>
                                                 <div class="col-sm-7">
                                                     <select class="form-control" id="report_month" name="month">
                                                         <option value="">--Select month--</option>
-                                                        <option value="01"{{!empty($month) && $month === 1?'selected':''}}>January</option>
-                                                        <option value="02"{{!empty($month) && $month === 2?'selected':''}}>Febraury</option>
-                                                        <option value="03"{{!empty($month) && $month === 3?'selected':''}}>March</option>
-                                                        <option value="04"{{!empty($month) && $month === 4?'selected':''}}>April</option>
-                                                        <option value="05"{{!empty($month) && $month === 5?'selected':''}}>May</option>
-                                                        <option value="06"{{!empty($month) && $month === 6?'selected':''}}>June</option>
-                                                        <option value="07"{{!empty($month) && $month === 7?'selected':''}}>July</option>
-                                                        <option value="08"{{!empty($month) && $month === 8?'selected':''}}>August</option>
-                                                        <option value="09"{{!empty($month) && $month === 9?'selected':''}}>September</option>
-                                                        <option value="10"{{!empty($month) && $month === 10?'selected':''}}>October</option>
-                                                        <option value="11"{{!empty($month) && $month === 11?'selected':''}}>November</option>
-                                                        <option value="12"{{!empty($month) && $month === 12?'selected':''}}>December</option>
+                                                        <option value="01"{{!empty($month) && $month === 'January'?'selected':''}}>
+                                                            January
+                                                        </option>
+                                                        <option value="02"{{!empty($month) && $month === 'Febraury'?'selected':''}}>
+                                                            Febraury
+                                                        </option>
+                                                        <option value="03"{{!empty($month) && $month === 'March'?'selected':''}}>
+                                                            March
+                                                        </option>
+                                                        <option value="04"{{!empty($month) && $month === 'April'?'selected':''}}>
+                                                            April
+                                                        </option>
+                                                        <option value="05"{{!empty($month) && $month === 'May'?'selected':''}}>
+                                                            May
+                                                        </option>
+                                                        <option value="06"{{!empty($month) && $month === 'June'?'selected':''}}>
+                                                            June
+                                                        </option>
+                                                        <option value="07"{{!empty($month) && $month === 'July'?'selected':''}}>
+                                                            July
+                                                        </option>
+                                                        <option value="08"{{!empty($month) && $month === 'August'?'selected':''}}>
+                                                            August
+                                                        </option>
+                                                        <option value="09"{{!empty($month) && $month === 'September'?'selected':''}}>
+                                                            September
+                                                        </option>
+                                                        <option value="10"{{!empty($month) && $month === 'October'?'selected':''}}>
+                                                            October
+                                                        </option>
+                                                        <option value="11"{{!empty($month) && $month === 'November'?'selected':''}}>
+                                                            November
+                                                        </option>
+                                                        <option value="12"{{!empty($month) && $month === 'December'?'selected':''}}>
+                                                            December
+                                                        </option>
                                                     </select>
                                                     <small><code>{{ !empty($month) ? $month.' reports':''}}</code></small>
                                                 </div>
@@ -86,28 +116,24 @@
                                     </div>
                                 </form>
 
-                                <form action="{{route('reports_by_week')}}" method="post" id="week_sort_form" class="col-md-3">
+                                <form action="{{route('reports_by_year')}}" method="post" id="year_sort_form" class="col-md-3">
                                     @csrf
                                     <div class="row date-report-search">
                                         <div class="form-group row sort">
-                                                <label for="inputEmail3" class="col-sm-3 col-form-label">Year</label>
+                                                <label for="inputEmail3" class="col-sm-4 col-form-label">
+                                                    <span class="badge-pill badge-info">Year</span>
+                                                </label>
                                                 <div class="col-sm-7">
-                                                    <select class="form-control" id="report_month" name="month">
-                                                        <option value="">--Select month--</option>
-                                                        <option value="1"{{!empty($month) && $month === 1?'selected':''}}>January</option>
-                                                        <option value="2"{{!empty($month) && $month === 2?'selected':''}}>Febraury</option>
-                                                        <option value="3"{{!empty($month) && $month === 3?'selected':''}}>March</option>
-                                                        <option value="4"{{!empty($month) && $month === 4?'selected':''}}>April</option>
-                                                        <option value="5"{{!empty($month) && $month === 5?'selected':''}}>May</option>
-                                                        <option value="6"{{!empty($month) && $month === 6?'selected':''}}>June</option>
-                                                        <option value="7"{{!empty($month) && $month === 7?'selected':''}}>July</option>
-                                                        <option value="8"{{!empty($month) && $month === 8?'selected':''}}>August</option>
-                                                        <option value="9"{{!empty($month) && $month === 9?'selected':''}}>September</option>
-                                                        <option value="10"{{!empty($month) && $month === 10?'selected':''}}>October</option>
-                                                        <option value="11"{{!empty($month) && $month === 11?'selected':''}}>November</option>
-                                                        <option value="12"{{!empty($month) && $month === 12?'selected':''}}>December</option>
+                                                    <select class="form-control" id="report_year" name="year">
+                                                        <option value="">--Select year--</option>
+                                                        <option value="2019"{{!empty($year) && $year === 2019 ?'selected':''}}>
+                                                            2019
+                                                        </option>
+                                                        <option value="2020"{{!empty($year) && $year === 2020 ?'selected':''}}>
+                                                            2020
+                                                        </option>
                                                     </select>
-                                                    <small><code>{{ !empty($month) ? $month.' reports':''}}</code></small>
+                                                    <small><code>{{ !empty($year) ? $year.' reports':'2020 reports'}}</code></small>
                                                 </div>
                                             </div>
                                     </div>
@@ -499,7 +525,7 @@
 <style type="text/css">
     .sort label{
         font-size: 9px !important;
-        color: #00acc1 !important;
+        /*color: #00acc1 !important;*/
     }
 
     .sort_header{

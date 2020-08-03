@@ -343,4 +343,32 @@
       });
     }
   })
+
+    // Sort reports by year
+   $(document).on('change','#report_year', function(){
+    var year = $(this).val();
+    if (year !== '') {
+      $.ajax({
+        type : "GET",
+        url : page_data.routes.reports_by_year,
+        data : { year, _token : page_data.csrf_token},
+        success: function(data){
+          if (data.status) {
+            Swal.fire(
+                  Object.keys(data.reports).length+' report(s) found for year <b>'+year+'</b>',
+                  'Loading content now...',
+                  'success'
+                )
+            $('#year_sort_form').submit();
+          }else{
+              Swal.fire(
+                  'Oops...',
+                  'Could not find any report for year <b>'+year+'</b>',
+                  'error' 
+                )
+          }
+        }
+      });
+    }
+  })
 })( jQuery );

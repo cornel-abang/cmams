@@ -220,7 +220,22 @@ class ReportController extends Controller
         }
         //if request is not ajax
         $title = $month.' reports'; 
-        $week = $request->week;
         return view('report.daily', compact('title', 'reports','month'));
+    }
+
+     public function getReportByYear(Request $request)
+    {
+        $status = false;
+        $reports = Report::where('created_at', 'like', '%'.$request->year.'%')->get();
+        if ($reports->count() > 0) {
+            $status = true;
+        }
+        if ($request->ajax()) {
+         return compact('status','reports');   
+        }
+        //if request is not ajax
+        $year = $request->year;
+        $title = $year.' reports'; 
+        return view('report.daily', compact('title','reports','year'));
     }
 }
