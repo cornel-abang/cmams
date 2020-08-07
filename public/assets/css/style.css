@@ -139,8 +139,40 @@ td code{
   padding: 20px;
 }
 
+.tracking-form{
+  margin-top: 100px;
+  margin-left: 10%;
+  border: 1px solid #ced4da;
+  padding: 20px;
+}
+
+.tracking_view_header{
+  margin-left: 30%!important;
+}
+
 .client-info{
   display: none;
+}
+
+.trigger{
+  display: none!important;
+}
+
+.img-responsive{
+  /*max-width: 100%;*/
+  width: auto;
+  height: auto;
+}
+
+.tr_img_view{
+  text-align: center;
+  margin-left: 75% !important;
+  font-size: 8px !important;
+}
+
+.cm_tag_track_view{
+  font-size: 6px !important;
+  font-weight: bold;
 }
 
 .no-match{
@@ -154,6 +186,14 @@ td code{
 
 .no-match p{
   margin-top: -10px;
+}
+
+.client-info-on-tracking{
+  display: none !important;
+}
+
+.user_info{
+  color: #4680ff;
 }
 
 label{
@@ -21051,7 +21091,7 @@ pre[class*=language-]:before {
     display: block;
 }
 
-.pcoded-navbar .pcoded-inner-navbar li.pcoded-hasmenu .pcoded-submenu li > a:before {
+.pcoded-navbar .pcoded-inner-navbar li.pcoded-hasmenu .pcoded-submenu li > .down-icon:before {
     content: "\e844";
     font-family: 'feather';
     position: absolute;

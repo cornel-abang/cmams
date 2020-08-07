@@ -58,8 +58,7 @@
                                                 </span>
                                                 </div>
                                                 <div class="col-md-4">
-                                                    <button type="button" id="{{$case_mg->id}}" class="btn btn-danger btn-sm delete-btn-cm" data-toggle="tooltip" title="Delete case manager" 
-                                                        aria-data="{{route('destroy_manager')}}"><i class="la la-trash"></i>
+                                                    <button type="button" id="{{$case_mg->id}}" class="btn btn-danger btn-sm delete-btn-cm" data-toggle="tooltip" title="Delete case manager" ><i class="la la-trash"></i>
                                                     </button>
                                                 </div>
                                             </div>

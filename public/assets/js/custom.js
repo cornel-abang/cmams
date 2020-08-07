@@ -85,14 +85,14 @@
             .then((willDelete) => {
               if (willDelete.value === true) {
                 $.ajax({
-                    type : "POST",
-                    url : route,
+                    type : "GET",
+                    url : page_data.routes.destroy_manager,
                     data : { id : manager_id, _token : page_data.csrf_token},
                     success: function(data){
                     	$(handler).closest('tr').fadeOut(500, function(){
                     		 Swal.fire(
                             'Done!',
-                            'Client info deleted',
+                            'Case Manager info deleted',
                             'success'
                           )
                     	});
@@ -371,4 +371,130 @@
       });
     }
   })
+
+   $(document).on('change', '#clientID_tracking', function(){
+      var userInfo = $('#client_info');
+      resetClientInfo(userInfo);
+      var clientID = $(this).val();
+      if (clientID !== '') {
+        $.ajax({
+          type: "GET",
+          url: page_data.routes.find_client_for_tracking,
+          data: {clientID, _token : page_data.csrf_token},
+          success: function(data){
+            if (data.status) {
+              $('.loading-img').css('display','none');
+              $(userInfo).addClass('la-user')
+              $(userInfo).text(data.client.name);
+              $('#client_id').val(data.client.id);
+            }else{
+              $('.loading-img').css('display','none');
+              $(userInfo).removeClass('client-info-on-tracking');
+              $(userInfo).removeClass('la-user');
+              $(userInfo).addClass('la-user-alt-slash');
+              $(userInfo).css('color','red');
+              $(userInfo).text('ID does not match any client');
+            }
+          },
+          global: false
+        });
+      }
+   });
+
+   function resetClientInfo(userInfo){
+    $('.loading-img').css('display','inline');
+    $(userInfo).removeClass('la-user-alt-slash');
+    $(userInfo).text('');
+    $('#client_id').val('');
+    $(userInfo).removeClass('la-user');
+    $(userInfo).css('color','#4680ff');
+    $(userInfo).removeClass('client-info-on-tracking');
+   }
+
+   $(document).on('submit','#tracking_report_form', function(e){
+    e.preventDefault();
+    let regBtn = $('.reg-btn');
+    let loadBtn = $('.load-btn');
+    $(regBtn).css('display','none');
+    $(loadBtn).css('display','inline');
+    $.ajax({
+      type: "POST",
+      url: page_data.routes.store_tracking_report,
+      processData: false,
+      contentType: false,
+      data: new FormData(this),
+      global: false,
+      success: function(data){
+        $(loadBtn).css('display','none');
+        $(regBtn).css('display','inline');
+        $(regBtn).text('Done!');
+        try{
+          swal({
+               title: "Tracking report saved!",
+                text: "Do you want to add more?",
+                type: "success",
+                showCancelButton: true,
+                confirmButtonColor: "#DD6B55",
+                confirmButtonText: "Yes",
+                cancelButtonText: 'No',
+              })
+              .then((res) => {
+                if (res.value === true) {
+                  window.location.href=page_data.routes.tracking_reports;
+                }else{
+                   resetSuccess();
+                }
+          });
+        }catch{
+          if (confirm('Tracking report successfully added! Do you want to add another report?')) {
+            resetSuccess();
+          }else{
+            window.location.href=page_data.routes.tracking_reports;
+          }
+        }
+      }
+    });
+   })
+
+   function resetSuccess(){
+    let form = document.getElementById('tracking_report_form');
+    let formInputs = form.getElementsByClassName('inFld');
+    for(const i of formInputs){
+      i.value = '';
+    }
+    let userInfo = form.getElementsByTagName('small')[0];
+    userInfo.innerText = '';
+    userInfo.classList.remove('la-user');
+   }
+
+   //hide play button, display player n autoplay
+   $(document).on('click', '#play-evid', function(){
+    let wrapper = $('#play-wrapper');
+    // reset DOM values for continous use
+    resetPlayer(wrapper); 
+    $(this).fadeOut(400, function(){
+      $(wrapper).removeClass('trigger');
+      $('.evidence-player').get(0).play();
+    });
+   });
+
+   //close evidence player
+   $(document).on('click','.cls-player',function(){
+    $(this).parent().fadeOut(500, function(){
+      $(this).siblings('button').fadeIn(400);
+    });
+   })
+
+   function resetPlayer(wrapper){
+    $(wrapper).fadeIn();
+    $(wrapper).addClass('trigger');
+   }
+
+   $(document).on('click','#view-evid-img',function(){
+    let img = $(this).data('img');
+    let displayModal = $('#evidence-view');
+    let displayArea = $('#evidence-img-display');
+    $(displayArea).attr('src',img);
+    $(displayModal).modal('show');
+   });
 })( jQuery );

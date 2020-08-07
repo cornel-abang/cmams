@@ -43,7 +43,7 @@ Route::group(['middleware'=>'auth:web'], function(){
 		Route::post('/', 'CaseManagerController@store')->name('add-case-manager');
 		Route::get('edit-case_mg/{id}', 'CaseManagerController@edit')->name('edit-case_mg');
 		Route::post('edit-case_mg/{id}', 'CaseManagerController@update');
-		Route::post('destroy_manager','CaseManagerController@destroy')->name('destroy_manager');
+		Route::get('destroy_manager/{id}','CaseManagerController@destroy')->name('destroy_manager');
 		Route::get('{id}/view_clients', 'CaseManagerController@viewClients')->name('view_clients_cm');
 		Route::any('search_client', 'CaseManagerController@search')->name('search_client');
 	});
@@ -69,5 +69,12 @@ Route::group(['middleware'=>'auth:web'], function(){
 		Route::any('by_week', 'ReportController@getReportByWeek')->name('reports_by_week');
 		Route::any('by_month', 'ReportController@getReportByMonth')->name('reports_by_month');
 		Route::any('by_year', 'ReportController@getReportByYear')->name('reports_by_year');
+	});
+
+	Route::group(['prefix'=>'tracking'], function(){
+		Route::get('add', 'TrackingController@create')->name('add');
+		Route::any('find_client_for_tracking', 'TrackingController@searchClient')->name('find_client_for_tracking');
+		Route::any('store_tracking_report', 'TrackingController@store')->name('store_tracking_report');
+		Route::get('/', 'TrackingController@index')->name('tracking_reports');
 	});
 });

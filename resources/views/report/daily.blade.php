@@ -28,7 +28,7 @@
                         {{-- Sorting Area --}}
                         <div class="row">
                             <div class="col-md-2 sort_header">
-                                <h4 class="la la-sort-alpha-up-alt">Sort By:</h4>
+                                <h4 class="la la-filter">Filter By:</h4>
                             </div>
                             {{-- Sort report by day area --}}
                             <div class="col-md-10">

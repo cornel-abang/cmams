@@ -28,7 +28,7 @@ class CreateReportsTable extends Migration
             $table->string('comment')->nullable();
             $table->string('tag')->nullable();
             $table->timestamps();
-            $table->foreign('case_manager_id')->references('id')->on('case_managers');
+            $table->foreign('case_manager_id')->references('id')->on('case_managers')->onDelete('cascade')->onUpdate('no action');
         });
     }
 
