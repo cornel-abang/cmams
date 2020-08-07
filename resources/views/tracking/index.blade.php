@@ -54,7 +54,7 @@
                                                     </div>
                                                     @elseif($extension == 'jpg')
                                                     <div class="col-md-4">
-                                                        <button type="button" class="btn btn-primary btn-sm" data-toggle="tooltip" 
+                                                        <button type="button" class="btn btn-secondary btn-sm" data-toggle="tooltip" 
                                                             title="View evidence" id="view-evid-img" data-img="{{asset('assets/evidences/'.$tr->evidence)}}"><i class="la la-eye"></i>
                                                             </button>
                                                     </div>
@@ -64,7 +64,7 @@
                                         <td>
                                             <div class="row">
                                                 <div class="col-md-4">
-                                                    <button type="button" class="btn btn-info btn-sm" data-toggle="tooltip" title="Edit client info" onclick="window.location.href=''"><i class="la la-edit"></i>
+                                                    <button type="button" class="btn btn-info btn-sm" data-toggle="tooltip" title="Edit tracking info" onclick="window.location.href='{{route('edit-tracking', $tr->id)}}'"><i class="la la-edit"></i>
                                                     </button>
                                                 </div>
                                                 <div class="col-md-4">
@@ -75,7 +75,7 @@
                                                 </span>
                                                 </div>
                                                 <div class="col-md-4">
-                                                    <button type="button" id="" class="btn btn-danger btn-sm delete-btn-client" data-toggle="tooltip" title="Delete client info">
+                                                    <button type="button" id="{{$tr->id}}" class="btn btn-danger btn-sm delete-btn-tracking" data-toggle="tooltip" title="Delete tracking info">
                                                         <i class="la la-trash"></i>
                                                     </button>
                                                 </div>

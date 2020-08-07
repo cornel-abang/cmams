@@ -76,5 +76,8 @@ Route::group(['middleware'=>'auth:web'], function(){
 		Route::any('find_client_for_tracking', 'TrackingController@searchClient')->name('find_client_for_tracking');
 		Route::any('store_tracking_report', 'TrackingController@store')->name('store_tracking_report');
 		Route::get('/', 'TrackingController@index')->name('tracking_reports');
+		Route::get('{id}/edit', 'TrackingController@edit')->name('edit-tracking');
+		Route::post('{id}/edit', 'TrackingController@update');
+		Route::post('destroy_tracking', 'TrackingController@destroy')->name('destroy_tracking');
 	});
 });

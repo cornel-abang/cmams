@@ -99,7 +99,9 @@ class TrackingController extends Controller
      */
     public function edit($id)
     {
-        //
+        $title = 'Edit tracking report';
+        $tracking = Tracking::find($id);
+        return view('tracking.edit',compact('title','tracking'));
     }
 
     /**
@@ -111,7 +113,30 @@ class TrackingController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $tracking = Tracking::find($id);
+        if ($request->hasFile('evidence')) {
+                if ($file = $request->file('evidence')) {
+                    $img_name = $file->getClientOriginalName();
+                    $storagePath = public_path('/assets/evidences/');
+                        if ($file->move($storagePath, $img_name)) {
+                             $data = [
+                            'client_id'         => $request->client_id,
+                            'case_manager_id'   => $request->case_manager_id,
+                            'method'            => $request->method,
+                            'evidence'          => $img_name
+                            ];
+                        }
+                }
+        }else{
+                            $data = [
+                            'client_id'         => $request->client_id,
+                            'case_manager_id'   => $request->case_manager_id,
+                            'method'            => $request->method,
+                        ];
+        }
+
+        $tracking->update($data);
+        return redirect(route('tracking_reports'))->with('success', 'Tracking report updated!');
     }
 
     /**
@@ -120,8 +145,10 @@ class TrackingController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+   public function destroy(Request $request)
     {
-        //
+        $report = Tracking::find($request->id);
+        $report->delete();
+        return true;
     }
 }

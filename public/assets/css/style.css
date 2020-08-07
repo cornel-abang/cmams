@@ -147,7 +147,8 @@ td code{
 }
 
 .tracking_view_header{
-  margin-left: 30%!important;
+  margin-left: 20%!important;
+  text-align: center;
 }
 
 .client-info{

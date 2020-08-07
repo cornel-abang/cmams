@@ -174,6 +174,40 @@
         
   });
 
+   // Delete tracking report
+  $(document).on('click', '.delete-btn-tracking', function(e){
+    var handler = $(this);
+    var tracking_id = handler.attr('id');
+    swal({
+             title: "Are you sure?",
+              text: "This is an irriversible action",
+              type: "warning",
+              showCancelButton: true,
+              confirmButtonColor: "#DD6B55",
+              confirmButtonText: "Yes, delete it!",
+            })
+            .then((willDelete) => {
+              if (willDelete.value === true) {
+                $.ajax({
+                    type : "POST",
+                    url : page_data.routes.destroy_tracking,
+                    data : { id : tracking_id, _token : page_data.csrf_token},
+                    success: function(data){
+                      $(handler).closest('tr').fadeOut(500, function(){
+                        Swal.fire(
+                            'Done!',
+                            'Tracking info deleted!',
+                            'success'
+                          )
+                      }); 
+                    }
+                });
+            
+              }
+        });
+        
+  });
+
   // select case managers based on facility choosen
   $(document).on('change', '.sel_facility', function(){
     var handler = $('.case_managers_select');
