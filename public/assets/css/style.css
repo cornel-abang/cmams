@@ -151,6 +151,11 @@ td code{
   text-align: center;
 }
 
+.val{
+  color: red;
+  display: none;
+}
+
 .client-info{
   display: none;
 }

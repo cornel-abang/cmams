@@ -15,7 +15,7 @@ class TrackingController extends Controller
      */
     public function index()
     {
-        $trackings = Tracking::all();
+        $trackings = Tracking::latest()->get();
         $title = 'All tracking reports';
         return view('tracking.index', compact('title','trackings'));
     }
@@ -59,8 +59,10 @@ class TrackingController extends Controller
 
         $validator = validator()->make($request->all(), $rules);
         if ($validator->fails()){
-            return response()->withErrors($validator);
-            // return redirect()->back()->withInput($request->input())->withErrors($validator);
+            return response()->json(array(
+                                'success'=>false,
+                                'errors'=>$validator->errors()->all()
+                            ));
         }
         if ($file = $request->file('evidence')) {
             $name = $file->getClientOriginalName();
@@ -75,7 +77,8 @@ class TrackingController extends Controller
                             'evidence'          => $name
                         ];
                 Tracking::create($data);
-                return response(true);
+                return response()->json(array(
+                                        'success'=>true),200);
             }
         }
     }

@@ -459,32 +459,41 @@
       data: new FormData(this),
       global: false,
       success: function(data){
-        $(loadBtn).css('display','none');
-        $(regBtn).css('display','inline');
-        $(regBtn).text('Done!');
-        try{
-          swal({
-               title: "Tracking report saved!",
-                text: "Do you want to add more?",
-                type: "success",
-                showCancelButton: true,
-                confirmButtonColor: "#DD6B55",
-                confirmButtonText: "Yes",
-                cancelButtonText: 'No',
-              })
-              .then((res) => {
-                if (res.value === true) {
-                  window.location.href=page_data.routes.tracking_reports;
-                }else{
-                   resetSuccess();
-                }
-          });
-        }catch{
-          if (confirm('Tracking report successfully added! Do you want to add another report?')) {
-            resetSuccess();
-          }else{
-            window.location.href=page_data.routes.tracking_reports;
+        if (data.success === false) {
+          $(loadBtn).css('display','none');
+          $(regBtn).css('display','inline');
+          let errors = new Map();
+          data.errors.forEach(function(key, val){
+            //set the map like this bcs the order of 
+            //recieving the vals from the data obj seems to be inverted
+            errors.set(val,key);
+          })
+          if (errors.has(0) && errors.get(0).startsWith('The method field')) {
+            $('#val-method').fadeIn(400);
           }
+          if (errors.has(1) && errors.get(1).startsWith('The evidence field')) {
+            $('#val-evidence').fadeIn(400);
+          }
+        }else{
+          $(loadBtn).css('display','none');
+          $(regBtn).css('display','inline');
+          $(regBtn).text('Done!');
+            swal({
+                 title: "Tracking report saved!",
+                  text: "Do you want to add another?",
+                  type: "success",
+                  showCancelButton: true,
+                  confirmButtonColor: "#008000",
+                  confirmButtonText: "Yes",
+                  cancelButtonText: 'No',
+                })
+                .then((res) => {
+                  if (res.value === true) {
+                    resetSuccess();
+                  }else{
+                    window.location.href=page_data.routes.tracking_reports;
+                  }
+            });
         }
       }
     });
@@ -499,6 +508,9 @@
     let userInfo = form.getElementsByTagName('small')[0];
     userInfo.innerText = '';
     userInfo.classList.remove('la-user');
+    $('.reg-btn').text('Save');
+    $('#val-method').css('display','none');
+    $('#val-evidence').css('display','none');
    }
 
    //hide play button, display player n autoplay

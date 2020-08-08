@@ -13,7 +13,7 @@
                                     <label for="inputEmail3" class="col-sm-3 col-form-label">Client ID</label>
                                     <div class="col-sm-6">
                                         <input type="text" class="form-control{{ $errors->has('clientID') ? ' is-invalid' : '' }} inFld" 
-                                            name="clientID" value="{{old('clientID')}}" id="clientID_tracking">
+                                            name="clientID" value="{{old('clientID')}}" id="clientID_tracking" required>
                                             <img src="{{asset('assets/images/loading.gif')}}" class="loading-img" alt="loader">
                                         <small class="client-info-on-tracking user_info la la-user" id="client_info">
                                            
@@ -38,6 +38,7 @@
                                             <option value="visit">Home visit</option>
                                             <option value="phone">Phone call</option>
                                         </select>
+                                        <small class="val" id="val-method">Please select a tracking method</small>
                                         @if ($errors->has('method'))
                                             <span class="invalid-feedback" role="alert">
                                                 <strong>{{ $errors->first('method') }}</strong>
@@ -50,7 +51,7 @@
                                             <label class="input-group-text">Evidence</label>
                                         </div>
                                         <div class="custom-file">
-                                            <input type="file" class="custom-file-input{{ $errors->has('evidence') ? ' is-invalid' : '' }} inFld" id="inputGroupFile01" name="evidence" required="">
+                                            <input type="file" class="custom-file-input{{ $errors->has('evidence') ? ' is-invalid' : '' }} inFld" id="inputGroupFile01" name="evidence">
                                              @if ($errors->has('evidence'))
                                             <span class="invalid-feedback" role="alert">
                                                 <strong>{{ $errors->first('evidence') }}</strong>
@@ -58,16 +59,8 @@
                                             @endif
                                             <span class="custom-file-label" for="inputGroupFile01">Choose file</span>
                                         </div>
+                                    <small class="val" id="val-evidence">Please choose a correct file format:jpeg, jpg, png, wav, mp3</small>
                                 </div>
-                                {{-- New form fields area --}}
-                                {{-- <div id="new_tracking_field"></div>
-
-                                <div class="form-group row add-more">
-                                    <div class="col-md-9">
-                                        <button type="button" class="btn btn-success add_form_fields">
-                                            <span class="la la-folder-plus"></span> Add more</button>
-                                    </div>
-                                </div> --}}
                                 <div class="form-group row">
                                     <div class="col-sm-10">
                                         {{-- Loading button --}}
