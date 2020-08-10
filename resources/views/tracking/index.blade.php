@@ -43,9 +43,9 @@
                                                  @if($extension == 'mp3' || $extension == 'wav')
                                                     <div class="col-md-4">
                                                         <button type="button" class="btn btn-warning btn-sm" data-toggle="tooltip" 
-                                                                title="Play evidence" id="play-evid"><i class="la la-play-circle"></i>
+                                                                title="Play evidence" id="play-evid" data-id="{{$tr->id}}"><i class="la la-play-circle"></i>
                                                         </button>
-                                                        <div class="trigger" id="play-wrapper">
+                                                        <div class="trigger" id="play-wrapper_{{$tr->id}}">
                                                             <audio class="evidence-player"controls>
                                                                 <source src="{{asset('assets/evidences/'.$tr->evidence)}}" type="audio/{{$extension}}">
                                                             </audio>

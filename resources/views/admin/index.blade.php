@@ -1,6 +1,8 @@
 @extends('layouts.dashboard')
-
 @section('content')
+@section('sweet-alert-area')
+    <script src="{{asset('assets/js/sweetalert2.js')}}" defer></script>
+@endsection
 
     <div class="pcoded-content">
         <!-- [ breadcrumb ] start -->
@@ -28,9 +30,9 @@
                     <div class="col-sm-6">
                         <div class="card support-bar overflow-hidden">
                             <div class="card-body pb-0">
-                                <h2 class="m-0">350</h2>
-                                <span class="text-c-blue">Support Requests</span>
-                                <p class="mb-3 mt-3">Total number of support requests that come in.</p>
+                                <h2 class="m-0">Facilities</h2>
+                                <span class="text-c-blue">See all</span>
+                                <p class="mb-3 mt-3">Total number of facilities.</p>
                             </div>
                             <div id="support-chart"></div>
                             <div class="card-footer bg-primary text-white">
@@ -390,53 +392,190 @@
                 </div>
             </div>
             <!-- prject ,team member start -->
-            <!-- seo start -->
-            <div class="col-xl-4 col-md-12">
+            <!-- performance analysis starts -->
+            <div class="col-xl-6 col-md-12">
                 <div class="card">
                     <div class="card-body">
                         <div class="row align-items-center">
-                            <div class="col-6">
-                                <h3>$16,756</h3>
-                                <h6 class="text-muted m-b-0">Visits<i class="fa fa-caret-down text-c-red m-l-10"></i></h6>
-                            </div>
-                            <div class="col-6">
-                                <div id="seo-chart1" class="d-flex align-items-end"></div>
+                            <div class="col-md-12" id="performance-chart">
+                            {{-- Chart Area --}}
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-xl-4 col-md-6">
-                <div class="card">
-                    <div class="card-body">
-                        <div class="row align-items-center">
-                            <div class="col-6">
-                                <h3>49.54%</h3>
-                                <h6 class="text-muted m-b-0">Bounce Rate<i class="fa fa-caret-up text-c-green m-l-10"></i></h6>
+            <div class="col-xl-6 col-md-6">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="row align-items-center">
+                                    <div class="col-8">
+                                        <h4 class="">69%</h4>
+                                        <h6 class="text-muted m-b-0">Refill</h6>
+                                    </div>
+                                    <div class="col-4 text-right">
+                                        <i class="la la-pills f-28"></i>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="col-6">
-                                <div id="seo-chart2" class="d-flex align-items-end"></div>
+                            <div class="card-footer change-area">
+                                <div class="row align-items-center drop">
+                                    <div class="col-9">
+                                        <p class=" m-b-0">10% drop</p>
+                                    </div>
+                                    <div class="col-3 text-right">
+                                        <i class="la la-caret-down"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="row align-items-center">
+                                    <div class="col-8">
+                                        <h4 class="">58%</h4>
+                                        <h6 class="text-muted m-b-0">Viral load</h6>
+                                    </div>
+                                    <div class="col-4 text-right">
+                                        <i class="fas fa-virus f-28"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer change-area">
+                                <div class="row align-items-center rise">
+                                    <div class="col-9">
+                                        <p class=" m-b-0">19% rise</p>
+                                    </div>
+                                    <div class="col-3 text-right">
+                                        <i class="la la-caret-up"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="row align-items-center">
+                                    <div class="col-8">
+                                        <h4 class="">55%</h4>
+                                        <h6 class="text-muted m-b-0">ICT</h6>
+                                    </div>
+                                    <div class="col-4 text-right">
+                                        <i class="la la-user-friends f-28"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer change-area">
+                                <div class="row align-items-center rise">
+                                    <div class="col-9">
+                                        <p class=" m-b-0">40% rise</p>
+                                    </div>
+                                    <div class="col-3 text-right">
+                                        <i class="la la-caret-up"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="row align-items-center">
+                                    <div class="col-8">
+                                        <h4 class="">67%</h4>
+                                        <h6 class="text-muted m-b-0">TPT</h6>
+                                    </div>
+                                    <div class="col-4 text-right">
+                                        <i class="fa fa-head-side-cough f-28"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer change-area">
+                                <div class="row align-items-center drop">
+                                    <div class="col-9">
+                                        <p class=" m-b-0">13% drop</p>
+                                    </div>
+                                    <div class="col-3 text-right">
+                                        <i class="la la-caret-down"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="row align-items-center">
+                                    <div class="col-8">
+                                        <h4 class="">8</h4>
+                                        <h6 class="text-muted m-b-0">Tracking</h6>
+                                    </div>
+                                    <div class="col-4 text-right">
+                                        <i class="fa fa-house-user f-28"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer change-area">
+                                <div class="row align-items-center rise">
+                                    <div class="col-9">
+                                        <p class=" m-b-0">5% rise</p>
+                                    </div>
+                                    <div class="col-3 text-right">
+                                        <i class="la la-caret-up"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="row align-items-center">
+                                    <div class="col-8">
+                                        <h4 class="">17%</h4>
+                                        <h6 class="text-muted m-b-0">Attendance</h6>
+                                    </div>
+                                    <div class="col-4 text-right">
+                                        <i class="fa fa-hospital-user f-28"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer change-area">
+                                <div class="row align-items-center rise">
+                                    <div class="col-9">
+                                        <p class=" m-b-0">11% rise</p>
+                                    </div>
+                                    <div class="col-3 text-right">
+                                        <i class="la la-caret-up"></i>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                <!-- page statustic card end -->    
             </div>
-            <div class="col-xl-4 col-md-6">
-                <div class="card">
-                    <div class="card-body">
-                        <div class="row align-items-center">
-                            <div class="col-6">
-                                <h3>1,62,564</h3>
-                                <h6 class="text-muted m-b-0">Products<i class="fa fa-caret-down text-c-red m-l-10"></i></h6>
-                            </div>
-                            <div class="col-6">
-                                <div id="seo-chart3" class="d-flex align-items-end"></div>
+                {{-- <div class="col-xl-3 col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="row align-items-center">
+                                <div class="col-6">
+                                    <h3>1,62,564</h3>
+                                    <h6 class="text-muted m-b-0">Products<i class="fa fa-caret-down text-c-red m-l-10"></i></h6>
+                                </div>
+                                <div class="col-6">
+                                    <div id="seo-chart3" class="d-flex align-items-end"></div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> --}}
             </div>
-            <!-- seo end -->
+            <!-- analysis ends -->
 
             <!-- Latest Customers start -->
             <div class="col-lg-8 col-md-12">
@@ -648,4 +787,8 @@
         </div>
         <!-- [ Main Content ] end -->
     </div>
+@endsection
+@section('jscharting-area')
+    <script src="{{asset('assets/js/jscharting/jsc/jscharting.js')}}"></script>
+    <script src="{{asset('assets/js/charting.js')}}"></script>
 @endsection

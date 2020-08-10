@@ -38,7 +38,8 @@
             "App\\": "app/"
         },
         "files": [
-            "app/helpers.php"
+            "app/helpers.php",
+            "app/Daemons/DailyPerformance.php"
         ],
         "classmap": [
             "database/seeds",

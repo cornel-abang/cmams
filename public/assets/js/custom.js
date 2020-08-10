@@ -515,7 +515,8 @@
 
    //hide play button, display player n autoplay
    $(document).on('click', '#play-evid', function(){
-    let wrapper = $('#play-wrapper');
+    let wrapper_id = $(this).data('id');
+    let wrapper = $('#play-wrapper_'+wrapper_id);
     // reset DOM values for continous use
     resetPlayer(wrapper); 
     $(this).fadeOut(400, function(){

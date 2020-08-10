@@ -21,6 +21,7 @@
 
     {{-- Fonts --}}
     <link href="{{ asset('assets/line-awesome/css/line-awesome.min.css')}}" rel="stylesheet">
+    <link href="{{ asset('assets/font-awesome-5/css/all.min.css')}}" rel="stylesheet">
     <script type='text/javascript'>
         var page_data = {!! pageJsonData() !!};
     </script>
@@ -301,13 +302,12 @@
     {{-- Datatbales --}}
     <link rel="stylesheet" href="{{asset('assets/DataTable/datatables.min.css') }}">
     <script src="{{asset('assets/DataTable/datatables.min.js') }}" defer></script>
-	
-	<!-- Apex Chart -->
-	<script src="{{asset('assets/js/plugins/apexcharts.min.js')}}"></script>
-
 
 	<!-- custom-chart js -->
 	<script src="{{asset('assets/js/pages/dashboard-main.js')}}"></script>
+
+	{{-- jscharting --}}
+	 @yield('jscharting-area')
 
 	@yield('page-js')
 	</body>

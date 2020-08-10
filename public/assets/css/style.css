@@ -19,6 +19,21 @@ File: style.css
   text-align: center;
 }
 
+.change-area{
+  color: black;
+  font-weight: bold;
+}
+
+.drop{
+  color: red;
+  font-weight: bold;
+}
+
+.rise{
+  color: green;
+  font-weight: bold;
+}
+
 #close-msg{
   float: right;
   opacity: 0.6;
