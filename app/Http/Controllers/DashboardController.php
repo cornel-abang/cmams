@@ -9,16 +9,56 @@ use App\Client;
 use App\Report;
 use Carbon\Carbon;
 use App\DailyPerformance;
+use App\Performance;
 
 class DashboardController extends Controller
 {
     public function index()
     {
-    	$title = 'Admin dashboard';
+    	$title = 'FHI360 admin area';
     	$facilities 	= Facility::all();
     	$case_managers	= CaseManager::all();
     	$clients		= Client::all();
-    	return view('admin.index', compact('title','facilities','case_managers','clients'));
+        $perf_collection    = Performance::orderBy('performance','desc')
+                            ->whereBetween('created_at', [
+                            Carbon::now()->startOfWeek(), 
+                            Carbon::now()->endOfWeek()
+                        ])->get();
+                            // ->take(4)
+        // Group data by case_manager_id so that all similar ids(same case manager)
+        // belong together
+        $performances = $perf_collection->groupBy('case_manager_id');
+        $results = [];
+        //loop through the first collection of data
+        //each representing a particular case manager
+        foreach ($performances as $performance) {
+            // initialize an empty array to hold the case manager performances
+            // and also create another empty array to use in building a new look 
+            // for the case manager data 
+            $arr = [];
+            $case_mg_data = [];
+            // loop through the second instance of the returned data (repin each case manager data)
+                foreach($performance as $perf){
+                    // get the performance into an array 
+                    // average out and create new case manager instance
+                    // using the performance avg as key for the final array
+                    // so we can order them in a descending order (up-down)
+                    array_push($arr, $perf->performance);
+                }
+            $perf_avg = ceil(collect($arr)->average());
+            $case_mg_data = [
+                            'name'          =>$perf->caseManager->name,
+                            'image'         =>$perf->caseManager->profile_photo,
+                            'facility'      =>$perf->caseManager->facility->name,
+                            'clients'       =>$perf->caseManager->clients->count(),
+                            'performance'   =>$perf_avg
+                        ];
+            $results[$perf_avg] = collect($case_mg_data);
+        }
+        //collect final array and sort by keys in descending order
+        $perf_data = collect($results)->sortKeysDesc();
+        // dd($perf_data);
+    	return view('admin.index', compact('title','facilities','case_managers','clients','perf_data'));
     }
 
     public function getRefillData()

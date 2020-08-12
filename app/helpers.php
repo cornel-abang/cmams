@@ -1,7 +1,10 @@
 <?php
+
+use App\DailyPerformance;
+use Carbon\Carbon;
 /**
  * @return mixed
- * Custom functions made by themeqx
+ * Custom functions made by Cornel
  */
 
 
@@ -39,6 +42,138 @@ if ( ! function_exists('pageJsonData')){
     }
 }
 
+
+/**
+ * @return integer
+ */
+function getWeekRefillAvg()
+{
+    $refill = DailyPerformance::select('refill_performance')
+            ->whereBetween('created_at', [
+                            Carbon::now()->startOfWeek(), 
+                            Carbon::now()->endOfWeek()
+                        ])->get();
+    $refill_arr = [];
+    foreach ($refill as $val) {
+        array_push($refill_arr, $val->refill_performance);
+    }
+    return ceil(collect($refill_arr)->average());
+}
+
+function getWeekViralLoadAvg()
+{
+    $vrl = DailyPerformance::select('viral_load_performance')
+            ->whereBetween('created_at', [
+                            Carbon::now()->startOfWeek(), 
+                            Carbon::now()->endOfWeek()
+                        ])->get();
+    $vr_arr = [];
+    foreach ($vrl as $val) {
+        array_push($vr_arr, $val->viral_load_performance);
+    }
+    return ceil(collect($vr_arr)->average());
+}
+
+function getWeekIctAvg()
+{
+    $ict = DailyPerformance::select('ict_performance')
+            ->whereBetween('created_at', [
+                            Carbon::now()->startOfWeek(), 
+                            Carbon::now()->endOfWeek()
+                        ])->get();
+    $ict_arr = [];
+    foreach ($ict as $val) {
+        array_push($ict_arr, $val->ict_performance);
+    }
+    return ceil(collect($ict_arr)->average());
+}
+
+function getWeekTptAvg()
+{
+    $tpt = DailyPerformance::select('tpt_performance')
+            ->whereBetween('created_at', [
+                            Carbon::now()->startOfWeek(), 
+                            Carbon::now()->endOfWeek()
+                        ])->get();
+    $tpt_arr = [];
+    foreach ($tpt as $val) {
+        array_push($tpt_arr, $val->tpt_performance);
+    }
+    return ceil(collect($tpt_arr)->average());
+}
+
+function getWeekTrackingAvg()
+{
+    $tracking = DailyPerformance::select('tracking_performance')
+            ->whereBetween('created_at', [
+                            Carbon::now()->startOfWeek(), 
+                            Carbon::now()->endOfWeek()
+                        ])->get();
+    $tr_arr = [];
+    foreach ($tracking as $val) {
+        array_push($tr_arr, $val->tracking_performance);
+    }
+    return ceil(collect($tr_arr)->average());
+}
+
+function getWeekAttAvg()
+{
+    $att = DailyPerformance::select('attendance_performance')
+            ->whereBetween('created_at', [
+                            Carbon::now()->startOfWeek(), 
+                            Carbon::now()->endOfWeek()
+                        ])->get();
+    $att_arr = [];
+    foreach ($att as $val) {
+        array_push($att_arr, $val->attendance_performance);
+    }
+    return ceil(collect($att_arr)->average());
+}
+
+/**
+ * Custom function 
+ * To calcualte diff in performance 
+ * between this week and the last
+ * Calcualate for all indicators
+ * @return integer
+ * Custom functions made by Cornel
+ */
+
+function performanceDiff($indicator, $thisWeekAvg)
+{
+    $diff = 0;
+    // get the last week avg for the indicator
+    $lastWeekAvg = lastWeekIndicatorAvg($indicator);
+    if ($lastWeekAvg !== 0) {
+        $diff = $thisWeekAvg - $lastWeekAvg;
+    }
+    return $diff;
+}
+
+//function to get the last week average for the indicator 
+function lastWeekIndicatorAvg($indicator)
+{
+    $indicatorAvg = DailyPerformance::select($indicator)
+                    ->whereBetween('created_at', [
+                        Carbon::now()->subWeek(),
+                        Carbon::now()->startOfWeek()
+                    ])->get();
+    if ($indicatorAvg->count() > 0) {
+        $val_arr = [];
+        foreach ($indicatorAvg as $val) {
+            array_push($val_arr, $val->$indicator);
+        }
+        return ceil(collect($val_arr)->average());
+    }else{
+        return 0;
+    }
+}
+
+/**
+ * Custom calculate report average
+ * @return integer
+ * Custom functions made by Cornel
+ */
 function calcAverage($report)
 {
    $collection = collect([

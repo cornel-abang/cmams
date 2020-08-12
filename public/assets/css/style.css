@@ -34,9 +34,18 @@ File: style.css
   font-weight: bold;
 }
 
+.same{
+  color: #4680ff;
+  font-weight: bold;
+}
+
 #close-msg{
   float: right;
   opacity: 0.6;
+}
+
+td label{
+  color: white !important;
 }
 
 td code{

@@ -192,7 +192,7 @@
             <div class="col-xl-6 col-md-12">
                 <div class="card table-card">
                     <div class="card-header">
-                        <h5>Projects</h5>
+                        <h5>This week's case managers leaderboard</h5>
                         <div class="card-header-right">
                             <div class="btn-group card-option">
                                 <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -212,101 +212,35 @@
                             <table class="table table-hover mb-0">
                                 <thead>
                                     <tr>
-                                        <th>
-                                            <div class="chk-option">
-                                                <label class="check-task custom-control custom-checkbox d-flex justify-content-center done-task">
-                                                    <input type="checkbox" class="custom-control-input">
-                                                    <span class="custom-control-label"></span>
-                                                </label>
-                                            </div>
-                                            Assigned
-                                        </th>
                                         <th>Name</th>
-                                        <th>Due Date</th>
-                                        <th class="text-right">Priority</th>
+                                        <th>Facility</th>
+                                        <th class="text-right">Score</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <td>
-                                            <div class="chk-option">
-                                                <label class="check-task custom-control custom-checkbox d-flex justify-content-center done-task">
-                                                    <input type="checkbox" class="custom-control-input">
-                                                    <span class="custom-control-label"></span>
-                                                </label>
-                                            </div>
-                                            <div class="d-inline-block align-middle">
-                                                <img src="{{asset('assets/images/user/avatar-4.jpg')}}" alt="user image" class="img-radius wid-40 align-top m-r-15">
-                                                <div class="d-inline-block">
-                                                    <h6>John Deo</h6>
-                                                    <p class="text-muted m-b-0">Graphics Designer</p>
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td>Able Pro</td>
-                                        <td>Jun, 26</td>
-                                        <td class="text-right"><label class="badge badge-light-danger">Low</label></td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <div class="chk-option">
-                                                <label class="check-task custom-control custom-checkbox d-flex justify-content-center done-task">
-                                                    <input type="checkbox" class="custom-control-input">
-                                                    <span class="custom-control-label"></span>
-                                                </label>
-                                            </div>
-                                            <div class="d-inline-block align-middle">
-                                                <img src="{{asset('assets/images/user/avatar-2.jpg')}}" alt="user image" class="img-radius wid-40 align-top m-r-15">
-                                                <div class="d-inline-block">
-                                                    <h6>Jenifer Vintage</h6>
-                                                    <p class="text-muted m-b-0">Web Designer</p>
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td>Mashable</td>
-                                        <td>March, 31</td>
-                                        <td class="text-right"><label class="badge badge-light-primary">high</label></td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <div class="chk-option">
-                                                <label class="check-task custom-control custom-checkbox d-flex justify-content-center done-task">
-                                                    <input type="checkbox" class="custom-control-input">
-                                                    <span class="custom-control-label"></span>
-                                                </label>
-                                            </div>
-                                            <div class="d-inline-block align-middle">
-                                                <img src="{{asset('assets/images/user/avatar-3.jpg')}}" alt="user image" class="img-radius wid-40 align-top m-r-15">
-                                                <div class="d-inline-block">
-                                                    <h6>William Jem</h6>
-                                                    <p class="text-muted m-b-0">Developer</p>
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td>Flatable</td>
-                                        <td>Aug, 02</td>
-                                        <td class="text-right"><label class="badge badge-light-success">medium</label></td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <div class="chk-option">
-                                                <label class="check-task custom-control custom-checkbox d-flex justify-content-center done-task">
-                                                    <input type="checkbox" class="custom-control-input">
-                                                    <span class="custom-control-label"></span>
-                                                </label>
-                                            </div>
-                                            <div class="d-inline-block align-middle">
-                                                <img src="{{asset('assets/images/user/avatar-2.jpg')}}" alt="user image" class="img-radius wid-40 align-top m-r-15">
-                                                <div class="d-inline-block">
-                                                    <h6>David Jones</h6>
-                                                    <p class="text-muted m-b-0">Developer</p>
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td>Guruable</td>
-                                        <td>Sep, 22</td>
-                                        <td class="text-right"><label class="badge badge-light-primary">high</label></td>
-                                    </tr>
+                                    @foreach($perf_data as $perfs)
+                                            <tr>
+                                                <td>
+                                                    <div class="d-inline-block align-middle">
+                                                        <img src="{{asset('/assets/images/uploads/'.$perfs['image'])}}" 
+                                                            alt="cm image" class="img-radius wid-40 align-top m-r-15">
+                                                        <div class="d-inline-block">
+                                                            <h6 class="leader-name">{{ $perfs['name'] }}</h6>
+                                                            <p class="text-muted m-b-0">{{ $perfs['clients'] }} client(s)</p>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>{{ $perfs['facility'] }}</td>
+                                                <td class="text-right">
+                                                    @if( $perfs['performance'] > 69 )
+                                                        <label class="badge-pill badge-success">{{ $perfs['performance'] }}</label></td>
+                                                    @elseif( $perfs['performance'] > 49 && $perfs['performance'] < 70 )
+                                                        <label class="badge-pill badge-primary">{{ $perfs['performance'] }}</label></td>
+                                                    @elseif( $perfs['performance'] < 50)
+                                                        <label class="badge-pill badge-danger">{{ $perfs['performance'] }}</label></td>
+                                                    @endif
+                                            </tr>
+                                    @endforeach
                                 </tbody>
                             </table>
                         </div>
@@ -411,7 +345,7 @@
                             <div class="card-body">
                                 <div class="row align-items-center">
                                     <div class="col-8">
-                                        <h4 class="">69%</h4>
+                                        <h4 class="">{{ getWeekRefillAvg() }}%</h4>
                                         <h6 class="text-muted m-b-0">Refill</h6>
                                     </div>
                                     <div class="col-4 text-right">
@@ -420,12 +354,15 @@
                                 </div>
                             </div>
                             <div class="card-footer change-area">
-                                <div class="row align-items-center drop">
+                                <div class="row align-items-center" id="refill-area">
                                     <div class="col-9">
-                                        <p class=" m-b-0">10% drop</p>
+                                         <p class=" m-b-0" id="refill-pointer" 
+                                            data-val="{{performanceDiff( 'refill_performance', getWeekRefillAvg())}}">
+                                            {{ performanceDiff( 'refill_performance', getWeekRefillAvg()) }}%
+                                        </p>
                                     </div>
                                     <div class="col-3 text-right">
-                                        <i class="la la-caret-down"></i>
+                                        <i class="la"></i>
                                     </div>
                                 </div>
                             </div>
@@ -436,7 +373,7 @@
                             <div class="card-body">
                                 <div class="row align-items-center">
                                     <div class="col-8">
-                                        <h4 class="">58%</h4>
+                                        <h4 class="">{{ getWeekViralLoadAvg() }}%</h4>
                                         <h6 class="text-muted m-b-0">Viral load</h6>
                                     </div>
                                     <div class="col-4 text-right">
@@ -445,12 +382,15 @@
                                 </div>
                             </div>
                             <div class="card-footer change-area">
-                                <div class="row align-items-center rise">
+                                <div class="row align-items-center" id="viral-ld-area">
                                     <div class="col-9">
-                                        <p class=" m-b-0">19% rise</p>
+                                         <p class=" m-b-0" id="viral_ld_pointer"
+                                            data-val="{{performanceDiff( 'viral_load_performance', getWeekViralLoadAvg() )}}">
+                                            {{performanceDiff( 'viral_load_performance', getWeekViralLoadAvg() )}}%
+                                        </p>
                                     </div>
                                     <div class="col-3 text-right">
-                                        <i class="la la-caret-up"></i>
+                                        <i class="la"></i>
                                     </div>
                                 </div>
                             </div>
@@ -461,7 +401,7 @@
                             <div class="card-body">
                                 <div class="row align-items-center">
                                     <div class="col-8">
-                                        <h4 class="">55%</h4>
+                                        <h4 class="">{{ getWeekIctAvg() }}%</h4>
                                         <h6 class="text-muted m-b-0">ICT</h6>
                                     </div>
                                     <div class="col-4 text-right">
@@ -470,12 +410,15 @@
                                 </div>
                             </div>
                             <div class="card-footer change-area">
-                                <div class="row align-items-center rise">
+                                <div class="row align-items-center" id="ict-area">
                                     <div class="col-9">
-                                        <p class=" m-b-0">40% rise</p>
+                                         <p class=" m-b-0" id="ict-pointer" 
+                                            data-val="{{performanceDiff( 'ict_performance', getWeekIctAvg() )}}">
+                                            {{performanceDiff( 'ict_performance', getWeekIctAvg() )}}%
+                                        </p>
                                     </div>
                                     <div class="col-3 text-right">
-                                        <i class="la la-caret-up"></i>
+                                        <i class="la"></i>
                                     </div>
                                 </div>
                             </div>
@@ -486,7 +429,7 @@
                             <div class="card-body">
                                 <div class="row align-items-center">
                                     <div class="col-8">
-                                        <h4 class="">67%</h4>
+                                        <h4 class="">{{ getWeekTptAvg() }}%</h4>
                                         <h6 class="text-muted m-b-0">TPT</h6>
                                     </div>
                                     <div class="col-4 text-right">
@@ -495,12 +438,15 @@
                                 </div>
                             </div>
                             <div class="card-footer change-area">
-                                <div class="row align-items-center drop">
+                                <div class="row align-items-center" id="tpt-area">
                                     <div class="col-9">
-                                        <p class=" m-b-0">13% drop</p>
+                                         <p class=" m-b-0" id="tpt-pointer" 
+                                            data-val="{{performanceDiff( 'tpt_performance', getWeekTptAvg() )}}">
+                                            {{performanceDiff( 'tpt_performance', getWeekTptAvg() )}}%
+                                        </p>
                                     </div>
                                     <div class="col-3 text-right">
-                                        <i class="la la-caret-down"></i>
+                                        <i class="la"></i>
                                     </div>
                                 </div>
                             </div>
@@ -511,7 +457,7 @@
                             <div class="card-body">
                                 <div class="row align-items-center">
                                     <div class="col-8">
-                                        <h4 class="">8</h4>
+                                        <h4 class="">{{ getWeekTrackingAvg() }}</h4>
                                         <h6 class="text-muted m-b-0">Tracking</h6>
                                     </div>
                                     <div class="col-4 text-right">
@@ -520,12 +466,15 @@
                                 </div>
                             </div>
                             <div class="card-footer change-area">
-                                <div class="row align-items-center rise">
+                                <div class="row align-items-center" id="tracking-area">
                                     <div class="col-9">
-                                        <p class=" m-b-0">5% rise</p>
+                                         <p class=" m-b-0" id="tracking-pointer"
+                                            data-val="{{performanceDiff( 'tracking_performance', getWeekTrackingAvg() )}}">
+                                            {{performanceDiff( 'tracking_performance', getWeekTrackingAvg() )}}%
+                                        </p>
                                     </div>
                                     <div class="col-3 text-right">
-                                        <i class="la la-caret-up"></i>
+                                        <i class="la"></i>
                                     </div>
                                 </div>
                             </div>
@@ -536,7 +485,7 @@
                             <div class="card-body">
                                 <div class="row align-items-center">
                                     <div class="col-8">
-                                        <h4 class="">17%</h4>
+                                        <h4 class="">{{ getWeekAttAvg() }}%</h4>
                                         <h6 class="text-muted m-b-0">Attendance</h6>
                                     </div>
                                     <div class="col-4 text-right">
@@ -545,12 +494,15 @@
                                 </div>
                             </div>
                             <div class="card-footer change-area">
-                                <div class="row align-items-center rise">
+                                <div class="row align-items-center" id="att-area">
                                     <div class="col-9">
-                                        <p class=" m-b-0">11% rise</p>
+                                        <p class=" m-b-0" id="att-pointer"
+                                            data-val="{{performanceDiff( 'attendance_performance', getWeekAttAvg() )}}">
+                                            {{performanceDiff( 'attendance_performance', getWeekAttAvg() )}}%
+                                        </p>
                                     </div>
                                     <div class="col-3 text-right">
-                                        <i class="la la-caret-up"></i>
+                                        <i class="la"></i>
                                     </div>
                                 </div>
                             </div>
@@ -792,3 +744,8 @@
     <script src="{{asset('assets/js/jscharting/jsc/jscharting.js')}}"></script>
     <script src="{{asset('assets/js/charting.js')}}"></script>
 @endsection
+<style type="text/css">
+    td, .leader-name{
+        font-size: 13px !important;
+    }
+</style>

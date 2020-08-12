@@ -17,7 +17,39 @@
 
 		$('#entry-table').DataTable( {         
 					"ordering": false
-				} ); 
+				});
+
+    //Set call indicator areas and set pointer - rise or drop
+    // Viral Load
+    setPointer($('#viral-ld-area'),$('#viral-ld-pointer'));
+    //Refill
+    setPointer($('#refill-area'),$('#refill-pointer'));
+    //ICT
+    setPointer($('#ict-area'),$('#ict-pointer'));
+    //TPT
+    setPointer($('#tpt-area'),$('tpt-pointer'));
+    //Tracking
+    setPointer($('#tracking-area'),$('#tracking-pointer'));
+    //Attendance
+    setPointer($('#att-area'),$('#att-pointer'));
+    
+    //Set indicator pointer - rise or drop
+    function setPointer(area, ptr)
+    {
+      // convert pointer to string 
+      let pointer = String($(ptr).data('val'));
+      if (pointer.startsWith('-')) {
+        $(area).addClass('drop');
+        $(area).find('i').addClass('la-caret-down');
+      }else if(pointer.startsWith('0')){
+        $(area).addClass('same');
+        $(area).find('i').addClass('same');
+      }else{
+        $(area).addClass('rise');
+        $(area).find('i').addClass('la-caret-up');
+      }
+     
+    }
 	});
 
   // Ajax Call loading screen

@@ -1,5 +1,5 @@
 "use strict";
-
+	// Initialize and send a promise
 	let options = {method:"GET",headers:{'X-CSRF-TOKEN':page_data.csrf_token,'Content-Type':'application/json'}}
 	JSC.fetch(page_data.routes.get_refill_data,options)
 	.then((response) => response.json())
@@ -73,4 +73,3 @@
 			{name: 'Tracking', points: tracking_series}
 		]
 	}
-	

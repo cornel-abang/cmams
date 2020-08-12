@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Report;
 use App\CaseManager;
 use Carbon\Carbon;
+use App\Performance;
 
 class ReportController extends Controller
 {
@@ -55,7 +56,6 @@ class ReportController extends Controller
      */
     public function store(Request $request)
     {
-        // dd($request->all());
          $rules = [
             'case_manager_name'     => ['required', 'string','max:30'],
             'refill_deno'           => ['required', 'integer'],
@@ -85,8 +85,23 @@ class ReportController extends Controller
         //          'case_manager_id'  =>$request->case_manager,
         //          'status'           =>$request->status
         //         ];
-        Report::create($request->all());
+        $report = Report::create($request->all());
+        $this->savePerformance($report);
         return redirect(route('daily'))->with('success', 'Report entered succesfully');
+    }
+
+    public function savePerformance($report)
+    {
+        $performance = collect([
+                    ceil(($report->viral_load_numo / $report->viral_load_deno)*100),
+                    ceil(($report->refill_numo / $report->refill_deno)*100),
+                    ceil(($report->ict_numo / $report->ict_deno)*100),
+                    ceil(($report->tpt_numo / $report->tpt_deno)*100),
+                    100
+                ])->average();
+        $data = ['case_manager_id'=>$report->case_manager_id, 'performance'=>$performance];
+        Performance::create($data);
+        return true;
     }
 
     /**
