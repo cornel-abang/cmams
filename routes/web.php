@@ -27,6 +27,8 @@ Route::group(['middleware'=>'auth:web'], function(){
 	Route::group(['prefix'=>'fhi360'], function(){
 		Route::get('dashboard', 'DashboardController@index')->name('dashboard');
 		Route::get('get_refill_data','DashboardController@getRefillData')->name('get_refill_data');
+		Route::get('leaderboard', 'DashboardController@leaderboard')->name('leaderboard');
+		Route::get('get_btm_4', 'DashboardController@bottomFour')->name('get_btm_4');
 	});
 	Route::group(['prefix'=>'facilities'], function(){
 		Route::get('/', 'FacilityController@index')->name('facilities');

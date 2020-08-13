@@ -32,7 +32,10 @@
     setPointer($('#tracking-area'),$('#tracking-pointer'));
     //Attendance
     setPointer($('#att-area'),$('#att-pointer'));
-    
+
+    //set leaderbaord toggle menu
+    $('#top-4-nav').parent().addClass('shut');
+    $('#set').addClass('up');
     //Set indicator pointer - rise or drop
     function setPointer(area, ptr)
     {
@@ -64,6 +67,48 @@
 		e.preventDefault();
 		$(this).parent('div').fadeOut(500);
 	});
+
+  $(document).on('click','#btm-4-nav', function(e){
+    e.preventDefault();
+    let that = $(this);
+    let loader = $('#load');
+    let set = $('#set');
+    //mimic a sever request
+    $(loader).addClass('busy')
+    setTimeout(function(){
+      $(loader).removeClass('busy')
+      $(set).text('(Bottom 4)');
+      $(set).removeClass('up');
+      $(set).addClass('down');
+      $('#top4').fadeOut(400,function(){
+        $('#top-4-nav').parent().removeClass('shut');
+        $(that).parent().addClass('shut');
+        $('#bottom4').fadeIn(400,function(){
+          $(this).removeClass('shut');
+        });
+      });
+    },3000);
+  });
+
+   $(document).on('click','#top-4-nav', function(e){
+    e.preventDefault();
+    let that = $(this);
+    let loader = $('#load');
+    let set = $('#set');
+    //mimic a sever request
+    $('#load').addClass('busy')
+    setTimeout(function(){
+      $(loader).removeClass('busy')
+      $(set).text('(Top 4)');
+      $(set).removeClass('down');
+      $(set).addClass('up');
+      $('#bottom4').fadeOut(400,function(){
+        $('#btm-4-nav').parent().removeClass('shut');
+        $(that).parent().addClass('shut');
+        $('#top4').fadeIn(400);
+      });
+    },3000);
+  });
 
 	// Delete facility
 	$(document).on('click', '.delete-btn-facility', function(e){

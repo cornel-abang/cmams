@@ -28,6 +28,7 @@ if ( ! function_exists('pageJsonData')){
             'home_url'                    => route('home'),
             'asset_url'                   => asset('assets'),
             'csrf_token'                  => csrf_token(),
+            'uploads'                     => asset('/assets/images/uploads/'),
         ];
 
         $routeLists = \Illuminate\Support\Facades\Route::getRoutes();

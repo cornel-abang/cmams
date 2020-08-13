@@ -98,6 +98,28 @@ td code{
   margin-top: 25px !important;
 }
 
+.bottom4{
+  display: none !important;
+}
+
+.shut{
+  display: none !important;
+}
+
+.down{
+  color: red;
+  font-weight: bold;
+}
+
+.up{
+  color: green;
+  font-weight: bold;
+}
+
+.b4{
+  display: none;
+}
+
 .assign-btn{
   margin-left: 350%;
 }
@@ -243,6 +265,17 @@ label{
   background: rgb(255, 255, 255, .8) url('../images/loading.gif') 50% 50% no-repeat;
 }
 
+/*leaderboard loader*/
+.busy{
+  position: absolute;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgb(255, 255, 255, .8) url('../images/loadingss.gif') 50% 50% no-repeat;
+}
+
 .pcoded-main-container.loading .load-screen{
   overflow: hidden;
 }
@@ -250,6 +283,7 @@ label{
 .pcoded-main-container.loading .load-screen{
   display: block;
 }
+
 /*Loading screen ends*/
 
 @font-face {

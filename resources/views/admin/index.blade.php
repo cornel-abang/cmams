@@ -192,24 +192,23 @@
             <div class="col-xl-6 col-md-12">
                 <div class="card table-card">
                     <div class="card-header">
-                        <h5>This week's case managers leaderboard</h5>
+                        <h5>This week's case managers leaderboard <span id="set">(Top 4)</span></h5>
                         <div class="card-header-right">
                             <div class="btn-group card-option">
                                 <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     <i class="feather icon-more-horizontal"></i>
                                 </button>
                                 <ul class="list-unstyled card-option dropdown-menu dropdown-menu-right">
-                                    <li class="dropdown-item full-card"><a href="#!"><span><i class="feather icon-maximize"></i> maximize</span><span style="display:none"><i class="feather icon-minimize"></i> Restore</span></a></li>
-                                    <li class="dropdown-item minimize-card"><a href="#!"><span><i class="feather icon-minus"></i> collapse</span><span style="display:none"><i class="feather icon-plus"></i> expand</span></a></li>
-                                    <li class="dropdown-item reload-card"><a href="#!"><i class="feather icon-refresh-cw"></i> reload</a></li>
-                                    <li class="dropdown-item close-card"><a href="#!"><i class="feather icon-trash"></i> remove</a></li>
+                                    <li class="dropdown-item"><a href="{{ route('leaderboard')}}"><span><i class="feather icon-maximize"></i> See all</span></li>
+                                    <li class="dropdown-item"><a href="#!" id="btm-4-nav"><span><i class="feather icon-trending-down"></i> Bottom 4</span></a></li>
+                                    <li class="dropdown-item"><a href="#!" id="top-4-nav"><span><i class="feather icon-trending-up"></i> Top 4</span></a></li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                     <div class="card-body p-0">
                         <div class="table-responsive">
-                            <table class="table table-hover mb-0">
+                            <table class="table table-hover mb-0" id="perf_table">
                                 <thead>
                                     <tr>
                                         <th>Name</th>
@@ -217,8 +216,8 @@
                                         <th class="text-right">Score</th>
                                     </tr>
                                 </thead>
-                                <tbody>
-                                    @foreach($perf_data as $perfs)
+                                <tbody id="top4">
+                                    @foreach($top4 as $perfs)
                                             <tr>
                                                 <td>
                                                     <div class="d-inline-block align-middle">
@@ -241,6 +240,33 @@
                                                     @endif
                                             </tr>
                                     @endforeach
+                                    <div class="" id="load"></div>
+                                </tbody>
+                                <tbody id="bottom4" class="shut">
+                                    @foreach($bottom4 as $perfs)
+                                            <tr>
+                                                <td>
+                                                    <div class="d-inline-block align-middle">
+                                                        <img src="{{asset('/assets/images/uploads/'.$perfs['image'])}}" 
+                                                            alt="cm image" class="img-radius wid-40 align-top m-r-15">
+                                                        <div class="d-inline-block">
+                                                            <h6 class="leader-name">{{ $perfs['name'] }}</h6>
+                                                            <p class="text-muted m-b-0">{{ $perfs['clients'] }} client(s)</p>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>{{ $perfs['facility'] }}</td>
+                                                <td class="text-right">
+                                                    @if( $perfs['performance'] > 69 )
+                                                        <label class="badge-pill badge-success">{{ $perfs['performance'] }}</label></td>
+                                                    @elseif( $perfs['performance'] > 49 && $perfs['performance'] < 70 )
+                                                        <label class="badge-pill badge-primary">{{ $perfs['performance'] }}</label></td>
+                                                    @elseif( $perfs['performance'] < 50)
+                                                        <label class="badge-pill badge-danger">{{ $perfs['performance'] }}</label></td>
+                                                    @endif
+                                            </tr>
+                                    @endforeach
+                                    <div class="" id="load"></div>
                                 </tbody>
                             </table>
                         </div>
