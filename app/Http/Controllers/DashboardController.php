@@ -19,11 +19,11 @@ class DashboardController extends Controller
     	$facilities 	= Facility::all();
     	$case_managers	= CaseManager::all();
     	$clients		= Client::all();
-        $perf_collection    = Performance::orderBy('performance','desc')
+        $perf_collection    = Performance::orderBy('performance','asc')
                             ->whereBetween('created_at', [
                             Carbon::now()->startOfWeek(), 
                             Carbon::now()->endOfWeek()
-                        ])->take(5)->get();
+                        ])->take(4)->get();
         // Group data by case_manager_id so that all similar ids(same case manager)
         // belong together
         $performances = $perf_collection->groupBy('case_manager_id');
@@ -57,7 +57,8 @@ class DashboardController extends Controller
         //collect final array and sort by keys in descending order
         $top4 = collect($results)->sortKeysDesc();
         $bottom4 = $this->bottomFour();
-    	return view('admin.index', compact('title','facilities','case_managers','clients','top4','bottom4'));
+        $comments = Report::select('comment','created_at','case_manager_id')->where('tag','on')->latest()->take(3)->get();
+    	return view('admin.index', compact('title','facilities','case_managers','clients','top4','bottom4','comments'));
     }
 
     public function getRefillData()
@@ -134,10 +135,11 @@ class DashboardController extends Controller
         // dd($perf_data);
         return view('admin.leaderboard', compact('title','perf_data'));
     }
+
     //function to fetch the bottom four performing case managers
     public function bottomFour()
     {
-        $perf_collection    = Performance::orderBy('performance','asc')
+        $perf_collection    = Performance::orderBy('performance','desc')
                             ->whereBetween('created_at', [
                             Carbon::now()->startOfWeek(), 
                             Carbon::now()->endOfWeek()
