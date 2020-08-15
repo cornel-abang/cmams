@@ -4,6 +4,8 @@ namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
 use App\Appointment;
+use SmsTo;
+use Carbon\Carbon;
 use App\Http\Controllers\AppointmentController as Appointments;
 
 class AppointmentReminder extends Command
@@ -49,6 +51,7 @@ class AppointmentReminder extends Command
                             'appts' => $value
                         ];
             $this->sendMailReminder($appt_data);
+            $this->sendSMSReminder($appt_data);
         }
         $this->info('Reminders sent!');
       } catch (Exception $e) {
@@ -67,5 +70,36 @@ class AppointmentReminder extends Command
                 ->subject('Client appointment reminder');
         });
         return true;
+    }
+
+    private function sendSMSReminder($appt_data)
+    {
+        $apt = new Appointments;
+        $appointments = $apt->getAppointments();
+        $appts = $appointments->groupBy('phone');
+        foreach ($appts as $key => $value) {
+            $appt_data = [
+                            'phone' => $key,
+                            'appts' => $value
+                        ];
+        $this->send($appt_data);
+        }
+    }
+
+    private function send($appt_data)
+    {
+        $msg = 'THIS WEEK\'S APPOINTMENTS REMINDER *-* ';
+        foreach ($appt_data['appts'] as $apt) {
+            $msg .= ' CLIENT NAME: '.$apt->client->name.', APPOINTMENT TYPE: '.ucfirst($apt->type).', DATE: '.Carbon::parse($apt->appt_date)->format('l jS \of F Y').' *-* ';
+            $msg .= ' Please ensure to attend to all your appointments with the clients.';
+            }
+        $messages = [
+            [
+                'to' => $appt_data['phone'],
+                'message' => $msg
+            ],
+        ];
+
+        SmsTo::setMessages($messages)->sendSingle();
     }
 }

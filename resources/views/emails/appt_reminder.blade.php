@@ -16,7 +16,7 @@
 			<hr>
 		<tr>
 			<th>Appointment Type:</th>
-			<td>{{ $appt->type }}</td>
+			<td>{{ ucfirst($appt->type) }}</td>
 		</tr>
 		<hr>
 		<tr>

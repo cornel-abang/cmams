@@ -24,13 +24,13 @@ class AppointmentController extends Controller
                             'email' => $key,
                             'appts' => $value
                         ];
-            foreach ($appt_data['appts'] as $data) {
-                // i will then send this '$appt_data' array to the Emailing classs or SMS class
-                // and then access the email as $appt_data->email
-                // to access the various appointments, i will loop through
-                // the appts value and assign and attach the appt type and date as due 
-                dd($data->caseManager->name);
+            $msg = 'THIS WEEK\'S APPOINTMENTS REMINDER *-* ';
+            foreach ($appt_data['appts'] as $apt) {
+                $msg .= ' CLIENT NAME: '.$apt->client->name.', APPOINTMENT TYPE: '.ucfirst($apt->type).', DATE: '.Carbon::parse($apt->appt_date)->format('l jS \of F Y').' *-* ';
+                $msg .= ' Please ensure to attend to all your appointments with the clients.';
             }
+
+            dd($msg);
         }
         return view('appts.index',compact('title','appointments'));
     }
