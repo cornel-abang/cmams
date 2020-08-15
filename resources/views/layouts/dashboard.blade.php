@@ -78,7 +78,7 @@
 					    	<i class="la la-users"></i></span><span class="pcoded-mtext">Clients</span></a>
 					</li>
 					<li class="nav-item pcoded-hasmenu">
-					    <a href="#!" class="nav-link "><span class="pcoded-micon"><i class="la la-file-alt"></i></span><span class="pcoded-mtext">Report</span></a>
+					    <a href="#!" class="nav-link "><span class="pcoded-micon"><i class="la la-file-alt"></i></span><span class="pcoded-mtext">Reports</span></a>
 					    <ul class="pcoded-submenu">
 					        <li><a href="{{route('daily')}}">Daily Report</a></li>
 					        <li>
@@ -89,6 +89,14 @@
 							        <li><a href="{{route('tracking_reports')}}">View all</a></li>
 							    </ul>
 					        </li>
+					    </ul>
+					</li>
+					<li class="nav-item pcoded-hasmenu">
+					    <a href="#!" class="nav-link "><span class="pcoded-micon"><i class="la la-calendar-check-o"></i></span>
+					    	<span class="pcoded-mtext">Appointments</span></a>
+					    <ul class="pcoded-submenu">
+					        <li><a href="{{route('add-appts')}}">Add</a></li>
+					        <li><a href="{{route('appointments')}}">View all </a></li>
 					    </ul>
 					</li>
 					<li class="nav-item pcoded-menu-caption">

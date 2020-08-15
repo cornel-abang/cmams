@@ -19,6 +19,17 @@
                                     </div>
                                 </div>
                                 <div class="form-group row">
+                                    <label for="inputEmail3" class="col-sm-3 col-form-label">Email Address</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{$manager->email}}">
+                                        @if ($errors->has('email'))
+                                            <span class="invalid-feedback" role="alert">
+                                                <strong>{{ $errors->first('email') }}</strong>
+                                            </span>
+                                        @endif
+                                    </div>
+                                </div>
+                                <div class="form-group row">
                                     <div class="input-group mb-3 col-sm-12">
                                         <div class="input-group-prepend">
                                             <label class="input-group-text" for="inputGroupSelect01">Facility</label>

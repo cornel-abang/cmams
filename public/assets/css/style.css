@@ -122,6 +122,16 @@ td code{
   border-radius: 10px;
 }
 
+.appt-view{
+  margin-left: 20%;
+}
+
+.appts td{
+  color: #4680ff;
+  font-size: 9px;
+  font-weight: bold;
+}
+
 .b4{
   display: none;
 }

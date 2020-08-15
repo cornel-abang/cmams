@@ -32,6 +32,7 @@ class CaseManagerController extends Controller
     {
         $rules = [
             'name'           => ['required', 'string', 'max:190'],
+            'email'          => ['required', 'string', 'email', 'max:190'],
             'facility'       => 'required',
             'profile_photo'  => 'required'
         ];

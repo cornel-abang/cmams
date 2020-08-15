@@ -25,6 +25,7 @@ class Kernel extends ConsoleKernel
     protected function schedule(Schedule $schedule)
     {
         $schedule->command('save:daily_performance')->weekDays();
+        $schedule->command('remind:case_managers')->weekDays();
     }
 
     /**

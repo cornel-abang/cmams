@@ -371,6 +371,19 @@
     $('#suggestions').empty();
     $('#case_manager_name').val(case_manager_name);
     $('#case_manager_id').val(case_manager_id);
+    $.ajax({
+              type : "GET",
+              url : page_data.routes.verify_appt,
+              data : { id : case_manager_id, _token : page_data.csrf_token},
+              global: false,
+              success: function(res){
+                if (res.length > 0) {
+                  res.forEach(function(data){
+                    $('#appts-area').append('<td>* This case manager had a <b>'+data.type+'</b> appointment today with <b>'+data.client+'</b></td>');
+                  });
+                }
+              },
+      });
   })
 
   // Sort reports by day

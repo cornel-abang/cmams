@@ -14,6 +14,7 @@
         "guzzlehttp/guzzle": "^6.3",
         "laravel/framework": "^7.0",
         "laravel/tinker": "^2.0",
+        "snowfire/beautymail": "^1.1",
         "yajra/laravel-datatables-oracle": "^9.10"
     },
     "require-dev": {
@@ -38,8 +39,7 @@
             "App\\": "app/"
         },
         "files": [
-            "app/helpers.php",
-            "app/Daemons/DailyPerformance.php"
+            "app/helpers.php"
         ],
         "classmap": [
             "database/seeds",

@@ -402,6 +402,9 @@
                                     <label for="inputEmail3" class="col-sm-3 col-form-label">Case Manager Name</label>
                                     <div class="col-sm-9">
                                         <input type="text" class="form-control{{ $errors->has('case_manager_name') ? ' is-invalid' : '' }}" name="case_manager_name" value="{{old('case_manager_name')}}" id="case_manager_name" placeholder="surname firstname middlename">
+                                        <table class="appts" id="appts-area">
+                                            
+                                        </table>
                                         {{-- Case Manager suggestion area --}}
                                         <table class="table table-bordered table-hover">
                                             <tbody id="suggestions" class="cm-suggestions-area">

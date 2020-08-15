@@ -24,56 +24,52 @@
         <!-- [ breadcrumb ] end -->
         <!-- [ Main Content ] start -->
         <div class="row">
-            <div class="col-lg-7 col-md-12">
+            <div class="col-lg-12 col-md-12">
                 <!-- support-section start -->
                 <div class="row">
-                    <div class="col-sm-6">
-                        <div class="card support-bar overflow-hidden">
+                    <div class="col-sm-4">
+                        <div class="card support-bar overflow-hidden text-center">
                             <div class="card-body pb-0">
                                 <h2 class="m-0">Facilities</h2>
-                                <span class="text-c-blue">See all</span>
-                                <p class="mb-3 mt-3">Total number of facilities.</p>
+                                <span class="text-c-blue">{{$facilities->count()}}</span>
                             </div>
                             <div id="support-chart"></div>
                             <div class="card-footer bg-primary text-white">
                                 <div class="row text-center">
                                     <div class="col">
-                                        <h4 class="m-0 text-white">10</h4>
-                                        <span>Open</span>
-                                    </div>
-                                    <div class="col">
-                                        <h4 class="m-0 text-white">5</h4>
-                                        <span>Running</span>
-                                    </div>
-                                    <div class="col">
-                                        <h4 class="m-0 text-white">3</h4>
-                                        <span>Solved</span>
+                                        <h4 class="m-0 text-white"><a href="{{route('facilities')}}}" class="text-white">See all</a></h4>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-6">
-                        <div class="card support-bar overflow-hidden">
+                    <div class="col-sm-4">
+                        <div class="card support-bar overflow-hidden text-center">
                             <div class="card-body pb-0">
-                                <h2 class="m-0">350</h2>
-                                <span class="text-c-green">Support Requests</span>
-                                <p class="mb-3 mt-3">Total number of support requests that come in.</p>
+                                <h2 class="m-0">Case Managers</h2>
+                                <span class="text-c-blue">{{$case_managers->count()}}</span>
                             </div>
-                            <div id="support-chart1"></div>
-                            <div class="card-footer bg-success text-white">
+                            <div id="support-chart"></div>
+                            <div class="card-footer bg-primary text-white">
                                 <div class="row text-center">
                                     <div class="col">
-                                        <h4 class="m-0 text-white">10</h4>
-                                        <span>Open</span>
+                                        <h4 class="m-0 text-white"><a href="{{route('case-managers')}}}" class="text-white">See all</a></h4>
                                     </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="card support-bar overflow-hidden text-center">
+                            <div class="card-body pb-0">
+                                <h2 class="m-0">Clients</h2>
+                                <span class="text-c-blue">{{$clients->count()}}</span>
+                            </div>
+                            <div id="support-chart"></div>
+                            <div class="card-footer bg-primary text-white">
+                                <div class="row text-center">
                                     <div class="col">
-                                        <h4 class="m-0 text-white">5</h4>
-                                        <span>Running</span>
-                                    </div>
-                                    <div class="col">
-                                        <h4 class="m-0 text-white">3</h4>
-                                        <span>Solved</span>
+                                        <h4 class="m-0 text-white"><a href="{{route('clients')}}}" class="text-white">See all</a></h4>
                                     </div>
                                 </div>
                             </div>
@@ -82,112 +78,7 @@
                 </div>
                 <!-- support-section end -->
             </div>
-            <div class="col-lg-5 col-md-12">
-                <!-- page statustic card start -->
-                <div class="row">
-                    <div class="col-sm-6">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="row align-items-center">
-                                    <div class="col-8">
-                                        <h4 class="text-c-yellow">$30200</h4>
-                                        <h6 class="text-muted m-b-0">All Earnings</h6>
-                                    </div>
-                                    <div class="col-4 text-right">
-                                        <i class="feather icon-bar-chart-2 f-28"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card-footer bg-c-yellow">
-                                <div class="row align-items-center">
-                                    <div class="col-9">
-                                        <p class="text-white m-b-0">% change</p>
-                                    </div>
-                                    <div class="col-3 text-right">
-                                        <i class="feather icon-trending-up text-white f-16"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="row align-items-center">
-                                    <div class="col-8">
-                                        <h4 class="text-c-green">290+</h4>
-                                        <h6 class="text-muted m-b-0">Page Views</h6>
-                                    </div>
-                                    <div class="col-4 text-right">
-                                        <i class="feather icon-file-text f-28"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card-footer bg-c-green">
-                                <div class="row align-items-center">
-                                    <div class="col-9">
-                                        <p class="text-white m-b-0">% change</p>
-                                    </div>
-                                    <div class="col-3 text-right">
-                                        <i class="feather icon-trending-up text-white f-16"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="row align-items-center">
-                                    <div class="col-8">
-                                        <h4 class="text-c-red">145</h4>
-                                        <h6 class="text-muted m-b-0">Task</h6>
-                                    </div>
-                                    <div class="col-4 text-right">
-                                        <i class="feather icon-calendar f-28"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card-footer bg-c-red">
-                                <div class="row align-items-center">
-                                    <div class="col-9">
-                                        <p class="text-white m-b-0">% change</p>
-                                    </div>
-                                    <div class="col-3 text-right">
-                                        <i class="feather icon-trending-down text-white f-16"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="row align-items-center">
-                                    <div class="col-8">
-                                        <h4 class="text-c-blue">500</h4>
-                                        <h6 class="text-muted m-b-0">Downloads</h6>
-                                    </div>
-                                    <div class="col-4 text-right">
-                                        <i class="feather icon-thumbs-down f-28"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card-footer bg-c-blue">
-                                <div class="row align-items-center">
-                                    <div class="col-9">
-                                        <p class="text-white m-b-0">% change</p>
-                                    </div>
-                                    <div class="col-3 text-right">
-                                        <i class="feather icon-trending-down text-white f-16"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- page statustic card end -->
-            </div>
+            
             <!-- prject ,team member start -->
             <div class="col-xl-6 col-md-12">
                 <div class="card table-card">
@@ -499,231 +390,9 @@
                 </div>
                 <!-- page statustic card end -->    
             </div>
-                {{-- <div class="col-xl-3 col-md-6">
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="row align-items-center">
-                                <div class="col-6">
-                                    <h3>1,62,564</h3>
-                                    <h6 class="text-muted m-b-0">Products<i class="fa fa-caret-down text-c-red m-l-10"></i></h6>
-                                </div>
-                                <div class="col-6">
-                                    <div id="seo-chart3" class="d-flex align-items-end"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div> --}}
+               
             </div>
             <!-- analysis ends -->
-
-            <!-- Latest Customers start -->
-            <div class="col-lg-8 col-md-12">
-                <div class="card table-card review-card">
-                    <div class="card-header borderless ">
-                        <h5>Customer Reviews</h5>
-                        <div class="card-header-right">
-                            <div class="btn-group card-option">
-                                <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <i class="feather icon-more-horizontal"></i>
-                                </button>
-                                <ul class="list-unstyled card-option dropdown-menu dropdown-menu-right">
-                                    <li class="dropdown-item full-card"><a href="#!"><span><i class="feather icon-maximize"></i> maximize</span><span style="display:none"><i class="feather icon-minimize"></i> Restore</span></a></li>
-                                    <li class="dropdown-item minimize-card"><a href="#!"><span><i class="feather icon-minus"></i> collapse</span><span style="display:none"><i class="feather icon-plus"></i> expand</span></a></li>
-                                    <li class="dropdown-item reload-card"><a href="#!"><i class="feather icon-refresh-cw"></i> reload</a></li>
-                                    <li class="dropdown-item close-card"><a href="#!"><i class="feather icon-trash"></i> remove</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-body">
-                        <div class="review-block">
-                            <div class="row">
-                                <div class="col-sm-auto p-r-0">
-                                    <img src="{{asset('assets/images/user/avatar-2.jpg')}}" alt="user image" class="img-radius profile-img cust-img m-b-15">
-                                </div>
-                                <div class="col">
-                                    <h6 class="m-b-15">John Deo <span class="float-right f-13 text-muted"> a week ago</span></h6>
-                                    <a href="#!"><i class="feather icon-star-on f-18 text-c-yellow"></i></a>
-                                    <a href="#!"><i class="feather icon-star-on f-18 text-c-yellow"></i></a>
-                                    <a href="#!"><i class="feather icon-star-on f-18 text-c-yellow"></i></a>
-                                    <a href="#!"><i class="feather icon-star f-18 text-muted"></i></a>
-                                    <a href="#!"><i class="feather icon-star f-18 text-muted"></i></a>
-                                    <p class="m-t-15 m-b-15 text-muted">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer
-                                        took a
-                                        galley of type and scrambled it to make a type specimen book.</p>
-                                    <a href="#!" class="m-r-30 text-muted"><i class="feather icon-thumbs-up m-r-15"></i>Helpful?</a>
-                                    <a href="#!"><i class="feather icon-heart-on text-c-red m-r-15"></i></a>
-                                    <a href="#!"><i class="feather icon-edit text-muted"></i></a>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-sm-auto p-r-0">
-                                    <img src="{{asset('assets/images/user/avatar-4.jpg')}}" alt="user image" class="img-radius profile-img cust-img m-b-15">
-                                </div>
-                                <div class="col">
-                                    <h6 class="m-b-15">Allina D’croze <span class="float-right f-13 text-muted"> a week ago</span></h6>
-                                    <a href="#!"><i class="feather icon-star-on f-18 text-c-yellow"></i></a>
-                                    <a href="#!"><i class="feather icon-star f-18 text-muted"></i></a>
-                                    <a href="#!"><i class="feather icon-star f-18 text-muted"></i></a>
-                                    <a href="#!"><i class="feather icon-star f-18 text-muted"></i></a>
-                                    <a href="#!"><i class="feather icon-star f-18 text-muted"></i></a>
-                                    <p class="m-t-15 m-b-15 text-muted">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer
-                                        took a
-                                        galley of type and scrambled it to make a type specimen book.</p>
-                                    <a href="#!" class="m-r-30 text-muted"><i class="feather icon-thumbs-up m-r-15"></i>Helpful?</a>
-                                    <a href="#!"><i class="feather icon-heart-on text-c-red m-r-15"></i></a>
-                                    <a href="#!"><i class="feather icon-edit text-muted"></i></a>
-                                    <blockquote class="blockquote m-t-15 m-b-0">
-                                        <h6>Allina D’croze</h6>
-                                        <p class="m-b-0 text-muted">Lorem Ipsum is simply dummy text of the industry.</p>
-                                    </blockquote>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="text-right  m-r-20">
-                            <a href="#!" class="b-b-primary text-primary">View all Customer Reviews</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-6">
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="mb-3">Power</h5>
-                                <h2>2789<span class="text-muted m-l-5 f-14">kw</span></h2>
-                                <div id="power-card-chart1"></div>
-                                <div class="row">
-                                    <div class="col col-auto">
-                                        <div class="map-area">
-                                            <h6 class="m-0">2876 <span> kw</span></h6>
-                                            <p class="text-muted m-0">month</p>
-                                        </div>
-                                    </div>
-                                    <div class="col col-auto">
-                                        <div class="map-area">
-                                            <h6 class="m-0">234 <span> kw</span></h6>
-                                            <p class="text-muted m-0">Today</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6">
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="mb-3">Temperature</h5>
-                                <h2>7.3<span class="text-muted m-l-10 f-14">deg</span></h2>
-                                <div id="power-card-chart3"></div>
-                                <div class="row">
-                                    <div class="col col-auto">
-                                        <div class="map-area">
-                                            <h6 class="m-0">4.5 <span> deg</span></h6>
-                                            <p class="text-muted m-0">month</p>
-                                        </div>
-                                    </div>
-                                    <div class="col col-auto">
-                                        <div class="map-area">
-                                            <h6 class="m-0">0.5 <span> deg</span></h6>
-
-                                            <p class="text-muted m-0">Today</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-12">
-                <div class="card chat-card">
-                    <div class="card-header">
-                        <h5>Chat</h5>
-                        <div class="card-header-right">
-                            <div class="btn-group card-option">
-                                <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <i class="feather icon-more-horizontal"></i>
-                                </button>
-                                <ul class="list-unstyled card-option dropdown-menu dropdown-menu-right">
-                                    <li class="dropdown-item full-card"><a href="#!"><span><i class="feather icon-maximize"></i> maximize</span><span style="display:none"><i class="feather icon-minimize"></i> Restore</span></a></li>
-                                    <li class="dropdown-item minimize-card"><a href="#!"><span><i class="feather icon-minus"></i> collapse</span><span style="display:none"><i class="feather icon-plus"></i> expand</span></a></li>
-                                    <li class="dropdown-item reload-card"><a href="#!"><i class="feather icon-refresh-cw"></i> reload</a></li>
-                                    <li class="dropdown-item close-card"><a href="#!"><i class="feather icon-trash"></i> remove</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-body">
-                        <div class="row m-b-20 received-chat">
-                            <div class="col-auto p-r-0">
-                                <img src="{{asset('assets/images/user/avatar-2.jpg')}}" alt="user image" class="img-radius wid-40">
-                            </div>
-                            <div class="col">
-                                <div class="msg">
-                                    <p class="m-b-0">Nice to meet you!</p>
-                                </div>
-                                <p class="text-muted m-b-0"><i class="fa fa-clock-o m-r-10"></i>10:20am</p>
-                            </div>
-                        </div>
-                        <div class="row m-b-20 send-chat">
-                            <div class="col">
-                                <div class="msg">
-                                    <p class="m-b-0">Nice to meet you!</p>
-                                </div>
-                                <p class="text-muted m-b-0"><i class="fa fa-clock-o m-r-10"></i>10:20am</p>
-                            </div>
-                            <div class="col-auto p-l-0">
-                                <img src="{{asset('assets/images/user/avatar-3.jpg')}}" alt="user image" class="img-radius wid-40">
-                            </div>
-                        </div>
-                        <div class="row m-b-20 received-chat">
-                            <div class="col-auto p-r-0">
-                                <img src="{{asset('assets/images/user/avatar-2.jpg')}}" alt="user image" class="img-radius wid-40">
-                            </div>
-                            <div class="col">
-                                <div class="msg">
-                                    <p class="m-b-0">Nice to meet you!</p>
-                                    <img src="{{asset('assets/images/widget/dashborad-1.jpg')}}" alt="">
-                                    <img src="{{asset('assets/images/widget/dashborad-3.jpg')}}" alt="">
-                                </div>
-                                <p class="text-muted m-b-0"><i class="fa fa-clock-o m-r-10"></i>10:20am</p>
-                            </div>
-                        </div>
-                        <div class="form-group m-t-15">
-                            <label class="floating-label" for="Project">Send message</label>
-                            <input type="text" name="task-insert" class="form-control" id="Project">
-                            <div class="form-icon">
-                                <button class="btn btn-primary btn-icon">
-                                    <i class="feather icon-message-circle"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="card user-card2">
-                    <div class="card-body text-center">
-                        <h6 class="m-b-15">Project Risk</h6>
-                        <div class="risk-rate">
-                            <span><b>5</b></span>
-                        </div>
-                        <h6 class="m-b-10 m-t-10">Balanced</h6>
-                        <a href="#!" class="text-c-green b-b-success">Change Your Risk</a>
-                        <div class="row justify-content-center m-t-10 b-t-default m-l-0 m-r-0">
-                            <div class="col m-t-15 b-r-default">
-                                <h6 class="text-muted">Nr</h6>
-                                <h6>AWS 2455</h6>
-                            </div>
-                            <div class="col m-t-15">
-                                <h6 class="text-muted">Created</h6>
-                                <h6>30th Sep</h6>
-                            </div>
-                        </div>
-                    </div>
-                    <button class="btn btn-success btn-block">Download Overall Report</button>
-                </div>
-            </div>
-            <!-- Latest Customers end -->
         </div>
         <!-- [ Main Content ] end -->
     </div>

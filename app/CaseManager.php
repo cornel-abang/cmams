@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class CaseManager extends Model
 {
-    protected $fillable =['name','facility_id','profile_photo'];
+    protected $fillable =['name','facility_id','profile_photo','email'];
 
     public function facility()
     {
@@ -26,5 +26,10 @@ class CaseManager extends Model
     public function performance()
     {
         return $this->hasMany(Performance::class);
+    }
+
+    public function appointments()
+    {
+        return $this->hasMany(Appointment::class,'email','email');
     }
 }

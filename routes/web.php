@@ -83,4 +83,11 @@ Route::group(['middleware'=>'auth:web'], function(){
 		Route::post('{id}/edit', 'TrackingController@update');
 		Route::post('destroy_tracking', 'TrackingController@destroy')->name('destroy_tracking');
 	});
+
+	Route::group(['prefix'=>'appointments'], function(){
+		Route::get('add', 'AppointmentController@create')->name('add-appts');
+		Route::post('add', 'AppointmentController@store');
+		Route::get('/', 'AppointmentController@index')->name('appointments');
+		Route::get('verify_appt/{cm_id}', 'AppointmentController@verifyAppt')->name('verify_appt');
+	});
 });
