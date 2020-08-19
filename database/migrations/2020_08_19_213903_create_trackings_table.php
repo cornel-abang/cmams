@@ -20,7 +20,7 @@ class CreateTrackingsTable extends Migration
             $table->string('method');
             $table->string('evidence');
             $table->timestamps();
-            $table->foreign('client_id')->references('id')->on('clients')->onDelete('cascade')->onUpdate('no action');
+            $table->foreign('client_id')->references('id')->on('clients')->onDelete('no action')->onUpdate('no action');
             $table->foreign('case_manager_id')->references('id')->on('case_managers')->onDelete('cascade')->onUpdate('no action');
         });
     }

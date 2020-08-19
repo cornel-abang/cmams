@@ -15,10 +15,13 @@ class CreateCaseManagersTable extends Migration
     {
         Schema::create('case_managers', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
             $table->unsignedBigInteger('facility_id');
+            $table->string('name');
+            $table->string('email');
+            $table->string('phone');
             $table->string('profile_photo');
             $table->timestamps();
+            $table->unique('email');
             $table->foreign('facility_id')->references('id')->on('facilities');
         });
     }

@@ -18,20 +18,20 @@ class AppointmentController extends Controller
     {
         $title = 'This week\'s case manager appointments';
         $appointments = $this->getAppointments();
-        $appts = $appointments->groupBy('email');
-        foreach ($appts as $key => $value) {
-            $appt_data = [
-                            'email' => $key,
-                            'appts' => $value
-                        ];
-            $msg = 'THIS WEEK\'S APPOINTMENTS REMINDER *-* ';
-            foreach ($appt_data['appts'] as $apt) {
-                $msg .= ' CLIENT NAME: '.$apt->client->name.', APPOINTMENT TYPE: '.ucfirst($apt->type).', DATE: '.Carbon::parse($apt->appt_date)->format('l jS \of F Y').' *-* ';
-                $msg .= ' Please ensure to attend to all your appointments with the clients.';
-            }
+        // $appts = $appointments->groupBy('email');
+        // foreach ($appts as $key => $value) {
+        //     $appt_data = [
+        //                     'email' => $key,
+        //                     'appts' => $value
+        //                 ];
+        //     $msg = 'THIS WEEK\'S APPOINTMENTS REMINDER *-* ';
+        //     foreach ($appt_data['appts'] as $apt) {
+        //         $msg .= ' CLIENT NAME: '.$apt->client->name.', APPOINTMENT TYPE: '.ucfirst($apt->type).', DATE: '.Carbon::parse($apt->appt_date)->format('l jS \of F Y').' *-* ';
+        //         $msg .= ' Please ensure to attend to all your appointments with the clients.';
+        //     }
 
-            dd($msg);
-        }
+        //     dd($msg);
+        // }
         return view('appts.index',compact('title','appointments'));
     }
 

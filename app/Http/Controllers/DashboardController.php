@@ -178,4 +178,5 @@ class DashboardController extends Controller
         $performances = collect($results)->sortKeys();
         return $performances;
     }
+
 }

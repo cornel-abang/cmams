@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class CaseManager extends Model
 {
-    protected $fillable =['name','facility_id','profile_photo','email'];
+    protected $fillable =['name','facility_id','profile_photo','email','phone'];
 
     public function facility()
     {

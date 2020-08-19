@@ -24,6 +24,7 @@ class CreateClientsTable extends Migration
             $table->string('address');
             $table->string('status');
             $table->timestamps();
+            $table->unique('clientID');
             $table->foreign('facility_id')->references('id')->on('facilities');
             $table->foreign('case_manager_id')->references('id')->on('case_managers');
         });

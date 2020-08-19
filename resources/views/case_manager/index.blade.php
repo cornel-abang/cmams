@@ -4,6 +4,8 @@
     <script src="{{asset('assets/js/sweetalert2.js')}}" defer></script>
 @endsection
 
+
+
 <!-- [ stiped-table ] start -->
             <div class="col-xl-12">
                 <div class="card">
@@ -156,6 +158,17 @@
                                         @if ($errors->has('email'))
                                             <span class="invalid-feedback" role="alert">
                                                 <strong>{{ $errors->first('email') }}</strong>
+                                            </span>
+                                        @endif
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="inputEmail3" class="col-sm-3 col-form-label">Phone Number</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control{{ $errors->has('phone') ? ' is-invalid' : '' }}" name="phone" value="{{old('phone')}}">
+                                        @if ($errors->has('phone'))
+                                            <span class="invalid-feedback" role="alert">
+                                                <strong>{{ $errors->first('phone') }}</strong>
                                             </span>
                                         @endif
                                     </div>

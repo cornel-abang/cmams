@@ -20,7 +20,7 @@ class CreateAppointmentsTable extends Migration
             $table->string('type');
             $table->date('appt_date');
             $table->timestamps();
-            $table->foreign('clientID')->references('clientID')->on('clients')->onDelete('cascade')->onUpdate('no action');
+            $table->foreign('clientID')->references('clientID')->on('clients')->onDelete('no action')->onUpdate('no action');
             $table->foreign('email')->references('email')->on('case_managers')->onDelete('cascade')->onUpdate('no action');
         });
     }

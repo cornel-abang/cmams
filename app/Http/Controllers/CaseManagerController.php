@@ -33,8 +33,9 @@ class CaseManagerController extends Controller
         $rules = [
             'name'           => ['required', 'string', 'max:190'],
             'email'          => ['required', 'string', 'email', 'max:190'],
+            'phone'          => ['required', 'digits:11'],
             'facility'       => 'required',
-            'profile_photo'  => 'required'
+            'profile_photo'  => ['mimes: jpeg, jpg, png']
         ];
 
         $validator = validator()->make($request->all(), $rules);
@@ -93,6 +94,14 @@ class CaseManagerController extends Controller
      */
     public function update(Request $request, $id)
     {
+         $rules = [
+            'name'           => ['required', 'string', 'max:190'],
+            'email'          => ['required', 'string', 'email', 'max:190'],
+            'phone'          => ['required', 'digits:11'],
+            'facility'       => 'required',
+            'profile_photo'  => ['mimes: jpeg, jpg, png']
+        ];
+        $this->validate($request, $rules);
         $manager = CaseManager::find($id);
         if ($request->hasFile('profile_photo')) {
                 if ($file = $request->file('profile_photo')) {
