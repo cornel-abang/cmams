@@ -281,6 +281,10 @@ label{
   background: rgb(255, 255, 255, .8) url('../images/loading.gif') 50% 50% no-repeat;
 }
 
+.logout-area{
+  margin-top: 30%;
+}
+
 /*leaderboard loader*/
 .busy{
   position: absolute;

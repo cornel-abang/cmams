@@ -15,10 +15,16 @@ class UserController extends Controller
     {
         if (auth()->attempt(['email'=>$request->email, 
                            'password'=>$request->password])) {
-            return redirect(route('dashboard'));
-            // return redirect()->intended(); 
+            // return redirect(route('dashboard'));
+            return redirect()->intended(); 
         }
         return redirect()->back()->with('error','Incorrect Login Credentials');
+    }
+
+    public function logout()
+    {
+        auth()->logout();
+        return redirect()->route('login')->with('success','Logged out!');
     }
     /**
      * Display a listing of the resource.
