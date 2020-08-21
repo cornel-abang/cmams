@@ -9,7 +9,7 @@
                 <div class="card">
                     <div class="card-header">
                         <h5>Registered Facilities</h5>
-                        <span class="d-block m-t-5">There are a total of <b><code>{{$facilities->count()}}</code></b> facilities registered</span>
+                        <span class="d-block m-t-5">There are a total of <b><code>{{ $facilities->count() }}</code></b> facilities registered</span>
                         <button type="button" class="btn btn-info btn-sm add-btn" data-toggle="modal" data-target="#add-facility-form">
                             <i class="la la-plus-circle"></i> Add Facility</button>
                     </div>

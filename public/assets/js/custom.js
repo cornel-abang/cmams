@@ -68,6 +68,7 @@
 		$(this).parent('div').fadeOut(500);
 	});
 
+// toggle to bottom 4 performers
   $(document).on('click','#btm-4-nav', function(e){
     e.preventDefault();
     let that = $(this);
@@ -89,7 +90,7 @@
       });
     },3000);
   });
-
+// toggle to top4 performers
    $(document).on('click','#top-4-nav', function(e){
     e.preventDefault();
     let that = $(this);

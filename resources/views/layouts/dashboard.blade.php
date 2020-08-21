@@ -42,7 +42,7 @@
 				
 				<div class="">
 					<div class="main-menu-header">
-						<img class="img-radius" src="{{asset('assets/images/user/avatar-2.jpg')}}" alt="cmams-logo">
+						<img class="img-radius" src="{{asset('assets/images/logo.png')}}" alt="cmams-logo">
 						<div class="user-details">
 							<div id="more-details">FHI360 - CMAMS </div>
 						</div>
