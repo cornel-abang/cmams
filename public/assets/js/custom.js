@@ -349,6 +349,7 @@
   $(document).on('keyup', '#case_manager_name', function(){
     var suggestions_area = $('#suggestions');
     $(suggestions_area).empty();
+    $('#appts-area').empty();
     var case_mg_name = $(this).val();
     if (case_mg_name !== '') {
       $.ajax({
@@ -502,6 +503,7 @@
       resetClientInfo(userInfo);
       var clientID = $(this).val();
       if (clientID !== '') {
+        $('.loading-img').css('display','inline');
         $.ajax({
           type: "GET",
           url: page_data.routes.find_client_for_tracking,
@@ -527,7 +529,6 @@
    });
 
    function resetClientInfo(userInfo){
-    $('.loading-img').css('display','inline');
     $(userInfo).removeClass('la-user-alt-slash');
     $(userInfo).text('');
     $('#client_id').val('');
@@ -628,10 +629,13 @@
     $(wrapper).addClass('trigger');
    }
 
+   //view tracking photo evidence modal
    $(document).on('click','#view-evid-img',function(){
     let img = $(this).data('img');
+    let case_manager_name = $(this).data('cm-name');
     let displayModal = $('#evidence-view');
     let displayArea = $('#evidence-img-display');
+    $('#cm_name').text(case_manager_name);
     $(displayArea).attr('src',img);
     $(displayModal).modal('show');
    });

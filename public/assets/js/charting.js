@@ -1,10 +1,11 @@
 "use strict";
-	// Initialize and send a promise
-	let options = {method:"GET",headers:{'X-CSRF-TOKEN':page_data.csrf_token,'Content-Type':'application/json'}}
-	JSC.fetch(page_data.routes.get_refill_data,options)
-	.then((response) => response.json())
-	.then((res) => renderChart(res))
-	.catch((error)=> alert("something went wrong with the Chart - "+error));
+	// Initialize fetch data and send to return a promise
+	const options = {method:"GET",headers:{'X-CSRF-TOKEN':page_data.csrf_token,'Content-Type':'application/json'}};
+	let url = page_data.routes.get_refill_data;
+	JSC.fetch(url,options)
+	.then(response => response.json())
+	.then(response => renderChart(response))
+	.catch(error => alert("something went wrong with the Chart - <b>"+error+"</b>"));
 
 	function renderChart(data){
 		let series = buildSeries(data);

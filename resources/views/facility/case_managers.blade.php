@@ -34,8 +34,8 @@
                                         <td>{{$case_mg->id}}</td>
                                         <td>{{$case_mg->name}}</td>
                                         <td>{{$case_mg->facility->name}}</td>
-                                        <td>0</td>
-                                        <td>0%</td>
+                                        <td>{{ $case_mg->clients->count() }}</td>
+                                        <td>{{ cm_performance($case_mg) }}%</td>
                                         <td>
                                             <div class="row">
                                                 <div class="col-md-4">
@@ -50,8 +50,7 @@
                                                 </span>
                                                 </div>
                                                 <div class="col-md-4">
-                                                    <button type="button" id="{{$case_mg->id}}" class="btn btn-danger btn-sm delete-btn-cm" data-toggle="tooltip" title="Delete case manager" 
-                                                        aria-data="{{route('destroy_manager')}}"><i class="la la-trash"></i>
+                                                    <button type="button" id="{{$case_mg->id}}" class="btn btn-danger btn-sm delete-btn-cm" data-toggle="tooltip" title="Delete case manager"><i class="la la-trash"></i>
                                                     </button>
                                                 </div>
                                             </div>
@@ -94,11 +93,11 @@
                                         </tr>
                                         <tr>
                                             <th>No. of Clients</th>
-                                            <td>0</td>
+                                            <td>{{ $case_mg->clients->count() }}</td>
                                         </tr>
                                         <tr>
                                             <th>Avg. Performamce</th>
-                                            <td>0%</td>
+                                            <td>{{ cm_performance($case_mg) }}%</td>
                                         </tr>
                                     </table>
                                 </div>

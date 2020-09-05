@@ -10,7 +10,7 @@
                     <div class="card-header">
                         <h5>Tracking Reports</h5>
                         <span class="d-block m-t-5">There are a total of <b><code>{{$trackings->count()}}</code></b> tracking report(s) found on the system</span>
-                        <button type="button" class="btn btn-info btn-sm add-btn"><i class="la la-plus-circle"></i> Add report</button>
+                        <button type="button" class="btn btn-info btn-sm add-btn" onclick="window.location.href='{{route('add')}}'"><i class="la la-plus-circle"></i> Add report</button>
                     </div>
                     <div class="card-body table-border-style">
                         <div class="table-responsive">
@@ -55,7 +55,7 @@
                                                     @elseif($extension == 'jpg')
                                                     <div class="col-md-4">
                                                         <button type="button" class="btn btn-secondary btn-sm" data-toggle="tooltip" 
-                                                            title="View evidence" id="view-evid-img" data-img="{{asset('assets/evidences/'.$tr->evidence)}}"><i class="la la-eye"></i>
+                                                            title="View evidence" id="view-evid-img" data-img="{{asset('assets/evidences/'.$tr->evidence)}}" data-cm-name="{{$tr->caseManager->name}}"><i class="la la-eye"></i>
                                                             </button>
                                                     </div>
                                                 @endif
@@ -95,7 +95,7 @@
           <div class="modal-dialog" role="document">
             <div class="modal-content">
               <div class="modal-header">
-                <h4 class="modal-title tracking_view_header" id="exampleModalLabel">
+                <h4 class="modal-title " id="exampleModalLabel">
                     Tracking report: <br>
                     <i class="la la-user"></i> <span class="styled-header">{{$tr->caseManager->name}}</span> 
                 </h4>
@@ -115,7 +115,7 @@
                                         </tr>
                                         <tr>
                                             <th>Client ID</th>
-                                            <td>{{ $tr->client->clientID}}</td>
+                                            <td>{{ $tr->client->clientID}} - {{ $tr->client->name}}</td>
                                         </tr>
                                         <tr>
                                             <th>Phone Number</th>
@@ -153,7 +153,7 @@
                 </button>
                 <img src="" class="img-fluid img-thumbnail" id="evidence-img-display">
                 <h4 class="tr_img_view">
-                    By: <span class="styled-header">{{$tr->caseManager->name}}  <br><i class="badge badge-pill badge-primary cm_tag_track_view">Case Manager</i></span> 
+                    By:<span id="cm_name"></span> <span class="styled-header">  <br><i class="badge badge-pill badge-primary cm_tag_track_view">Case Manager</i></span> 
                 </h4>
             </div>
           </div>

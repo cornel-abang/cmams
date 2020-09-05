@@ -58,8 +58,8 @@ td code{
 }
 
 .report_view_title{
-  margin-left: 25%;
-  text-align: center;
+  /*margin-left: 25%;
+  text-align: center;*/
 }
 
 .jumbotron{
@@ -144,12 +144,17 @@ td code{
   display: none;
 }
 
-.view-title{
-  margin-left: 25% !important;
+.modal-header{
+  text-align: center;
 }
 
-.cm_view-title{
+/*.view-title{
   margin-left: 20% !important;
+  text-align: center;
+}*/
+
+.cm_view-title{
+  /*margin-left: 20% !important;*/
 }
 
 .reg-btn-case-mg{
@@ -175,7 +180,7 @@ td code{
 }
 
 .client_view_title{
-  margin-left: 20%;
+  /*margin-left: 20%;*/
 }
 
 .cm-suggestions-area{
@@ -235,13 +240,15 @@ td code{
 .tr_img_view{
   text-align: center;
   margin-left: 75% !important;
-  font-size: 8px !important;
+  font-size: 10px !important;
+  font-weight: bold;
 }
 
 .cm_tag_track_view{
-  font-size: 6px !important;
-  font-weight: bold;
+  font-size: 8px !important;
+  font-weight: bolder;
 }
+
 
 .no-match{
   display: none;
@@ -6567,8 +6574,9 @@ a.close.disabled {
 
 .modal-header {
     display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
+    flex-direction: column;
+    /*align-items: center;
+    justify-content: space-between;*/
     padding: 20px 20px;
     border-bottom: 1px solid #e3eaef;
     border-top-left-radius: calc(0.3rem - 1px);

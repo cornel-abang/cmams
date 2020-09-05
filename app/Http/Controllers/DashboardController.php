@@ -23,7 +23,7 @@ class DashboardController extends Controller
                             ->whereBetween('created_at', [
                             Carbon::now()->startOfWeek(), 
                             Carbon::now()->endOfWeek()
-                        ])->take(4)->get();
+                        ])->take(5)->get();
         // Group data by case_manager_id so that all similar ids(same case manager)
         // belong together
         $performances = $perf_collection->groupBy('case_manager_id');

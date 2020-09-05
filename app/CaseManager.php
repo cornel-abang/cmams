@@ -23,7 +23,7 @@ class CaseManager extends Model
     	return $this->hasMany(Report::class);
     }
 
-    public function performance()
+    public function performances()
     {
         return $this->hasMany(Performance::class);
     }

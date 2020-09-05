@@ -27,51 +27,33 @@
             <div class="col-lg-12 col-md-12">
                 <!-- support-section start -->
                 <div class="row">
-                    <div class="col-sm-4">
-                        <div class="card support-bar overflow-hidden text-center">
-                            <div class="card-body pb-0">
-                                <h2 class="m-0">Facilities</h2>
-                                <span class="text-c-blue">{{$facilities->count()}}</span>
-                            </div>
-                            <div id="support-chart"></div>
-                            <div class="card-footer bg-primary text-white">
-                                <div class="row text-center">
-                                    <div class="col">
-                                        <h4 class="m-0 text-white"><a href="{{route('facilities')}}}" class="text-white">See all</a></h4>
-                                    </div>
-                                </div>
+                    <div class="col-sm-12 col-md-4">
+                        <hr>
+                        <div class="card text-center">
+                            <div class="card-body">
+                                <h3 class="card-title">Facilities</h3>
+                                <p class="card-text"><h3 class="card-title">{{$facilities->count()}}</h3></p>
+                                <a href="{{ route('facilities') }}" class="btn  btn-primary">See all</a>
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-4">
-                        <div class="card support-bar overflow-hidden text-center">
-                            <div class="card-body pb-0">
-                                <h2 class="m-0">Case Managers</h2>
-                                <span class="text-c-blue">{{$case_managers->count()}}</span>
-                            </div>
-                            <div id="support-chart"></div>
-                            <div class="card-footer bg-primary text-white">
-                                <div class="row text-center">
-                                    <div class="col">
-                                        <h4 class="m-0 text-white"><a href="{{route('case-managers')}}}" class="text-white">See all</a></h4>
-                                    </div>
-                                </div>
+                     <div class="col-sm-12 col-md-4">
+                        <hr>
+                        <div class="card text-center">
+                            <div class="card-body">
+                                <h3 class="card-title">Case Managers</h3>
+                                <p class="card-text"><h3 class="card-title">{{$case_managers->count()}}</h3></p>
+                                <a href="{{ route('case-managers') }}" class="btn  btn-primary">See all</a>
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-4">
-                        <div class="card support-bar overflow-hidden text-center">
-                            <div class="card-body pb-0">
-                                <h2 class="m-0">Clients</h2>
-                                <span class="text-c-blue">{{$clients->count()}}</span>
-                            </div>
-                            <div id="support-chart"></div>
-                            <div class="card-footer bg-primary text-white">
-                                <div class="row text-center">
-                                    <div class="col">
-                                        <h4 class="m-0 text-white"><a href="{{route('clients')}}}" class="text-white">See all</a></h4>
-                                    </div>
-                                </div>
+                     <div class="col-sm-12 col-md-4">
+                        <hr>
+                        <div class="card text-center">
+                            <div class="card-body">
+                                <h3 class="card-title">Clients</h3>
+                                <p class="card-text"><h3 class="card-title">{{$clients->count()}}</h3></p>
+                                <a href="{{ route('clients') }}" class="btn  btn-primary">See all</a>
                             </div>
                         </div>
                     </div>
@@ -104,7 +86,7 @@
                                     <tr>
                                         <th>Name</th>
                                         <th>Facility</th>
-                                        <th class="text-right">Score</th>
+                                        <th class="text-right">Score (%)</th>
                                     </tr>
                                 </thead>
                                 <tbody id="top4">
@@ -228,7 +210,7 @@
                                         <h6 class="text-muted m-b-0">Refill</h6>
                                     </div>
                                     <div class="col-4 text-right">
-                                        <i class="la la-pills f-28"></i>
+                                        <i class="fa fa-pills f-28"></i>
                                     </div>
                                 </div>
                             </div>
@@ -284,7 +266,7 @@
                                         <h6 class="text-muted m-b-0">ICT</h6>
                                     </div>
                                     <div class="col-4 text-right">
-                                        <i class="la la-user-friends f-28"></i>
+                                        <i class="fa fa-user-friends f-28"></i>
                                     </div>
                                 </div>
                             </div>

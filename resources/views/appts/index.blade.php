@@ -62,7 +62,7 @@
           <div class="modal-dialog" role="document">
             <div class="modal-content">
               <div class="modal-header">
-                <h4 class="modal-title appt-view" id="exampleModalLabel">
+                <h4 class="modal-title" id="exampleModalLabel">
                     <i class="la la-calendar-check-o"></i> {{ ucfirst($appt->type) }} appointment 
                 </h4>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -85,7 +85,10 @@
                                         </tr>
                                         <tr>
                                             <th>Client involved:</th>
-                                            <td>{{ $appt->client->name }}</td>
+                                            <td>
+                                                {{ $appt->client->name }} 
+                                                <span class="badge-pill badge-info">{{ $appt->client->status }}</span>
+                                            </td>
                                         </tr>
                                     </table>
                                 </div>

@@ -55,6 +55,11 @@
 					</li>
 
 					<li class="nav-item">
+					    <a href="{{route('dashboard')}}" class="nav-link "><span class="pcoded-micon">
+					    	<i class="la la-dashboard"></i></span><span class="pcoded-mtext">Dashboard</span></a>
+					</li>
+
+					<li class="nav-item">
 					    <a href="{{route('facilities')}}" class="nav-link "><span class="pcoded-micon">
 					    	<i class="la la-hospital"></i></span><span class="pcoded-mtext">Facilities</span></a>
 					</li>

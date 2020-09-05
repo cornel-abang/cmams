@@ -32,7 +32,7 @@ class AppointmentController extends Controller
 
         //     dd($msg);
         // }
-        return view('appts.index',compact('title','appointments'));
+        return view('appts.index',compact('title','appointments')); 
     }
 
      /**
@@ -66,13 +66,6 @@ class AppointmentController extends Controller
      */
     public function create()
     {
-        // $appts = Appointment::all();
-        // $apt = $appts->groupBy('email');
-        // foreach ($apt as $a) {
-        //     foreach ($a as $x) {
-        //         dd($x->caseManager);
-        //     }
-        // }
         $title = 'Add appointments';
         return view('appts.add',compact('title'));
     }

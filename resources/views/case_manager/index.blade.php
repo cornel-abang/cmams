@@ -45,7 +45,7 @@
                                                 {{$case_mg->clients->count()}}
                                             @endif
                                         </td>
-                                        <td>0%</td>
+                                        <td>{{ cm_performance($case_mg) }}%</td>
                                         <td>
                                             <div class="row">
                                                 <div class="col-md-4">
@@ -98,16 +98,24 @@
                                 <div class="card-body">
                                     <table class="table table-bordered table-striped">
                                         <tr>
+                                            <th>Email Address</th>
+                                            <td>{{ $case_mg->email }}</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Phone No.</th>
+                                            <td>{{ $case_mg->phone }}</td>
+                                        </tr>
+                                        <tr>
                                             <th>Facility</th>
                                             <td>{{ $case_mg->facility->name }}</td>
                                         </tr>
                                         <tr>
                                             <th>No. of Clients</th>
-                                            <td>0</td>
+                                            <td>{{ $case_mg->clients->count() }}</td>
                                         </tr>
                                         <tr>
                                             <th>Avg. Performamce</th>
-                                            <td>0%</td>
+                                            <td>{{ cm_performance($case_mg) }}%</td>
                                         </tr>
                                     </table>
                                 </div>

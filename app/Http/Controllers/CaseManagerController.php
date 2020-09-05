@@ -35,7 +35,7 @@ class CaseManagerController extends Controller
             'email'          => ['required', 'string', 'email', 'max:190'],
             'phone'          => ['required', 'digits:11'],
             'facility'       => 'required',
-            'profile_photo'  => ['mimes: jpeg, jpg, png']
+            'profile_photo'  => 'required'
         ];
 
         $validator = validator()->make($request->all(), $rules);
@@ -48,9 +48,11 @@ class CaseManagerController extends Controller
             $storagePath = public_path('/assets/images/uploads/');
             if ($file->move($storagePath, $name)) {
                 $data = [
-                 'name'=>$request->name, 
-                 'facility_id'=>$request->facility, 
-                 'profile_photo'=>$name
+                 'name'             =>$request->name, 
+                 'facility_id'      =>$request->facility, 
+                 'profile_photo'    =>$name,
+                 'email'            => $request->email,
+                 'phone'            => $request->phone
                 ];
                 CaseManager::create($data);
                 return redirect(route('case-managers'))->with('success', 'Case Manager successfully registered');

@@ -65,8 +65,8 @@
                                     <div class="col-sm-10">
                                         {{-- Loading button --}}
                                         <button class="btn  btn-primary m-2 load-btn" type="button" disabled>
-                                            <span class="spinner-grow spinner-grow-sm" role="status"></span>
-                                            Loading...
+                                            <span class="spinner-border spinner-border-sm" role="status"></span>
+                                            Saving...
                                         </button>
                                         {{-- Loading btn ends --}}
                                         <button type="submit" class="btn  btn-primary reg-btn">Save</button>

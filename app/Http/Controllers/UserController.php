@@ -15,8 +15,8 @@ class UserController extends Controller
     {
         if (auth()->attempt(['email'=>$request->email, 
                            'password'=>$request->password])) {
-            return redirect(route('dashboard'));
-            // return redirect()->intended(); 
+            // return redirect(route('dashboard'));
+            return redirect()->intended(); 
         }
         return redirect()->back()->with('error','Incorrect Login Credentials');
     }

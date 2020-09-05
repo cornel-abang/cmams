@@ -267,7 +267,7 @@
               <div class="modal-header">
                 <h4 class="modal-title report_view_title" id="exampleModalLabel">
                     <i class="la la-file-alt"></i> Report by <br><span class="styled-header">{{$report->caseManager->name}}</span> 
-                </h4><span class="badge badge-pill badge-info client-status"> {{$report->tag === 'on' ? 'featured':''}}</span>
+                </h4>{!! $report->tag === 'on' ? '<span class="badge badge-pill badge-info client-status">Featured</span>':'' !!}
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span>
                 </button>
@@ -388,7 +388,7 @@
               <div class="modal-dialog" role="document">
                 <div class="modal-content">
                   <div class="modal-header">
-                    <h4 class="modal-title add-report-title" id="exampleModalLabel">Add Report </h4>
+                    <h4 class="modal-title " id="exampleModalLabel">Add Report </h4>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                       <span aria-hidden="true">&times;</span>
                     </button>
