@@ -66,6 +66,7 @@ class ReportController extends Controller
             'ict_numo'              => ['required', 'integer'],
             'tpt_numo'              => ['required', 'integer'],
             'tpt_deno'              => ['required', 'integer'],
+            'comment'               => ['string', 'max:300']
         ];
 
         $validator = validator()->make($request->all(), $rules);

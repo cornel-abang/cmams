@@ -37,10 +37,10 @@
                                         <td>{{$tr->client->opc_phone}}</td>
                                         <td>
                                             @php
-                                            $extension = pathinfo(asset('assets/evidences/'.$tr->evidence), PATHINFO_EXTENSION)
+                                            $extension = pathinfo(asset('assets/evidences/'.$tr->evidence), PATHINFO_EXTENSION);
                                             @endphp
                                                 <div class="row">
-                                                 @if($extension == 'mp3' || $extension == 'wav')
+                                                 @if($extension == 'mp3' || $extension == 'wav' || $extension == 'mp4')
                                                     <div class="col-md-4">
                                                         <button type="button" class="btn btn-warning btn-sm" data-toggle="tooltip" 
                                                                 title="Play evidence" id="play-evid" data-id="{{$tr->id}}"><i class="la la-play-circle"></i>

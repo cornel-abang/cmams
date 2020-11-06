@@ -31,7 +31,91 @@ class ClientController extends Controller
      */
     public function store(Request $request)
     {
-        $rules = [
+        //check if a bulk option (csv file upload) was choosen or single option
+        //verify and upload in both cases
+        list($validator, $msg) = $request->hasFile('bulk-client') ? $this->verifyUploadCSV($request) : $this->verifyUploadSingle($request);
+
+        if ($validator->fails()){
+            session()->flash('client_reg_valid_fail', [
+                'failed'    => true,
+                'msg'       => $msg
+            ]);
+            return redirect()->back()->withInput($request->input())->withErrors($validator);
+        }
+
+        return redirect(route('clients'))->with('success', $msg);
+    }
+    // public function tore(Request $request)
+    // {
+    //     $rules = [
+    //         'name'          => ['required', 'string', 'max:190'],
+    //         'clientID'      => ['required', 'digits:7','unique:clients'],
+    //         'phone'         => ['required','digits:11'],
+    //         'address'       => ['required', 'string'],
+    //         'facility'      => 'required',
+    //         'case_manager'  => 'required',
+    //         'status'        => 'required'
+    //     ];
+
+    //     $validator = validator()->make($request->all(), $rules);
+
+    //     if ($validator->fails()){
+    //         session()->flash('client_reg_valid_fail', true);
+    //         return redirect()->back()->withInput($request->input())->withErrors($validator);
+    //     }
+    //     $data = [
+    //              'name'             =>$request->name, 
+    //              'facility_id'      =>$request->facility, 
+    //              'clientID'         =>$request->clientID,
+    //              'phone'            =>$request->phone,
+    //              'opc_phone'        =>isset($request->opc_phone)?$request->opc_phone:'none',
+    //              'address'          =>$request->address,
+    //              'facility_id'      =>$request->facility,
+    //              'case_manager_id'  =>$request->case_manager,
+    //              'status'           =>$request->status
+    //             ];
+    //     Client::create($data);
+    //     return redirect(route('clients'))->with('success', 'Client successfully registered');
+    // }
+
+     public function findCaseManager(Request $request)
+    {
+        $case_managers = CaseManager::where('facility_id',$request->id)->get();
+        if ($case_managers) {
+            return ['status'=>true, 'managers'=>$case_managers];
+        }
+
+        return ['status'=>false];
+    }
+
+    private function verifyUploadCSV(Request $request)
+    {
+        $rules = ['bulk-client' => ['required','mimes:csv,txt'] ];
+        $validator = validator()->make($request->all(), $rules);
+
+        if ($validator->fails()) {
+            //return validator with fail
+            $msg = 'csv failed';
+            return array($validator, $msg);
+        }
+
+        $file = $request->file('bulk-client');
+        // my custom global helper.php function
+        $client_array = csvToArray($file);
+        
+        for($i = 0; $i < count($client_array); $i++){
+            Client::firstOrCreate($client_array[$i]);
+        }
+
+        //return $validator still, but without fail
+        $msg = 'All clients fom CSV file successfully registered';
+        return array($validator, $msg);
+    }
+
+    // upload single client
+    private function verifyUploadSingle(Request $request)
+    {
+         $rules = [
             'name'          => ['required', 'string', 'max:190'],
             'clientID'      => ['required', 'digits:7','unique:clients'],
             'phone'         => ['required','digits:11'],
@@ -40,12 +124,12 @@ class ClientController extends Controller
             'case_manager'  => 'required',
             'status'        => 'required'
         ];
-
         $validator = validator()->make($request->all(), $rules);
 
         if ($validator->fails()){
-            session()->flash('client_reg_valid_fail', true);
-            return redirect()->back()->withInput($request->input())->withErrors($validator);
+            //return failed validator
+            $msg = 'single failed';
+            return array($validator, $msg);
         }
         $data = [
                  'name'             =>$request->name, 
@@ -59,17 +143,10 @@ class ClientController extends Controller
                  'status'           =>$request->status
                 ];
         Client::create($data);
-        return redirect(route('clients'))->with('success', 'Client successfully registered');
-    }
 
-     public function findCaseManager(Request $request)
-    {
-        $case_managers = CaseManager::where('facility_id',$request->id)->get();
-        if ($case_managers) {
-            return ['status'=>true, 'managers'=>$case_managers];
-        }
-
-        return ['status'=>false];
+        //return validator without fail
+        $msg = 'Client successfully registered';
+        return array($validator, $msg);
     }
 
     /**

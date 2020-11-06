@@ -9,14 +9,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="description" content="" />
     <meta name="keywords" content="">
-    <meta name="author" content="Phoenixcoded" />
+    <meta name="author" content="" />
     <!-- Favicon icon -->
-    <link rel="icon" href="{{asset('assets/images/favicon.ico')}}" type="image/x-icon">
+    <link rel="icon" href="{{asset('assets/images/favicon.png')}}" type="image/x-icon">
 
     <!-- vendor css -->
     <link rel="stylesheet" href="{{asset('assets/css/style.css')}}">
-    
-    
+
+
 
 
 </head>

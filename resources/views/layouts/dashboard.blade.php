@@ -11,15 +11,18 @@
     <meta content="{{ csrf_token() }}" id="csrf_area">
     <meta name="author" content="Phoenixcoded" />
     <!-- Favicon icon -->
-    <link rel="icon" href="{{asset('assets/images/favicon.ico')}}" type="image/x-icon">
+    <link rel="icon" href="{{asset('assets/images/favicon.png')}}" type="image/x-icon">
 
     {{-- Sweet Alert --}}
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
 
     <!-- vendor css -->
     <link rel="stylesheet" href="{{asset('assets/css/style.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('assets/css/datatables.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/js/selectize.js-master/dist/css/selectize.bootstrap3.css')}}"/>
 
     {{-- Fonts --}}
+    <link rel="stylesheet" type="text/css" href="{{asset('assets/css/icofont.css')}}">
     <link href="{{ asset('assets/line-awesome/css/line-awesome.min.css')}}" rel="stylesheet">
     <link href="{{ asset('assets/font-awesome-5/css/all.min.css')}}" rel="stylesheet">
     <script type='text/javascript'>
@@ -39,16 +42,16 @@
 	<nav class="pcoded-navbar menu-light ">
 		<div class="navbar-wrapper  ">
 			<div class="navbar-content scroll-div " >
-				
-				<div class="">
+
+				{{-- <div class="">
 					<div class="main-menu-header">
 						<img class="img-radius" src="{{asset('assets/images/logo.png')}}" alt="cmams-logo">
 						<div class="user-details">
 							<div id="more-details">FHI360 - CMAMS </div>
 						</div>
 					</div>
-				</div>
-				
+				</div> --}}
+
 				<ul class="nav pcoded-inner-navbar ">
 					<li class="nav-item pcoded-menu-caption">
 					    <label>Navigation</label>
@@ -56,28 +59,28 @@
 
 					<li class="nav-item">
 					    <a href="{{route('dashboard')}}" class="nav-link "><span class="pcoded-micon">
-					    	<i class="la la-dashboard"></i></span><span class="pcoded-mtext">Dashboard</span></a>
+					    	<i class="icofont icofont-chart-line"></i></span><span class="pcoded-mtext">Dashboard</span></a>
 					</li>
 
 					<li class="nav-item">
 					    <a href="{{route('facilities')}}" class="nav-link "><span class="pcoded-micon">
-					    	<i class="la la-hospital"></i></span><span class="pcoded-mtext">Facilities</span></a>
+					    	<i class="icofont icofont-hospital"></i></span><span class="pcoded-mtext">Facilities</span></a>
 					</li>
 
 					<li class="nav-item">
 					    <a href="{{route('case-managers')}}" class="nav-link "><span class="pcoded-micon">
-					    	<i class="la la-briefcase-medical"></i></span><span class="pcoded-mtext">Case Managers</span></a>
+					    	<i class="icofont icofont-users-alt-3"></i></span><span class="pcoded-mtext">Case Managers</span></a>
 					</li>
 					<li class="nav-item">
 					    <a href="{{route('clients')}}" class="nav-link "><span class="pcoded-micon">
-					    	<i class="la la-users"></i></span><span class="pcoded-mtext">Clients</span></a>
+					    	<i class="icofont icofont-users-social"></i></span><span class="pcoded-mtext">Clients</span></a>
 					</li>
 					<li class="nav-item pcoded-hasmenu">
-					    <a href="#!" class="nav-link "><span class="pcoded-micon"><i class="la la-file-alt"></i></span><span class="pcoded-mtext">Reports</span></a>
+					    <a href="#!" class="nav-link "><span class="pcoded-micon"><i class="icofont icofont-file-alt"></i></span><span class="pcoded-mtext">Reports</span></a>
 					    <ul class="pcoded-submenu">
 					        <li><a href="{{route('daily')}}">Daily Report</a></li>
 					        <li>
-							  <a href="#!" class="nav-link  down-icon"><span class="pcoded-micon"><i class="la la-book-medical"></i></span>
+							  <a href="#!" class="nav-link  down-icon"><span class="pcoded-micon"><i class="icofont icofont-ui-contact-list"></i></span>
 							  	<span class="pcoded-mtext">Tracking Records</span></a>
 							    <ul class="pcoded-submenu">
 							        <li><a href="{{route('add')}}">Add</a></li>
@@ -87,7 +90,7 @@
 					    </ul>
 					</li>
 					<li class="nav-item pcoded-hasmenu">
-					    <a href="#!" class="nav-link "><span class="pcoded-micon"><i class="la la-calendar-check-o"></i></span>
+					    <a href="#!" class="nav-link "><span class="pcoded-micon"><i class="icofont icofont-calendar"></i></span>
 					    	<span class="pcoded-mtext">Appointments</span></a>
 					    <ul class="pcoded-submenu">
 					        <li><a href="{{route('add-appts')}}">Add</a></li>
@@ -139,7 +142,7 @@
 	<div class="col-md-6 session-messages">
         @include('admin.flash_msg')
     </div>
-   
+
 <!-- [ Main Content ] start -->
 <div class="pcoded-main-container">
 	{{-- Ajax Call Screen Wait Area --}}
@@ -147,7 +150,7 @@
 	@yield('content')
 </div>
 <!-- [ Main Content ] end -->
-   
+
     <!-- Required Js -->
     <script src="{{asset('assets/js/vendor-all.min.js')}}"></script>
     <script src="{{asset('assets/js/plugins/bootstrap.min.js')}}"></script>
@@ -157,8 +160,11 @@
     <script src="{{asset('assets/js/custom.js')}}"></script>
 
     {{-- Datatbales --}}
-    <link rel="stylesheet" href="{{asset('assets/DataTable/datatables.min.css') }}">
-    <script src="{{asset('assets/DataTable/datatables.min.js') }}" defer></script>
+    {{-- <link rel="stylesheet" href="{{asset('assets/DataTable/datatables.min.css') }}">
+    <script src="{{asset('assets/DataTable/datatables.min.js') }}" defer></script> --}}
+    <script src="{{asset('assets/js/datatable/datatables/jquery.dataTables.min.js')}}"></script>
+    <script src="{{asset('assets/js/datatable/datatables/datatable.custom.js')}}"></script>
+    <script src="{{asset('assets/js/selectize.js-master/dist/js/standalone/selectize.min.js')}}"></script>
 
 	{{-- jscharting --}}
 	 @yield('jscharting-area')

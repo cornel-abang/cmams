@@ -28,7 +28,7 @@
                         {{-- Sorting Area --}}
                         <div class="row">
                             <div class="col-md-2 sort_header">
-                                <h4 class="la la-filter">Filter By:</h4>
+                                <h5 class="sort-title"><span class="la la-filter"></span> Filter By:</h5>
                             </div>
                             {{-- Sort report by day area --}}
                             <div class="col-md-10">
@@ -152,7 +152,7 @@
                                     <tr>
                                         <th>Date</th>
                                         <th>Case Manager</th>
-                                        <th>Attendance</th>
+                                        {{-- <th>Attendance</th> --}}
                                         <th>Refill</th>
                                         <th>Viral Load</th>
                                         <th>ICT</th>
@@ -164,9 +164,9 @@
                                 <tbody>
                                     @foreach($reports as $report)
                                     <tr id="de-{{$report->id}}">
-                                        <td>{{$report->created_at->format('l jS \of F Y')}}</td>
+                                        <td>{{$report->created_at->format('l jS \of F Y') }}</td>
                                         <td>{{$report->caseManager->name}}</td>
-                                        <td> 1/1 <span class="badge-pill badge-success">{{$report->attendance}}<code>%</code></span></td>
+                                        {{-- <td> 1/1 <span class="badge-pill badge-success">{{$report->attendance}}<code>%</code></span></td> --}}
                                         <td>
                                             {{ $report->refill_numo }}/{{ $report->refill_deno }}
                                             @if(ceil(($report->refill_numo / $report->refill_deno)*100) > 69)

@@ -17,7 +17,7 @@
                     </div>
                     <div class="card-body table-border-style">
                         <div class="table-responsive">
-                        
+
                             <table class="table table-striped" id="entry-table">
                                 <thead>
                                     <tr>
@@ -37,7 +37,7 @@
                                         <td>{{$case_mg->facility->name}}</td>
                                         <td>
                                             @if($case_mg->clients->count() > 0)
-                                                <a href="{{route('view_clients_cm', $case_mg->id)}}" data-toggle="tooltip" 
+                                                <a href="{{route('view_clients_cm', $case_mg->id)}}" data-toggle="tooltip"
                                                     title="View clients assigned to {{$case_mg->name}}">
                                                     {{$case_mg->clients->count()}}
                                                 </a>
@@ -182,23 +182,22 @@
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <div class="input-group mb-3 col-sm-12">
-                                        <div class="input-group-prepend">
-                                            <label class="input-group-text" for="inputGroupSelect01">Facility</label>
-                                        </div>
-                                        <select class="custom-select{{ $errors->has('facility') ? ' is-invalid' : '' }}" name="facility" selected="{{old('facility')}}" id="inputGroupSelect01" required>
-                                            <option value=""> Choose...</option>
+                                    <label for="inputEmail3" class="col-sm-3 col-form-label">Facility</label>
+                                    <div class="col-sm-9">
+                                        <select class="form-control{{ $errors->has('facility') ? ' is-invalid' : '' }} select-or-search" name="facility" value="{{old('facility')}}" selected="{{old('facility')}}" placeholder="Pick a facility">
+                                            <option>...</option>
                                             @foreach($facilities as $fac)
                                             <option value="{{$fac->id}}">{{$fac->name}}</option>
                                             @endforeach
                                         </select>
-                                        @if ($errors->has('facility'))
+                                            @if ($errors->has('facility'))
                                             <span class="invalid-feedback" role="alert">
                                                 <strong>{{ $errors->first('facility') }}</strong>
                                             </span>
                                         @endif
                                     </div>
-                                   <div class="input-group mb-3 col-sm-12">
+                                </div>
+                                <div class="input-group mb-3 col-sm-12">
                                         <div class="input-group-prepend">
                                             <label class="input-group-text">Profile Photo</label>
                                         </div>
@@ -214,11 +213,11 @@
                                     </div>
                                 <div class="form-group row">
                                     <div class="col-sm-10">
-                                        <button type="submit" class="btn  btn-primary reg-btn-case-mg">Add</button>
+                                        <button type="submit" class="btn  btn-primary reg-btn">Add</button>
                                     </div>
                                 </div>
                             </form>
-                       </div>         
+                       </div>
                   </div>
                 </div>
               </div>

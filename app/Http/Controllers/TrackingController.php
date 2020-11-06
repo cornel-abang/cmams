@@ -53,8 +53,8 @@ class TrackingController extends Controller
     {
         $rules = [
             'clientID'       => ['required'],
-            'method'         => 'required',
-            'evidence'       => ['required','mimes:mpga,wav,jpeg,png,jpg,ogg','max:5120']
+            'method'         => 'required'
+            // 'evidence'       => ['required','file','mimes:mpga,wav,jpeg,png,jpg,ogg,mp4','max:5120']
         ];
 
         $validator = validator()->make($request->all(), $rules);

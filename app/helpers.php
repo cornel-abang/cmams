@@ -257,6 +257,31 @@ function e_form_invalid_class($field = '', $errors){
     return $errors->has($field) ? ' is-invalid' : '';
 }
 
+/**
+     * convert a csv to an array 
+     * for import into db
+     *
+     * @return \Illuminate\Http\Response
+     */
+    function csvToArray($filename = '', $delimiter = ',')
+    {
+        if (!file_exists($filename) || !is_readable($filename))
+            return false;
+
+            $header = null;
+            $data = array();
+            if (($handle = fopen($filename, 'r')) !== false) {
+                while (($row = fgetcsv($handle, 1000, $delimiter)) !== false) {
+                    if (!$header) 
+                        $header = $row;
+                    else
+                        $data[] = array_combine($header, $row);
+                }
+                fclose($handle);
+            }
+            return $data;
+    }
+
 
 /**
  * Form Helper

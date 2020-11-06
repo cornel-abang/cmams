@@ -30,19 +30,65 @@ class FacilityController extends Controller
      */
     public function store(Request $request)
     {
+        //check if a bulk option (csv file upload) was choosen or single option
+        //verify and upload in both cases
+        list($validator, $msg) = $request->hasFile('bulk-facility') ? $this->verifyUploadCSV($request) : $this->verifyUploadSingle($request);
+
+        if ($validator->fails()){
+            session()->flash('facility_reg_valid_fail', [
+                'failed'    => true,
+                'msg'       => $msg
+            ]);
+            return redirect()->back()->withInput($request->input())->withErrors($validator);
+        }
+
+        return redirect(route('facilities'))->with('success', $msg);
+    }
+
+    //verify and upload csv file for multiple facilities
+    private function verifyUploadCSV(Request $request)
+    {
+        $rules = ['bulk-facility' => ['required','mimes:csv,txt'] ];
+        $validator = Validator::make($request->all(), $rules);
+
+        if ($validator->fails()) {
+            //return validator with fail
+            $msg = 'csv failed';
+            return array($validator, $msg);
+        }
+
+        $file = $request->file('bulk-facility');
+        // my custom global helper.php function
+        $facility_array = csvToArray($file);
+        
+        for($i = 0; $i < count($facility_array); $i++){
+            Facility::firstOrCreate($facility_array[$i]);
+        }
+
+        //return $validator still, but without fail
+        $msg = 'All facilities fom CSV file successfully registered';
+        return array($validator, $msg);
+    }
+
+    // upload single facility
+    private function verifyUploadSingle(Request $request)
+    {
         $rules = [
             'name'      => ['required', 'string', 'max:190'],
             'backstop'  => ['required', 'string'],
         ];
-
         $validator = Validator::make($request->all(), $rules);
 
         if ($validator->fails()){
-            session()->flash('facility_reg_valid_fail', true);
-            return redirect()->back()->withInput($request->input())->withErrors($validator);
+            //return failed validator
+            $msg = 'single failed';
+            return array($validator, $msg);
         }
         Facility::create($request->all());
-        return redirect(route('facilities'))->with('success', 'Facility successfully registered');
+
+        //return validator without fail
+        $msg = 'Facility successfully registered';
+        return array($validator, $msg);
     }
 
     /**

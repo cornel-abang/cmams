@@ -15,7 +15,7 @@
                     </div>
                     <div class="card-body table-border-style">
                         <div class="table-responsive">
-                        
+
                             <table class="table table-striped" id="entry-table">
                                 <thead>
                                     <tr>
@@ -35,7 +35,7 @@
                                         <td>{{$client->name}}</td>
                                         <td>{{$client->phone}}</td>
                                         <td>
-                                            <a href="{{route('view_clients', $client->facility->id)}}" data-toggle="tooltip" 
+                                            <a href="{{route('view_clients', $client->facility->id)}}" data-toggle="tooltip"
                                                 title="View clients in {{$client->facility->name}} facility">
                                                 {{$client->facility->name}}
                                             </a>
@@ -78,7 +78,7 @@
             <div class="modal-content">
               <div class="modal-header">
                 <h4 class="modal-title" id="exampleModalLabel">
-                    <i class="la la-user"></i> {{$client->name}} 
+                    <i class="la la-user"></i> {{$client->name}}
                 </h4><span class="badge badge-pill badge-info client-status"> {{$client->status}}</span>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span>
@@ -148,118 +148,146 @@
                   <div class="modal-body">
                     <div class="row">
                        <div class="col-md-12">
-                            <form action="{{route('add-client')}}" method="post">
+                            <div class="col-md-12 options">
+                                <div class="single-tab"><i class="la la-file-o"> Single Facilty</i></div>
+                                <div class="bulk-tab"><i class="la la-files-o"></i> Bulk Upload</div>
+                            </div>
+                            <form action="{{route('add-client')}}" method="post" enctype="multipart/form-data">
                                 @csrf
-                                <div class="form-group row">
-                                    <label for="inputEmail3" class="col-sm-3 col-form-label">Client Name</label>
-                                    <div class="col-sm-9">
-                                        <input type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{old('name')}}" required>
-                                        @if ($errors->has('name'))
-                                            <span class="invalid-feedback" role="alert">
-                                                <strong>{{ $errors->first('name') }}</strong>
-                                            </span>
-                                        @endif
-                                    </div>
-                                </div>
-                               <div class="form-group row">
-                                    <label for="inputEmail3" class="col-sm-3 col-form-label">Client ID</label>
-                                    <div class="col-sm-9">
-                                        <input type="text" class="form-control{{ $errors->has('clientID') ? ' is-invalid' : '' }}" name="clientID" value="{{old('clientID')}}" required>
-                                        @if ($errors->has('clientID'))
-                                            <span class="invalid-feedback" role="alert">
-                                                <strong>{{ $errors->first('clientID') }}</strong>
-                                            </span>
-                                        @endif
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <label for="inputEmail3" class="col-sm-3 col-form-label">Phone Number</label>
-                                    <div class="col-sm-9">
-                                        <input type="phone" class="form-control{{ $errors->has('phone') ? ' is-invalid' : '' }}" name="phone" value="{{old('phone')}}" required>
-                                        @if ($errors->has('phone'))
-                                            <span class="invalid-feedback" role="alert">
-                                                <strong>{{ $errors->first('phone') }}</strong>
-                                            </span>
-                                        @endif
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <label for="inputEmail3" class="col-sm-3 col-form-label">Phone Number OPC (Optional)</label>
-                                    <div class="col-sm-9">
-                                        <input type="phone" class="form-control{{ $errors->has('opc_phone') ? ' is-invalid' : '' }}" name="opc_phone" value="{{old('opc_phone')}}">
-                                        @if ($errors->has('opc_phone'))
-                                            <span class="invalid-feedback" role="alert">
-                                                <strong>{{ $errors->first('opc_phone') }}</strong>
-                                            </span>
-                                        @endif
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <label for="inputEmail3" class="col-sm-3 col-form-label">Residential Address</label>
-                                    <div class="col-sm-9">
-                                        <input type="text" class="form-control{{ $errors->has('address') ? ' is-invalid' : '' }}" name="address" value="{{old('address')}}">
-                                        @if ($errors->has('address'))
-                                            <span class="invalid-feedback" role="alert">
-                                                <strong>{{ $errors->first('address') }}</strong>
-                                            </span>
-                                        @endif
-                                    </div>
-                                </div>
-                                 <div class="form-group row">
-                                    <div class="input-group mb-3 col-sm-12">
-                                        <div class="input-group-prepend">
-                                            <label class="input-group-text" for="inputGroupSelect01">Facility</label>
+                                <div class="single-upload">
+                                <div class="back-arrow"><i class="la la-long-arrow-left"></i></div>
+                                    <div class="form-group row">
+                                        <label for="inputEmail3" class="col-sm-3 col-form-label">Client Name</label>
+                                        <div class="col-sm-9">
+                                            <input type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{old('name')}}">
+                                            @if ($errors->has('name'))
+                                                <span class="invalid-feedback" role="alert">
+                                                    <strong>{{ $errors->first('name') }}</strong>
+                                                </span>
+                                            @endif
                                         </div>
-                                        <select class="custom-select{{ $errors->has('facility') ? ' is-invalid' : '' }} sel_facility" name="facility" selected="{{old('facility')}}" id="inputGroupSelect01" required>
-                                            <option value=""> Choose...</option>
-                                            @foreach($facilities as $fac)
-                                            <option value="{{$fac->id}}">{{$fac->name}}</option>
-                                            @endforeach
-                                        </select>
-                                        @if ($errors->has('facility'))
-                                            <span class="invalid-feedback" role="alert">
-                                                <strong>{{ $errors->first('facility') }}</strong>
-                                            </span>
-                                        @endif
                                     </div>
-                                    <div class="input-group mb-3 col-sm-12">
-                                        <div class="input-group-prepend">
-                                            <label class="input-group-text" for="inputGroupSelect01">Assign Case Manager</label>
+                                   <div class="form-group row">
+                                        <label for="inputEmail3" class="col-sm-3 col-form-label">Client ID</label>
+                                        <div class="col-sm-9">
+                                            <input type="text" class="form-control{{ $errors->has('clientID') ? ' is-invalid' : '' }}" name="clientID" value="{{old('clientID')}}">
+                                            @if ($errors->has('clientID'))
+                                                <span class="invalid-feedback" role="alert">
+                                                    <strong>{{ $errors->first('clientID') }}</strong>
+                                                </span>
+                                            @endif
                                         </div>
-                                        <select class="custom-select{{ $errors->has('case_manager') ? ' is-invalid' : '' }} case_managers_select" name="case_manager" selected="{{old('case_manager')}}" id="inputGroupSelect01" required title="{{route('find_case_managers')}}">
-                                        </select><img src="{{asset('assets/images/loading.gif')}}" class="loading-img">
-                                        @if ($errors->has('case_manager'))
-                                            <span class="invalid-feedback" role="alert">
-                                                <strong>{{ $errors->first('case_manager') }}</strong>
-                                            </span>
-                                        @endif
                                     </div>
-                                    <div class="input-group mb-3 col-sm-12">
-                                        <div class="input-group-prepend">
-                                            <label class="input-group-text" for="inputGroupSelect01">Status</label>
+                                    <div class="form-group row">
+                                        <label for="inputEmail3" class="col-sm-3 col-form-label">Phone Number</label>
+                                        <div class="col-sm-9">
+                                            <input type="phone" class="form-control{{ $errors->has('phone') ? ' is-invalid' : '' }}" name="phone" value="{{old('phone')}}">
+                                            @if ($errors->has('phone'))
+                                                <span class="invalid-feedback" role="alert">
+                                                    <strong>{{ $errors->first('phone') }}</strong>
+                                                </span>
+                                            @endif
                                         </div>
-                                        <select class="custom-select{{ $errors->has('status') ? ' is-invalid' : '' }}" name="status" selected="{{old('status')}}" id="inputGroupSelect01" required>
-                                            <option value=""> Choose...</option>
-                                            <option value="Active">Active</option>
-                                            <option value="Dead">Dead</option>
-                                            <option value="Transferred Out">Transferred Out</option>
-                                            <option value="Lost to Follow Up">Lost to Follow Up</option>
-                                            <option value="Stop Treatment">Stop Treatment</option>
-                                        </select>
-                                        @if ($errors->has('status'))
-                                            <span class="invalid-feedback" role="alert">
-                                                <strong>{{ $errors->first('status') }}</strong>
-                                            </span>
-                                        @endif
                                     </div>
-                                
-                                <div class="form-group row">
-                                    <div class="col-sm-10">
-                                        <button type="submit" class="btn  btn-primary reg-btn-case-mg">Add</button>
+                                    <div class="form-group row">
+                                        <label for="inputEmail3" class="col-sm-3 col-form-label">Phone Number OPC (Optional)</label>
+                                        <div class="col-sm-9">
+                                            <input type="phone" class="form-control{{ $errors->has('opc_phone') ? ' is-invalid' : '' }}" name="opc_phone" value="{{old('opc_phone')}}">
+                                            @if ($errors->has('opc_phone'))
+                                                <span class="invalid-feedback" role="alert">
+                                                    <strong>{{ $errors->first('opc_phone') }}</strong>
+                                                </span>
+                                            @endif
+                                        </div>
                                     </div>
+                                    <div class="form-group row">
+                                        <label for="inputEmail3" class="col-sm-3 col-form-label">Residential Address</label>
+                                        <div class="col-sm-9">
+                                            <input type="text" class="form-control{{ $errors->has('address') ? ' is-invalid' : '' }}" name="address" value="{{old('address')}}">
+                                            @if ($errors->has('address'))
+                                                <span class="invalid-feedback" role="alert">
+                                                    <strong>{{ $errors->first('address') }}</strong>
+                                                </span>
+                                            @endif
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="inputEmail3" class="col-sm-3 col-form-label">Status</label>
+                                        <div class="col-sm-9">
+                                            <select class="form-control{{ $errors->has('status') ? ' is-invalid' : '' }} select-or-search" name="status" value="{{old('status')}}" selected="{{old('status')}}" placeholder="Pick a status">
+                                                <option>...</option>
+                                                <option value="Active">Active</option>
+                                                <option value="Dead">Dead</option>
+                                                <option value="Transferred Out">Transferred Out</option>
+                                                <option value="Lost to Follow Up">Lost to Follow Up</option>
+                                                <option value="Stop Treatment">Stop Treatment</option>
+                                            </select>
+                                            @if ($errors->has('status'))
+                                                <span class="invalid-feedback" role="alert">
+                                                    <strong>{{ $errors->first('status') }}</strong>
+                                                </span>
+                                            @endif
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="inputEmail3" class="col-sm-3 col-form-label">Facility</label>
+                                        <div class="col-sm-9">
+                                            <select class="form-control{{ $errors->has('facility') ? ' is-invalid' : '' }} select-or-search sel_facility" name="facility" value="{{old('facility')}}" selected="{{old('facility')}}" placeholder="Pick a facility">
+                                                <option>...</option>
+                                                @foreach($facilities as $fac)
+                                                <option value="{{$fac->id}}">{{$fac->name}}</option>
+                                                @endforeach
+                                            </select>
+                                                @if ($errors->has('facility'))
+                                                <span class="invalid-feedback" role="alert">
+                                                    <strong>{{ $errors->first('facility') }}</strong>
+                                                </span>
+                                            @endif
+                                        </div>
+                                    </div>
+                                    <img src="{{asset('assets/images/loading.gif')}}" class="loading-img">
+                                        <div class="input-group mb-3 col-sm-12">
+                                            <div class="input-group-prepend">
+                                                <label class="input-group-text" for="inputGroupSelect01">Assign Case Manager</label>
+                                            </div>
+                                            <select class="custom-select{{ $errors->has('case_manager') ? ' is-invalid' : '' }} case_managers_select" name="case_manager" selected="{{old('case_manager')}}" id="inputGroupSelect01" title="{{route('find_case_managers')}}" placeholder="Pick a case manager">
+                                            </select>
+                                            @if ($errors->has('case_manager'))
+                                                <span class="invalid-feedback" role="alert">
+                                                    <strong>{{ $errors->first('case_manager') }}</strong>
+                                                </span>
+                                            @endif
+                                        </div>
+                                    <div class="form-group row">
+                                        <div class="col-sm-10">
+                                            <button type="submit" class="btn  btn-primary reg-btn">Add</button>
+                                        </div>
+                                    </div>
+                            </div>
+                            <div class="bulk-upload">
+                                    <div class="back-arrow"><i class="la la-long-arrow-left"></i></div>
+                                        <div class="input-group mb-3 col-sm-12">
+                                            <div class="input-group-prepend">
+                                                <label class="input-group-text">Upload CSV</label>
+                                            </div>
+                                            <div class="custom-file">
+                                                <input type="file" class="custom-file-input{{ $errors->has('bulk-client') ? ' is-invalid' : '' }}" id="inputGroupFile01" name="bulk-client">
+                                                 @if ($errors->has('bulk-client'))
+                                                <span class="invalid-feedback" role="alert">
+                                                    <strong>{{ $errors->first('bulk-client') }}</strong>
+                                                </span>
+                                                @endif
+                                                <span class="custom-file-label" for="inputGroupFile01">Choose file</span>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <div class="col-sm-10">
+                                                <button type="submit" class="btn  btn-primary reg-btn">Add</button>
+                                            </div>
+                                        </div>
                                 </div>
                             </form>
-                       </div>         
+                       </div>
                   </div>
                 </div>
               </div>

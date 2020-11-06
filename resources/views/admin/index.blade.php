@@ -60,12 +60,12 @@
                 </div>
                 <!-- support-section end -->
             </div>
-            
+
             <!-- prject ,team member start -->
             <div class="col-xl-6 col-md-12">
                 <div class="card table-card">
                     <div class="card-header">
-                        <h5>This week's case managers leaderboard <span id="set">(Top 4)</span></h5>
+                        <h5>This week's case managers' leaderboard <span id="set">(Top Performaners)</span></h5>
                         <div class="card-header-right">
                             <div class="btn-group card-option">
                                 <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -94,7 +94,7 @@
                                             <tr>
                                                 <td>
                                                     <div class="d-inline-block align-middle">
-                                                        <img src="{{asset('/assets/images/uploads/'.$perfs['image'])}}" 
+                                                        <img src="{{asset('/assets/images/uploads/'.$perfs['image'])}}"
                                                             alt="cm image" class="img-radius wid-40 align-top m-r-15">
                                                         <div class="d-inline-block">
                                                             <h6 class="leader-name">{{ $perfs['name'] }}</h6>
@@ -120,7 +120,7 @@
                                             <tr>
                                                 <td>
                                                     <div class="d-inline-block align-middle">
-                                                        <img src="{{asset('/assets/images/uploads/'.$perfs['image'])}}" 
+                                                        <img src="{{asset('/assets/images/uploads/'.$perfs['image'])}}"
                                                             alt="cm image" class="img-radius wid-40 align-top m-r-15">
                                                         <div class="d-inline-block">
                                                             <h6 class="leader-name">{{ $perfs['name'] }}</h6>
@@ -210,14 +210,14 @@
                                         <h6 class="text-muted m-b-0">Refill</h6>
                                     </div>
                                     <div class="col-4 text-right">
-                                        <i class="fa fa-pills f-28"></i>
+                                        <i class="icofont icofont-pills f-28"></i>
                                     </div>
                                 </div>
                             </div>
                             <div class="card-footer change-area">
                                 <div class="row align-items-center" id="refill-area">
                                     <div class="col-9">
-                                         <p class=" m-b-0" id="refill-pointer" 
+                                         <p class=" m-b-0" id="refill-pointer"
                                             data-val="{{performanceDiff( 'refill_performance', getWeekRefillAvg())}}">
                                             {{ performanceDiff( 'refill_performance', getWeekRefillAvg()) }}%
                                         </p>
@@ -238,14 +238,14 @@
                                         <h6 class="text-muted m-b-0">Viral load</h6>
                                     </div>
                                     <div class="col-4 text-right">
-                                        <i class="fas fa-virus f-28"></i>
+                                        <i class="icofont icofont-blood-test f-28"></i>
                                     </div>
                                 </div>
                             </div>
                             <div class="card-footer change-area">
                                 <div class="row align-items-center" id="viral-ld-area">
                                     <div class="col-9">
-                                         <p class=" m-b-0" id="viral_ld_pointer"
+                                         <p class=" m-b-0" id="viral-ld-pointer"
                                             data-val="{{performanceDiff( 'viral_load_performance', getWeekViralLoadAvg() )}}">
                                             {{performanceDiff( 'viral_load_performance', getWeekViralLoadAvg() )}}%
                                         </p>
@@ -266,14 +266,14 @@
                                         <h6 class="text-muted m-b-0">ICT</h6>
                                     </div>
                                     <div class="col-4 text-right">
-                                        <i class="fa fa-user-friends f-28"></i>
+                                        <i class="icofont icofont-users-alt-5 f-28"></i>
                                     </div>
                                 </div>
                             </div>
                             <div class="card-footer change-area">
                                 <div class="row align-items-center" id="ict-area">
                                     <div class="col-9">
-                                         <p class=" m-b-0" id="ict-pointer" 
+                                         <p class=" m-b-0" id="ict-pointer"
                                             data-val="{{performanceDiff( 'ict_performance', getWeekIctAvg() )}}">
                                             {{performanceDiff( 'ict_performance', getWeekIctAvg() )}}%
                                         </p>
@@ -301,8 +301,8 @@
                             <div class="card-footer change-area">
                                 <div class="row align-items-center" id="tpt-area">
                                     <div class="col-9">
-                                         <p class=" m-b-0" id="tpt-pointer" 
-                                            data-val="{{performanceDiff( 'tpt_performance', getWeekTptAvg() )}}">
+                                         <p class=" m-b-0" id="tpt-pointer"
+                                            data-val="{{ performanceDiff( 'tpt_performance', getWeekTptAvg() )}}">
                                             {{performanceDiff( 'tpt_performance', getWeekTptAvg() )}}%
                                         </p>
                                     </div>
@@ -322,7 +322,7 @@
                                         <h6 class="text-muted m-b-0">Tracking</h6>
                                     </div>
                                     <div class="col-4 text-right">
-                                        <i class="fa fa-house-user f-28"></i>
+                                        <i class="icofont icofont-ui-contact-list f-28"></i>
                                     </div>
                                 </div>
                             </div>
@@ -370,9 +370,9 @@
                         </div>
                     </div>
                 </div>
-                <!-- page statustic card end -->    
+                <!-- page statustic card end -->
             </div>
-               
+
             </div>
             <!-- analysis ends -->
         </div>

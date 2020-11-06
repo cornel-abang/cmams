@@ -81,7 +81,9 @@ class AppointmentController extends Controller
         $rules = ['appt_file'       => ['required','mimes:csv,txt'] ];
         $this->validate($request, $rules);
         $file = $request->file('appt_file');
-        $appt_array = $this->csvToArray($file);
+        // my custom global helper.php function
+        $appt_array = csvToArray($file);
+        
         for($i = 0; $i < count($appt_array); $i++){
             Appointment::firstOrCreate($appt_array[$i]);
         }
@@ -89,38 +91,14 @@ class AppointmentController extends Controller
         return redirect()->route('appointments');
     }
 
+
     /**
-     * convert a csv to an array 
-     * for import into db
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function csvToArray($filename = '', $delimiter = ',')
-    {
-        if (!file_exists($filename) || !is_readable($filename))
-            return false;
-
-            $header = null;
-            $data = array();
-            if (($handle = fopen($filename, 'r')) !== false) {
-                while (($row = fgetcsv($handle, 1000, $delimiter)) !== false) {
-                    if (!$header) 
-                        $header = $row;
-                    else
-                        $data[] = array_combine($header, $row);
-                }
-                fclose($handle);
-            }
-            return $data;
-    }
-
-        /**
          * Verify that a case manager didnt miss her/her appointment due for 
          * the day a report was submitted
          *
          * @param  int  $id
          * @return \Illuminate\Http\Response
-         */
+    */
     public function verifyAppt(Request $request)
     {
         $case_mg = CaseManager::find($request->id);

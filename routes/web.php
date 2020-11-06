@@ -36,7 +36,7 @@ Route::group(['middleware'=>'auth:web'], function(){
 		Route::post('/', 'FacilityController@store')->name('add-facility');
 		Route::get('edit/{id}', 'FacilityController@edit')->name('edit-facility');
 		Route::post('edit/{id}', 'FacilityController@update');
-		Route::post('destroy_facility', 'FacilityController@destroy')->name('destroy_facility');
+		Route::get('destroy_facility/{id}', 'FacilityController@destroy')->name('destroy_facility');
 		Route::get('{id}/view_case_managers', 'FacilityController@viewCaseManagers')->name('view_case_managers');
 		Route::get('{id}/view_clients', 'FacilityController@viewClients')->name('view_clients');
 		Route::get('{id}/view_facility', 'FacilityController@show')->name('view_facility');
