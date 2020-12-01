@@ -1,0 +1,4 @@
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/handwhib/public_html/coords.handiman.ng/
+    - /bin/cp -R * $DEPLOYPATH
