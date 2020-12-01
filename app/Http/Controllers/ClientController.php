@@ -5,7 +5,10 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Client;
 use App\Facility;
+use App\Patient;
 use App\CaseManager;
+use App\Imports\PatientsImport;
+use Maatwebsite\Excel\Facades\Excel;
 
 class ClientController extends Controller
 {
@@ -17,7 +20,7 @@ class ClientController extends Controller
     public function index()
     {
         $title = 'All Clients';
-        $clients = Client::all();
+        $clients = Patient::paginate(10);
         $facilities = Facility::all();
         $case_managers = CaseManager::all();
         return view('clients.index', compact('title','clients','facilities','case_managers'));
@@ -90,7 +93,7 @@ class ClientController extends Controller
 
     private function verifyUploadCSV(Request $request)
     {
-        $rules = ['bulk-client' => ['required','mimes:csv,txt'] ];
+        $rules = ['bulk-client' => ['required','mimes:csv,txt,xlsx'] ];
         $validator = validator()->make($request->all(), $rules);
 
         if ($validator->fails()) {
@@ -100,15 +103,16 @@ class ClientController extends Controller
         }
 
         $file = $request->file('bulk-client');
+        Excel::import(new PatientsImport, $file);
         // my custom global helper.php function
-        $client_array = csvToArray($file);
+        // $client_array = csvToArray($file);
         
-        for($i = 0; $i < count($client_array); $i++){
-            Client::firstOrCreate($client_array[$i]);
-        }
+        // for($i = 0; $i < count($client_array); $i++){
+        //     Client::firstOrCreate($client_array[$i]);
+        // }
 
         //return $validator still, but without fail
-        $msg = 'All clients fom CSV file successfully registered';
+        $msg = 'All clients fom file successfully registered';
         return array($validator, $msg);
     }
 

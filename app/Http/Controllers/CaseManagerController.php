@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\CaseManager;
 use App\Facility;
 use App\Client;
+use Illuminate\Support\Facades\Storage;
 
 class CaseManagerController extends Controller
 {
@@ -160,5 +161,19 @@ class CaseManagerController extends Controller
             $case_manager = $client->caseManager->name;
         }
         return ['status'=>$res, 'client'=>$client, 'case_manager'=>$case_manager];
+    }
+
+    public function attendance(Request $request)
+    {
+        $image = $request->cm_img;  // your base64 encoded
+        $image = str_replace('data:image/png;base64,', '', $image);
+        $image = str_replace(' ', '+', $image);
+        $imageName = time(). '.png';
+
+        Storage::disk('public')->put($imageName, base64_decode($image));
+        dd($request->all());
+        // $data->photo_name = $photo_name;
+        // $data->photo_url = $img_url;
+        // $data->save();
     }
 }

@@ -2,11 +2,14 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use Datatables;
 use Validator;
 use App\Facility;
 use App\CaseManager;
+use App\Coordinate;
+use Illuminate\Http\Request;
+use App\Imports\FacilitiesImport;
+use Maatwebsite\Excel\Facades\Excel;
 
 class FacilityController extends Controller
 {
@@ -48,7 +51,7 @@ class FacilityController extends Controller
     //verify and upload csv file for multiple facilities
     private function verifyUploadCSV(Request $request)
     {
-        $rules = ['bulk-facility' => ['required','mimes:csv,txt'] ];
+        $rules = ['bulk-facility' => ['required','mimes:csv,txt,xlsx'] ];
         $validator = Validator::make($request->all(), $rules);
 
         if ($validator->fails()) {
@@ -58,15 +61,16 @@ class FacilityController extends Controller
         }
 
         $file = $request->file('bulk-facility');
+        Excel::import(new FacilitiesImport, $file);
         // my custom global helper.php function
-        $facility_array = csvToArray($file);
+        // $facility_array = csvToArray($file);
         
-        for($i = 0; $i < count($facility_array); $i++){
-            Facility::firstOrCreate($facility_array[$i]);
-        }
+        // for($i = 0; $i < count($facility_array); $i++){
+        //     Facility::firstOrCreate($facility_array[$i]);
+        // }
 
         //return $validator still, but without fail
-        $msg = 'All facilities fom CSV file successfully registered';
+        $msg = 'All facilities file successfully registered';
         return array($validator, $msg);
     }
 
@@ -161,5 +165,37 @@ class FacilityController extends Controller
         $title = 'Clients in '.$facility->name.' facility';
         $managers = CaseManager::where('facility_id',$facility->id)->get();
         return view('facility.clients', compact('title','facility','managers'));
+    }
+
+    public function saveCoords(Request $request)
+    {
+        // dd($request->all());
+        $rules = [
+            'facility'  => ['required', 'string'],
+            'longitude' => 'required',
+            'latitude'  => 'required'
+        ];
+
+        $msg = [
+            'longitude.required' => 'Please allow the system access your location',
+            'latitude.required' => 'Please allow the system access your location'
+        ];
+
+        $validator = validator()->make($request->all(), $rules, $msg);
+
+        if ($validator->fails()){
+            session()->flash('error', 'Incomplete action');
+            return redirect()->back()->withInput($request->input())->withErrors($validator);
+        }
+
+        $coord = new Coordinate;
+        $coord->facility = $request->facility;
+        $coord->longitude = $request->longitude;
+        $coord->latitude = $request->latitude;
+        $coord->save();
+
+        session()->flash('success', 'Success. Thank You!');
+
+        return redirect()->back();
     }
 }

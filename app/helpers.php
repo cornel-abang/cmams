@@ -2,6 +2,7 @@
 
 use App\DailyPerformance;
 use Carbon\Carbon;
+use App\Facility;
 /**
  * @return mixed
  * Custom functions made by Cornel
@@ -334,6 +335,13 @@ if ( ! function_exists('__checked_selected_helper')) {
             echo $result;
 
         return $result;
+    }
+}
+
+if (! function_exists('__facilities')) {
+    function __facilities()
+    {
+        return Facility::all();
     }
 }
 /**

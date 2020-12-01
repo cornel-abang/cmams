@@ -21,6 +21,17 @@ Route::get('/', function () {
 Route::get('login', function(){
 	return view('welcome');
 });
+
+Route::get('attendance', function(){
+	return view('attendance.tracker');
+});
+Route::get('facility/coordinates', function(){
+	return view('attendance.coordinates');
+});
+
+Route::post('check_attendance', 'CaseManagerController@attendance')->name('check_attendance');
+Route::post('facility/coordinates', 'FacilityController@saveCoords')->name('save.coords');
+
 Route::post('login', 'UserController@login')->name('login');
 
 Route::group(['middleware'=>'auth:web'], function(){

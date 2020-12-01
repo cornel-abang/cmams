@@ -19,9 +19,8 @@
                             <table class="table table-striped" id="entry-table">
                                 <thead>
                                     <tr>
-                                        <th>Client ID</th>
-                                        <th>Client Name</th>
-                                        <th>Phone</th>
+                                        <th>Hospital Number</th>
+                                        <th>Gender</th>
                                         <th>Facility</th>
                                         <th>Case Manager</th>
                                         <th>Status</th>
@@ -31,16 +30,16 @@
                                 <tbody>
                                     @foreach($clients as $client)
                                     <tr id="de-{{$client->id}}">
-                                        <td>{{$client->clientID}}</td>
-                                        <td>{{$client->name}}</td>
-                                        <td>{{$client->phone}}</td>
+                                        <td>{{$client->hospital_num}}</td>
+                                        <td>{{$client->sex}}</td>
+                                        <td>{{$client->facility}}</td>
                                         <td>
-                                            <a href="{{route('view_clients', $client->facility->id)}}" data-toggle="tooltip"
-                                                title="View clients in {{$client->facility->name}} facility">
-                                                {{$client->facility->name}}
+                                            <a href="" data-toggle="tooltip"
+                                                title="View clients in facility">
+                                                {{$client->facility}}
                                             </a>
                                         </td>
-                                        <td>{{$client->caseManager->name}}</td>
+                                        <td>{{$client->case_manager}}</td>
                                         <td>{{$client->status}}</td>
                                         <td>
                                             <div class="row">
@@ -91,32 +90,16 @@
                                 <div class="card-body">
                                     <table class="table table-bordered table-striped">
                                         <tr>
-                                            <th>Client ID</th>
-                                            <td>{{ $client->clientID }}</td>
-                                        </tr>
-                                        <tr>
-                                            <th>Client Name</th>
-                                            <td>{{ $client->name}}</td>
-                                        </tr>
-                                        <tr>
-                                            <th>Phone Number</th>
-                                            <td>{{$client->phone}}</td>
-                                        </tr>
-                                        <tr>
-                                            <th>Phone OPC</th>
-                                            <td>{{$client->opc_phone}}</td>
-                                        </tr>
-                                        <tr>
-                                            <th>Residential Address </th>
-                                            <td>{{$client->address}}</td>
+                                            <th>Hospital Number</th>
+                                            <td>{{ $client->hospital_num }}</td>
                                         </tr>
                                         <tr>
                                             <th>Facility</th>
-                                            <td>{{$client->facility->name}}</td>
+                                            <td>{{$client->facility}}</td>
                                         </tr>
                                         <tr>
                                             <th>Case Manager</th>
-                                            <td>{{$client->caseManager->name}}</td>
+                                            <td>{{$client->case_manager}}</td>
                                         </tr>
                                     </table>
                                 </div>
@@ -238,7 +221,7 @@
                                                 <option value="{{$fac->id}}">{{$fac->name}}</option>
                                                 @endforeach
                                             </select>
-                                                @if ($errors->has('facility'))
+                                            @if ($errors->has('facility'))
                                                 <span class="invalid-feedback" role="alert">
                                                     <strong>{{ $errors->first('facility') }}</strong>
                                                 </span>
