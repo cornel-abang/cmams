@@ -33,9 +33,9 @@
                                     @foreach($appointments as $appt)
                                     <tr>
                                         <td>{{ Carbon\Carbon::parse($appt->appt_date)->format('l jS \of F Y') }}</td>
-                                        <td>{{ $appt->caseManager->name }}</td>
-                                        <td>{{ $appt->client->name }}</td>
-                                        <td>{!! ucfirst($appt->type) !!}</td>
+                                        <td>{{ $appt->case_manager }}</td>
+                                        <td>{{ $appt->client_hospital_num }}</td>
+                                        <td>{!! ucfirst($appt->appt_type) !!}</td>
                                         <td>
                                             <div class="row">
                                                 <div class="col-md-4">
@@ -51,13 +51,14 @@
                                     @endforeach
                                 </tbody>
                             </table>
+                            {{-- {{ $appointments->links() }} --}}
                         </div>
                     </div>
                 </div>
             </div>
 
             {{-- View Facility Modal --}}
-        @foreach($appointments as $appt)
+        {{-- @foreach($appointments as $appt)
         <div class="modal fade" id="appt{{$appt->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -98,11 +99,11 @@
               </div>
               {{-- <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              </div> --}}
+              </div>
             </div>
           </div>
         </div>
-        @endforeach
+        @endforeach --}} 
     </div>
 
     @endsection

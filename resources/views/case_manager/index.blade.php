@@ -33,19 +33,30 @@
                                     @foreach($case_managers as $case_mg)
                                     <tr id="de-{{$case_mg->id}}">
                                         <td>{{$case_mg->id}}</td>
-                                        <td>{{$case_mg->name}}</td>
-                                        <td>{{$case_mg->facility->name}}</td>
+                                        <td>{{$case_mg->names}}</td>
+                                        <td>{{$case_mg->facility??'None'}}</td>
                                         <td>
-                                            @if($case_mg->clients->count() > 0)
+                                            @if($case_mg->clients()->count() > 0)
                                                 <a href="{{route('view_clients_cm', $case_mg->id)}}" data-toggle="tooltip"
                                                     title="View clients assigned to {{$case_mg->name}}">
-                                                    {{$case_mg->clients->count()}}
+                                                    {{$case_mg->clients()->count()}}
                                                 </a>
                                             @else
-                                                {{$case_mg->clients->count()}}
+                                                {{$case_mg->clients()->count()}}
                                             @endif
                                         </td>
-                                        <td>{{ cm_performance($case_mg) }}%</td>
+                                        <td>
+                                            @if(cm_performance($case_mg) > 69)
+                                                    <span class="badge-pill badge-success">
+                                                @elseif(cm_performance($case_mg) > 49 && 
+                                                        cm_performance($case_mg) < 70)
+                                                    <span class="badge-pill badge-info">
+                                                @elseif(cm_performance($case_mg) < 50)
+                                                    <span class="badge-pill badge-danger">
+                                            @endif
+                                            {{ cm_performance($case_mg) }}%
+                                            </span>
+                                        </td>
                                         <td>
                                             <div class="row">
                                                 <div class="col-md-4">
@@ -60,15 +71,23 @@
                                                 </span>
                                                 </div>
                                                 <div class="col-md-4">
+                                                <span data-toggle="modal" data-target="#ts{{$case_mg->id}}">
+                                                    <button type="button" class="btn btn-secondary btn-sm" data-toggle="tooltip" data-placement="top" title="View timesheet">
+                                                        <i class="la la-calendar-week"></i>
+                                                    </button>
+                                                </span>
+                                                </div>
+                                                {{-- <div class="col-md-4">
                                                     <button type="button" id="{{$case_mg->id}}" class="btn btn-danger btn-sm delete-btn-cm" data-toggle="tooltip" title="Delete case manager" ><i class="la la-trash"></i>
                                                     </button>
-                                                </div>
+                                                </div> --}}
                                             </div>
                                         </td>
                                     </tr>
                                     @endforeach
                                 </tbody>
                             </table>
+                            {{-- {{ $case_managers->links() }} --}}
                         </div>
                     </div>
                 </div>
@@ -82,9 +101,9 @@
               <div class="modal-header">
                 <h3 class="modal-title cm_view-title" id="exampleModalLabel">
                     {{-- <i class="la la-briefcase-medical"></i> --}}
-                        <img class="img-radius case-mg-photo-view" src="{{asset('assets/images/uploads/'.$case_mg->profile_photo)}}" alt="User-Profile-Image">
+                       {{--  <img class="img-radius case-mg-photo-view" src="{{asset('assets/images/uploads/'.$case_mg->profile_photo)}}" alt="User-Profile-Image"> --}}
                         <div class="user-details manager-name">
-                            <div id="more-details">{{$case_mg->name}}</div>
+                            <div id="more-details">{{$case_mg->names}}</div>
                         </div>
                 </h3>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -107,16 +126,79 @@
                                         </tr>
                                         <tr>
                                             <th>Facility</th>
-                                            <td>{{ $case_mg->facility->name }}</td>
+                                            <td>{{ $case_mg->facility??'None' }}</td>
                                         </tr>
                                         <tr>
                                             <th>No. of Clients</th>
-                                            <td>{{ $case_mg->clients->count() }}</td>
+                                            <td>
+                                                <span class="client-count">{{ $case_mg->clients()->count() }}</span><br/>
+                                                <div class="clients-analytica">
+                                                    <span class="badge-pill badge-success">Active: {{ clientsAnalyzer($case_mg->names, 'Active') }}</span>
+                                                    <br/>
+                                                    <span class="badge-pill badge-info">Transferred Out: {{ clientsAnalyzer($case_mg->names, 'Transferred Out') }}</span><br/>
+                                                    <span class="badge-pill badge-secondary">LTFU: {{ clientsAnalyzer($case_mg->names, 'LTFU') }}</span><br/>
+                                                    <span class="badge-pill badge-warning">Stopped: {{ clientsAnalyzer($case_mg->names, 'Stopped') }}</span><br/>
+                                                    <span class="badge-pill badge-danger">Dead: {{ clientsAnalyzer($case_mg->names, 'Dead') }}</span>
+                                                </div>
+                                            </td>
                                         </tr>
                                         <tr>
                                             <th>Avg. Performamce</th>
                                             <td>{{ cm_performance($case_mg) }}%</td>
                                         </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+              </div>
+              {{-- <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              </div> --}}
+            </div>
+          </div>
+        </div>
+        @endforeach
+
+        {{-- Timesheet --}}
+         @foreach($case_managers as $case_mg)
+        <div class="modal fade" id="ts{{$case_mg->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h3 class="modal-title cm_view-title" id="exampleModalLabel">
+                    {{-- <i class="la la-briefcase-medical"></i> --}}
+                       {{--  <img class="img-radius case-mg-photo-view" src="{{asset('assets/images/uploads/'.$case_mg->profile_photo)}}" alt="User-Profile-Image"> --}}
+                        <div class="user-details manager-name">
+                            <div id="more-details">{{$case_mg->names}} - Work Timesheet</div>
+                        </div>
+                </h3>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <div class="row">
+                        <div class="col-md-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <table class="table table-bordered table-striped">
+                                        @foreach($case_mg->timesheets() as $time)
+                                            <tr>
+                                                <th>{{ $time->created_at->format('l jS \of F Y') }}</th>
+                                                <td>
+                                                    @if(\Carbon\Carbon::parse($time->checkoutTime)->diffInHours($time->checkInTime) > 0)
+                                                        <span>
+                                                            {{ \Carbon\Carbon::parse($time->checkoutTime)->diffInHours($time->checkInTime) }} Hour(s)
+                                                        </span>
+                                                        @else
+                                                        <span>
+                                                            {{ gmdate('H:i:s', \Carbon\Carbon::parse($time->checkoutTime)->diffInSeconds($time->checkInTime)) }} - 0 Hours
+                                                        </span>
+                                                    @endif
+                                                </td>
+                                            </tr>
+                                        @endforeach
                                     </table>
                                 </div>
                             </div>

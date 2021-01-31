@@ -9,7 +9,7 @@
                 <div class="card">
                     <div class="card-header">
                         <h5>Clients in {{$facility->name}} facility</h5>
-                        <span class="d-block m-t-5">There are a total of <b><code>{{$facility->clients->count()}}</code></b> client(s) in this facility</span>
+                        <span class="d-block m-t-5">There are a total of <b><code>{{ number_format($facility->clients()->count()) }}</code></b> client(s) in this facility</span>
                         <button type="button" class="btn btn-info btn-sm add-btn" data-toggle="modal" data-target="#add-client-form">
                             <i class="la la-plus-circle"></i> Add Client to {{$facility->name}}</button>
                     </div>
@@ -20,9 +20,8 @@
                             <table class="table table-striped" id="entry-table">
                                 <thead>
                                     <tr>
-                                        <th>Client ID</th>
-                                        <th>Client Name</th>
-                                        <th>Phone</th>
+                                        <th>Hospital No.</th>
+                                        <th>Gender</th>
                                         <th>Facility</th>
                                         <th>Case Manager</th>
                                         <th>Status</th>
@@ -30,13 +29,12 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach($facility->clients as $client)
+                                    @foreach($facility->clientsPaginate() as $client)
                                     <tr id="de-{{$client->id}}">
-                                        <td>{{$client->clientID}}</td>
-                                        <td>{{$client->name}}</td>
-                                        <td>{{$client->phone}}</td>
-                                        <td>{{$client->facility->name}}</td>
-                                        <td>{{$client->caseManager->name}}</td>
+                                        <td>{{$client->hospital_num}}</td>
+                                        <td>{{$client->sex}}</td>
+                                        <td>{{$client->facility}}</td>
+                                        <td>{{$client->case_manager}}</td>
                                         <td>{{$client->status}}</td>
                                         <td>
                                             <div class="row">
@@ -62,13 +60,14 @@
                                     @endforeach
                                 </tbody>
                             </table>
+                            {{ $facility->clientsPaginate()->links() }}
                         </div>
                     </div>
                 </div>
             </div>
 
             {{-- View Facility Modal --}}
-        @foreach($facility->clients as $client)
+        @foreach($facility->clients() as $client)
         <div class="modal fade" id="cl{{$client->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -106,14 +105,14 @@
                                             <th>Residential Address </th>
                                             <td>{{$client->address}}</td>
                                         </tr>
-                                        <tr>
+                                        {{-- <tr>
                                             <th>Facility</th>
                                             <td>{{$client->facility->name}}</td>
-                                        </tr>
-                                        <tr>
+                                        </tr> --}}
+                                        {{-- <tr>
                                             <th>Case Manager</th>
                                             <td>{{$client->caseManager->name}}</td>
-                                        </tr>
+                                        </tr> --}}
                                     </table>
                                 </div>
                             </div>

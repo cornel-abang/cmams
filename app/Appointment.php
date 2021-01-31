@@ -10,11 +10,11 @@ class Appointment extends Model
 
     public function caseManager()
     {
-    	return $this->belongsTo(CaseManager::class,'email','email');
+    	return $this->belongsTo(Manager::class,'email','email');
     }
 
     public function client()
     {
-    	return $this->belongsTo(Client::class, 'clientID','clientID');
+    	return $this->belongsTo(Patient::class, 'clientID','clientID');
     }
 }

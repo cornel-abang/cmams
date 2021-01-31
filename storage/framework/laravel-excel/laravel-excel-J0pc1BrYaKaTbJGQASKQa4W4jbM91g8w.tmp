@@ -1,0 +1,1680 @@
+Facility,Hospital Num,Last Pickup Date (yyyy-mm-dd),Months of ARV Refill,TPT in the Last 2 years,"If Yes to TPT, date of TPT Start (yyyy-mm-dd)",TPT Completion date (yyyy-mm-dd),Date of Viral Load Sample Collection (yyyy-mm-dd),Case Manager
+cr Bakor Medical centre,0000188,2020-12-10,1,Yes,2020-11-11,2021-01-09,,Deborah Otei
+cr Bakor Medical centre,0000189,2020-12-10,1,Yes,2020-11-11,2020-12-11,,Deborah Otei
+cr Diamond Hill Health  Centre,0027/DHC/20,2020-11-09,3,Yes,2020-10-13,2021-02-07,,Amos Cecilia Awara
+cr Diamond Hill Health  Centre,0028/DHC/20,2020-10-30,3,Yes,2020-10-30,2021-01-28,,Amos Cecilia Awara
+cr Diamond Hill Health  Centre,00028/DHC/20,2020-11-13,3,,,,,Amos Cecilia Awara
+cr Diamond Hill Health  Centre,0025/DHC/20,2020-11-09,3,Yes,2020-11-09,2021-02-07,,Amos Cecilia Awara
+cr Diamond Hill Health  Centre,DHC/0030/20,2020-11-23,2,,,,,
+cr Nyahasang Health Centre,3037,2020-11-11,3,Yes,2020-10-12,2021-02-09,,Eno Esther Emmanuel
+cr Nyahasang Health Centre,3085,2020-11-09,3,Yes,2020-11-09,2021-02-07,,Eno Esther Emmanuel
+cr Nyahasang Health Centre,3041,2020-11-11,3,Yes,2020-10-12,2021-02-09,,Ogbu Sunday Oru
+cr Ikot Ekpo Health Post (Ward 10),1034/20,2020-10-28,6,Yes,2020-10-28,2021-04-26,,"Attah, Winifred Obika"
+cr Ikot Ekpo Health Post (Ward 10),1139/20,2020-11-24,2,Yes,2020-11-24,2021-01-19,,Helen Edem 
+cr Ikot Ekpo Health Post (Ward 10),1200/20,2020-12-10,3,,,2021-03-10,,"Attah, Winifred Obika"
+cr Ikot Ekpo Health Post (Ward 10),1128/20,2020-11-24,2,,,,,"Attah, Winifred Obika"
+cr Ikot Ekpo Health Post (Ward 10),1219/20,2020-12-14,3,,,,,"Attah, Winifred Obika"
+cr Emmanuel Infirmiry,020/1258,2020-11-30,3,,,,,Stella Ewor Abang
+cr Emmanuel Infirmiry,020/1256,2020-11-25,3,,,,,Stella Ewor Abang
+cr Emmanuel Infirmiry,020/302,2020-11-10,3,Yes,,2021-02-08,,Stella Ewor Abang
+cr Emmanuel Infirmiry,020/1338,2020-11-18,3,,,,,Offiong  Edem Effanga
+cr Emmanuel Infirmiry,020/1410,2020-12-11,1,,,2021-01-10,,
+cr Ekana Medical Centre,ek/0066,2020-10-05,3,Yes,2020-10-05,2020-12-28,,Abeng Freda
+cr Ekana Medical Centre,ek/0067,2020-12-04,3,Yes,2020-10-05,2021-02-26,2020-11-10,Abeng Freda
+cr Ekana Medical Centre,ek/0068,2020-11-25,3,Yes,2020-10-26,2021-02-17,,
+cr Ekana Medical Centre,ek/0071,2020-12-18,3,Yes,2020-11-19,,,
+cr Ekana Medical Centre,ek/0072,2020-12-29,3,Yes,2020-12-29,,,
+cr Ekana Medical Centre,ek/0073,2020-12-31,3,Yes,2020-12-31,,,
+cr Ekana Medical Centre,ek/0069,2020-12-03,3,Yes,2020-11-04,2021-02-25,,
+cr Obubra Maternal and Child Health Clinic,crs/00518c,2020-10-06,3,Yes,2020-10-06,2020-12-29,,Idim Sunday
+cr Obubra Maternal and Child Health Clinic,crs/00519c,2020-10-07,3,Yes,2020-10-07,2021-01-05,,Usang Happiness
+cr Obubra Maternal and Child Health Clinic,crs/00520c,2020-10-12,3,Yes,,2021-01-04,,Nyama Sampson
+cr Obubra Maternal and Child Health Clinic,crs/00521c,2020-10-13,3,Yes,2020-10-13,2021-01-05,,Jombo Jerome
+cr Obubra Maternal and Child Health Clinic,crs/00523ci,2020-10-15,3,Yes,2020-10-15,2021-01-07,,Nyama Sampson
+cr Obubra Maternal and Child Health Clinic,crs/00525ci,2020-10-17,3,Yes,2020-10-17,2021-01-09,,Idim Sunday
+cr Obubra Maternal and Child Health Clinic,crs/00526c,2020-10-19,3,Yes,2020-10-19,2021-01-11,,Idim Sunday
+cr Obubra Maternal and Child Health Clinic,crs/00527ci,2020-10-20,3,Yes,,2021-01-12,,Nyama Sampson
+cr Obubra Maternal and Child Health Clinic,crs/00528c,2020-10-21,3,Yes,,2021-01-13,,Nyama Sampson
+cr Obubra Maternal and Child Health Clinic,crs/00529ci,2020-10-22,3,Yes,2020-10-22,2021-01-14,,Nyama Sampson
+cr Obubra Maternal and Child Health Clinic,crs/00530c,2020-10-23,3,Yes,2020-10-23,2021-01-15,,Nyama Sampson
+cr Obubra Maternal and Child Health Clinic,crs/00531ci,2020-10-28,3,Yes,2020-10-28,2021-01-20,,Idim Sunday
+cr Obubra Maternal and Child Health Clinic,crs/00532c,2020-10-31,3,Yes,2020-10-31,2021-01-23,,
+cr Obubra Maternal and Child Health Clinic,crs/00533c,2020-10-31,3,Yes,2020-10-31,2021-01-23,,
+cr Obubra Maternal and Child Health Clinic,crs/00534c,2020-10-31,3,Yes,2020-10-31,2021-01-23,,
+cr Obubra Maternal and Child Health Clinic,crs/00535c,2020-10-31,3,Yes,2020-10-31,2021-01-23,,
+cr Obubra Maternal and Child Health Clinic,crs/00536ci,2020-10-31,3,Yes,2020-10-31,2021-01-23,,
+cr Obubra Maternal and Child Health Clinic,crs/00522c,2020-10-14,3,Yes,2020-10-14,2021-01-06,,Ogiri Sylvia
+cr Obubra Maternal and Child Health Clinic,crs/00524c,2020-10-16,3,Yes,2020-10-16,2021-01-08,,Idim Sunday
+cr Obubra Maternal and Child Health Clinic,crs/00539c,2020-10-31,3,Yes,2020-10-31,2021-01-23,,
+cr Obubra Maternal and Child Health Clinic,crs/00538ci,2020-10-31,3,Yes,2020-10-31,2021-01-23,,
+cr Obubra Maternal and Child Health Clinic,crs/00540ci,2020-10-31,3,Yes,2020-10-31,2021-01-23,,
+cr Obubra Maternal and Child Health Clinic,crs/00541c,2020-11-02,3,Yes,2020-11-02,2021-01-25,,
+cr Obubra Maternal and Child Health Clinic,crs/00542ci,2020-11-03,3,Yes,2020-11-03,2021-01-26,,
+cr Obubra Maternal and Child Health Clinic,crs/00544ci,2020-11-05,3,Yes,2020-11-05,2021-01-28,,
+cr Obubra Maternal and Child Health Clinic,crs/00546c,2020-11-07,3,Yes,2020-11-07,2021-01-30,,
+cr Obubra Maternal and Child Health Clinic,crs/00548c,2020-11-09,3,Yes,2020-11-09,2021-02-01,,
+cr Obubra Maternal and Child Health Clinic,crs/00547ct,2020-11-09,3,Yes,,2021-02-01,,
+cr Obubra Maternal and Child Health Clinic,crs/00549c,2020-11-10,3,Yes,2020-11-10,2021-02-02,,
+cr Obubra Maternal and Child Health Clinic,crs/00552c,2020-11-11,3,Yes,2020-11-11,2021-02-03,,
+cr Obubra Maternal and Child Health Clinic,crs/00551c,2020-11-11,3,Yes,,2021-02-03,,
+cr Obubra Maternal and Child Health Clinic,crs/00553,2020-11-12,3,Yes,2020-11-12,2021-02-04,,
+cr Obubra Maternal and Child Health Clinic,crs/00543c,2020-11-04,3,Yes,2020-11-04,2021-01-27,,
+cr Obubra Maternal and Child Health Clinic,cers/00555c,2020-11-13,3,Yes,2020-11-13,2021-02-05,,
+cr Obubra Maternal and Child Health Clinic,crs/00558c,2020-11-16,3,Yes,2020-11-16,2021-02-08,,
+cr Obubra Maternal and Child Health Clinic,crs/00537c,2020-10-31,3,Yes,2020-10-31,2021-01-23,,
+cr Obubra Maternal and Child Health Clinic,crs/00557c,2020-11-16,3,Yes,2020-11-16,2021-02-08,,
+cr Obubra Maternal and Child Health Clinic,crs/00559ci,2020-11-17,3,Yes,2020-11-17,2021-02-09,,
+cr Obubra Maternal and Child Health Clinic,crs/00560c,2020-11-17,3,Yes,2020-11-17,2021-02-09,,
+cr Obubra Maternal and Child Health Clinic,crs/00561c,2020-11-18,3,Yes,2020-11-18,2021-02-10,,
+cr Obubra Maternal and Child Health Clinic,crs/00562c,2020-11-18,3,Yes,2020-11-18,2021-02-10,,
+cr Obubra Maternal and Child Health Clinic,crs/00563c,2020-11-18,3,Yes,2020-11-18,2021-02-10,,
+cr Obubra Maternal and Child Health Clinic,crs/00564c,2020-11-19,3,Yes,2020-11-19,2021-02-11,,
+cr Obubra Maternal and Child Health Clinic,crs/00566c,2020-11-20,3,Yes,2020-11-20,2021-02-12,,
+cr Obubra Maternal and Child Health Clinic,crs/00565c,2020-11-20,3,Yes,2020-11-20,2021-02-12,,
+cr Obubra Maternal and Child Health Clinic,crs/00568c,2020-11-23,3,Yes,2020-11-23,2021-02-15,,
+cr Obubra Maternal and Child Health Clinic,crs/00567c,2020-11-21,3,Yes,2020-11-21,2021-02-13,,
+cr Obubra Maternal and Child Health Clinic,crs/00569c,2020-11-24,3,Yes,2020-11-24,2021-02-16,,
+cr Obubra Maternal and Child Health Clinic,crs/00554c,2020-11-12,3,Yes,2020-11-12,2021-02-04,,
+cr Obubra Maternal and Child Health Clinic,crs/00556c,2020-11-14,3,Yes,2020-11-14,2021-02-08,,
+cr Obubra Maternal and Child Health Clinic,crs/00571c,2020-11-26,3,Yes,2020-11-26,2021-02-18,,
+cr Obubra Maternal and Child Health Clinic,crs/00573c,2020-11-28,3,,,,,
+cr Obubra Maternal and Child Health Clinic,crs/00574c,2020-11-30,3,,,,,
+cr Obubra Maternal and Child Health Clinic,crs/00575ci,2020-12-01,3,,,,,
+cr Obubra Maternal and Child Health Clinic,crs/00576c,2020-12-02,3,,,,,
+cr Obubra Maternal and Child Health Clinic,crs/00577c,2020-12-03,3,,,,,
+cr Obubra Maternal and Child Health Clinic,crs/00578c,2020-12-04,3,Yes,2020-12-04,2021-02-26,,
+cr Obubra Maternal and Child Health Clinic,crs/00579c,2020-12-05,3,Yes,2020-12-05,2021-02-27,,
+cr Obubra Maternal and Child Health Clinic,crs/00580c,2020-12-05,3,Yes,2020-12-05,2021-02-27,,
+cr Obubra Maternal and Child Health Clinic,crs/00581c,2020-12-08,3,Yes,2020-12-08,2021-03-02,,
+cr Obubra Maternal and Child Health Clinic,crs/00582c,2020-12-09,3,,,,,
+cr Obubra Maternal and Child Health Clinic,crs/00584c,2020-12-11,3,Yes,2020-12-11,2021-03-05,,
+cr Obubra Maternal and Child Health Clinic,crs/00585c,2020-12-12,3,Yes,2020-12-12,2021-03-06,,
+cr Obubra Maternal and Child Health Clinic,crs/00572c,2020-11-27,3,,,,,
+cr Obubra Maternal and Child Health Clinic,crs/00586c,2020-12-14,3,Yes,,,,
+cr Obubra Maternal and Child Health Clinic,crs/00588c/ct,2020-12-16,3,Yes,2020-12-16,,,
+cr Obubra Maternal and Child Health Clinic,crs/00587c,2020-12-15,3,Yes,2020-12-15,,,
+cr Obubra Maternal and Child Health Clinic,crs/00589c,2020-12-17,3,Yes,2020-12-17,,,
+cr Obubra Maternal and Child Health Clinic,crs/00590c,2020-12-18,3,Yes,2020-12-18,,,
+cr Obubra Maternal and Child Health Clinic,crs/00591c,2020-12-21,3,Yes,2020-12-21,,,
+cr Obubra Maternal and Child Health Clinic,crs/00592c,2020-12-23,3,Yes,2020-12-23,,,
+cr Obubra Maternal and Child Health Clinic,crs/00594c,2020-12-29,3,Yes,2020-12-29,,,
+cr Obubra Maternal and Child Health Clinic,crs/00570c,2020-11-24,3,Yes,2020-11-24,2021-02-16,,
+cr Obubra Maternal and Child Health Clinic,crs/00595c,2020-12-30,3,Yes,2020-12-30,,,
+cr Ekpo Abasi Primary Health Centre,0764,2020-10-08,3,Yes,2020-10-08,2021-03-25,2020-11-19,Emmanuel Atu
+cr Ekpo Abasi Primary Health Centre,0766,2020-10-20,3,Yes,2020-10-20,2021-01-18,,Mary A
+cr Ekpo Abasi Primary Health Centre,0767,2020-11-02,3,Yes,2020-11-02,2021-04-19,,
+cr Ekpo Abasi Primary Health Centre,768,2020-11-05,3,Yes,2020-11-05,2021-02-03,,
+cr Ekpo Abasi Primary Health Centre,769,2020-11-11,3,Yes,2020-11-11,2021-04-28,,Christiana Charles
+cr Ekpo Abasi Primary Health Centre,0770,2020-11-16,3,Yes,2020-11-16,2021-05-10,,
+cr Ekpo Abasi Primary Health Centre,0771,2020-11-23,3,Yes,2020-11-23,2021-05-21,,
+cr Ekpo Abasi Primary Health Centre,765,2020-12-21,3,Yes,2020-10-14,2021-03-21,,
+cr Ekpo Abasi Primary Health Centre,772,2020-11-26,3,,,,,
+cr Ekpo Abasi Primary Health Centre,774,2020-12-01,3,Yes,2020-12-01,2043-04-13,,
+cr Ekpo Abasi Primary Health Centre,773,2020-11-26,3,Yes,2020-11-26,2021-05-13,,
+cr Ekpo Abasi Primary Health Centre,0775,2020-12-03,3,Yes,2020-12-03,2021-05-16,,
+cr Ekpo Abasi Primary Health Centre,0777,2020-12-10,3,,,2021-03-10,,
+cr Ekpo Abasi Primary Health Centre,0778,2020-12-14,3,Yes,2020-12-14,2021-05-31,,
+cr Ekpo Abasi Primary Health Centre,0776,2020-12-04,3,Yes,2020-12-04,,,
+cr Ekpo Abasi Primary Health Centre,0763,2020-10-08,3,Yes,2020-10-08,2021-03-25,,Christiana Charles
+cr Ekpo Abasi Primary Health Centre,0779,2020-12-21,3,,,2021-03-21,,
+cr Kasuk Health Centre,0252,2020-11-09,3,Yes,2020-10-08,2021-02-07,,Deborah Okon
+cr Kasuk Health Centre,0253,2020-11-23,3,Yes,2020-10-22,2021-02-21,,Deborah Okon
+cr Kasuk Health Centre,0254,2020-11-23,2,Yes,2020-10-23,2021-01-22,,Deborah Okon
+cr Kasuk Health Centre,0255,2020-11-26,3,Yes,2020-11-26,2021-02-24,,Deborah Okon
+cr Kasuk Health Centre,CRS/KHC/0256,2020-12-15,3,Yes,2020-11-11,2020-12-11,,Dorothy Ene
+cr Kasuk Health Centre,CRS/KHC/0258,2020-12-18,3,Yes,2020-11-13,2020-12-13,,Dorothy Ene
+cr Kasuk Health Centre,CRS/KHC/0257,2020-12-15,3,Yes,2020-11-13,2020-12-13,,Dorothy Ene
+cr Kasuk Health Centre,0259,2020-12-18,3,Yes,2020-12-18,2020-12-18,,Dorothy Ene
+cr Kasuk Health Centre,0261,2020-12-04,1,Yes,2020-12-04,2021-01-03,,Dorothy Ene
+cr Kasuk Health Centre,0262,2020-12-04,1,Yes,2020-12-04,2021-01-03,,Dorothy Ene
+cr Kasuk Health Centre,0260,2020-12-18,3,Yes,2020-12-18,2020-12-18,,Dorothy Ene
+cr Kasuk Health Centre,0263,2020-12-10,1,Yes,2020-12-10,2021-01-09,,Dorothy Ene
+cr Kasuk Health Centre,0265,2020-12-14,1,Yes,2020-12-14,2021-01-13,,Dorothy Ene
+cr Kasuk Health Centre,0266,2020-12-16,1,Yes,2020-12-16,2021-01-15,,Dorothy Ene
+cr Kasuk Health Centre,0264,2020-12-11,1,,,2021-01-10,,Dorothy Ene
+cr Kasuk Health Centre,0267,2020-12-17,1,Yes,2020-12-17,2021-01-16,,Dorothy Ene
+cr Ishie Health Post,01441,2020-11-04,3,Yes,2020-11-04,2021-02-02,,menken ogar
+cr Ishie Health Post,CRS/IHC/14453,2020-11-13,3,Yes,2020-11-13,2021-02-11,,menken ogar
+cr Ishie Health Post,1581/20,2020-12-16,1,Yes,2020-12-16,2021-01-15,,menken ogar
+cr Police Medical Clinic,0000190,2020-11-11,3,Yes,2020-11-11,2021-02-09,,Mrs Itam Ikpi
+cr Police Medical Clinic,0000193,2020-11-23,3,,,,,
+cr Police Medical Clinic,0000192,2020-11-13,2,,,,,Mark Imoke Ekpe
+cr University of Calabar Medical Centre,0000138,2020-11-12,3,Yes,2020-12-02,2021-03-02,,David Emmanuel
+cr University of Calabar Medical Centre,0000139,2020-12-09,3,,,2021-03-09,,Amaka Njoku
+cr University of Calabar Medical Centre,0000140,2020-12-15,3,,,2021-03-15,,
+cr Oban Primary Health Centre,2156/20,2020-10-09,3,Yes,2020-10-09,2021-01-01,,Ojong  Eric  Oru
+cr Oban Primary Health Centre,2160/20,2020-10-10,3,Yes,2020-10-10,2021-01-02,,Ojong  Eric  Oru
+cr Oban Primary Health Centre,2249/20,2020-11-05,3,Yes,2020-11-05,2021-01-28,,Ojong  Eric  Oru
+cr Oban Primary Health Centre,2111/20,2020-11-13,3,Yes,2020-11-13,2021-02-05,,Ojong  Eric  Oru
+cr Mma Efa Primary Health Centre,001/920/20,2020-10-05,3,Yes,2020-10-05,2021-01-03,,OCHELEBE  EMMANUEL
+cr Mma Efa Primary Health Centre,001/921/20,2020-10-05,3,Yes,2020-10-05,2021-01-03,,OCHELEBE  EMMANUEL
+cr Mma Efa Primary Health Centre,001/923/20,2020-12-22,3,Yes,2020-10-06,2021-03-22,,OCHELEBE  EMMANUEL
+cr Mma Efa Primary Health Centre,001/922/20,2020-12-21,3,Yes,2020-10-06,2021-03-21,,OCHELEBE  EMMANUEL
+cr Mma Efa Primary Health Centre,001/924/20,2020-10-07,3,Yes,2020-10-07,2021-01-05,,OCHELEBE  EMMANUEL
+cr Mma Efa Primary Health Centre,001/925/20,2020-10-07,3,Yes,2020-10-07,2021-01-05,,Aniefiok  Godswill
+cr Mma Efa Primary Health Centre,001/926/20,2020-10-11,3,Yes,2020-10-11,2021-01-09,,Aniefiok  Godswill
+cr Mma Efa Primary Health Centre,001/927/20,2020-12-10,3,Yes,2020-10-11,2021-01-09,,Aniefiok  Godswill
+cr Mma Efa Primary Health Centre,001/928/20,2020-10-11,3,Yes,2020-10-11,2021-01-09,,EGBE  LINDA
+cr Mma Efa Primary Health Centre,001/931/20,2020-10-11,3,Yes,2020-10-11,2021-01-09,,ERNEST  EYAM
+cr Mma Efa Primary Health Centre,001/930/20,2020-10-11,3,Yes,2020-10-11,2021-01-09,,EGBE  LINDA
+cr Mma Efa Primary Health Centre,001/929/20,2020-10-11,3,Yes,2020-10-11,2021-01-09,,EGBE  LINDA
+cr Mma Efa Primary Health Centre,001/933/20,2020-10-12,3,Yes,2020-10-12,2021-01-10,,ERNEST  EYAM
+cr Mma Efa Primary Health Centre,001/935/20,2020-10-14,3,Yes,2020-10-14,2021-01-12,,OFEM  JAMES
+cr Mma Efa Primary Health Centre,001/932/20,2020-11-30,3,Yes,2020-10-11,2021-01-09,,ERNEST  EYAM
+cr Mma Efa Primary Health Centre,001/937/20,2020-10-16,3,Yes,2020-10-16,2021-01-14,,OFEM  JAMES
+cr Mma Efa Primary Health Centre,001/936/20,2020-10-15,3,Yes,2020-10-15,2021-01-13,,OFEM  JAMES
+cr Mma Efa Primary Health Centre,001/938/20,2020-10-18,3,Yes,2020-10-18,2021-01-16,,VICTOR  BLESSING
+cr Mma Efa Primary Health Centre,001/940/20,2020-10-22,3,Yes,2020-10-22,2021-01-20,2020-12-03,VICTOR  BLESSING
+cr Mma Efa Primary Health Centre,001/941/20,2020-11-17,3,Yes,2020-10-21,2021-01-19,,VICTOR  BLESSING
+cr Mma Efa Primary Health Centre,001/939/20,2020-10-19,3,Yes,2020-10-19,2021-01-17,,VICTOR  BLESSING
+cr Mma Efa Primary Health Centre,001/942/20,2020-10-31,3,Yes,2020-10-31,2021-01-29,,EGBE  LINDA
+cr Mma Efa Primary Health Centre,001/944/20,2020-11-03,3,Yes,2020-11-03,2021-02-01,,Aniefiok  Godswill
+cr Mma Efa Primary Health Centre,001/943/20,2020-11-02,3,Yes,2020-11-02,2021-01-31,,Aniefiok  Godswill
+cr Mma Efa Primary Health Centre,001/945/20,2020-11-03,3,Yes,2020-11-03,2021-02-01,,Aniefiok  Godswill
+cr Mma Efa Primary Health Centre,001/946/20,2020-11-04,3,Yes,2020-11-04,2021-02-02,,Aniefiok  Godswill
+cr Mma Efa Primary Health Centre,001/947/20,2020-11-05,3,Yes,2020-11-05,2021-02-03,,Aniefiok  Godswill
+cr Mma Efa Primary Health Centre,001/949/20,2020-11-06,3,Yes,2020-11-06,2021-02-04,,Aniefiok  Godswill
+cr Mma Efa Primary Health Centre,001/950/20,2020-11-06,3,Yes,2020-11-06,2021-02-04,,Aniefiok  Godswill
+cr Mma Efa Primary Health Centre,001/948/20,2020-11-06,3,Yes,2020-11-06,2021-02-04,,Aniefiok  Godswill
+cr Mma Efa Primary Health Centre,001/952/20,2020-11-08,3,Yes,2020-11-08,2021-02-06,,EGBE  LINDA
+cr Mma Efa Primary Health Centre,001/953/20,2020-11-09,3,Yes,2020-11-09,2021-02-07,,EGBE  LINDA
+cr Mma Efa Primary Health Centre,001/951/20,2020-11-07,3,Yes,2020-11-07,2021-02-05,,EGBE  LINDA
+cr Mma Efa Primary Health Centre,001/955/20,2020-11-09,3,Yes,2020-11-09,2021-02-07,,EGBE  LINDA
+cr Mma Efa Primary Health Centre,001/954/20,2020-11-09,3,Yes,2020-11-09,2021-02-07,,EGBE  LINDA
+cr Mma Efa Primary Health Centre,001/956/20,2020-11-09,3,Yes,2020-11-09,2021-02-07,,EGBE  LINDA
+cr Mma Efa Primary Health Centre,001/958/20,2020-11-09,3,Yes,2020-11-09,2021-02-07,,ERNEST  EYAM
+cr Mma Efa Primary Health Centre,001/957/20,2020-11-09,3,Yes,2020-11-09,2021-02-07,,EGBE  LINDA
+cr Mma Efa Primary Health Centre,001/960/20,2020-11-11,3,Yes,2020-11-11,2021-02-09,,ERNEST  EYAM
+cr Mma Efa Primary Health Centre,001/962/20,2020-11-11,3,Yes,2020-11-11,2021-02-09,,ERNEST  EYAM
+cr Mma Efa Primary Health Centre,001/961/20,2020-11-10,3,Yes,2020-11-10,2021-02-08,,ERNEST  EYAM
+cr Mma Efa Primary Health Centre,001/963/20,2020-11-11,3,Yes,2020-11-11,2021-02-09,,Edet Okon Edet
+cr Mma Efa Primary Health Centre,001/964/20,2020-11-13,3,Yes,2020-11-13,2021-02-11,,ERNEST  EYAM
+cr Mma Efa Primary Health Centre,001/965/20,2020-12-17,3,Yes,2020-11-16,2021-03-17,,Glory  Osebi
+cr Mma Efa Primary Health Centre,001/966/20,2020-11-16,3,Yes,2020-11-16,2021-02-14,,ERNEST  EYAM
+cr Mma Efa Primary Health Centre,001/967/20,2020-11-16,3,Yes,2020-11-16,2021-02-14,,OCHELEBE  EMMANUEL
+cr Mma Efa Primary Health Centre,001/968/20,2020-11-17,3,Yes,2020-11-17,2021-02-15,,OCHELEBE  EMMANUEL
+cr Mma Efa Primary Health Centre,001/969/20,2020-11-17,3,Yes,2020-11-17,2021-02-15,,OCHELEBE  EMMANUEL
+cr Mma Efa Primary Health Centre,001/970/20,2020-11-17,3,Yes,2020-11-17,2021-02-15,,OCHELEBE  EMMANUEL
+cr Mma Efa Primary Health Centre,001/971/20,2020-11-18,3,Yes,2020-11-18,2021-02-16,,OCHELEBE  EMMANUEL
+cr Mma Efa Primary Health Centre,001/972/20,2020-11-18,3,Yes,2020-11-18,2021-02-16,,OCHELEBE  EMMANUEL
+cr Mma Efa Primary Health Centre,001/973/20,2020-11-18,3,Yes,2020-11-18,2021-02-16,,OCHELEBE  EMMANUEL
+cr Mma Efa Primary Health Centre,001/974/20,2020-11-20,3,Yes,2020-11-20,2021-02-18,,OFEM  JAMES
+cr Mma Efa Primary Health Centre,001/975/20,2020-11-23,3,Yes,2020-11-23,2021-02-21,,OFEM  JAMES
+cr Mma Efa Primary Health Centre,001/977/20,2020-11-23,3,Yes,2020-11-23,2021-02-21,,OFEM  JAMES
+cr Mma Efa Primary Health Centre,001/976/20,2020-11-23,3,Yes,2020-11-23,2021-02-21,,OFEM  JAMES
+cr Mma Efa Primary Health Centre,001/978/20,2020-11-24,3,Yes,2020-11-24,2021-02-22,,OFEM  JAMES
+cr Mma Efa Primary Health Centre,001/979/20,2020-11-25,3,Yes,2020-11-25,2021-02-23,,OFEM  JAMES
+cr Mma Efa Primary Health Centre,001/980/20,2020-11-25,3,Yes,2020-11-25,2021-02-23,,OFEM  JAMES
+cr Mma Efa Primary Health Centre,001/983/20,2020-11-27,3,Yes,2020-11-27,2021-02-25,2020-11-29,VICTOR  BLESSING
+cr Mma Efa Primary Health Centre,001/981/20,2020-11-25,3,Yes,2020-11-25,2021-02-23,,VICTOR  BLESSING
+cr Mma Efa Primary Health Centre,001/982/20,2020-11-26,3,Yes,2020-11-26,2021-02-24,,VICTOR  BLESSING
+cr Mma Efa Primary Health Centre,001/986/20,2020-11-25,3,Yes,2020-11-25,2021-02-23,,VICTOR  BLESSING
+cr Mma Efa Primary Health Centre,001/985/20,2020-11-25,3,Yes,2020-11-25,2021-02-23,,VICTOR  BLESSING
+cr Mma Efa Primary Health Centre,001/984/20,2020-11-29,3,Yes,2020-11-29,2021-02-27,,VICTOR  BLESSING
+cr Mma Efa Primary Health Centre,001/988/20,2020-11-30,3,Yes,2020-11-30,2021-02-28,,VICTOR  BLESSING
+cr Mma Efa Primary Health Centre,001/989/20,2020-11-30,3,Yes,2020-11-30,2021-02-28,,VICTOR  BLESSING
+cr Mma Efa Primary Health Centre,001/987/20,2020-11-30,3,Yes,2020-11-30,2021-02-28,,Nancy Ndifon Ntui
+cr Mma Efa Primary Health Centre,001/991/20,2020-12-01,3,Yes,2020-12-01,,,EGBE  LINDA
+cr Mma Efa Primary Health Centre,001/990/20,2020-12-01,3,Yes,2020-12-01,2021-03-01,,EGBE  LINDA
+cr Mma Efa Primary Health Centre,001/992/20,2020-12-03,3,Yes,2020-12-03,2021-03-03,,Glory  Osebi
+cr Mma Efa Primary Health Centre,001/995/20,2020-12-04,3,Yes,2020-12-04,2021-03-04,,ERNEST  EYAM
+cr Mma Efa Primary Health Centre,001/993/20,2020-12-03,3,Yes,2020-12-03,2021-03-03,,EGBE  LINDA
+cr Mma Efa Primary Health Centre,001/996/20,2020-12-04,3,Yes,2020-12-04,2021-03-04,,ERNEST  EYAM
+cr Mma Efa Primary Health Centre,001/997/20,2020-12-02,3,Yes,2020-12-02,2021-03-02,,ERNEST  EYAM
+cr Mma Efa Primary Health Centre,001/994/20,2020-12-04,3,Yes,2020-12-04,2021-03-04,,EGBE  LINDA
+cr Mma Efa Primary Health Centre,001/999/20,2020-12-07,3,Yes,2020-12-07,2021-03-07,,OFEM  JAMES
+cr Mma Efa Primary Health Centre,001/998/20,2020-12-07,3,Yes,2020-12-07,2021-03-07,,OFEM  JAMES
+cr Mma Efa Primary Health Centre,001/1000/20,2020-12-09,3,Yes,2020-12-09,2021-03-09,,OCHELEBE  EMMANUEL
+cr Mma Efa Primary Health Centre,001/1001/20,2020-12-10,3,Yes,2020-12-10,2021-03-10,,ERNEST  EYAM
+cr Mma Efa Primary Health Centre,001/1003/20,2020-12-10,3,Yes,2020-12-10,2021-03-10,,OCHELEBE  EMMANUEL
+cr Mma Efa Primary Health Centre,001/1002/20,2020-12-10,3,Yes,2020-12-10,,,ERNEST  EYAM
+cr Mma Efa Primary Health Centre,001/1005/20,2020-12-11,3,Yes,2020-12-11,2021-03-11,,OFEM  JAMES
+cr Mma Efa Primary Health Centre,001/1006/20,2020-12-13,3,Yes,2020-12-13,2021-03-13,,ERNEST  EYAM
+cr Mma Efa Primary Health Centre,001/1004/20,2020-12-11,3,Yes,2020-12-11,2021-03-11,,OCHELEBE  EMMANUEL
+cr Mma Efa Primary Health Centre,001/1007/20,2020-12-15,3,Yes,2020-12-15,2021-03-15,,OCHELEBE  EMMANUEL
+cr Mma Efa Primary Health Centre,001/1008/20,2020-12-15,3,Yes,2020-12-15,2021-03-15,,EGBE  LINDA
+cr Mma Efa Primary Health Centre,001/1009/20,2020-12-16,3,Yes,2020-12-16,2021-03-16,,OFEM  JAMES
+cr Mma Efa Primary Health Centre,001/1011/20,2020-12-16,3,Yes,2020-12-16,2021-03-16,,OCHELEBE  EMMANUEL
+cr Mma Efa Primary Health Centre,001/1010/20,2020-12-16,3,Yes,2020-12-16,2021-03-16,,OFEM  JAMES
+cr Mma Efa Primary Health Centre,001/1012/20,2020-12-21,3,Yes,2020-12-21,2021-03-21,,Nancy Ndifon Ntui
+cr Mma Efa Primary Health Centre,001/1013/20,2020-12-21,3,Yes,2020-12-21,2021-03-21,,VICTOR  BLESSING
+cr Mma Efa Primary Health Centre,001/1014/20,2020-12-29,3,Yes,2020-12-29,2021-03-29,,Aniefiok  Godswill
+cr Mma Efa Primary Health Centre,001/1015/20,2020-12-30,3,Yes,2020-12-30,2021-03-30,,OCHELEBE  EMMANUEL
+cr Mma Efa Primary Health Centre,001/1016/20,2020-12-31,3,,2020-12-31,2021-03-31,,OCHELEBE  EMMANUEL
+cr Dr Lawrence Henshaw Memorial Hospital,CRS/008/10687C,2020-10-06,3,Yes,2020-10-06,2020-12-29,,Elijah David Ekpa
+cr Dr Lawrence Henshaw Memorial Hospital,10685,2020-11-05,3,Yes,2020-10-05,2021-01-28,,Ani Lovina Chinenye
+cr Dr Lawrence Henshaw Memorial Hospital,CRS/008/10689C,2020-10-09,3,Yes,2020-10-09,2021-01-01,,Ita Alice-oyo Godwin
+cr Dr Lawrence Henshaw Memorial Hospital,CRS/008/10691C,2020-10-12,3,Yes,2020-10-12,2021-01-04,,Elijah David Ekpa
+cr Dr Lawrence Henshaw Memorial Hospital,10692C,2020-10-12,3,Yes,2020-10-12,2021-01-04,,Ita Alice-oyo Godwin
+cr Dr Lawrence Henshaw Memorial Hospital,CRS/008/10693,2020-12-10,4,,,2021-04-09,,Ani Lovina Chinenye
+cr Dr Lawrence Henshaw Memorial Hospital,CRS/008/10694C,2020-10-13,3,Yes,2020-10-13,2021-01-05,,Ita Alice-oyo Godwin
+cr Dr Lawrence Henshaw Memorial Hospital,CRS/008/10695C,2020-10-14,3,Yes,2020-10-14,2021-01-06,,Ita Alice-oyo Godwin
+cr Dr Lawrence Henshaw Memorial Hospital,CRS/008/10696,2020-10-15,3,,,,,  Grace Enya Abeh
+cr Dr Lawrence Henshaw Memorial Hospital,CRS/008/10697C,2020-10-15,3,Yes,2020-10-15,2021-01-07,,Ita Alice-oyo Godwin
+cr Dr Lawrence Henshaw Memorial Hospital,10698,2020-10-16,3,Yes,2020-10-16,2021-01-08,,Ani Lovina Chinenye
+cr Dr Lawrence Henshaw Memorial Hospital,CRS/008/10701C,2020-10-19,3,Yes,2020-10-19,2021-01-11,,Elijah David Ekpa
+cr Dr Lawrence Henshaw Memorial Hospital,CRS/008/10699C,2020-10-16,3,Yes,2020-10-16,2021-01-08,,Elijah David Ekpa
+cr Dr Lawrence Henshaw Memorial Hospital,CRS/008/10700C,2020-10-19,3,Yes,2020-10-19,2021-01-11,,Elijah David Ekpa
+cr Dr Lawrence Henshaw Memorial Hospital,CRS/008/10702,2020-10-19,3,Yes,2020-10-19,2021-01-11,,Ani Lovina Chinenye
+cr Dr Lawrence Henshaw Memorial Hospital,CRS/008/10704,2020-10-20,3,Yes,2020-10-20,2021-01-12,,Ani Lovina Chinenye
+cr Dr Lawrence Henshaw Memorial Hospital,CRS/008/10703,2020-10-20,3,Yes,2020-10-20,2021-01-12,,Ani Lovina Chinenye
+cr Dr Lawrence Henshaw Memorial Hospital,10705C,2020-10-20,3,Yes,2020-10-20,2021-01-12,,Ita Alice-oyo Godwin
+cr Dr Lawrence Henshaw Memorial Hospital,CRS/008/10707,2020-10-21,3,Yes,2020-10-21,2021-01-13,,Ani Lovina Chinenye
+cr Dr Lawrence Henshaw Memorial Hospital,10706C,2020-10-20,3,Yes,2020-10-20,2021-01-12,,Ita Alice-oyo Godwin
+cr Dr Lawrence Henshaw Memorial Hospital,10708C,2020-10-21,3,Yes,2020-10-21,2021-01-13,,Ita Alice-oyo Godwin
+cr Dr Lawrence Henshaw Memorial Hospital,CRS/008/10710C,2020-10-22,3,Yes,2020-10-22,2021-01-14,,Ita Alice-oyo Godwin
+cr Dr Lawrence Henshaw Memorial Hospital,CRS/008/10711,2020-10-22,3,Yes,2020-10-22,2021-01-14,,Ani Lovina Chinenye
+cr Dr Lawrence Henshaw Memorial Hospital,CRS/008/10712C,2020-10-23,3,Yes,2020-10-23,2021-01-15,,Ita Alice-oyo Godwin
+cr Dr Lawrence Henshaw Memorial Hospital,CRS/008/10713C,2020-10-23,3,Yes,2020-10-23,2021-01-15,,Elijah David Ekpa
+cr Dr Lawrence Henshaw Memorial Hospital,10714,2020-10-23,3,Yes,2020-10-23,2021-04-09,,Ani Lovina Chinenye
+cr Dr Lawrence Henshaw Memorial Hospital,CRS/008/10717,2020-11-02,3,Yes,2020-11-02,2021-01-31,,Ani Lovina Chinenye
+cr Dr Lawrence Henshaw Memorial Hospital,CRS/008/10715C,2020-10-30,3,Yes,2020-10-30,2021-01-22,,Elijah David Ekpa
+cr Dr Lawrence Henshaw Memorial Hospital,CRS/008/10716C,2020-10-31,3,Yes,2020-10-31,2021-01-23,,Elijah David Ekpa
+cr Dr Lawrence Henshaw Memorial Hospital,CRS/008/10718C,2020-11-02,3,Yes,2020-11-02,2021-01-31,,Ita Alice-oyo Godwin
+cr Dr Lawrence Henshaw Memorial Hospital,CRS/008/10719C,2020-11-02,3,Yes,2020-11-02,2021-01-31,,Ita Alice-oyo Godwin
+cr Dr Lawrence Henshaw Memorial Hospital,10720,2020-11-03,3,Yes,2020-11-03,2021-01-26,,Ani Lovina Chinenye
+cr Dr Lawrence Henshaw Memorial Hospital,CRS/008/10721C,2020-11-03,3,Yes,2020-11-03,2021-01-26,,Elijah David Ekpa
+cr Dr Lawrence Henshaw Memorial Hospital,CRS/008/10722C,2020-11-04,3,Yes,2020-11-04,2021-01-27,,Ita Alice-oyo Godwin
+cr Dr Lawrence Henshaw Memorial Hospital,CRS/008/10723C,2020-11-05,3,Yes,2020-11-05,2021-01-28,,Ita Alice-oyo Godwin
+cr Dr Lawrence Henshaw Memorial Hospital,CRS/008/10724C,2020-11-05,3,Yes,2020-11-05,2021-01-28,,Ita Alice-oyo Godwin
+cr Dr Lawrence Henshaw Memorial Hospital,10726,2020-11-09,3,Yes,2020-11-09,2021-02-01,,Ani Lovina Chinenye
+cr Dr Lawrence Henshaw Memorial Hospital,10727C,2020-11-09,3,Yes,2020-11-09,2021-02-01,,Ita Alice-oyo Godwin
+cr Dr Lawrence Henshaw Memorial Hospital,CRS/008/10728C,2020-11-10,3,Yes,2020-11-10,2021-02-02,,Ita Alice-oyo Godwin
+cr Dr Lawrence Henshaw Memorial Hospital,10730,2020-11-11,3,Yes,2020-11-11,2021-02-03,,Ani Lovina Chinenye
+cr Dr Lawrence Henshaw Memorial Hospital,10731,2020-11-12,3,Yes,2020-11-12,2021-02-04,,Ani Lovina Chinenye
+cr Dr Lawrence Henshaw Memorial Hospital,10732C,2020-11-12,3,Yes,2020-11-12,2021-02-04,,Ita Alice-oyo Godwin
+cr Dr Lawrence Henshaw Memorial Hospital,10733C,2020-11-13,3,Yes,2020-11-13,2021-02-05,,Ita Alice-oyo Godwin
+cr Dr Lawrence Henshaw Memorial Hospital,10734C,2020-11-13,3,Yes,2020-11-13,2021-02-05,,Ita Alice-oyo Godwin
+cr Dr Lawrence Henshaw Memorial Hospital,10735C,2020-11-11,3,Yes,2020-11-11,2021-02-03,,Elijah David Ekpa
+cr Dr Lawrence Henshaw Memorial Hospital,10738C,2020-11-16,3,Yes,2020-11-16,2021-02-08,,Elijah David Ekpa
+cr Dr Lawrence Henshaw Memorial Hospital,10739C,2020-11-16,3,Yes,2020-11-16,2021-02-08,,Elijah David Ekpa
+cr Dr Lawrence Henshaw Memorial Hospital,10740,2020-11-17,3,Yes,2020-11-17,2021-02-09,,Ani Lovina Chinenye
+cr Dr Lawrence Henshaw Memorial Hospital,10741,2020-11-17,3,Yes,2020-11-17,2021-02-09,,Ani Lovina Chinenye
+cr Dr Lawrence Henshaw Memorial Hospital,10742C,2020-11-17,3,Yes,2020-11-17,2021-02-09,,Elijah David Ekpa
+cr Dr Lawrence Henshaw Memorial Hospital,10744C,2020-11-18,3,Yes,2020-11-18,2021-02-10,,Elijah David Ekpa
+cr Dr Lawrence Henshaw Memorial Hospital,10745C,2020-11-18,3,Yes,2020-11-18,2021-02-10,,Elijah David Ekpa
+cr Dr Lawrence Henshaw Memorial Hospital,10746C,2020-11-19,3,Yes,2020-11-19,2021-02-11,,Elijah David Ekpa
+cr Dr Lawrence Henshaw Memorial Hospital,10747,2020-11-20,3,Yes,2020-11-20,2021-02-12,,Paul Edet Inyang
+cr Dr Lawrence Henshaw Memorial Hospital,CRS/008/10748C,2020-11-20,3,Yes,2020-11-20,2021-02-12,,Elijah David Ekpa
+cr Dr Lawrence Henshaw Memorial Hospital,10749C,2020-11-21,3,Yes,2020-11-21,2021-02-13,,Elijah David Ekpa
+cr Dr Lawrence Henshaw Memorial Hospital,10751C,2020-11-23,3,Yes,2020-11-23,2021-02-15,,Elijah David Ekpa
+cr Dr Lawrence Henshaw Memorial Hospital,10750C,2020-11-23,3,Yes,2020-11-23,2021-02-15,,Elijah David Ekpa
+cr Dr Lawrence Henshaw Memorial Hospital,10752C,2020-11-24,3,Yes,2020-11-24,2021-02-16,,Ita Alice-oyo Godwin
+cr Dr Lawrence Henshaw Memorial Hospital,10753CI,2020-11-26,3,Yes,2020-11-26,2021-02-18,,Ita Alice-oyo Godwin
+cr Dr Lawrence Henshaw Memorial Hospital,10754C,2020-11-27,3,Yes,2020-11-27,2021-02-19,,Ita Alice-oyo Godwin
+cr Dr Lawrence Henshaw Memorial Hospital,10755C,2020-11-30,3,Yes,2020-11-30,2021-02-28,,Ita Alice-oyo Godwin
+cr Dr Lawrence Henshaw Memorial Hospital,CRS/008/10756,2020-12-02,3,Yes,2020-12-02,2021-02-24,,Ani Lovina Chinenye
+cr Dr Lawrence Henshaw Memorial Hospital,10757,2020-12-02,3,,,,,Ani Lovina Chinenye
+cr Dr Lawrence Henshaw Memorial Hospital,10759,2020-12-03,2,Yes,2020-12-03,2021-01-28,,Ani Lovina Chinenye
+cr Dr Lawrence Henshaw Memorial Hospital,10758C,2020-12-02,3,Yes,2020-12-02,2021-02-24,,Ita Alice-oyo Godwin
+cr Dr Lawrence Henshaw Memorial Hospital,10760C,2020-12-03,3,Yes,2020-12-03,2021-02-25,,Ita Alice-oyo Godwin
+cr Dr Lawrence Henshaw Memorial Hospital,10761C,2020-12-04,3,Yes,2020-12-04,2021-02-26,,Ita Alice-oyo Godwin
+cr Dr Lawrence Henshaw Memorial Hospital,10762C,2020-12-05,3,Yes,2020-12-05,2021-03-05,,Ita Alice-oyo Godwin
+cr Dr Lawrence Henshaw Memorial Hospital,10763C,2020-12-07,3,Yes,2020-12-07,2021-03-01,,Elijah David Ekpa
+cr Dr Lawrence Henshaw Memorial Hospital,10764,2020-12-09,3,Yes,2020-12-09,2021-03-03,,Ani Lovina Chinenye
+cr Dr Lawrence Henshaw Memorial Hospital,10765C,2020-12-09,3,Yes,2020-12-09,2021-03-03,,Elijah David Ekpa
+cr Dr Lawrence Henshaw Memorial Hospital,10766C,2020-12-10,3,Yes,2020-12-10,2021-03-04,,Elijah David Ekpa
+cr Dr Lawrence Henshaw Memorial Hospital,CRS/008/10767,2020-12-11,3,Yes,2020-12-11,2021-03-05,,Ani Lovina Chinenye
+cr Dr Lawrence Henshaw Memorial Hospital,10768C,2020-12-11,3,Yes,2020-12-11,2021-03-05,,Elijah David Ekpa
+cr Dr Lawrence Henshaw Memorial Hospital,10769C,2020-12-12,3,Yes,2020-12-12,2021-03-06,,Elijah David Ekpa
+cr Dr Lawrence Henshaw Memorial Hospital,10770,2020-12-14,3,Yes,2020-12-14,2021-03-08,,Ani Lovina Chinenye
+cr Dr Lawrence Henshaw Memorial Hospital,10771C,2020-12-14,3,Yes,2020-12-14,2021-03-08,,Elijah David Ekpa
+cr Dr Lawrence Henshaw Memorial Hospital,10772C,2020-12-15,3,Yes,2020-12-15,2021-03-09,,Elijah David Ekpa
+cr Dr Lawrence Henshaw Memorial Hospital,10773C,2020-12-15,3,Yes,2020-12-15,2021-03-09,,Elijah David Ekpa
+cr Dr Lawrence Henshaw Memorial Hospital,CRS/008/10774,2020-12-17,3,Yes,2020-12-17,,,
+cr Dr Lawrence Henshaw Memorial Hospital,10775C,2020-12-17,3,Yes,2020-12-17,,,
+cr Dr Lawrence Henshaw Memorial Hospital,10776C,2020-12-18,3,Yes,2020-12-18,,,
+cr Dr Lawrence Henshaw Memorial Hospital,10777,2020-12-21,3,Yes,2020-12-21,,,
+cr Dr Lawrence Henshaw Memorial Hospital,10778,2020-12-21,3,Yes,2020-12-21,,,
+cr Dr Lawrence Henshaw Memorial Hospital,10780,2020-12-21,3,Yes,2020-12-21,,,
+cr Dr Lawrence Henshaw Memorial Hospital,10779,2020-12-21,3,Yes,2020-12-21,,,
+cr Dr Lawrence Henshaw Memorial Hospital,10781C,2020-12-19,3,Yes,2020-12-19,,,
+cr Dr Lawrence Henshaw Memorial Hospital,10783C,2020-12-23,3,Yes,2020-12-23,,,
+cr Dr Lawrence Henshaw Memorial Hospital,10782C,2020-12-21,3,Yes,2020-12-21,,,
+cr Dr Lawrence Henshaw Memorial Hospital,10784,2020-12-24,3,Yes,2020-12-24,,,
+cr Dr Lawrence Henshaw Memorial Hospital,10786C,2020-12-29,3,Yes,2020-12-29,,,
+cr Dr Lawrence Henshaw Memorial Hospital,10785C,2020-12-24,3,Yes,2020-12-24,,,
+cr Dr Lawrence Henshaw Memorial Hospital,10787C,2020-12-30,3,Yes,2020-12-30,,,
+cr Goldie Clinic,6322/20,2020-11-27,1,,,,,Chioma  Ogar
+cr Goldie Clinic,6208/20,2020-12-23,1,,,,,Chioma  Ogar
+cr Ekorinim Health Centre,EHC/30010/20,2020-12-02,3,Yes,2020-10-05,2021-02-24,,Ara Mbek
+cr Ekorinim Health Centre,4165/EHC/20,2020-12-21,3,,,,,
+cr Ekorinim Health Centre,EHC/4008/20,2020-12-11,3,Yes,2020-11-13,2021-03-11,,Ara Mbek
+cr Ekorinim Health Centre,4155/EHC/20,2020-12-21,3,Yes,2020-11-26,2020-12-24,,
+cr Anderson Primary Health Centre,0135/20,2020-11-05,3,Yes,2020-11-05,2021-02-03,,Ndarake Bassey
+cr Anderson Primary Health Centre,0132/20,2020-10-15,3,Yes,2020-10-15,2021-01-13,,Ndarake Bassey
+cr Anderson Primary Health Centre,0133/20,2020-10-15,3,Yes,2020-10-15,2021-01-13,,Ndarake Bassey
+cr Anderson Primary Health Centre,0136/20,2020-11-10,3,Yes,2020-11-10,2021-02-08,,Ndarake Bassey
+cr Anderson Primary Health Centre,0138/20,2020-12-04,3,Yes,2020-12-04,2021-03-04,,Ndarake Bassey
+cr Anderson Primary Health Centre,0137/20,2020-11-23,3,Yes,2020-11-23,2021-02-21,,Ndarake Bassey
+cr Calabar South Family Health Centre,2053/20,2020-12-07,1,,,2021-01-06,,Sedoo Ruth Ortswen
+cr Essierebom Primary Health Centre,0000063,2020-10-09,3,Yes,2020-10-09,2021-01-07,,
+cr Essierebom Primary Health Centre,0000064,2020-12-09,3,Yes,2020-12-09,2021-03-09,,
+cr Henshaw Town Health Post,050/20,2020-11-11,3,,,,,
+cr Henshaw Town Health Post,052/20,2020-11-30,3,,,,,
+cr Okundi Comprehensive Health Centre,C/00907,2020-10-05,3,Yes,2020-10-05,2021-01-03,,Bisong Kenneth
+cr Okundi Comprehensive Health Centre,C/00909,2020-10-08,3,Yes,2020-10-08,2021-01-06,,Bisong Kenneth
+cr Okundi Comprehensive Health Centre,C/00908,2020-10-06,3,Yes,2020-10-06,2021-01-04,,Bisong Kenneth
+cr Okundi Comprehensive Health Centre,C/00910,2020-10-09,3,Yes,2020-10-09,2021-01-07,,Bisong Kenneth
+cr Okundi Comprehensive Health Centre,C/00912,2020-10-14,3,Yes,2020-10-14,2021-01-12,,Bisong Kenneth
+cr Okundi Comprehensive Health Centre,c/00913,2020-10-15,3,Yes,2020-10-15,2021-01-13,,Bisong Kenneth
+cr Okundi Comprehensive Health Centre,C/00914,2020-10-16,3,Yes,2020-10-16,2021-01-14,,Bisong Kenneth
+cr Okundi Comprehensive Health Centre,C/00916,2020-10-17,3,Yes,2020-10-17,2021-01-15,,Bisong Kenneth
+cr Okundi Comprehensive Health Centre,c/00911,2020-10-12,3,Yes,2020-10-12,2021-01-10,,Bisong Kenneth
+cr Okundi Comprehensive Health Centre,c/00917,2020-10-19,3,Yes,2020-10-19,2021-01-17,,Bisong Kenneth
+cr Okundi Comprehensive Health Centre,C/00915,2020-10-17,3,Yes,2020-10-17,2021-01-15,,Bisong Kenneth
+cr Okundi Comprehensive Health Centre,0000918,2020-10-20,3,Yes,2020-10-20,2021-01-18,,Bisong Kenneth
+cr Okundi Comprehensive Health Centre,C/00920,2020-10-21,3,Yes,2020-10-21,2021-01-19,,Bisong Kenneth
+cr Okundi Comprehensive Health Centre,C/00919,2020-10-20,3,Yes,2020-10-20,2021-01-18,,Bisong Kenneth
+cr Okundi Comprehensive Health Centre,C/00922,2020-10-23,3,Yes,2020-10-23,2021-01-21,,Bisong Kenneth
+cr Okundi Comprehensive Health Centre,CI/00929,2020-10-22,3,,,,,Bisong Kenneth
+cr Okundi Comprehensive Health Centre,C/00921,2020-10-22,3,Yes,2020-10-22,2021-01-20,,Bisong Kenneth
+cr Okundi Comprehensive Health Centre,CI/00930,2020-10-22,3,,,,,Bisong Kenneth
+cr Okundi Comprehensive Health Centre,C/00928,2020-10-22,3,,,,,Bisong Kenneth
+cr Okundi Comprehensive Health Centre,C/00927,2020-10-22,3,,,,,Bisong Kenneth
+cr Okundi Comprehensive Health Centre,C/00926,2020-10-22,3,,,,,Bisong Kenneth
+cr Okundi Comprehensive Health Centre,C/00925,2020-10-22,3,,,,,Bisong Kenneth
+cr Okundi Comprehensive Health Centre,C/00923,2020-10-22,3,,,,,Bisong Kenneth
+cr Okundi Comprehensive Health Centre,C/00932,2020-10-23,3,,,,,Bisong Kenneth
+cr Okundi Comprehensive Health Centre,C/00933,2020-10-23,3,Yes,2020-10-23,2021-01-21,,Bisong Kenneth
+cr Okundi Comprehensive Health Centre,C/00924,2020-10-22,3,,,,,Bisong Kenneth
+cr Okundi Comprehensive Health Centre,C/00935,2020-10-23,3,,,,,Bisong Kenneth
+cr Okundi Comprehensive Health Centre,C/00936,2020-10-23,3,,,,,Bisong Kenneth
+cr Okundi Comprehensive Health Centre,CI/00938,2020-10-23,3,,,,,Bisong Kenneth
+cr Okundi Comprehensive Health Centre,C/00937,2020-10-23,3,Yes,2020-10-23,2021-01-21,,Bisong Kenneth
+cr Okundi Comprehensive Health Centre,C/00944,2020-10-24,3,Yes,2020-10-24,2021-01-22,,Bisong Kenneth
+cr Okundi Comprehensive Health Centre,CI/00939,2020-10-23,3,,,,,Bisong Kenneth
+cr Okundi Comprehensive Health Centre,C/00942,2020-10-24,3,Yes,2020-10-24,2021-01-22,,Bisong Kenneth
+cr Okundi Comprehensive Health Centre,C/00943,2020-10-24,3,Yes,2020-10-24,2021-01-22,,Bisong Kenneth
+cr Okundi Comprehensive Health Centre,CI/00940,2020-10-24,3,,,,,Bisong Kenneth
+cr Okundi Comprehensive Health Centre,C/00941,2020-10-24,3,Yes,2020-10-24,2021-01-22,,Bisong Kenneth
+cr Okundi Comprehensive Health Centre,C/00934,2020-10-23,3,,,,,Bisong Kenneth
+cr Okundi Comprehensive Health Centre,C/00945,2020-10-30,3,Yes,2020-10-30,2021-01-28,,Bisong Kenneth
+cr Okundi Comprehensive Health Centre,C/00931,2020-10-22,3,Yes,2020-10-22,2021-01-20,,Bisong Kenneth
+cr Okundi Comprehensive Health Centre,C/00946,2020-11-03,3,Yes,2020-11-03,2021-02-01,,Bisong Kenneth
+cr Okundi Comprehensive Health Centre,CI/00947,2020-11-04,3,Yes,2020-11-04,2021-02-02,,Bisong Kenneth
+cr Okundi Comprehensive Health Centre,CI/00949,2020-11-06,3,Yes,2020-11-06,2021-02-04,,Bisong Kenneth
+cr Okundi Comprehensive Health Centre,c/00948,2020-11-05,3,Yes,2020-11-05,2021-02-03,,Bisong Kenneth
+cr Okundi Comprehensive Health Centre,0000950,2020-11-09,3,Yes,2020-11-09,2021-02-07,,Bisong Kenneth
+cr Okundi Comprehensive Health Centre,C/00952,2020-11-10,3,Yes,2020-11-10,2021-02-08,,Bisong Kenneth
+cr Okundi Comprehensive Health Centre,c/00951,2020-11-09,3,Yes,2020-11-09,2021-02-07,,Bisong Kenneth
+cr Okundi Comprehensive Health Centre,C/00954,2020-11-11,3,Yes,2020-11-11,2021-02-09,,Bisong Kenneth
+cr Okundi Comprehensive Health Centre,C/00955,2020-11-12,3,Yes,2020-11-12,2021-02-10,,Bisong Kenneth
+cr Okundi Comprehensive Health Centre,C/00953,2020-11-11,3,Yes,2020-11-11,2021-02-09,,Bisong Kenneth
+cr Okundi Comprehensive Health Centre,C/00956,2020-11-14,3,Yes,2020-11-14,2021-02-12,,Bisong Kenneth
+cr Okundi Comprehensive Health Centre,C/00957,2020-11-16,3,Yes,2020-11-16,2021-02-14,,Bisong Kenneth
+cr Okundi Comprehensive Health Centre,C/00958,2020-11-16,3,Yes,2020-11-16,2021-02-14,,Bisong Kenneth
+cr Okundi Comprehensive Health Centre,CI/00960,2020-11-17,3,Yes,2020-11-17,2021-02-15,,Bisong Kenneth
+cr Okundi Comprehensive Health Centre,0000959,2020-11-17,3,Yes,2020-11-17,,,Bisong Kenneth
+cr Okundi Comprehensive Health Centre,C/00962,2020-11-20,3,Yes,2020-11-20,2021-02-18,,Bisong Kenneth
+cr Okundi Comprehensive Health Centre,0000964,2020-11-23,3,Yes,2020-11-23,2021-02-21,,Bisong Kenneth
+cr Okundi Comprehensive Health Centre,C/00963,2020-11-22,3,Yes,2020-11-22,2021-02-20,,Bisong Kenneth
+cr Okundi Comprehensive Health Centre,C/00967,2020-11-27,3,Yes,2020-11-27,2021-02-25,,Bisong Kenneth
+cr Okundi Comprehensive Health Centre,C/00965,2020-11-23,3,Yes,2020-11-23,2021-02-21,,Bisong Kenneth
+cr Okundi Comprehensive Health Centre,C/00966,2020-11-24,3,Yes,2020-11-24,2021-02-22,,Bisong Kenneth
+cr Okundi Comprehensive Health Centre,0000969,2020-11-30,3,Yes,2020-11-30,2021-02-28,,Bisong Kenneth
+cr Okundi Comprehensive Health Centre,C/00970,2020-11-30,3,Yes,2020-11-30,2021-02-28,,Bisong Kenneth
+cr Okundi Comprehensive Health Centre,C/00971,2020-12-01,3,Yes,2020-12-01,2021-03-01,,Bisong Kenneth
+cr Okundi Comprehensive Health Centre,C/00973,2020-12-03,3,Yes,2020-12-03,2021-03-03,,Bisong Kenneth
+cr Okundi Comprehensive Health Centre,C/00968,2020-11-28,3,Yes,2020-11-28,2021-02-26,,Bisong Kenneth
+cr Okundi Comprehensive Health Centre,CI/00972,2020-12-02,3,Yes,2020-12-02,2021-03-02,,Bisong Kenneth
+cr Okundi Comprehensive Health Centre,C/00974,2020-12-04,3,Yes,2020-12-04,2021-03-04,,Bisong Kenneth
+cr Okundi Comprehensive Health Centre,C/00976,2020-12-08,3,Yes,2020-12-08,2021-03-08,,Bisong Kenneth
+cr Okundi Comprehensive Health Centre,C/00977,2020-12-09,3,Yes,2020-12-09,2021-03-09,,Bisong Kenneth
+cr Okundi Comprehensive Health Centre,C/00978,2020-12-10,3,Yes,2020-12-10,2021-03-10,,Bisong Kenneth
+cr Okundi Comprehensive Health Centre,C/00975,2020-12-07,3,Yes,2020-12-07,2021-03-07,,Bisong Kenneth
+cr Okundi Comprehensive Health Centre,C/00979,2020-12-10,3,Yes,2020-12-10,2021-03-10,,Bisong Kenneth
+cr Okundi Comprehensive Health Centre,C/00980,2020-12-13,3,Yes,2020-12-13,2021-03-13,,Bisong Kenneth
+cr Okundi Comprehensive Health Centre,CI/00983,2020-12-15,3,Yes,2020-12-15,2021-03-15,,Bisong Kenneth
+cr Okundi Comprehensive Health Centre,C/00982,2020-12-15,3,Yes,2020-12-15,2021-03-15,,Bisong Kenneth
+cr Okundi Comprehensive Health Centre,C/00981,2020-12-14,3,Yes,2020-12-14,2021-03-14,,Bisong Kenneth
+cr Okundi Comprehensive Health Centre,C/00984,2020-12-16,3,Yes,2020-12-16,2021-03-16,,Bisong Kenneth
+cr Okundi Comprehensive Health Centre,C/00987,2020-12-21,3,,,,,Bisong Kenneth
+cr Okundi Comprehensive Health Centre,0000985,2020-12-17,3,Yes,2020-12-17,2021-03-17,,Bisong Kenneth
+cr Okundi Comprehensive Health Centre,C/00986,2020-12-17,3,Yes,2020-12-17,2021-03-17,,Bisong Kenneth
+cr Okundi Comprehensive Health Centre,C/00989,2020-12-22,3,Yes,2020-12-22,,,Bisong Kenneth
+cr Okundi Comprehensive Health Centre,C/00988,2020-12-22,3,Yes,2020-12-22,,,Bisong Kenneth
+cr Okundi Comprehensive Health Centre,CI/00992,2020-12-24,3,Yes,2020-12-24,,,Bisong Kenneth
+cr Okundi Comprehensive Health Centre,C/00990,2020-12-23,3,Yes,2020-12-23,,,Bisong Kenneth
+cr Okundi Comprehensive Health Centre,C/00991,2020-12-24,3,Yes,2020-12-24,,,Bisong Kenneth
+cr Okundi Comprehensive Health Centre,C/00993,2020-12-29,3,Yes,2020-12-29,,,
+cr Okundi Comprehensive Health Centre,C/00994,2020-12-31,3,Yes,2020-12-31,,,
+cr Ikang Primary Health Centre,1537,2020-10-05,3,Yes,2020-10-05,2021-01-03,,Nora Maurice Eyo
+cr Ikang Primary Health Centre,1540fac,2020-10-07,3,Yes,2020-10-07,2021-01-05,,Nora Maurice Eyo
+cr Ikang Primary Health Centre,1538,2020-10-06,3,,,,,Nora Maurice Eyo
+cr Ikang Primary Health Centre,1539,2020-10-06,3,,,,,Nora Maurice Eyo
+cr Ikang Primary Health Centre,1543ct,2020-10-09,3,Yes,2020-10-09,2021-01-07,,Nora Maurice Eyo
+cr Ikang Primary Health Centre,1541ci,2020-10-07,3,Yes,2020-10-07,2021-01-05,,Nora Maurice Eyo
+cr Ikang Primary Health Centre,1542ct,2020-10-09,3,Yes,2020-10-09,2021-01-07,,Nora Maurice Eyo
+cr Ikang Primary Health Centre,1547ct,2020-10-13,3,Yes,2020-10-13,2021-01-11,,Nora Maurice Eyo
+cr Ikang Primary Health Centre,1546fac,2020-10-13,3,Yes,2020-10-13,2021-01-11,,Nora Maurice Eyo
+cr Ikang Primary Health Centre,1545ct,2020-10-12,3,Yes,2020-10-12,2021-01-10,,Nora Maurice Eyo
+cr Ikang Primary Health Centre,1544fac,2020-10-12,3,Yes,2020-10-12,2021-01-10,,Nora Maurice Eyo
+cr Ikang Primary Health Centre,1548ct,2020-10-14,3,Yes,2020-10-14,2021-01-12,,Nora Maurice Eyo
+cr Ikang Primary Health Centre,1550ci,2020-10-15,3,Yes,2020-10-15,2021-01-13,,Nora Maurice Eyo
+cr Ikang Primary Health Centre,1549ci,2020-10-14,3,Yes,2020-10-14,2021-01-12,,Nora Maurice Eyo
+cr Ikang Primary Health Centre,1551fac,2020-10-16,3,Yes,2020-10-16,2021-01-14,,Ntiero Emmanuel Okon
+cr Ikang Primary Health Centre,1553ct,2020-10-19,3,Yes,2020-10-19,2021-01-17,,Ntiero Emmanuel Okon
+cr Ikang Primary Health Centre,1552ci,2020-10-16,3,Yes,2020-10-16,2021-01-14,,Ntiero Emmanuel Okon
+cr Ikang Primary Health Centre,1555fac,2020-10-19,3,Yes,2020-10-19,2021-01-17,,Ntiero Emmanuel Okon
+cr Ikang Primary Health Centre,1557ci,2020-10-20,3,Yes,2020-10-20,2021-01-18,,Ntiero Emmanuel Okon
+cr Ikang Primary Health Centre,1554ct,2020-10-19,3,Yes,2020-10-19,2021-01-17,,Ntiero Emmanuel Okon
+cr Ikang Primary Health Centre,1556ct,2020-10-20,3,Yes,2020-10-20,2021-01-18,,Ntiero Emmanuel Okon
+cr Ikang Primary Health Centre,1559ct,2020-10-21,3,Yes,2020-10-21,2021-01-19,,Ntiero Emmanuel Okon
+cr Ikang Primary Health Centre,1558ct,2020-10-21,3,Yes,2020-10-21,2021-01-19,,Rosemary  Offiong
+cr Ikang Primary Health Centre,1562fac,2020-10-22,3,Yes,2020-10-22,2021-01-20,,Ntiero Emmanuel Okon
+cr Ikang Primary Health Centre,1561ct,2020-10-22,3,Yes,2020-10-22,2021-01-20,,Ntiero Emmanuel Okon
+cr Ikang Primary Health Centre,1560ct,2020-10-22,3,Yes,2020-10-22,2021-01-20,,Ntiero Emmanuel Okon
+cr Ikang Primary Health Centre,1565fac,2020-10-23,3,Yes,2020-10-23,2021-01-21,,Rosemary  Offiong
+cr Ikang Primary Health Centre,1564ct,2020-10-23,3,Yes,2020-10-23,2021-01-21,,Rosemary  Offiong
+cr Ikang Primary Health Centre,1563ct,2020-10-23,3,Yes,2020-10-23,2021-01-21,,Rosemary  Offiong
+cr Ikang Primary Health Centre,1566ct,2020-10-30,3,Yes,2020-10-30,2021-01-28,,Rosemary  Offiong
+cr Ikang Primary Health Centre,1568ict,2020-10-30,3,Yes,2020-10-30,2021-01-28,,Rosemary  Offiong
+cr Ikang Primary Health Centre,1567ct,2020-10-30,3,Yes,2020-10-30,2021-01-28,,Rosemary  Offiong
+cr Ikang Primary Health Centre,1569ct,2020-10-31,3,Yes,2020-10-31,2021-01-31,,Rosemary  Offiong
+cr Ikang Primary Health Centre,1574fac,2020-11-03,3,Yes,2020-11-03,2021-02-01,,Rosemary  Offiong
+cr Ikang Primary Health Centre,1570ct,2020-10-31,3,Yes,2020-10-31,2021-01-31,,Rosemary  Offiong
+cr Ikang Primary Health Centre,1572ct,2020-11-03,3,Yes,2020-11-03,2021-02-01,,Rosemary  Offiong
+cr Ikang Primary Health Centre,1575ct,2020-11-04,3,Yes,2020-11-04,2021-02-02,,Rosemary  Offiong
+cr Ikang Primary Health Centre,1573ct,2020-11-03,3,Yes,2020-11-03,2021-02-01,,Rosemary  Offiong
+cr Ikang Primary Health Centre,1576ct,2020-11-05,3,Yes,2020-11-05,2021-02-03,,Rosemary  Offiong
+cr Ikang Primary Health Centre,1579ct,2020-11-06,3,Yes,2020-11-06,2021-02-04,,Rosemary  Offiong
+cr Ikang Primary Health Centre,1577ct,2020-11-06,3,Yes,2020-11-06,2021-02-04,,Rosemary  Offiong
+cr Ikang Primary Health Centre,1578fac,2020-11-06,3,Yes,2020-11-06,2021-02-04,,Rosemary  Offiong
+cr Ikang Primary Health Centre,1582ct,2020-11-09,3,Yes,2020-11-09,2021-02-07,,Rosemary  Offiong
+cr Ikang Primary Health Centre,1581ci,2020-11-09,3,Yes,2020-11-09,2021-02-07,,Peter Elizabeth
+cr Ikang Primary Health Centre,1584ct,2020-11-10,3,Yes,2020-11-10,2021-02-08,,Peter Elizabeth
+cr Ikang Primary Health Centre,1585ct,2020-11-10,3,Yes,2020-11-10,2021-02-08,,Peter Elizabeth
+cr Ikang Primary Health Centre,1587ct,2020-11-11,3,Yes,2020-11-11,2021-02-09,,Peter Elizabeth
+cr Ikang Primary Health Centre,1583fac,2020-11-10,3,Yes,2020-11-10,2021-02-08,,Peter Elizabeth
+cr Ikang Primary Health Centre,1586fac,2020-11-11,3,Yes,2020-11-11,2021-02-09,,Peter Elizabeth
+cr Ikang Primary Health Centre,1588fac,2020-11-12,3,Yes,2020-11-12,2021-02-10,,Peter Elizabeth
+cr Ikang Primary Health Centre,1589ct,2020-11-12,3,Yes,2020-11-12,2021-02-10,,Peter Elizabeth
+cr Ikang Primary Health Centre,1590ct,2020-11-12,3,Yes,2020-11-12,2021-02-10,,Peter Elizabeth
+cr Ikang Primary Health Centre,1591faci,2020-11-13,3,Yes,2020-11-13,2021-02-11,,Peter Elizabeth
+cr Ikang Primary Health Centre,1592ct,2020-11-13,3,Yes,2020-11-13,2021-02-11,,Peter Elizabeth
+cr Ikang Primary Health Centre,1593ct,2020-11-13,3,Yes,2020-11-13,2021-02-11,,Peter Elizabeth
+cr Ikang Primary Health Centre,1598ct,2020-11-16,3,Yes,2020-11-16,2021-02-14,,Peter Elizabeth
+cr Ikang Primary Health Centre,1599fac,2020-11-17,3,Yes,2020-11-17,2021-02-15,,Ntiero Emmanuel Okon
+cr Ikang Primary Health Centre,1596ct,2020-11-16,3,Yes,2020-11-16,2021-02-14,,Ntiero Emmanuel Okon
+cr Ikang Primary Health Centre,1600ct,2020-11-17,3,Yes,2020-11-17,2021-02-15,,Ntiero Emmanuel Okon
+cr Ikang Primary Health Centre,1601ct,2020-11-18,3,Yes,2020-11-18,2021-02-16,,Ntiero Emmanuel Okon
+cr Ikang Primary Health Centre,1604ct,2020-11-19,3,Yes,2020-11-19,2021-02-17,,Ntiero Emmanuel Okon
+cr Ikang Primary Health Centre,1603ct,2020-11-19,3,Yes,2020-11-19,2021-02-17,,Ntiero Emmanuel Okon
+cr Ikang Primary Health Centre,1602ct,2020-11-19,3,Yes,2020-11-19,2021-02-17,,Ntiero Emmanuel Okon
+cr Ikang Primary Health Centre,1605ct,2020-11-20,3,Yes,2020-11-20,2021-02-18,,Ntiero Emmanuel Okon
+cr Ikang Primary Health Centre,1607ct,2020-11-21,3,Yes,2020-11-21,2021-02-19,,Ntiero Emmanuel Okon
+cr Ikang Primary Health Centre,1606ct,2020-11-20,3,Yes,2020-11-20,2021-02-18,,Ntiero Emmanuel Okon
+cr Ikang Primary Health Centre,1608ct,2020-11-23,3,Yes,2020-11-23,2021-02-21,,Ntiero Emmanuel Okon
+cr Ikang Primary Health Centre,1609ct,2020-11-24,3,Yes,2020-11-24,2021-02-22,,Nora Maurice Eyo
+cr Ikang Primary Health Centre,1611ct,2020-11-25,3,Yes,,2021-02-23,,Rosemary  Offiong
+cr Ikang Primary Health Centre,1612ct,2020-11-27,3,Yes,2020-11-27,2021-02-25,,Rosemary  Offiong
+cr Ikang Primary Health Centre,1610ct,2020-11-25,3,Yes,2020-11-25,2021-02-23,,Nora Maurice Eyo
+cr Ikang Primary Health Centre,1613ci,2020-11-27,3,Yes,2020-11-27,2021-02-25,,Ntiero Emmanuel Okon
+cr Ikang Primary Health Centre,1571ct,2020-11-02,3,Yes,2020-11-02,2021-01-31,,Ntiero Emmanuel Okon
+cr Ikang Primary Health Centre,1580ct,2020-11-07,3,Yes,2020-11-07,2021-02-05,,Ntiero Emmanuel Okon
+cr Ikang Primary Health Centre,1614ct,2020-11-28,3,Yes,2020-11-28,2021-02-26,,Ntiero Emmanuel Okon
+cr Ikang Primary Health Centre,1595ct,2020-11-14,3,Yes,2020-11-14,2021-02-12,,Ntiero Emmanuel Okon
+cr Ikang Primary Health Centre,1616ct,2020-11-30,3,Yes,2020-11-30,2021-02-28,,Emmanuel Offem
+cr Ikang Primary Health Centre,1594ct,2020-11-14,3,Yes,2020-11-14,2021-02-12,,Ntiero Emmanuel Okon
+cr Ikang Primary Health Centre,1615ct,2020-11-30,3,Yes,2020-11-30,2021-02-28,,Rosemary  Offiong
+cr Ikang Primary Health Centre,1619fac,2020-12-04,3,Yes,2020-12-04,2021-03-04,,
+cr Ikang Primary Health Centre,1617ct,2020-12-02,3,Yes,2020-12-02,2021-03-02,,
+cr Ikang Primary Health Centre,1621ct,2020-12-07,3,Yes,2020-12-07,2021-03-07,,
+cr Ikang Primary Health Centre,1620ct,2020-12-05,3,,,,,
+cr Ikang Primary Health Centre,1618ct,2020-12-03,3,Yes,2020-12-03,2021-03-03,,
+cr Ikang Primary Health Centre,1622ct,2020-12-08,3,Yes,2020-12-08,2021-03-08,,
+cr Ikang Primary Health Centre,1623ct,2020-12-08,3,Yes,2020-12-08,2021-03-08,,
+cr Ikang Primary Health Centre,1624fac,2020-12-09,3,Yes,2020-12-09,2021-03-09,,
+cr Ikang Primary Health Centre,1625ct,2020-12-09,3,Yes,2020-12-09,2021-03-09,,
+cr Ikang Primary Health Centre,1627ct,2020-12-11,3,Yes,2020-12-11,2021-03-11,,
+cr Ikang Primary Health Centre,1628ct,2020-12-11,3,Yes,2020-12-11,2021-03-11,,
+cr Ikang Primary Health Centre,1629ct,2020-12-12,3,Yes,2020-12-12,2021-03-12,,
+cr Ikang Primary Health Centre,1632ci,2020-12-14,3,Yes,2020-12-14,2021-03-14,,
+cr Ikang Primary Health Centre,1630ct,2020-12-12,3,Yes,2020-12-12,2021-03-12,,
+cr Ikang Primary Health Centre,1633ct,2020-12-15,3,Yes,2020-12-15,2021-03-15,,
+cr Ikang Primary Health Centre,1634ct,2020-12-17,3,Yes,2020-12-17,,,
+cr Ikang Primary Health Centre,1631ct,2020-12-14,3,Yes,2020-12-14,2021-03-14,,
+cr Ikang Primary Health Centre,1635ct,2020-12-18,3,Yes,2020-12-18,,,
+cr Ikang Primary Health Centre,1637ct,2020-12-21,3,Yes,2020-12-21,,,
+cr Ikang Primary Health Centre,1636ct,2020-12-19,3,Yes,2020-12-19,,,
+cr Ikang Primary Health Centre,1639ct,2020-12-23,3,Yes,2020-12-23,,,
+cr Ikang Primary Health Centre,1638ct,2020-12-22,3,Yes,2020-12-22,,,
+cr Ikang Primary Health Centre,1640ct,2020-12-24,3,Yes,2020-12-24,,,
+cr Ikang Primary Health Centre,1642ct,2020-12-29,3,Yes,2020-12-29,,,
+cr Ikang Primary Health Centre,1641fac,2020-12-24,3,Yes,2020-12-24,,,
+cr Ikang Primary Health Centre,1643ct,2020-12-30,3,Yes,2020-12-30,,,
+cr Ikang Primary Health Centre,1644ct,2020-12-31,3,Yes,2020-12-31,,,
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),02503,2020-10-06,3,Yes,2020-10-06,2020-12-29,,Ekpo Ekpeyonganwan
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),02502,2020-10-05,3,Yes,2020-10-05,2020-12-28,,Edet Etim Okon
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),02500,2020-10-05,3,Yes,2020-10-05,2020-12-28,,Edet Etim Okon
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),02501,2020-10-05,3,Yes,2020-10-05,2020-12-28,,Edet Etim Okon
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),02497,2020-10-05,3,Yes,2020-10-05,2020-12-28,,Edet Etim Okon
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),02504,2020-10-05,3,Yes,2020-10-05,2020-12-28,,Edet Etim Okon
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),02506,2020-10-07,3,Yes,2020-10-07,2020-12-30,,Edet Etim Okon
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),02508,2020-12-22,3,Yes,2020-10-06,2021-03-16,,Edet Etim Okon
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),02509,2020-10-06,3,Yes,2020-10-06,2020-12-29,2020-12-01,Edet Etim Okon
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),02510,2020-12-14,3,Yes,2020-10-06,2021-03-05,,Edet Etim Okon
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),02512,2020-12-31,3,Yes,2020-10-09,2021-03-24,,Edet Etim Okon
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),040686,2020-12-10,3,Yes,,2021-03-04,,Edet Etim Okon
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),02514,2020-12-31,3,Yes,2020-10-11,2021-03-25,,Edet Etim Okon
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),02517,2020-10-13,3,Yes,2020-10-13,2021-01-05,,Edet Etim Okon
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),02513,2020-12-31,3,Yes,2020-10-09,2021-03-25,,Edet Etim Okon
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),02515,2020-10-13,3,Yes,2020-10-13,2021-01-05,,Edet Etim Okon
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),02516,2020-10-09,3,Yes,2020-10-09,2021-01-01,,Edet Etim Okon
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),02520,2020-10-14,3,Yes,2020-10-14,2021-01-06,,Edet Etim Okon
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),02521,2020-10-16,3,Yes,2020-10-16,2021-01-08,,Edet Etim Okon
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),02522,2020-10-18,3,Yes,2020-10-18,2021-01-10,,Edet Etim Okon
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),02523,2020-10-19,3,Yes,2020-10-19,2021-01-11,,Edet Etim Okon
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),02511,2020-10-12,3,Yes,2020-10-12,2021-01-04,,Edet Etim Okon
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),02525,2020-10-19,3,Yes,2020-10-19,2021-01-11,,Edet Etim Okon
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),02524,2020-10-19,3,Yes,2020-10-19,2021-01-11,,Edet Etim Okon
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),02526,2020-10-16,3,Yes,2020-10-16,2021-01-08,,Edet Etim Okon
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),02527,2020-10-18,3,Yes,2020-10-18,2021-01-10,,Edet Etim Okon
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),02529,2020-10-16,3,Yes,2020-10-16,2021-01-08,,Edet Etim Okon
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),02519,2020-10-15,3,Yes,2020-10-15,2021-01-07,,Edet Etim Okon
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),02528,2020-10-20,3,Yes,2020-10-20,2021-01-12,,Edet Etim Okon
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),02530,2020-10-20,3,Yes,2020-10-20,2021-01-12,,Edet Etim Okon
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),02532,2020-10-21,3,Yes,2020-10-21,2021-01-13,,Edet Etim Okon
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),02531,2020-10-21,3,Yes,2020-10-21,2021-01-13,,Edet Etim Okon
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),02535,2020-10-22,3,Yes,2020-10-22,2021-01-20,,Edet Etim Okon
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),02533,2020-10-21,3,Yes,2020-10-21,2021-01-13,,Edet Etim Okon
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),02537,2020-10-23,3,Yes,2020-10-23,2021-01-15,,Edet Etim Okon
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),02539,2020-10-22,3,Yes,2020-10-22,2021-01-14,,Edet Etim Okon
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),02538,2020-10-21,3,Yes,2020-10-21,2021-01-13,,Edet Etim Okon
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),02536,2020-10-23,3,Yes,2020-10-23,2021-01-15,,Edet Etim Okon
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),02499,2020-10-05,3,Yes,2020-10-05,2020-12-28,,Edet Etim Okon
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),02541,2020-11-01,3,Yes,2020-11-01,2021-01-24,,Edet Etim Okon
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),02534,2020-10-22,3,Yes,2020-10-22,2021-01-14,,Edet Etim Okon
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),02540,2020-11-01,3,Yes,2020-11-01,2021-01-24,,Edet Etim Okon
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),02544,2020-11-02,3,Yes,2020-11-02,2021-01-25,,Edet Etim Okon
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),02545,2020-10-21,3,Yes,2020-10-21,2021-01-13,,Edet Etim Okon
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),02542,2020-11-02,3,Yes,2020-11-02,2021-01-22,,Edet Etim Okon
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),02547,2020-11-03,3,Yes,2020-11-03,2021-01-26,,Edet Etim Okon
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),02543,2020-11-02,3,Yes,2020-11-02,2021-01-31,,Edet Etim Okon
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),02550,2020-11-09,3,Yes,2020-11-09,2021-02-01,,Edet Etim Okon
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),02551,2020-11-04,3,Yes,2020-11-04,2021-01-26,,Edet Etim Okon
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),02552,2020-11-05,3,Yes,2020-11-05,2021-01-27,,Edet Etim Okon
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),02553,2020-11-06,3,Yes,2020-11-06,2021-01-29,,Edet Etim Okon
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),02549,2020-11-05,3,Yes,2020-11-05,2021-01-27,,Edet Etim Okon
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),02554,2020-11-08,3,Yes,2020-11-08,2021-01-31,,Edet Etim Okon
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),02555,2020-11-09,3,Yes,2020-11-09,2021-02-01,,Edet Etim Okon
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),02557,2020-11-11,3,Yes,2020-11-11,2021-02-03,,Edet Etim Okon
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),02560,2020-11-12,3,Yes,2020-11-12,2021-02-04,,Edet Etim Okon
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),02558,2020-11-10,3,Yes,2020-11-10,2021-02-02,,Edet Etim Okon
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),02556,2020-11-10,3,Yes,2020-11-10,2021-02-02,,Edet Etim Okon
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),02561,2020-11-12,3,Yes,2020-11-12,2021-02-04,,Edet Etim Okon
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),02562,2020-11-12,3,Yes,2020-11-12,2021-02-04,,Edet Etim Okon
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),02574,2020-11-11,1,Yes,2020-11-11,2020-12-09,,Edet Etim Okon
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),02572,2020-11-16,3,Yes,2020-11-16,2021-02-08,,Edet Etim Okon
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),02559,2020-11-11,3,Yes,2020-11-11,2021-02-03,,Edet Etim Okon
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),02571,2020-11-17,3,Yes,2020-11-17,2021-02-09,,Edet Etim Okon
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),040729,2020-12-07,3,Yes,2020-11-09,2021-03-01,,Edet Etim Okon
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),040717,2020-12-07,3,Yes,2020-11-09,2021-03-01,,Edet Etim Okon
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),02564,2020-11-13,3,Yes,2020-11-13,2021-02-05,,Edet Etim Okon
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),02569,2020-11-13,3,Yes,2020-11-13,2021-02-05,,Edet Etim Okon
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),02565,2020-11-18,1,Yes,2020-11-18,2020-12-16,,Edet Etim Okon
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),02563,2020-11-15,3,Yes,2020-11-15,2021-02-07,,Edet Etim Okon
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),02573,2020-11-18,3,Yes,2020-11-18,2021-02-09,,Edet Etim Okon
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),02575,2020-11-18,3,Yes,2020-11-18,2021-02-10,,Edet Etim Okon
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),02568,2020-11-13,3,Yes,2020-11-13,2021-02-05,,Edet Etim Okon
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),040739,2020-11-23,1,Yes,2020-11-23,2020-12-21,,Edet Etim Okon
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),02576,2020-11-19,3,Yes,2020-11-19,2021-02-11,,Edet Etim Okon
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),02584,2020-11-20,3,Yes,2020-11-20,2021-02-12,,Edet Etim Okon
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),02583,2020-11-20,3,Yes,2020-11-20,2021-02-12,,Edet Etim Okon
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),02582,2020-11-20,3,Yes,2020-11-20,2021-02-11,,Edet Etim Okon
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),02579,2020-11-20,3,Yes,2020-11-20,2021-02-12,,Edet Etim Okon
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),02580,2020-11-20,3,Yes,2020-11-20,2021-02-12,,Edet Etim Okon
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),02581,2020-11-22,3,Yes,2020-11-22,2021-02-14,,Edet Etim Okon
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),02586,2020-11-23,3,Yes,2020-11-23,2021-02-15,,Jessiah Hanson
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),02585,2020-11-23,3,Yes,2020-11-23,2021-02-15,,Jessiah Hanson
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),02589,2020-11-24,3,Yes,2020-11-24,2021-02-16,,Jessiah Hanson
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),02587,2020-11-23,3,Yes,2020-11-23,2021-02-15,,Jessiah Hanson
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),02590,2020-11-24,3,Yes,2020-11-24,2021-02-16,,Jessiah Hanson
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),02591,2020-11-24,3,Yes,2020-11-24,2021-02-16,,Jessiah Hanson
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),02570,2020-11-16,3,Yes,2020-11-16,2021-02-08,,Eyo Effioanwan
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),02588,2020-11-24,3,Yes,2020-11-24,2021-02-16,,Jessiah Hanson
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),02596,2020-11-25,3,Yes,2020-11-25,2021-02-17,,Eyo Effioanwan
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),02597,2020-11-26,3,Yes,2020-11-26,2021-02-18,,Eyo Effioanwan
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),02598,2020-11-27,3,Yes,2020-11-27,2021-02-19,,Eyo Effioanwan
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),02592,2020-11-25,3,Yes,2020-11-25,2021-02-16,,Eyo Effioanwan
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),02593,2020-11-26,3,Yes,2020-11-26,2021-02-18,,Eyo Effioanwan
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),02594,2020-11-27,3,Yes,2020-11-27,2021-02-19,,Eyo Effioanwan
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),02546,2020-11-29,3,Yes,2020-11-29,2021-02-21,,Eyo Effioanwan
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),02577,2020-11-29,3,Yes,2020-11-29,2021-02-21,,Eyo Effioanwan
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),02599,2020-11-30,3,Yes,2020-11-30,2021-02-21,,Eyo Effioanwan
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),02600,2020-11-30,3,Yes,2020-11-30,2021-02-21,,Eyo Effioanwan
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),02603,2020-12-01,3,Yes,2020-12-01,2021-02-23,,Eyo Effioanwan
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),02604,2020-12-01,3,Yes,2020-12-01,2021-02-23,,Edet Ekanem
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),02605,2020-12-01,3,Yes,2020-12-01,2021-02-23,,Edet Ekanem
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),02606,2020-11-09,3,Yes,2020-11-09,2021-02-01,,Edet Ekanem
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),02607,2020-12-02,3,Yes,2020-12-02,2021-02-24,,Edet Ekanem
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),02610,2020-12-03,3,Yes,2020-12-03,2021-02-25,,Edet Ekanem
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),02609,2020-12-02,3,Yes,2020-12-02,2021-02-24,,Ekpo Ekpeyonganwan
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),02608,2020-12-02,3,Yes,2020-12-02,2021-02-24,,Ekpo Ekpeyonganwan
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),02611,2020-12-02,3,Yes,2020-12-02,2021-02-24,,Ekpo Ekpeyonganwan
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),02612,2020-12-03,3,Yes,2020-12-03,2021-02-25,,Ekpo Ekpeyonganwan
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),02615,2020-12-06,3,Yes,2020-12-06,2021-02-27,,Ekpo Ekpeyonganwan
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),02613,2020-12-04,3,Yes,2020-12-04,2021-02-26,,Edet Ekanem
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),02498,2020-10-05,3,Yes,2020-10-05,2020-12-28,,Jessiah Hanson
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),02616,2020-12-07,3,Yes,2020-12-07,2021-03-01,,Edet Ekanem
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),02617,2020-12-04,3,Yes,2020-12-04,2021-02-26,,Alice Sunday Akpan
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),02619,2020-12-08,3,Yes,2020-12-08,2021-03-02,,Ldyia Iwhobe
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),02620,2020-12-09,3,Yes,2020-12-09,2021-03-03,,Favour Christian Ekefre
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),02621,2020-12-09,3,Yes,2020-12-09,2021-03-03,,Favour Christian Ekefre
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),02622,2020-12-07,3,Yes,2020-12-07,2021-03-01,,Edet Ekanem
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),02595,2020-11-25,3,Yes,2020-11-25,2021-02-17,,Eyo Effioanwan
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),02625,2020-12-09,3,Yes,2020-12-09,2021-03-03,,Eyo Effioanwan
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),02626,2020-12-10,3,Yes,2020-12-10,2021-03-03,,Grace Okon
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),02627,2020-12-11,3,Yes,2020-12-11,2021-03-05,,Grace Okon
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),02629,2020-12-13,3,Yes,2020-12-13,2021-03-07,,Grace Okon
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),02628,2020-12-13,3,Yes,2020-12-13,2021-03-06,,Grace Okon
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),02630,2020-12-14,3,Yes,2020-12-14,2021-03-08,,Grace Okon
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),02637,2020-12-15,3,Yes,2020-12-15,2021-03-09,,Effiom Ekene Okpok
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),02638,2020-12-15,3,Yes,2020-12-15,2021-03-09,,Effiom Ekene Okpok
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),02631,2020-12-14,3,Yes,2020-12-14,2021-03-08,,Grace Okon
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),02632,2020-12-10,3,Yes,2020-12-10,2021-03-04,,Effiom Ekene Okpok
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),02633,2020-12-11,3,Yes,2020-12-11,2021-03-05,,Effiom Ekene Okpok
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),02634,2020-12-11,3,Yes,2020-12-11,2021-03-05,,Effiom Ekene Okpok
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),02635,2020-12-13,3,Yes,2020-12-13,2021-03-07,,Edet Etim Okon
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),02642,2020-12-15,3,Yes,2020-12-15,2021-03-08,,Edet Etim Okon
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),02636,2020-12-14,3,Yes,2020-12-14,2021-03-08,,Edet Etim Okon
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),02640,2020-12-17,3,Yes,2020-12-17,2021-03-11,,Edet Etim Okon
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),02641,2020-12-17,3,Yes,2020-12-17,2021-03-11,,Edet Etim Okon
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),02643,2020-12-18,3,Yes,2020-12-18,2021-03-12,,Edet Etim Okon
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),02644,2020-12-17,3,Yes,2020-12-17,2021-03-11,,Edet Etim Okon
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),02645,2020-12-18,3,Yes,2020-12-18,2021-03-12,,Asuquo Martha
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),02639,2020-12-16,3,Yes,2020-12-16,2021-03-09,,Edet Etim Okon
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),02646,2020-12-20,3,Yes,2020-12-20,2021-03-14,,Asuquo Martha
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),02614,2020-12-06,3,Yes,2020-12-06,2021-03-06,,Edet Ekanem
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),02647,2020-12-21,3,Yes,2020-12-21,2021-03-15,,Asuquo Martha
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),02649,2020-12-22,3,Yes,2020-12-22,2021-03-16,,Asuquo Martha
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),02650,2020-12-23,3,Yes,2020-12-23,2021-03-17,,Asuquo Martha
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),02651,2020-12-24,3,Yes,2020-12-24,2021-03-18,,Asuquo Martha
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),02652,2020-12-20,3,Yes,2020-12-20,2021-03-13,,Amayor Ekpe Nkor
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),02653,2020-12-21,3,Yes,2020-12-21,2021-03-15,,Amayor Ekpe Nkor
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),02654,2020-12-22,3,Yes,2020-12-22,2021-03-16,,Amayor Ekpe Nkor
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),02657,2020-12-24,3,Yes,2020-12-24,2021-03-18,,Amayor Ekpe Nkor
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),02658,2020-12-29,3,Yes,2020-12-29,2021-03-23,,Asuquo Martha
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),02659,2020-12-30,3,Yes,2020-12-30,2021-03-24,,Asuquo Martha
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),02660,2020-12-29,3,Yes,2020-12-29,2021-03-23,,Asuquo Martha
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),02661,2020-12-31,3,Yes,2020-12-31,2021-03-25,,Asuquo Martha
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),02663,2020-12-31,3,Yes,2020-12-31,2021-03-25,,Asuquo Martha
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),02664,2020-12-31,3,Yes,2020-12-31,2021-03-25,,Asuquo Martha
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),02662,2020-12-21,3,Yes,,2021-03-15,,Asuquo Martha
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),02648,2020-12-21,3,Yes,2020-12-21,2021-03-15,,Asuquo Martha
+cr Ikot Enebong Health Post,355/20,2020-11-02,3,Yes,,2021-01-31,,Sandar Archibong
+cr Ikot Enebong Health Post,378/20,2020-11-27,3,,,,,Sandar Archibong
+cr Ikot Enebong Health Post,379/20,2020-11-27,2,,,,,Sandar Archibong
+cr Cross River University of Science and Technology (CRUTECH) Medical Centre,09/032/0142,2020-12-03,3,Yes,2020-12-03,2021-02-25,,
+cr Mambo Clinic,00213,2020-12-10,3,Yes,2020-10-06,2021-03-10,,Cornelia Eban
+cr Mambo Clinic,0217,2020-11-23,3,Yes,2020-11-23,2021-02-21,,Cornelia Eban
+cr Mambo Clinic,0219,2020-12-08,3,Yes,2020-12-08,2021-03-08,,Cornelia Eban
+cr Mambo Clinic,5548,2020-10-12,6,Yes,2020-10-12,2021-04-10,,Cornelia Eban
+cr Mambo Clinic,0218,2020-12-01,1,Yes,2020-12-01,2020-12-31,,Cornelia Eban
+cr Mambo Clinic,02020,2020-12-17,3,Yes,2020-12-17,2021-03-17,,Cornelia Eban
+cr Igbo-Imabana Model Primary Health Centre,CRS/006/7902,2020-11-11,3,Yes,2020-11-11,2021-02-09,,
+cr Igbo-Imabana Model Primary Health Centre,CRS/006/7901,2020-10-23,3,Yes,2020-10-23,2021-01-21,,John Micheal
+cr Ugep General Hospital,5083,2020-12-02,3,Yes,2020-10-02,2021-03-02,,EKPO OBASEOYI
+cr Ugep General Hospital,5084C,2020-12-02,3,Yes,2020-10-02,2021-03-02,,Raymond Philip (community)
+cr Ugep General Hospital,5086c,2020-12-02,3,Yes,2020-10-07,2021-03-02,,Raymond Philip (community)
+cr Ugep General Hospital,5088C,2020-10-12,3,Yes,2020-10-12,2021-01-10,,Raymond Philip (community)
+cr Ugep General Hospital,5085CI,2020-12-02,3,Yes,2020-10-06,2021-03-02,,Raymond Philip (community)
+cr Ugep General Hospital,5090C,2020-10-13,3,Yes,2020-10-13,2021-01-11,,Raymond Philip (community)
+cr Ugep General Hospital,5089,2020-10-14,3,Yes,2020-10-14,2021-01-12,,Eteng Victoria Itam
+cr Ugep General Hospital,5087C,2020-12-01,4,Yes,2020-10-09,2021-03-31,,Raymond Philip (community)
+cr Ugep General Hospital,5091C,2020-10-14,3,Yes,2020-10-14,2021-01-12,,Edet Blessing Okoi (community)
+cr Ugep General Hospital,5094c,2020-10-19,3,Yes,2020-10-19,2021-01-17,,Raymond Philip (community)
+cr Ugep General Hospital,5092C,2020-10-15,3,Yes,2020-10-15,2021-01-13,,Edet Blessing Okoi (community)
+cr Ugep General Hospital,5095C ,2020-10-20,3,Yes,2020-10-20,2021-01-18,,Edet Blessing Okoi (community)
+cr Ugep General Hospital,5093FI,2020-10-17,3,Yes,2020-10-17,2021-01-15,,Omini Nnenyang Otu
+cr Ugep General Hospital,5096CI,2020-10-21,3,Yes,2020-10-21,2021-01-19,,Raymond Philip (community)
+cr Ugep General Hospital,5097C,2020-10-23,3,Yes,2020-10-23,2021-01-21,,Raymond Philip (community)
+cr Ugep General Hospital,5099C,2020-10-30,3,Yes,2020-10-30,2021-01-28,,Edet Blessing Okoi (community)
+cr Ugep General Hospital,5100C,2020-11-02,3,Yes,2020-11-02,2021-01-31,,Edet Blessing Okoi (community)
+cr Ugep General Hospital,5103,2020-11-04,3,,,,,EKPO OBASEOYI
+cr Ugep General Hospital,5101C,2020-11-03,3,Yes,2020-11-03,2021-02-01,,Edet Blessing Okoi (community)
+cr Ugep General Hospital,5102C,2020-11-03,3,Yes,2020-11-03,2021-02-01,,Raymond Philip (community)
+cr Ugep General Hospital,5104C,2020-11-04,3,Yes,2020-11-04,2021-02-02,,Raymond Philip (community)
+cr Ugep General Hospital,5105C,2020-11-04,3,Yes,2020-11-04,2021-02-02,,Raymond Philip (community)
+cr Ugep General Hospital,5107C,2020-11-06,3,Yes,2020-11-06,2021-02-04,,Edet Blessing Okoi (community)
+cr Ugep General Hospital,5109,2020-11-09,2,Yes,2020-11-09,2021-01-08,,Eteng Victoria Itam
+cr Ugep General Hospital,5108C,2020-11-07,3,Yes,2020-11-07,2021-02-05,,Edet Blessing Okoi (community)
+cr Ugep General Hospital,5110C,2020-11-10,3,Yes,2020-11-10,2021-02-08,,Raymond Philip (community)
+cr Ugep General Hospital,5111CI,2020-11-10,3,Yes,2020-11-10,2021-02-08,,Raymond Philip (community)
+cr Ugep General Hospital,5106C,2020-11-05,3,Yes,2020-11-05,2021-02-03,,Edet Blessing Okoi (community)
+cr Ugep General Hospital,5112c,2020-11-11,3,Yes,2020-11-11,2021-02-09,,Edet Blessing Okoi (community)
+cr Ugep General Hospital,5114C,2020-11-12,3,Yes,2020-11-12,2021-02-10,,Raymond Philip (community)
+cr Ugep General Hospital,5113C,2020-11-12,3,Yes,2020-11-12,2021-02-10,,Edet Blessing Okoi (community)
+cr Ugep General Hospital,5115C,2020-11-13,3,Yes,2020-11-13,2021-02-11,,Raymond Philip (community)
+cr Ugep General Hospital,5116C,2020-11-15,3,Yes,2020-11-15,2021-02-13,,Edet Blessing Okoi (community)
+cr Ugep General Hospital,5119C,2020-11-17,3,Yes,2020-11-17,2021-02-15,,Edet Blessing Okoi (community)
+cr Ugep General Hospital,5118C,2020-11-17,3,Yes,2020-11-17,2021-02-15,,Raymond Philip (community)
+cr Ugep General Hospital,5120C,2020-11-18,3,Yes,2020-11-18,2021-02-16,,Raymond Philip (community)
+cr Ugep General Hospital,5117C,2020-11-16,3,Yes,2020-11-16,2021-02-14,,Raymond Philip (community)
+cr Ugep General Hospital,5123C,2020-11-19,3,Yes,2020-11-19,2021-02-17,,Edet Blessing Okoi (community)
+cr Ugep General Hospital,5122CI,2020-11-19,3,Yes,2020-11-19,2021-02-17,,Edet Blessing Okoi (community)
+cr Ugep General Hospital,5121C,2020-11-18,3,Yes,2020-11-18,2021-02-16,,Raymond Philip (community)
+cr Ugep General Hospital,5124C,2020-11-20,3,Yes,2020-11-20,2021-02-18,,Edet Blessing Okoi (community)
+cr Ugep General Hospital,5126C,2020-11-23,3,Yes,2020-11-23,2021-02-21,,Edet Blessing Okoi (community)
+cr Ugep General Hospital,5125C,2020-11-21,3,Yes,2020-11-21,2021-02-19,,Edet Blessing Okoi (community)
+cr Ugep General Hospital,5127CI,2020-11-23,3,Yes,2020-11-23,2021-02-21,,Edet Blessing Okoi (community)
+cr Ugep General Hospital,5128C,2020-11-24,3,Yes,2020-11-24,2021-02-22,,Raymond Philip (community)
+cr Ugep General Hospital,5129CI ,2020-11-24,3,Yes,2020-11-24,2021-02-22,,Raymond Philip (community)
+cr Ugep General Hospital,5130C,2020-11-25,3,Yes,2020-11-25,2021-02-23,,Raymond Philip (community)
+cr Ugep General Hospital,5131C,2020-11-26,3,Yes,2020-11-26,2021-02-24,,Raymond Philip (community)
+cr Ugep General Hospital,5133c,2020-11-29,3,Yes,2020-11-29,2021-02-27,,Raymond Philip (community)
+cr Ugep General Hospital,5134c,2020-12-02,3,Yes,2020-12-02,2021-03-02,,Raymond Philip (community)
+cr Ugep General Hospital,005132c,2020-11-27,3,Yes,2020-11-27,2021-02-25,,Raymond Philip (community)
+cr Ugep General Hospital,5137Ci,2020-12-08,3,Yes,2020-12-08,2021-03-08,,Edet Blessing Okoi (community)
+cr Ugep General Hospital,5135c,2020-12-05,3,Yes,2020-12-05,2021-03-05,,Edet Blessing Okoi (community)
+cr Ugep General Hospital,5136c,2020-12-08,3,Yes,2020-12-08,2021-03-08,,Edet Blessing Okoi (community)
+cr Ugep General Hospital,5139C,2020-12-10,3,Yes,2020-12-10,2021-03-10,,Edet Blessing Okoi (community)
+cr Ugep General Hospital,5140CI,2020-12-11,3,Yes,2020-12-11,2021-03-11,,Edet Blessing Okoi (community)
+cr Ugep General Hospital,5138CI,2020-12-09,3,Yes,2020-12-09,2021-03-09,,Raymond Philip (community)
+cr Ugep General Hospital,5141C,2020-12-01,3,Yes,,2021-03-01,,Edet Blessing Okoi (community)
+cr Ugep General Hospital,5142C,2020-12-12,3,Yes,2020-12-12,2021-03-12,,Raymond Philip (community)
+cr Ugep General Hospital,5143C,2020-12-15,3,Yes,2020-12-15,2021-03-15,,Raymond Philip (community)
+cr Ugep General Hospital,5144C,2020-12-16,3,,,2021-03-16,,Raymond Philip (community)
+cr Ugep General Hospital,5145C,2020-12-17,3,Yes,2020-12-17,2021-03-17,,Raymond Philip (community)
+cr Ugep General Hospital,5148C,2020-12-20,3,Yes,2020-12-20,2021-03-20,,Raymond Philip (community)
+cr Ugep General Hospital,5146,2020-12-18,2,Yes,,2021-02-16,,EKPO OBASEOYI
+cr Ugep General Hospital,5147C,2020-12-20,3,Yes,2020-12-20,2021-03-20,,Raymond Philip (community)
+cr Ugep General Hospital,5151C,2020-12-23,3,Yes,2020-12-23,,,Edet Blessing Okoi (community)
+cr Ugep General Hospital,5150CI,2020-12-22,3,Yes,2020-12-22,,,Edet Blessing Okoi (community)
+cr Ugep General Hospital,5149C,2020-12-21,3,Yes,2020-12-21,,,Edet Blessing Okoi (community)
+cr Akpet Central Cottage Hospital,1455,2020-10-13,3,Yes,2020-10-13,2021-01-05,,Rosemary Echip
+cr Akpet Central Cottage Hospital,1454,2020-10-13,3,,,,,Comfort Egom 
+cr Akpet Central Cottage Hospital,0001457,2020-10-16,3,Yes,2020-10-16,2021-01-14,,Rosemary Echip
+cr Akpet Central Cottage Hospital,0001456C,2020-12-04,4,Yes,,2021-02-26,,Faithfull Agara Sunday (community)
+cr Akpet Central Cottage Hospital,0001465C,2020-10-15,3,Yes,2020-10-15,2021-01-13,,Awara Ebonor I (community)
+cr Akpet Central Cottage Hospital,001470C,2020-10-17,3,Yes,2020-10-17,2021-01-09,,Awara Ebonor I (community)
+cr Akpet Central Cottage Hospital,001468C,2020-10-17,3,Yes,2020-10-17,2021-01-15,,Awara Ebonor I (community)
+cr Akpet Central Cottage Hospital,001464C,2020-10-15,3,Yes,2020-10-15,2021-01-07,,Awara Ebonor I (community)
+cr Akpet Central Cottage Hospital,001469C,2020-10-17,3,Yes,2020-10-17,2021-01-15,,Awara Ebonor I (community)
+cr Akpet Central Cottage Hospital,001461C,2020-10-16,3,Yes,2020-10-16,2021-01-08,,Awara Ebonor I (community)
+cr Akpet Central Cottage Hospital,001459C,2020-10-16,3,Yes,2020-10-16,2021-01-08,,Awara Ebonor I (community)
+cr Akpet Central Cottage Hospital,001460C,2020-10-16,3,Yes,2020-10-16,2021-01-08,,Awara Ebonor I (community)
+cr Akpet Central Cottage Hospital,001463C,2020-10-15,3,Yes,2020-10-15,2021-01-07,,Awara Ebonor I (community)
+cr Akpet Central Cottage Hospital,001462C,2020-10-15,3,Yes,2020-10-15,2021-01-07,,Awara Ebonor I (community)
+cr Akpet Central Cottage Hospital,001458C,2020-10-16,3,Yes,2020-10-16,2021-01-08,,Awara Ebonor I (community)
+cr Akpet Central Cottage Hospital,001466C,2020-10-17,3,Yes,2020-10-17,2021-01-09,,Awara Ebonor I (community)
+cr Akpet Central Cottage Hospital,0001471,2020-10-19,3,Yes,2020-10-19,2021-01-17,,Rosemary Echip
+cr Akpet Central Cottage Hospital,001472C,2020-10-21,3,Yes,2020-10-21,2021-01-13,,Faithfull Agara Sunday (community)
+cr Akpet Central Cottage Hospital,001473C,2020-10-21,3,Yes,2020-10-21,2021-01-13,,Faithfull Agara Sunday (community)
+cr Akpet Central Cottage Hospital,001474C,2020-10-22,3,Yes,2020-10-22,2021-01-14,,Faithfull Agara Sunday (community)
+cr Akpet Central Cottage Hospital,001475C,2020-10-22,3,Yes,2020-10-22,2021-01-14,,Faithfull Agara Sunday (community)
+cr Akpet Central Cottage Hospital,0001477C,2020-11-02,3,Yes,2020-11-02,2021-01-25,,Faithfull Agara Sunday (community)
+cr Akpet Central Cottage Hospital,0001476C,2020-11-02,3,Yes,2020-11-02,2021-01-31,,Faithfull Agara Sunday (community)
+cr Akpet Central Cottage Hospital,0001478C,2020-11-04,3,Yes,2020-11-04,2021-01-27,,Faithfull Agara Sunday (community)
+cr Akpet Central Cottage Hospital,0001480,2020-11-05,3,Yes,2020-11-05,2021-01-28,,Comfort Egom 
+cr Akpet Central Cottage Hospital,0001482C,2020-11-06,3,Yes,2020-11-06,2021-01-29,,Faithfull Agara Sunday (community)
+cr Akpet Central Cottage Hospital,001453C,2020-12-04,4,Yes,2020-10-13,2021-02-26,,Faithfull Agara Sunday (community)
+cr Akpet Central Cottage Hospital,001467C,2020-10-17,3,Yes,2020-10-17,2021-01-09,,Awara Ebonor I (community)
+cr Akpet Central Cottage Hospital,0001483C,2020-11-13,3,Yes,2020-11-13,2021-02-05,,Faithfull Agara Sunday (community)
+cr Akpet Central Cottage Hospital,0001485C,2020-11-10,3,Yes,2020-11-10,2021-02-02,,Faithfull Agara Sunday (community)
+cr Akpet Central Cottage Hospital,0001487,2020-11-16,3,,,,,Rosemary Echip
+cr Akpet Central Cottage Hospital,0001488c,2020-11-15,3,Yes,2020-11-15,2021-02-13,,Awara Ebonor I (community)
+cr Akpet Central Cottage Hospital,0001489c,2020-11-15,3,Yes,2020-11-15,2021-02-13,,Awara Ebonor I (community)
+cr Akpet Central Cottage Hospital,0001490C,2020-11-15,3,Yes,2020-11-15,2021-02-13,,Awara Ebonor I (community)
+cr Akpet Central Cottage Hospital,0001484C,2020-11-10,3,Yes,2020-11-10,2021-02-02,,Faithfull Agara Sunday (community)
+cr Akpet Central Cottage Hospital,0001492c,2020-11-15,3,Yes,2020-11-15,2021-02-07,,Awara Ebonor I (community)
+cr Akpet Central Cottage Hospital,0001493C,2020-11-16,3,Yes,2020-11-16,2021-02-08,,Faithfull Agara Sunday (community)
+cr Akpet Central Cottage Hospital,0001481C,2020-11-06,3,Yes,2020-11-06,2021-01-29,,Faithfull Agara Sunday (community)
+cr Akpet Central Cottage Hospital,0001491c,2020-11-15,3,Yes,2020-11-15,2021-02-13,,Awara Ebonor I (community)
+cr Akpet Central Cottage Hospital,0001494C,2020-11-18,3,Yes,2020-11-18,2021-02-10,,Faithfull Agara Sunday (community)
+cr Akpet Central Cottage Hospital,0001495C,2020-11-18,3,Yes,2020-11-18,2021-02-10,,Faithfull Agara Sunday (community)
+cr Akpet Central Cottage Hospital,0001496C,2020-11-20,3,Yes,2020-11-20,2021-02-18,,Faithfull Agara Sunday (community)
+cr Akpet Central Cottage Hospital,0001497C,2020-11-24,3,Yes,2020-11-24,2021-02-16,,Richard Ujong Erupted (community)
+cr Akpet Central Cottage Hospital,0001498C,2020-11-24,3,Yes,2020-11-24,2021-02-16,,Richard Ujong Erupted (community)
+cr Akpet Central Cottage Hospital,0001499C,2020-11-24,3,Yes,2020-11-24,2021-02-16,,Richard Ujong Erupted (community)
+cr Akpet Central Cottage Hospital,0001505C,2020-11-26,3,Yes,2020-11-26,2021-02-18,,Richard Ujong Erupted (community)
+cr Akpet Central Cottage Hospital,0001501C,2020-11-26,3,Yes,2020-11-26,2021-02-18,,Richard Ujong Erupted (community)
+cr Akpet Central Cottage Hospital,0001502C,2020-11-26,3,Yes,2020-11-26,2021-02-18,,Richard Ujong Erupted (community)
+cr Akpet Central Cottage Hospital,0001503C,2020-11-26,3,Yes,2020-11-26,2021-02-18,,Richard Ujong Erupted (community)
+cr Akpet Central Cottage Hospital,0001504C,2020-11-26,3,Yes,2020-11-26,2021-02-18,,Richard Ujong Erupted (community)
+cr Akpet Central Cottage Hospital,0001486C,2020-11-12,3,Yes,2020-11-12,2021-02-04,,Faithfull Agara Sunday (community)
+cr Akpet Central Cottage Hospital,0001507C,2020-12-01,3,Yes,2020-12-01,2021-02-23,,Richard Ujong Erupted (community)
+cr Akpet Central Cottage Hospital,0001508C,2020-12-03,3,Yes,2020-12-03,2021-02-25,,Richard Ujong Erupted (community)
+cr Akpet Central Cottage Hospital,0001509C,2020-12-03,3,Yes,2020-12-03,2021-02-25,,Richard Ujong Erupted (community)
+cr Akpet Central Cottage Hospital,0001510C,2020-12-03,3,Yes,2020-12-03,2021-02-25,,Richard Ujong Erupted (community)
+cr Akpet Central Cottage Hospital,0001512,2020-12-04,3,,,,,Comfort Egom 
+cr Akpet Central Cottage Hospital,0001513,2020-12-07,3,Yes,2020-12-07,2021-03-01,,Comfort Egom 
+cr Akpet Central Cottage Hospital,0001514,2020-12-07,3,Yes,2020-12-07,2021-03-01,,Comfort Egom 
+cr Akpet Central Cottage Hospital,0001506C,2020-12-01,3,Yes,2020-12-01,2021-02-23,,Richard Ujong Erupted (community)
+cr Akpet Central Cottage Hospital,0001500C,2020-11-24,3,Yes,2020-11-24,2021-02-16,,Richard Ujong Erupted (community)
+cr Akpet Central Cottage Hospital,0001516,2020-12-09,3,Yes,2020-12-09,2021-03-09,,Comfort Egom 
+cr Akpet Central Cottage Hospital,0001517,2020-12-09,3,Yes,2020-12-09,2021-03-09,,Comfort Egom 
+cr Akpet Central Cottage Hospital,0001519,2020-12-11,3,Yes,2020-12-11,2021-03-05,,Comfort Egom 
+cr Akpet Central Cottage Hospital,0001518C,2020-12-10,3,Yes,2020-12-10,2021-03-10,,Awara Ebonor I (community)
+cr Akpet Central Cottage Hospital,0001521C,2020-12-15,3,Yes,2020-12-15,2021-03-15,,Awara Ebonor I (community)
+cr Akpet Central Cottage Hospital,0001522C,2020-12-17,3,Yes,2020-12-17,2021-03-17,,Awara Ebonor I (community)
+cr Akpet Central Cottage Hospital,0001523C,2020-12-17,3,Yes,2020-12-17,2021-03-17,,Awara Ebonor I (community)
+cr Akpet Central Cottage Hospital,0001524C,2020-12-17,3,Yes,2020-12-17,2021-03-17,,Awara Ebonor I (community)
+cr Akpet Central Cottage Hospital,0001525C,2020-12-21,3,Yes,2020-12-21,,,Awara Ebonor I (community)
+cr Akpet Central Cottage Hospital,0001515C,2020-12-08,3,Yes,2020-12-08,2021-03-02,,Awara Ebonor I (community)
+cr Akpet Central Cottage Hospital,0001520C,2020-12-15,3,Yes,2020-12-15,2021-03-15,,Awara Ebonor I (community)
+cr Akpet Central Cottage Hospital,0001527C,2020-12-21,3,Yes,2020-12-21,,,Awara Ebonor I (community)
+cr Akpet Central Cottage Hospital,0001529C,2020-12-23,3,Yes,2020-12-23,,,Helen Joseph Okoi 
+cr Akpet Central Cottage Hospital,0001530C,2020-12-30,3,Yes,2020-12-30,,,Helen Joseph Okoi 
+cr Akpet Central Cottage Hospital,0001531C,2020-12-30,3,Yes,2020-12-30,,,Helen Joseph Okoi 
+cr Akpet Central Cottage Hospital,0001528C,2020-12-23,3,Yes,2020-12-23,,,Helen Joseph Okoi 
+cr Akpet Central Cottage Hospital,0001526C,2020-12-21,3,Yes,2020-12-21,,,Awara Ebonor I (community)
+cr Aya Medical Centre,0064,2020-12-07,3,,,,,
+cr Aya Medical Centre,063,2020-10-09,3,Yes,,2021-01-03,,
+cr Aya Medical Centre,065,2020-11-30,3,Yes,,2021-02-28,,
+cr Aya Medical Centre,067,2020-11-10,1,Yes,2020-11-10,2020-12-08,,
+cr Aya Medical Centre,00068,2020-12-01,3,Yes,2020-12-01,2021-02-23,,
+cr Aya Medical Centre,066,2020-11-10,1,Yes,2020-11-10,2020-12-08,,
+cr Eja Memorial Hospital,009654c,2020-10-05,3,Yes,2020-10-05,2021-01-03,2020-11-30,Faithful Agara
+cr Eja Memorial Hospital,0076c,2020-10-11,3,Yes,2020-10-11,2021-01-09,2020-11-30,Mr Awara
+cr Eja Memorial Hospital,00954c,2020-10-09,3,Yes,2020-10-09,2021-01-07,2020-11-30,Mr Awara
+cr Eja Memorial Hospital,08761c,2020-10-11,3,Yes,2020-10-11,2021-01-09,,Mr Awara
+cr Eja Memorial Hospital,00653c,2020-10-12,3,Yes,2020-10-12,2021-01-10,,Mr Awara
+cr Eja Memorial Hospital,021341,2020-11-12,3,,,,2020-11-30,Esther Ivara
+cr Eja Memorial Hospital,080564c,2020-10-12,3,Yes,2020-10-12,2021-01-10,,Mr Awara
+cr Eja Memorial Hospital,00875c,2020-10-14,3,Yes,2020-10-14,2021-01-12,,Mr Awara
+cr Eja Memorial Hospital,09843c,2020-10-19,3,Yes,2020-10-14,2021-01-17,,Mr Awara
+cr Eja Memorial Hospital,0098643c,2020-10-23,3,Yes,2020-10-23,2021-01-21,,Faithful Agara
+cr Eja Memorial Hospital,011260c,2020-10-20,3,Yes,2020-10-20,2021-01-18,,Faithful Agara
+cr Eja Memorial Hospital,05430c,2020-10-23,3,,,,,Faithful Agara
+cr Eja Memorial Hospital,01205c,2020-10-28,3,Yes,2020-10-28,2021-06-28,,Faithful Agara
+cr Eja Memorial Hospital,03670c,2020-10-28,3,Yes,2020-10-28,2021-06-29,,Faithful Agara
+cr Eja Memorial Hospital,08765c,2020-10-20,3,Yes,2020-10-20,2021-01-18,,Faithful Agara
+cr Eja Memorial Hospital,01280c,2020-10-30,3,Yes,2020-10-30,2021-01-28,,Faithful Agara
+cr Eja Memorial Hospital,07603c,2020-10-30,3,Yes,2020-10-30,2021-01-28,,Faithful Agara
+cr Eja Memorial Hospital,060543c,2020-10-31,3,Yes,2020-10-31,2021-01-29,,Faithful Agara
+cr Eja Memorial Hospital,08035621c,2020-11-03,3,Yes,2020-11-03,2021-02-01,,Faithful Agara
+cr Eja Memorial Hospital,018630c,2020-10-31,3,Yes,2020-10-31,2021-01-29,,Faithful Agara
+cr Eja Memorial Hospital,007651c,2020-11-05,3,Yes,2020-11-05,2021-02-03,,Faithful Agara
+cr Eja Memorial Hospital,06432c,2020-11-03,3,Yes,2020-11-03,2021-02-01,,Faithful Agara
+cr Eja Memorial Hospital,08510c,2020-11-09,3,Yes,2020-11-09,2021-02-07,,Emmanuel Awara
+cr Eja Memorial Hospital,04376c,2020-11-05,3,Yes,2020-11-05,2021-02-03,,Faithful Agara
+cr Eja Memorial Hospital,007512c,2020-11-09,3,Yes,2020-11-09,2021-02-07,,Bassey Mercy Eteng
+cr Eja Memorial Hospital,05431c,2020-11-09,3,Yes,2020-11-09,2021-02-07,,Bassey Mercy Eteng
+cr Eja Memorial Hospital,01296c,2020-11-09,3,Yes,2020-11-09,2021-02-07,,Emmanuel Awara
+cr Eja Memorial Hospital,08321c,2020-11-09,3,Yes,2020-11-09,2021-02-07,,Bassey Mercy Eteng
+cr Eja Memorial Hospital,12054c,2020-11-11,3,Yes,2020-11-11,2021-02-09,,Emmanuel Awara
+cr Eja Memorial Hospital,06128c,2020-11-11,3,Yes,2020-11-11,2021-02-09,,Emmanuel Awara
+cr Eja Memorial Hospital,042189c,2020-11-11,3,Yes,2020-11-11,2021-02-09,,Emmanuel Awara
+cr Eja Memorial Hospital,076541c,2020-11-11,3,Yes,2020-11-11,2021-02-09,,Emmanuel Awara
+cr Eja Memorial Hospital,05421c,2020-11-13,3,Yes,2020-11-13,2021-02-11,,Faithful Agara
+cr Eja Memorial Hospital,019643c,2020-11-13,3,Yes,2020-11-13,2021-02-11,,Faithful Agara
+cr Eja Memorial Hospital,0763210c,2020-11-15,3,Yes,2020-11-15,2021-02-13,,Faithful Agara
+cr Eja Memorial Hospital,0056412c,2020-11-11,3,Yes,2020-11-11,2021-02-09,,Emmanuel Awara
+cr Eja Memorial Hospital,067432C,2020-11-17,3,Yes,2020-11-17,2021-02-15,,Emmanuel Awara
+cr Eja Memorial Hospital,07654c,2020-11-17,3,Yes,2020-11-17,2021-02-15,,Bassey Mercy Eteng
+cr Eja Memorial Hospital,076514c,2020-11-17,3,Yes,2020-11-17,2021-02-15,,Bassey Mercy Eteng
+cr Eja Memorial Hospital,01278c,2020-11-17,3,Yes,2020-11-17,2021-02-15,,Afakel Pius
+cr Eja Memorial Hospital,018432c,2020-11-17,3,Yes,2020-11-17,2021-02-15,,Emmanuel Awara
+cr Eja Memorial Hospital,0764c,2020-11-17,3,Yes,2020-11-17,2021-02-15,,Faithful Agara
+cr Eja Memorial Hospital,064321c,2020-11-17,3,Yes,2020-11-17,2021-02-15,,Faithful Agara
+cr Eja Memorial Hospital,067543c,2020-11-19,3,Yes,2020-11-19,2021-02-17,,Faithful Agara
+cr Eja Memorial Hospital,067321c,2020-11-19,3,Yes,2020-11-19,2021-02-17,,Emmanuel Awara
+cr Eja Memorial Hospital,091276c,2020-11-19,3,Yes,2020-11-19,2021-02-17,,Faithful Agara
+cr Eja Memorial Hospital,085431c,2020-11-23,3,Yes,2020-11-23,2021-02-21,,Ujong Richard
+cr Eja Memorial Hospital,018543c,2020-11-23,3,Yes,2020-11-23,2021-02-21,,Emmanuel Awara
+cr Eja Memorial Hospital,06785c,2020-11-22,3,Yes,2020-11-22,2021-02-20,,Mr Awara
+cr Eja Memorial Hospital,09321c,2020-11-23,3,Yes,2020-11-23,2021-02-21,,Ujong Richard
+cr Eja Memorial Hospital,027543c,2020-11-25,3,Yes,2020-11-25,2021-02-23,,Emmanuel Awara
+cr Eja Memorial Hospital,04329c,2020-11-23,3,Yes,2020-11-23,2021-02-21,,Bassey Mercy Eteng
+cr Eja Memorial Hospital,075432c,2020-11-25,3,Yes,2020-11-25,2021-02-23,,Emmanuel Awara
+cr Eja Memorial Hospital,076154c,2020-11-27,3,Yes,2020-11-27,2021-02-25,,Ujong Richard
+cr Eja Memorial Hospital,06542c,2020-11-29,3,Yes,2020-11-29,2021-02-27,,Ujong Richard
+cr Eja Memorial Hospital,02196c,2020-11-29,3,Yes,2020-11-29,2021-02-27,,Ujong Richard
+cr Eja Memorial Hospital,085432c,2020-11-30,3,Yes,2020-11-30,2021-02-28,,Ujong Richard
+cr Eja Memorial Hospital,08752c,2020-11-30,3,Yes,2020-11-30,2021-02-28,,Ujong Richard
+cr Eja Memorial Hospital,08643c,2020-11-13,3,Yes,2020-11-13,2021-02-11,,Bassey Mercy Eteng
+cr Eja Memorial Hospital,021003,2020-12-01,3,Yes,2020-12-01,2021-03-01,,Esther Ivara
+cr Eja Memorial Hospital,071254c,2020-11-13,3,Yes,2020-11-13,2021-02-11,,Afakel Pius
+cr Eja Memorial Hospital,081654c,2020-11-13,3,Yes,2020-11-13,2021-02-11,,Emmanuel Awara
+cr Eja Memorial Hospital,06783C,2020-12-02,3,Yes,2020-12-02,2021-03-02,,Ujong Richard
+cr Eja Memorial Hospital,06543c,2020-12-02,3,Yes,2020-12-02,2021-03-02,,Ujong Richard
+cr Eja Memorial Hospital,07365c,2020-12-04,3,Yes,2020-12-04,2021-03-04,,Ujong Richard
+cr Eja Memorial Hospital,056324c,2020-12-07,3,Yes,2020-12-07,2021-03-07,,Mr Awara
+cr Eja Memorial Hospital,0865415c,2020-12-06,3,Yes,2020-12-06,2021-03-06,,Mr Awara
+cr Eja Memorial Hospital,08754c,2020-12-09,3,Yes,2020-12-09,2021-03-09,,Bassey Mercy Eteng
+cr Eja Memorial Hospital,065431c,2020-12-07,3,Yes,2020-12-07,2021-03-07,,Mr Awara
+cr Eja Memorial Hospital,078543c,2020-12-09,3,Yes,2020-12-09,2021-03-09,,Bassey Mercy Eteng
+cr Eja Memorial Hospital,08126c,2020-12-11,3,Yes,2020-12-11,2021-03-11,,Mr Awara
+cr Eja Memorial Hospital,018632c,2020-12-11,3,Yes,2020-12-11,2021-03-11,,Mr Awara
+cr Eja Memorial Hospital,012308c,2020-12-09,3,Yes,2020-12-09,2021-03-09,,Bassey Mercy Eteng
+cr Eja Memorial Hospital,056731C,2020-12-14,3,Yes,2020-12-14,2021-03-14,,Mr Awara
+cr Eja Memorial Hospital,07621c,2020-12-14,3,Yes,2020-12-14,2021-03-14,,Mr Awara
+cr Eja Memorial Hospital,013542c,2020-12-14,3,Yes,2020-12-14,2021-03-14,,Mr Awara
+cr Eja Memorial Hospital,057431c,2020-12-16,3,Yes,2020-12-16,2021-03-16,,Mr Awara
+cr Eja Memorial Hospital,067843c,2020-12-16,3,Yes,2020-12-16,2021-03-16,,Mr Awara
+cr Eja Memorial Hospital,016754c,2020-12-18,3,Yes,2020-12-18,2021-03-18,,Mr Awara
+cr Eja Memorial Hospital,082356c,2020-12-22,3,Yes,2020-12-22,,,Mr Awara
+cr Akpabuyo St. Joseph Hospital,9419C,2020-10-02,3,Yes,2020-10-02,2020-12-31,,Eteng Joy E
+cr Akpabuyo St. Joseph Hospital,9420,2020-10-02,3,Yes,2020-10-02,2020-12-31,,Eteng Joy E
+cr Akpabuyo St. Joseph Hospital,9423,2020-10-03,3,Yes,2020-10-03,2021-01-01,,Emmanuel Alfred
+cr Akpabuyo St. Joseph Hospital,9422,2020-10-02,3,Yes,2020-10-02,2020-12-31,,Emmanuel Alfred
+cr Akpabuyo St. Joseph Hospital,9421,2020-10-02,3,Yes,2020-10-02,2020-12-31,,Emmanuel Alfred
+cr Akpabuyo St. Joseph Hospital,9424,2020-10-05,3,Yes,2020-10-05,2021-01-03,,Emmanuel Alfred
+cr Akpabuyo St. Joseph Hospital,9426I,2020-10-05,3,Yes,2020-10-05,2021-01-03,,Micheal A Victoria
+cr Akpabuyo St. Joseph Hospital,9439,2020-10-13,3,Yes,2020-10-13,2021-01-11,,Micheal A Victoria
+cr Akpabuyo St. Joseph Hospital,9438,2020-10-13,3,Yes,2020-10-13,2021-01-11,,Micheal A Victoria
+cr Akpabuyo St. Joseph Hospital,9436,2020-10-10,3,Yes,2020-10-10,2021-01-08,,Micheal A Victoria
+cr Akpabuyo St. Joseph Hospital,9434,2020-10-10,3,Yes,2020-10-10,2021-01-08,,Nancy Sylvester
+cr Akpabuyo St. Joseph Hospital,9435,2020-11-27,3,Yes,2020-10-09,2021-02-25,,Nancy Sylvester
+cr Akpabuyo St. Joseph Hospital,9431,2020-10-09,3,Yes,2020-10-09,2021-01-07,,Eteng Joy E
+cr Akpabuyo St. Joseph Hospital,9433,2020-10-09,3,Yes,2020-10-09,2021-01-07,,Nancy Sylvester
+cr Akpabuyo St. Joseph Hospital,9432,2020-10-09,3,Yes,2020-10-09,2021-01-07,,Nancy Sylvester
+cr Akpabuyo St. Joseph Hospital,9428,2020-10-07,3,Yes,2020-10-07,2021-01-05,,Nancy Sylvester
+cr Akpabuyo St. Joseph Hospital,9430,2020-10-07,3,Yes,2020-10-07,2021-01-05,,Eteng Joy E
+cr Akpabuyo St. Joseph Hospital,9429,2020-10-07,3,Yes,2020-10-07,2021-01-05,,Eteng Joy E
+cr Akpabuyo St. Joseph Hospital,9427,2020-10-06,3,Yes,2020-10-06,2021-01-04,,Nancy Sylvester
+cr Akpabuyo St. Joseph Hospital,9440I,2020-10-14,3,Yes,2020-10-14,2021-01-12,,Nancy Sylvester
+cr Akpabuyo St. Joseph Hospital,9425,2020-10-06,3,Yes,2020-10-06,2021-01-04,,Nancy Sylvester
+cr Akpabuyo St. Joseph Hospital,9445,2020-10-17,3,Yes,2020-10-17,2021-01-15,,Nancy Sylvester
+cr Akpabuyo St. Joseph Hospital,9441I,2020-10-14,3,Yes,2020-10-14,2021-01-12,,Nancy Sylvester
+cr Akpabuyo St. Joseph Hospital,9443,2020-10-16,3,Yes,2020-10-16,2021-01-14,,Nancy Sylvester
+cr Akpabuyo St. Joseph Hospital,9446,2020-10-17,3,Yes,2020-10-17,2021-01-15,,Ofem Chidera P
+cr Akpabuyo St. Joseph Hospital,9442,2020-10-15,3,Yes,2020-10-15,2021-01-13,,Ofem Chidera P
+cr Akpabuyo St. Joseph Hospital,9444,2020-10-16,3,Yes,2020-10-16,2021-01-14,,Ofem Chidera P
+cr Akpabuyo St. Joseph Hospital,9453,2020-10-21,3,Yes,2020-10-21,2021-01-19,,Sama Edom
+cr Akpabuyo St. Joseph Hospital,9451,2020-10-19,3,Yes,2020-10-19,2021-01-17,,Sama Edom
+cr Akpabuyo St. Joseph Hospital,9452,2020-10-20,3,Yes,2020-10-20,2021-01-18,,Sama Edom
+cr Akpabuyo St. Joseph Hospital,9448,2020-10-19,3,Yes,2020-10-19,2021-01-17,,Sama Edom
+cr Akpabuyo St. Joseph Hospital,9450,2020-10-19,3,Yes,2020-10-19,2021-01-17,,Sama Edom
+cr Akpabuyo St. Joseph Hospital,9455,2020-10-22,3,Yes,2020-10-22,2021-01-20,,Tecular F Anyawu
+cr Akpabuyo St. Joseph Hospital,9447,2020-10-20,3,Yes,2020-10-20,2021-01-18,,Tecular F Anyawu
+cr Akpabuyo St. Joseph Hospital,9454,2020-10-21,3,Yes,2020-10-21,2021-01-19,,Sama Edom
+cr Akpabuyo St. Joseph Hospital,9458I,2020-11-02,3,Yes,2020-11-02,2021-01-31,,Eteng Joy E
+cr Akpabuyo St. Joseph Hospital,9459I,2020-11-02,3,Yes,2020-11-02,2021-01-31,,Eteng Joy E
+cr Akpabuyo St. Joseph Hospital,9456,2020-10-22,3,Yes,2020-10-22,2021-01-20,,Tecular F Anyawu
+cr Akpabuyo St. Joseph Hospital,9457,2020-10-23,3,Yes,2020-10-23,2021-01-21,,Nancy Sylvester
+cr Akpabuyo St. Joseph Hospital,9462 ,2020-11-03,3,Yes,2020-11-03,2021-02-01,,Nancy Sylvester
+cr Akpabuyo St. Joseph Hospital,9464,2020-11-03,3,Yes,2020-11-03,2021-02-01,,Nancy Sylvester
+cr Akpabuyo St. Joseph Hospital,9463I,2020-11-03,3,Yes,2020-11-03,2021-02-01,,Nancy Sylvester
+cr Akpabuyo St. Joseph Hospital,9461,2020-11-02,3,Yes,2020-11-02,2021-01-31,,Nancy Sylvester
+cr Akpabuyo St. Joseph Hospital,CT-9467,2020-11-04,3,Yes,2020-11-04,2021-02-02,,Nancy Sylvester
+cr Akpabuyo St. Joseph Hospital,9465,2020-11-04,3,Yes,2020-11-04,2021-02-02,,Nancy Sylvester
+cr Akpabuyo St. Joseph Hospital,9470i,2020-11-06,3,Yes,2020-11-06,2021-02-04,,Emmanuel Alfred
+cr Akpabuyo St. Joseph Hospital,9469I,2020-11-05,3,Yes,2020-11-05,2021-02-03,,Blessing Agube
+cr Akpabuyo St. Joseph Hospital,9468i,2020-11-05,3,Yes,2020-11-05,2021-02-03,,Blessing Agube
+cr Akpabuyo St. Joseph Hospital,9471,2020-11-06,3,Yes,2020-11-06,2021-02-04,,Sama Edom
+cr Akpabuyo St. Joseph Hospital,9472i,2020-11-04,3,Yes,2020-11-04,2021-02-02,,Emmanuel Alfred
+cr Akpabuyo St. Joseph Hospital,9475i,2020-11-09,3,Yes,2020-11-09,2021-02-07,,Emmanuel Alfred
+cr Akpabuyo St. Joseph Hospital,9474,2020-11-07,3,Yes,2020-11-07,2021-02-05,,Emmanuel Alfred
+cr Akpabuyo St. Joseph Hospital,9496,2020-11-16,3,Yes,2020-11-16,2021-02-14,,Emmanuel Alfred
+cr Akpabuyo St. Joseph Hospital,9473,2020-11-07,3,Yes,2020-11-07,2021-02-05,,Emmanuel Alfred
+cr Akpabuyo St. Joseph Hospital,9494I,2020-11-14,3,Yes,2020-11-14,2021-02-12,,Emmanuel Alfred
+cr Akpabuyo St. Joseph Hospital,9495,2020-11-14,3,Yes,2020-11-14,2021-02-12,,Emmanuel Alfred
+cr Akpabuyo St. Joseph Hospital,9493,2020-11-14,3,Yes,2020-11-14,2021-02-12,,Emmanuel Alfred
+cr Akpabuyo St. Joseph Hospital,9491,2020-11-14,3,Yes,2020-11-14,2021-02-12,,Emmanuel Alfred
+cr Akpabuyo St. Joseph Hospital,9490,2020-11-14,3,Yes,2020-11-14,2021-02-12,,Nwankwo Joy
+cr Akpabuyo St. Joseph Hospital,9492,2020-11-14,3,Yes,2020-11-14,2021-02-12,,Emmanuel Alfred
+cr Akpabuyo St. Joseph Hospital,9489,2020-11-14,3,Yes,2020-11-14,2021-02-12,,Nwankwo Joy
+cr Akpabuyo St. Joseph Hospital,9487 OCT 1994,2020-11-13,3,Yes,2020-11-13,2021-02-11,,Nwankwo Joy
+cr Akpabuyo St. Joseph Hospital,9488,2020-11-14,3,Yes,2020-11-14,2021-02-12,,Nwankwo Joy
+cr Akpabuyo St. Joseph Hospital,9485I,2020-11-12,3,Yes,2020-11-12,2021-02-10,,Nwankwo Joy
+cr Akpabuyo St. Joseph Hospital,9486,2020-11-12,3,Yes,2020-11-12,2021-02-10,,Nwankwo Joy
+cr Akpabuyo St. Joseph Hospital,9483,2020-11-11,3,Yes,2020-11-11,2021-02-09,,Nwankwo Joy
+cr Akpabuyo St. Joseph Hospital,9481 ,2020-11-11,3,Yes,2020-11-11,2021-02-09,,Nwankwo Joy
+cr Akpabuyo St. Joseph Hospital,9478,2020-11-10,3,Yes,2020-11-10,2021-02-08,,Sama Edom
+cr Akpabuyo St. Joseph Hospital,9480,2020-11-10,3,Yes,,2021-02-08,,Sama Edom
+cr Akpabuyo St. Joseph Hospital,9479,2020-11-10,3,Yes,2020-11-10,2021-02-08,,Sama Edom
+cr Akpabuyo St. Joseph Hospital,9477,2020-11-09,3,Yes,2020-11-09,2021-02-07,,Sama Edom
+cr Akpabuyo St. Joseph Hospital,9476,2020-11-09,3,Yes,2020-11-09,2021-02-07,,Sama Edom
+cr Akpabuyo St. Joseph Hospital,9497,2020-11-17,3,Yes,2020-11-17,2021-02-15,,Emmanuel Alfred
+cr Akpabuyo St. Joseph Hospital,9499,2020-11-18,3,Yes,2020-11-18,2021-02-16,,Faith Nkom
+cr Akpabuyo St. Joseph Hospital,9498,2020-11-17,3,Yes,2020-11-17,2021-02-15,,Emmanuel Alfred
+cr Akpabuyo St. Joseph Hospital,9500,2020-11-18,3,Yes,2020-11-18,2021-02-16,,Faith Nkom
+cr Akpabuyo St. Joseph Hospital,9501,2020-11-19,3,Yes,2020-11-19,2021-02-17,,Faith Nkom
+cr Akpabuyo St. Joseph Hospital,9502,2020-11-19,3,Yes,2020-11-19,2021-02-17,,Faith Nkom
+cr Akpabuyo St. Joseph Hospital,9503,2020-11-20,3,Yes,2020-11-20,2021-02-18,,Faith Nkom
+cr Akpabuyo St. Joseph Hospital,9504,2020-11-20,3,Yes,2020-11-20,2021-02-18,,Faith Nkom
+cr Akpabuyo St. Joseph Hospital,9505,2020-11-20,3,Yes,2020-11-20,2021-02-18,,Faith Nkom
+cr Akpabuyo St. Joseph Hospital,9506,2020-11-20,3,Yes,2020-11-20,2021-02-18,,Faith Nkom
+cr Akpabuyo St. Joseph Hospital,9508i,2020-11-21,3,Yes,2020-11-21,2021-02-19,,Micheal A Victoria
+cr Akpabuyo St. Joseph Hospital,9507,2020-11-20,3,Yes,2020-11-20,2021-02-18,,Faith Nkom
+cr Akpabuyo St. Joseph Hospital,9509,2020-11-21,3,Yes,2020-11-21,2021-02-19,,Micheal A Victoria
+cr Akpabuyo St. Joseph Hospital,9510,2020-11-21,3,Yes,2020-11-21,2021-02-19,,Micheal A Victoria
+cr Akpabuyo St. Joseph Hospital,9511,2020-11-21,3,Yes,2020-11-21,2021-02-19,,Micheal A Victoria
+cr Akpabuyo St. Joseph Hospital,9512,2020-11-21,3,Yes,2020-11-21,2021-02-19,,Micheal A Victoria
+cr Akpabuyo St. Joseph Hospital,9515,2020-11-21,3,Yes,2020-11-21,2021-02-19,,Micheal A Victoria
+cr Akpabuyo St. Joseph Hospital,9513,2020-11-21,3,Yes,2020-11-21,2021-02-19,,Micheal A Victoria
+cr Akpabuyo St. Joseph Hospital,9516,2020-11-23,3,Yes,2020-11-23,2021-02-21,,Micheal A Victoria
+cr Akpabuyo St. Joseph Hospital,9518,2020-11-24,3,Yes,2020-11-24,2021-02-22,,Micheal A Victoria
+cr Akpabuyo St. Joseph Hospital,9517,2020-11-23,3,Yes,2020-11-23,2021-02-21,,Micheal A Victoria
+cr Akpabuyo St. Joseph Hospital,9519,2020-11-24,3,Yes,2020-11-24,2021-02-22,,Nancy Sylvester
+cr Akpabuyo St. Joseph Hospital,9521,2020-11-24,3,Yes,2020-11-24,2021-02-22,,Nancy Sylvester
+cr Akpabuyo St. Joseph Hospital,9520,2020-11-24,3,Yes,2020-11-24,2021-02-22,,Nancy Sylvester
+cr Akpabuyo St. Joseph Hospital,9522,2020-11-24,3,Yes,2020-11-24,2021-02-22,,Nancy Sylvester
+cr Akpabuyo St. Joseph Hospital,9524,2020-11-25,3,Yes,2020-11-25,2021-02-23,,Nancy Sylvester
+cr Akpabuyo St. Joseph Hospital,9523,2020-11-24,3,Yes,2020-11-24,2021-02-22,,Nancy Sylvester
+cr Akpabuyo St. Joseph Hospital,9525,2020-11-25,3,Yes,2020-11-25,2021-02-23,,Nancy Sylvester
+cr Akpabuyo St. Joseph Hospital,9526,2020-11-25,3,Yes,2020-11-25,2021-02-23,,Nancy Sylvester
+cr Akpabuyo St. Joseph Hospital,9528,2020-11-26,3,Yes,2020-11-26,2021-02-24,,Nancy Sylvester
+cr Akpabuyo St. Joseph Hospital,9527,2020-11-26,3,Yes,2020-11-26,2021-02-24,,Nsemo Peace
+cr Akpabuyo St. Joseph Hospital,9514,2020-11-21,3,Yes,2020-11-21,2021-02-19,,Nsemo Peace
+cr Akpabuyo St. Joseph Hospital,9530,2020-11-27,3,Yes,2020-11-27,2021-02-25,,Nsemo Peace
+cr Akpabuyo St. Joseph Hospital,9531,2020-11-27,3,Yes,2020-11-27,2021-02-25,,Tecular F Anyawu
+cr Akpabuyo St. Joseph Hospital,9538,2020-11-30,3,Yes,2020-11-30,2021-02-28,,Tecular F Anyawu
+cr Akpabuyo St. Joseph Hospital,9534,2020-11-28,3,Yes,2020-11-28,2021-02-26,,Tecular F Anyawu
+cr Akpabuyo St. Joseph Hospital,9535,2020-11-28,3,Yes,2020-11-28,2021-02-26,,Tecular F Anyawu
+cr Akpabuyo St. Joseph Hospital,9536,2020-11-28,3,Yes,2020-11-28,2021-02-26,,Tecular F Anyawu
+cr Akpabuyo St. Joseph Hospital,9537 ,2020-11-28,3,Yes,2020-11-28,2021-02-26,,Tecular F Anyawu
+cr Akpabuyo St. Joseph Hospital,9533,2020-11-28,3,Yes,2020-11-28,2021-02-26,,Tecular F Anyawu
+cr Akpabuyo St. Joseph Hospital,9539,2020-11-30,3,Yes,2020-11-30,2021-02-28,,Ofem Chidera P
+cr Akpabuyo St. Joseph Hospital,9532I,2020-11-28,3,Yes,2020-11-28,2021-02-26,,Tecular F Anyawu
+cr Akpabuyo St. Joseph Hospital,9529,2020-11-27,3,Yes,2020-11-27,2021-02-25,,Ofem Chidera P
+cr Akpabuyo St. Joseph Hospital,9541,2020-12-01,3,Yes,2020-12-01,2021-03-01,,Micheal A Victoria
+cr Akpabuyo St. Joseph Hospital,9540,2020-12-01,3,Yes,2020-12-01,2021-03-01,,Ofem Chidera P
+cr Akpabuyo St. Joseph Hospital,9542,2020-12-02,3,Yes,2020-12-02,2021-03-02,,Micheal A Victoria
+cr Akpabuyo St. Joseph Hospital,9544,2020-12-02,3,Yes,2020-12-02,2021-03-02,,Micheal A Victoria
+cr Akpabuyo St. Joseph Hospital,9543I,2020-12-02,3,Yes,2020-12-02,2021-03-02,,Micheal A Victoria
+cr Akpabuyo St. Joseph Hospital,9545,2020-12-03,3,Yes,2020-12-03,2021-03-03,,Micheal A Victoria
+cr Akpabuyo St. Joseph Hospital,9546,2020-12-03,3,Yes,2020-12-03,2021-03-03,,Micheal A Victoria
+cr Akpabuyo St. Joseph Hospital,9547,2020-12-04,3,Yes,2020-12-04,2021-03-04,,Micheal A Victoria
+cr Akpabuyo St. Joseph Hospital,9548,2020-12-04,3,Yes,2020-12-04,2021-03-04,,Micheal A Victoria
+cr Akpabuyo St. Joseph Hospital,9551,2020-12-07,3,Yes,2020-12-07,2021-03-07,,Micheal A Victoria
+cr Akpabuyo St. Joseph Hospital,9550i,2020-12-07,3,Yes,2020-12-07,2021-03-07,,Micheal A Victoria
+cr Akpabuyo St. Joseph Hospital,9549,2020-12-05,3,Yes,2020-12-05,2021-03-05,,Sama Edom
+cr Akpabuyo St. Joseph Hospital,9553,2020-12-08,3,Yes,2020-12-08,2021-03-08,,Sama Edom
+cr Akpabuyo St. Joseph Hospital,9552,2020-12-08,3,,,,,Sama Edom
+cr Akpabuyo St. Joseph Hospital,9554,2020-12-08,3,Yes,2020-12-08,2021-03-08,,Micheal A Victoria
+cr Akpabuyo St. Joseph Hospital,9555,2020-12-09,3,Yes,2020-12-09,2021-03-09,,Micheal A Victoria
+cr Akpabuyo St. Joseph Hospital,9558,2020-12-10,3,Yes,2020-12-10,2021-03-10,,Micheal A Victoria
+cr Akpabuyo St. Joseph Hospital,9557I,2020-12-10,3,Yes,2020-12-10,2021-03-10,,Micheal A Victoria
+cr Akpabuyo St. Joseph Hospital,9556,2020-12-10,3,Yes,2020-12-10,2021-03-10,,Micheal A Victoria
+cr Akpabuyo St. Joseph Hospital,9559,2020-12-11,3,Yes,2020-12-11,2021-03-11,,Nancy Sylvester
+cr Akpabuyo St. Joseph Hospital,9561,2020-12-11,3,Yes,2020-12-11,2021-03-11,,Nancy Sylvester
+cr Akpabuyo St. Joseph Hospital,9562I,2020-12-12,3,Yes,2020-12-12,2021-03-12,,Nancy Sylvester
+cr Akpabuyo St. Joseph Hospital,9560,2020-12-11,3,Yes,2020-12-11,2021-03-11,,Nancy Sylvester
+cr Akpabuyo St. Joseph Hospital,9563,2020-12-12,3,Yes,2020-12-12,2021-03-12,,Nancy Sylvester
+cr Akpabuyo St. Joseph Hospital,9564,2020-12-14,3,Yes,2020-12-14,2021-03-14,,Nancy Sylvester
+cr Akpabuyo St. Joseph Hospital,9565,2020-12-14,3,Yes,2020-12-14,2021-03-14,,Nancy Sylvester
+cr Akpabuyo St. Joseph Hospital,9568,2020-12-15,3,Yes,2020-12-15,2021-03-15,,Tecular F Anyawu
+cr Akpabuyo St. Joseph Hospital,9566,2020-12-14,3,Yes,2020-12-14,2021-03-14,,Nancy Sylvester
+cr Akpabuyo St. Joseph Hospital,9567,2020-12-15,3,Yes,2020-12-15,2021-03-15,,Tecular F Anyawu
+cr Akpabuyo St. Joseph Hospital,9570,2020-12-16,3,Yes,2020-12-16,2021-03-16,,Christopher B Okon
+cr Akpabuyo St. Joseph Hospital,9569,2020-12-16,3,Yes,2020-12-16,2021-03-16,,Christopher B Okon
+cr Akpabuyo St. Joseph Hospital,9571,2020-12-16,3,Yes,2020-12-16,2021-03-16,,Christopher B Okon
+cr Akpabuyo St. Joseph Hospital,9573,2020-12-17,3,Yes,2020-12-17,2021-03-17,,Micheal A Victoria
+cr Akpabuyo St. Joseph Hospital,9574IG,2020-12-18,3,Yes,2020-12-18,2021-03-18,,Micheal A Victoria
+cr Akpabuyo St. Joseph Hospital,9575,2020-12-18,3,Yes,2020-12-18,2021-03-18,,Micheal A Victoria
+cr Akpabuyo St. Joseph Hospital,9576,2020-12-18,3,Yes,2020-12-18,2021-03-18,,Micheal A Victoria
+cr Akpabuyo St. Joseph Hospital,9577 ,2020-12-19,3,Yes,2020-12-19,2021-03-19,,Micheal A Victoria
+cr Akpabuyo St. Joseph Hospital,9578,2020-12-19,3,Yes,2020-12-19,2021-03-19,,Micheal A Victoria
+cr Akpabuyo St. Joseph Hospital,9580,2020-12-21,3,Yes,2020-12-21,2021-03-21,,Micheal A Victoria
+cr Akpabuyo St. Joseph Hospital,9579,2020-12-21,3,Yes,2020-12-21,2021-03-21,,Micheal A Victoria
+cr Akpabuyo St. Joseph Hospital,9581IG,2020-12-22,3,Yes,2020-12-22,2021-03-22,,Micheal A Victoria
+cr Akpabuyo St. Joseph Hospital,9582,2020-12-22,3,Yes,2020-12-22,2021-03-22,,Micheal A Victoria
+cr Akpabuyo St. Joseph Hospital,9584,2020-12-23,3,Yes,2020-12-23,2021-03-23,,Blessing Agube
+cr Akpabuyo St. Joseph Hospital,9583,2020-12-23,3,Yes,2020-12-23,2021-03-23,,Faith Nkom
+cr Akpabuyo St. Joseph Hospital,9586 ,2020-12-24,3,Yes,2020-12-24,2021-03-24,,Faith Nkom
+cr Akpabuyo St. Joseph Hospital,9585,2020-12-23,3,Yes,2020-12-23,2021-03-23,,Faith Nkom
+cr Akpabuyo St. Joseph Hospital,9588,2020-12-24,3,Yes,2020-12-24,2021-03-24,,Emmanuel Alfred
+cr Akpabuyo St. Joseph Hospital,9587,2020-12-24,3,Yes,2020-12-24,2021-03-24,,Emmanuel Alfred
+cr Melrose Hospital,CRS/MEL/082,2020-10-09,3,Yes,2020-10-09,2021-01-07,,ODAY NYAMBI
+cr Melrose Hospital,CRS/MEl/083,2020-10-12,3,Yes,2020-10-12,2021-01-10,,ODAY NYAMBI
+cr Melrose Hospital,CRS/MEL/085,2020-11-03,3,Yes,2020-11-03,2021-02-01,,ODAY NYAMBI
+cr Melrose Hospital,CRS/MEL/086,2020-11-19,3,Yes,2020-11-19,2021-02-17,,ODAY NYAMBI
+cr Melrose Hospital,CRS/MEL/084,2020-10-13,3,Yes,2020-10-13,2021-01-11,,ODAY NYAMBI
+cr Melrose Hospital,CRS/MEL/087,2020-12-07,3,Yes,2020-12-07,2021-03-07,,ODAY NYAMBI
+cr Melrose Hospital,CRS/MEL/088,2020-12-17,3,Yes,2020-12-17,,,ODAY NYAMBI
+cr University of Calabar Teaching Hospital,CRS00610046,2020-10-19,3,Yes,,2021-01-17,,Darlene Ibimi
+cr University of Calabar Teaching Hospital,CRS00610047I,2020-10-19,3,Yes,,2021-01-17,,Darlene Ibimi
+cr University of Calabar Teaching Hospital,CRS00610048,2020-11-04,3,Yes,2020-11-04,,,Felicity Uko
+cr University of Calabar Teaching Hospital,CRS00610050,2020-12-14,3,,,2021-03-14,,Ojong Eucharia Don
+cr University of Calabar Teaching Hospital,CRS00610051,2020-11-06,3,Yes,2020-10-08,2021-02-04,,Felicity Uko
+cr University of Calabar Teaching Hospital,CRS00610052,2020-11-09,3,Yes,,2020-11-11,,Ojong Eucharia Don
+cr University of Calabar Teaching Hospital,CRS00610054,2020-11-12,3,,,,,Gobini Usang
+cr University of Calabar Teaching Hospital,CRS00610055,2020-12-16,3,Yes,,2021-03-16,,Gobini Usang
+cr University of Calabar Teaching Hospital,CRS00610056,2020-12-21,3,,,,,Gobini Usang
+cr University of Calabar Teaching Hospital,CRS00610058,2020-11-26,3,Yes,2020-11-26,2021-02-24,,Darlene Ibimi
+cr University of Calabar Teaching Hospital,CRS00610472C,2020-10-22,3,Yes,2020-10-22,2021-01-20,,Ojong Eucharia Don
+cr University of Calabar Teaching Hospital,CRS00610471C,2020-10-15,3,Yes,2020-10-15,2021-01-13,,Nwogu Jennifer
+cr University of Calabar Teaching Hospital,CRS00610059,2020-12-15,2,,,,,Gobini Usang
+cr University of Calabar Teaching Hospital,CRS00610061,2020-11-26,2,Yes,2020-11-26,2021-01-25,,Darlene Ibimi
+cr University of Calabar Teaching Hospital,CRS00610057,2020-11-16,2,,,,,Gobini Usang
+cr University of Calabar Teaching Hospital,CRS00610062i,2020-11-30,3,Yes,2020-11-30,2021-02-28,,Darlene Ibimi
+cr University of Calabar Teaching Hospital,L0010968TI,2020-11-02,3,,,,,Racheal Ndifon
+cr University of Calabar Teaching Hospital,CRS00610063,2020-12-03,3,Yes,2020-12-03,2021-03-03,,Racheal Ndifon
+cr University of Calabar Teaching Hospital,CRS00610064,2020-12-01,3,Yes,,2021-02-23,,Mary Ezeala
+cr University of Calabar Teaching Hospital,CRS00610066,2020-12-02,3,Yes,2020-11-04,2021-02-24,,Mary Ezeala
+cr University of Calabar Teaching Hospital,CRS00610067,2020-12-01,3,Yes,2020-12-01,2021-03-01,,Maryann Obi
+cr University of Calabar Teaching Hospital,CRS00610068,2020-12-08,3,,,,,Enang Agbor Enun
+cr University of Calabar Teaching Hospital,CRS00610069,2020-11-17,1,,,,,Enang Agbor Enun
+cr University of Calabar Teaching Hospital,CRS00610476C,2020-11-14,3,Yes,,2021-02-12,,Nwogu Jennifer
+cr University of Calabar Teaching Hospital,CRS00610071,2020-12-15,3,Yes,,2021-03-09,,Felicity Uko
+cr University of Calabar Teaching Hospital,CRS00610074,2020-11-26,1,Yes,,2020-12-11,,Racheal Ndifon
+cr University of Calabar Teaching Hospital,CRS00610077,2020-12-13,2,Yes,,2021-02-07,,Racheal Ndifon
+cr University of Calabar Teaching Hospital,CRS00610073,2020-11-27,1,,,,,Racheal Ndifon
+cr University of Calabar Teaching Hospital,CRS00610075,2020-11-26,1,,,,,Racheal Ndifon
+cr University of Calabar Teaching Hospital,CRS00610477C,2020-11-14,3,Yes,,2021-02-12,,Ojong Eucharia Don
+cr University of Calabar Teaching Hospital,CRS00610473C,2020-12-14,3,Yes,,2021-03-14,,Nwogu Jennifer
+cr University of Calabar Teaching Hospital,CRS00610474C,2020-12-07,3,,,,,Nwogu Jennifer
+cr University of Calabar Teaching Hospital,CRS00610475CI,2020-11-12,3,Yes,,2021-02-10,,Nwogu Jennifer
+cr University of Calabar Teaching Hospital,CRS00610480C,2020-11-24,3,,,,,Uba Ikwo Asher
+cr University of Calabar Teaching Hospital,CRS00610479C,2020-11-22,3,Yes,,2021-02-20,,Uba Ikwo Asher
+cr University of Calabar Teaching Hospital,CRS00610478C,2020-11-19,3,Yes,,2021-02-17,,Uba Ikwo Asher
+cr University of Calabar Teaching Hospital,CRS00610070,2020-12-17,3,,,2021-03-17,,Maryann Obi
+cr University of Calabar Teaching Hospital,CRS00610481C,2020-11-29,3,,,,,Nwogu Jennifer
+cr University of Calabar Teaching Hospital,CRS00610079,2020-12-02,1,,,,,Maryann Obi
+cr University of Calabar Teaching Hospital,CRS00610482C,2020-11-02,3,Yes,,2021-01-31,,Nwogu Jennifer
+cr University of Calabar Teaching Hospital,CRS00610083,2020-12-08,3,Yes,,2021-03-08,,Maryann Obi
+cr University of Calabar Teaching Hospital,CRS00610082,2020-12-04,1,Yes,,2021-01-03,,Maryann Obi
+cr University of Calabar Teaching Hospital,CRS00610085,2020-12-08,1,Yes,,2021-01-05,,Maryann Obi
+cr University of Calabar Teaching Hospital,CRS00610084,2020-12-07,1,,,,,Maryann Obi
+cr University of Calabar Teaching Hospital,CRS00610088,2020-12-09,1,,,2021-01-08,,Maryann Obi
+cr University of Calabar Teaching Hospital,CRS00610081,2020-12-11,1,,,2021-01-10,,Maryann Obi
+cr University of Calabar Teaching Hospital,CRS00610087,2020-12-09,1,,,2021-01-08,,Maryann Obi
+cr University of Calabar Teaching Hospital,CRS00610090,2020-12-11,3,Yes,,2021-03-11,,Maryann Obi
+cr University of Calabar Teaching Hospital,CRS00610089,2020-12-11,1,Yes,,2021-01-08,,Maryann Obi
+cr University of Calabar Teaching Hospital,CRS00610485CI,2020-12-02,3,Yes,,2021-03-02,,Nwogu Jennifer
+cr University of Calabar Teaching Hospital,CRS00610091,2020-12-15,2,,,2021-02-13,,Maryann Obi
+cr University of Calabar Teaching Hospital,CRS00610484C,2020-12-02,3,,,2021-03-02,,Nwogu Jennifer
+cr University of Calabar Teaching Hospital,CRS00610483C,2020-12-02,3,Yes,,2021-03-02,,Nwogu Jennifer
+cr University of Calabar Teaching Hospital,CRS00610488c,2020-12-09,3,Yes,,2021-03-09,,Maryann Obi
+cr University of Calabar Teaching Hospital,CRS00610490C,2020-12-13,3,Yes,,2021-03-13,,Nwogu Jennifer
+cr University of Calabar Teaching Hospital,CRS00610489C,2020-12-09,3,Yes,,2021-03-09,,Nwogu Jennifer
+cr University of Calabar Teaching Hospital,CRS00610487C,2020-12-08,3,Yes,,2021-03-02,,Nwogu Jennifer
+cr University of Calabar Teaching Hospital,CRS00610486C,2020-12-06,3,Yes,2020-12-06,2021-03-06,,Uba Ikwo Asher
+cr University of Calabar Teaching Hospital,CRS00610492C,2020-12-14,3,Yes,,2021-03-14,,Uba Ikwo Asher
+cr University of Calabar Teaching Hospital,CRS00610092,2020-12-21,1,Yes,2020-12-21,,,Maryann Obi
+cr University of Calabar Teaching Hospital,CRS00610495,2020-12-21,3,Yes,2020-12-21,,,Maryann Obi
+cr University of Calabar Teaching Hospital,CRS00610497C,2020-12-22,3,Yes,2020-12-22,,,Uba Ikwo Asher
+cr University of Calabar Teaching Hospital,CRS00610493C,2020-12-18,3,Yes,2020-12-18,,,Uba Ikwo Asher
+cr University of Calabar Teaching Hospital,CRS00610494C,2020-12-20,3,Yes,2020-12-20,,,Uba Ikwo Asher
+cr University of Calabar Teaching Hospital,CRS00610491C,2020-12-13,3,,,,,Uba Ikwo Asher
+cr University of Calabar Teaching Hospital,CRS00610065,2020-12-02,3,,,,,Maryann Obi
+cr University of Calabar Teaching Hospital,CRS00610498C,2020-12-22,3,Yes,2020-12-22,,,Uba Ikwo Asher
+cr University of Calabar Teaching Hospital,CRS00610094,2020-12-23,1,Yes,,,,Maryann Obi
+cr University of Calabar Teaching Hospital,CRS00610499C,2020-12-23,3,Yes,2020-12-23,,,Uba Ikwo Asher
+cr University of Calabar Teaching Hospital,CRS00610096,2020-12-29,1,,,,,Maryann Obi
+cr University of Calabar Teaching Hospital,CRS00610097,2020-12-30,1,Yes,2020-12-30,,,
+cr Mfamosing Primary Health Center,0428C,2020-10-07,3,Yes,2020-10-07,2021-01-05,,Idorenyin Inwang
+cr Mfamosing Primary Health Center,0431C,2020-10-11,3,Yes,2020-10-11,2021-01-09,,Idorenyin Inwang
+cr Mfamosing Primary Health Center,0429C,2020-10-09,3,Yes,2020-10-09,2021-01-07,,Idorenyin Inwang
+cr Mfamosing Primary Health Center,0432C,2020-10-12,3,Yes,2020-10-12,2021-01-10,,Idorenyin Inwang
+cr Mfamosing Primary Health Center,0430c,2020-10-09,3,Yes,2020-10-09,2021-01-01,,Idorenyin Inwang
+cr Mfamosing Primary Health Center,0435,2020-10-14,3,Yes,2020-10-14,2021-01-06,,  Ojong Oru
+cr Mfamosing Primary Health Center,0434C,2020-10-14,3,Yes,2020-10-14,2021-01-06,,Idorenyin Inwang
+cr Mfamosing Primary Health Center,0437,2020-10-14,3,Yes,2020-10-14,2021-01-06,,  Ojong Oru
+cr Mfamosing Primary Health Center,0436C,2020-10-15,3,Yes,2020-10-15,2021-01-07,,Idorenyin Inwang
+cr Mfamosing Primary Health Center,0438C,2020-10-16,3,Yes,2020-10-16,2021-01-08,,Idorenyin Inwang
+cr Mfamosing Primary Health Center,0439C,2020-10-16,3,Yes,2020-10-16,2021-01-08,,Idorenyin Inwang
+cr Mfamosing Primary Health Center,0440C,2020-10-17,3,Yes,2020-10-17,2021-01-09,,Idorenyin Inwang
+cr Mfamosing Primary Health Center,0442C,2020-10-17,3,Yes,2020-10-17,2021-01-15,,Idorenyin Inwang
+cr Mfamosing Primary Health Center,0441C,2020-10-17,3,Yes,2020-10-17,2021-01-09,,Idorenyin Inwang
+cr Mfamosing Primary Health Center,0443C,2020-10-17,3,Yes,2020-10-17,2021-01-09,,Idorenyin Inwang
+cr Mfamosing Primary Health Center,0445C,2020-10-17,3,Yes,2020-10-17,2021-01-09,,Idorenyin Inwang
+cr Mfamosing Primary Health Center,0444C,2020-10-17,3,Yes,2020-10-17,2021-01-09,,Idorenyin Inwang
+cr Mfamosing Primary Health Center,0446C,2020-10-19,3,Yes,2020-10-19,2021-01-17,,Idorenyin Inwang
+cr Mfamosing Primary Health Center,0448C,2020-10-21,3,Yes,2020-10-21,2021-01-13,,Idorenyin Inwang
+cr Mfamosing Primary Health Center,0447C,2020-10-20,3,Yes,2020-10-20,2021-01-12,,Idorenyin Inwang
+cr Mfamosing Primary Health Center,0449C,2020-10-22,3,Yes,2020-10-22,2021-01-20,,Idorenyin Inwang
+cr Mfamosing Primary Health Center,0451C,2020-10-23,3,Yes,2020-10-23,2021-01-15,,Idorenyin Inwang
+cr Mfamosing Primary Health Center,0450C,2020-10-22,3,Yes,2020-10-22,2021-01-14,,Idorenyin Inwang
+cr Mfamosing Primary Health Center,0452C,2020-10-22,3,Yes,2020-10-22,2021-01-14,,Idorenyin Inwang
+cr Mfamosing Primary Health Center,0453C,2020-10-22,3,Yes,2020-10-22,2021-01-14,,Idorenyin Inwang
+cr Mfamosing Primary Health Center,0455C,2020-10-21,3,Yes,2020-10-21,2021-01-13,,Idorenyin Inwang
+cr Mfamosing Primary Health Center,0456C,2020-10-22,3,Yes,2020-10-22,2021-01-14,,Idorenyin Inwang
+cr Mfamosing Primary Health Center,0457C,2020-10-22,3,Yes,2020-10-22,2021-01-14,,Idorenyin Inwang
+cr Mfamosing Primary Health Center,0458C,2020-10-22,3,Yes,2020-10-22,2021-01-14,,Idorenyin Inwang
+cr Mfamosing Primary Health Center,0460C,2020-10-23,3,Yes,2020-10-23,2021-01-15,,Idorenyin Inwang
+cr Mfamosing Primary Health Center,0461C,2020-10-30,3,Yes,2020-10-30,2021-01-22,,Idorenyin Inwang
+cr Mfamosing Primary Health Center,0463C,2020-11-03,3,Yes,2020-11-03,2021-01-26,,Idorenyin Inwang
+cr Mfamosing Primary Health Center,0462C,2020-11-02,3,Yes,2020-11-02,2021-01-25,,Idorenyin Inwang
+cr Mfamosing Primary Health Center,0464C,2020-11-04,3,Yes,2020-11-04,2021-01-27,,Idorenyin Inwang
+cr Mfamosing Primary Health Center,0466C,2020-11-06,3,Yes,2020-11-06,2021-01-29,,Idorenyin Inwang
+cr Mfamosing Primary Health Center,0465C,2020-11-05,3,Yes,2020-11-05,2021-01-28,,Idorenyin Inwang
+cr Mfamosing Primary Health Center,0467c,2020-11-07,3,Yes,2020-11-07,2021-01-30,,Idorenyin Inwang
+cr Mfamosing Primary Health Center,0469C,2020-11-10,3,Yes,2020-11-10,2021-02-02,,Idorenyin Inwang
+cr Mfamosing Primary Health Center,0468C,2020-11-09,3,Yes,2020-11-09,2021-02-01,,Idorenyin Inwang
+cr Mfamosing Primary Health Center,0470C,2020-11-10,3,Yes,2020-11-10,2021-02-02,,Idorenyin Inwang
+cr Mfamosing Primary Health Center,0472C,2020-11-11,3,Yes,2020-11-11,2021-02-03,,Idorenyin Inwang
+cr Mfamosing Primary Health Center,0471,2020-11-11,3,Yes,2020-11-11,2021-02-03,,  Ojong Oru
+cr Mfamosing Primary Health Center,0473C,2020-11-11,3,Yes,2020-11-11,2021-02-03,,Idorenyin Inwang
+cr Mfamosing Primary Health Center,0475C,2020-11-12,3,Yes,2020-11-12,2021-02-04,,Idorenyin Inwang
+cr Mfamosing Primary Health Center,0474C,2020-11-11,3,Yes,2020-11-11,2021-02-03,,Idorenyin Inwang
+cr Mfamosing Primary Health Center,0476C,2020-11-12,3,Yes,2020-11-12,2021-02-04,,Idorenyin Inwang
+cr Mfamosing Primary Health Center,0478,2020-11-16,3,Yes,2020-11-16,2021-02-08,,  Ojong Oru
+cr Mfamosing Primary Health Center,0477C,2020-11-13,3,Yes,2020-11-13,2021-02-05,,Idorenyin Inwang
+cr Mfamosing Primary Health Center,0480C,2020-11-16,3,Yes,2020-11-16,2021-02-08,,Idorenyin Inwang
+cr Mfamosing Primary Health Center,0433C,2020-10-13,3,Yes,2020-10-13,2021-01-05,,Idorenyin Inwang
+cr Mfamosing Primary Health Center,0481C,2020-11-17,3,Yes,2020-11-17,2021-02-09,,Idorenyin Inwang
+cr Mfamosing Primary Health Center,0479C,2020-11-14,3,Yes,2020-11-14,2021-02-06,,Idorenyin Inwang
+cr Mfamosing Primary Health Center,0482C,2020-11-18,3,Yes,2020-11-18,2021-02-16,,Idorenyin Inwang
+cr Mfamosing Primary Health Center,0483C,2020-11-19,3,Yes,2020-11-19,2021-02-17,,Idorenyin Inwang
+cr Mfamosing Primary Health Center,0484C,2020-11-19,3,Yes,2020-11-19,2021-02-17,,Idorenyin Inwang
+cr Mfamosing Primary Health Center,0485C,2020-11-21,3,Yes,2020-11-21,2021-02-13,,Idorenyin Inwang
+cr Mfamosing Primary Health Center,0486C,2020-11-23,3,Yes,2020-11-23,2021-02-15,,Idorenyin Inwang
+cr Mfamosing Primary Health Center,0487C,2020-11-24,3,Yes,2020-11-24,2021-02-16,,Idorenyin Inwang
+cr Mfamosing Primary Health Center,0488C,2020-11-23,3,Yes,,2021-02-15,,Idorenyin Inwang
+cr Mfamosing Primary Health Center,0489C,2020-11-23,3,Yes,2020-11-23,2021-02-15,,Idorenyin Inwang
+cr Mfamosing Primary Health Center,0490C,2020-11-23,3,Yes,2020-11-23,2021-02-15,,Idorenyin Inwang
+cr Mfamosing Primary Health Center,0499C,2020-11-23,3,Yes,2020-11-23,2021-02-15,,Idorenyin Inwang
+cr Mfamosing Primary Health Center,0494C,2020-11-23,3,Yes,2020-11-23,2021-02-15,,Idorenyin Inwang
+cr Mfamosing Primary Health Center,0498C,2020-11-23,3,Yes,2020-11-23,2021-02-15,,Idorenyin Inwang
+cr Mfamosing Primary Health Center,0496C,2020-11-23,3,Yes,2020-11-23,2021-02-15,,Idorenyin Inwang
+cr Mfamosing Primary Health Center,0493C,2020-11-23,3,Yes,2020-11-23,2021-02-15,,Idorenyin Inwang
+cr Mfamosing Primary Health Center,0495C,2020-11-23,3,Yes,2020-11-23,2021-02-15,,Idorenyin Inwang
+cr Mfamosing Primary Health Center,0492C,2020-11-23,3,Yes,2020-11-23,2021-02-15,,Idorenyin Inwang
+cr Mfamosing Primary Health Center,0501C,2020-11-23,3,Yes,2020-11-23,2021-02-21,,Idorenyin Inwang
+cr Mfamosing Primary Health Center,0502C,2020-11-23,3,Yes,2020-11-23,2021-02-21,,Idorenyin Inwang
+cr Mfamosing Primary Health Center,0504C,2020-11-23,3,Yes,2020-11-23,2021-02-21,,Idorenyin Inwang
+cr Mfamosing Primary Health Center,0506C,2020-11-23,3,Yes,2020-11-23,2021-02-21,,Idorenyin Inwang
+cr Mfamosing Primary Health Center,0491C,2020-11-23,3,Yes,2020-11-23,2021-02-15,,Idorenyin Inwang
+cr Mfamosing Primary Health Center,0497C,2020-11-23,3,Yes,2020-11-23,2021-02-15,,Idorenyin Inwang
+cr Mfamosing Primary Health Center,0508C,2020-11-23,3,Yes,2020-11-23,2021-02-21,,Idorenyin Inwang
+cr Mfamosing Primary Health Center,0505C,2020-11-23,3,Yes,2020-11-23,2021-02-21,,Idorenyin Inwang
+cr Mfamosing Primary Health Center,0507C,2020-11-23,3,Yes,2020-11-23,2021-02-21,,Idorenyin Inwang
+cr Mfamosing Primary Health Center,0503C,2020-11-23,3,Yes,2020-11-23,2021-02-21,,Idorenyin Inwang
+cr Mfamosing Primary Health Center,0500C,2020-11-23,3,Yes,2020-11-23,2021-02-15,,Idorenyin Inwang
+cr Mfamosing Primary Health Center,0509C,2020-11-25,3,Yes,2020-11-25,2021-02-23,,Idorenyin Inwang
+cr Mfamosing Primary Health Center,0510C,2020-11-26,3,Yes,2020-11-26,2021-02-18,,Idorenyin Inwang
+cr Mfamosing Primary Health Center,0511C,2020-11-27,3,Yes,2020-11-27,2021-02-19,,Idorenyin Inwang
+cr Mfamosing Primary Health Center,0512C,2020-11-30,3,Yes,2020-11-30,2021-02-22,,Idorenyin Inwang
+cr Mfamosing Primary Health Center, 0514C,2020-12-02,3,Yes,2020-12-02,2021-02-24,,Idorenyin Inwang
+cr Mfamosing Primary Health Center, 0517C,2020-12-06,3,Yes,2020-12-06,2021-02-28,,Idorenyin Inwang
+cr Mfamosing Primary Health Center,0516C,2020-12-04,3,Yes,2020-12-04,2021-02-26,,Idorenyin Inwang
+cr Mfamosing Primary Health Center,0519C,2020-12-07,3,Yes,2020-12-07,2021-03-01,,Idorenyin Inwang
+cr Mfamosing Primary Health Center,0518C,2020-12-07,3,Yes,2020-12-07,2021-03-01,,Idorenyin Inwang
+cr Mfamosing Primary Health Center,0522C,2020-12-09,3,Yes,2020-12-09,2021-03-03,,
+cr Mfamosing Primary Health Center,0521C,2020-12-08,3,Yes,2020-12-08,2021-03-08,,
+cr Mfamosing Primary Health Center,0524C,2020-12-10,3,Yes,2020-12-10,2021-03-10,,
+cr Mfamosing Primary Health Center,0525C,2020-12-11,3,Yes,2020-12-11,2021-03-11,,
+cr Mfamosing Primary Health Center,0523C,2020-12-10,3,Yes,2020-12-10,2021-03-10,,
+cr Mfamosing Primary Health Center,0528C,2020-12-14,3,Yes,2020-12-14,2021-03-08,,
+cr Mfamosing Primary Health Center,0527C,2020-12-14,3,Yes,2020-12-14,2021-03-08,,
+cr Mfamosing Primary Health Center,0526C,2020-12-12,3,Yes,2020-12-12,2021-03-06,,
+cr Mfamosing Primary Health Center,0530C,2020-12-16,3,Yes,,2021-03-10,,
+cr Mfamosing Primary Health Center,0531C,2020-12-16,3,Yes,2020-12-16,2021-03-10,,
+cr Mfamosing Primary Health Center,0534C,2020-12-18,3,Yes,2020-12-18,2021-03-12,,
+cr Mfamosing Primary Health Center,0533C,2020-12-17,3,Yes,2020-12-17,2021-03-11,,
+cr Mfamosing Primary Health Center,0532C,2020-12-17,3,Yes,2020-12-17,2021-03-11,,
+cr Mfamosing Primary Health Center,0540C,2020-12-18,3,Yes,2020-12-18,2021-03-12,,
+cr Mfamosing Primary Health Center, 0538C,2020-12-18,3,Yes,2020-12-18,2021-03-12,,
+cr Mfamosing Primary Health Center,0535C,2020-12-18,3,Yes,2020-12-18,2021-03-12,,
+cr Mfamosing Primary Health Center,0536C,2020-12-18,3,Yes,2020-12-18,2021-03-12,,
+cr Mfamosing Primary Health Center,0537C,2020-12-18,3,Yes,2020-12-18,2021-03-12,,
+cr Mfamosing Primary Health Center,0539C,2020-12-18,3,Yes,2020-12-18,2021-03-12,,
+cr Mfamosing Primary Health Center,0543C,2020-12-18,3,Yes,2020-12-18,2021-03-12,,
+cr Mfamosing Primary Health Center,0541C,2020-12-18,3,Yes,2020-12-18,2021-03-12,,
+cr Mfamosing Primary Health Center,0544C,2020-12-18,3,Yes,2020-12-18,2021-03-12,,
+cr Mfamosing Primary Health Center,0542C,2020-12-18,3,Yes,2020-12-18,2021-03-12,,
+cr Mfamosing Primary Health Center,0545C,2020-12-18,3,Yes,2020-12-18,2021-03-12,,
+cr Mfamosing Primary Health Center,0546C,2020-12-18,3,Yes,2020-12-18,2021-03-12,,
+cr Mfamosing Primary Health Center,0548C,2020-12-18,3,Yes,2020-12-18,2021-03-12,,
+cr Mfamosing Primary Health Center,0547C,2020-12-18,3,Yes,2020-12-18,2021-03-12,,
+cr Mfamosing Primary Health Center,0549C,2020-12-18,3,Yes,2020-12-18,2021-03-12,,
+cr Mfamosing Primary Health Center,0551C,2020-12-18,3,Yes,2020-12-18,2021-03-12,,
+cr Mfamosing Primary Health Center,0550C,2020-12-18,3,Yes,2020-12-18,2021-03-12,,
+cr Mfamosing Primary Health Center,0552C,2020-12-21,3,Yes,2020-12-21,2021-03-15,,
+cr Mfamosing Primary Health Center,0553C,2020-12-22,3,Yes,2020-12-22,2021-03-16,,
+cr Mfamosing Primary Health Center,0554C,2020-12-23,3,Yes,2020-12-23,2021-03-17,,
+cr Mfamosing Primary Health Center,0555C,2020-12-24,3,Yes,2020-12-24,2021-03-18,,
+cr Mfamosing Primary Health Center,0556,2020-12-26,3,Yes,2020-12-26,2021-03-20,,
+cr Mfamosing Primary Health Center,0557C,2020-12-29,3,Yes,2020-12-29,2021-03-23,,
+cr Mfamosing Primary Health Center,0558C,2020-12-30,3,Yes,2020-12-30,2021-03-24,,
+cr Mount Zion Medical Centre,000076,2020-12-03,3,Yes,2020-12-03,2021-03-03,,
+cr Peace medical centre,405/2020,2020-11-02,3,Yes,2020-10-05,2021-01-25,,Ain Elenda Godwill
+cr Peace medical centre,460/2020,2020-11-09,3,,,,,Ain Elenda Godwill
+cr Calabar Women and Children Hospital,104,2020-12-18,1,Yes,2020-11-20,2020-12-21,,Harriet Ekpenyong
+cr Calabar Women and Children Hospital,103,2020-12-09,3,Yes,2020-11-03,2021-03-09,,Harriet Ekpenyong
+cr Calabar Women and Children Hospital,106,2020-11-30,3,Yes,2020-11-30,2021-02-28,,Harriet Ekpenyong
+cr Calabar Women and Children Hospital,105,2020-11-30,3,Yes,2020-11-30,2021-02-28,,Harriet Ekpenyong
+cr Calabar Women and Children Hospital,102,2020-12-09,3,Yes,2020-11-03,2021-03-09,,Harriet Ekpenyong
+cr Calabar Women and Children Hospital,108,2020-12-09,1,Yes,2020-12-09,2021-01-08,,
+cr Calabar Women and Children Hospital,107,2020-12-02,3,Yes,2020-12-02,2021-03-02,,
+cr Ukpem General Hospital,00201,2020-10-21,3,Yes,2020-10-21,2021-01-13,,
+cr Ukpem General Hospital,00203,2020-11-25,3,Yes,2020-11-25,2021-02-17,,
+cr Ukpem General Hospital,00204,2020-11-25,3,Yes,2020-11-25,2021-02-17,,
+cr Ukpem General Hospital,00205,2020-12-02,3,Yes,2020-12-02,2021-02-24,,
+cr Ukpem General Hospital,00206,2020-12-09,3,Yes,2020-12-09,2021-03-03,,
+cr Anantigha Primary Health Centre,00198,2020-10-12,3,Yes,2020-10-12,2021-01-10,,Angelo Brian War
+cr Anantigha Primary Health Centre,0197,2020-11-19,6,Yes,2020-10-05,2021-05-18,,Angelo Brian War
+cr Anantigha Primary Health Centre,0200,2020-11-12,2,Yes,2020-10-13,2021-01-11,,Angelo Brian War
+cr Anantigha Primary Health Centre,0199,2020-10-12,3,Yes,2020-10-12,2021-01-10,,Angelo Brian War
+cr Anantigha Primary Health Centre,0201,2020-12-14,2,,,2021-02-12,,Angelo Brian War
+cr Anantigha Primary Health Centre,0202,2020-12-02,2,Yes,2020-11-02,2021-04-21,2020-11-02,Angelo Brian War
+cr Anantigha Primary Health Centre,0205,2020-12-04,2,Yes,2020-12-04,2021-04-23,,Angelo Brian War
+cr Anantigha Primary Health Centre,0203,2020-12-02,2,Yes,2020-12-02,2021-05-31,,Angelo Brian War
+cr Anantigha Primary Health Centre,204,2020-12-02,2,Yes,2020-11-02,2021-04-21,,Angelo Brian War
+cr Anantigha Primary Health Centre,0206,2020-12-04,2,Yes,2020-12-04,2021-05-21,,Angelo Brian War
+cr Anantigha Primary Health Centre,0300,2020-12-04,3,,,,,
+cr Anantigha Primary Health Centre,0208,2020-12-09,2,Yes,2020-11-25,2021-04-28,,
+cr Anantigha Primary Health Centre,0209,2020-12-11,2,,,2021-02-09,,
+cr Anantigha Primary Health Centre,0301,2020-12-21,3,Yes,,2021-03-21,,
+cr Holy Family Catholic Hospital,c014966,2020-10-02,3,Yes,2020-10-02,2020-12-25,,Ndep Mary
+cr Holy Family Catholic Hospital,C014967,2020-10-05,3,Yes,2020-10-05,,,Agara Winifred
+cr Holy Family Catholic Hospital,14969CI,2020-10-06,3,Yes,2020-10-06,2020-12-29,,Etta Patricia
+cr Holy Family Catholic Hospital,C014968,2020-10-05,3,Yes,2020-10-05,2020-12-28,,Ndep Mary
+cr Holy Family Catholic Hospital,C014970,2020-10-07,3,Yes,2020-10-07,2020-12-30,,Asebe Mary Etung
+cr Holy Family Catholic Hospital,C014971,2020-10-06,3,Yes,2020-10-06,2020-12-29,,Nicolas Egede
+cr Holy Family Catholic Hospital,0014972,2020-10-12,3,Yes,2020-10-12,2021-03-26,,EGON MARGARET MUZE
+cr Holy Family Catholic Hospital,C014975,2020-10-12,3,Yes,2020-10-12,2021-01-04,,Owui Agom
+cr Holy Family Catholic Hospital,0014974CI,2020-10-09,3,Yes,2020-10-09,2021-01-01,,Asebe Mary Etung
+cr Holy Family Catholic Hospital,C014977,2020-10-12,3,Yes,2020-10-12,2021-01-04,,Ndep Mary
+cr Holy Family Catholic Hospital,0014973CI,2020-10-09,3,Yes,2020-10-09,2021-01-01,,Asebe Mary Etung
+cr Holy Family Catholic Hospital,0014979,2020-10-12,3,Yes,2020-10-12,2021-01-04,,Etta Egbe Atim
+cr Holy Family Catholic Hospital,C014976,2020-10-12,3,Yes,2020-10-12,2021-01-04,,Owui Agom
+cr Holy Family Catholic Hospital,C014978,2020-12-30,3,Yes,2020-12-30,2021-01-04,,Nicolas Egede
+cr Holy Family Catholic Hospital,C014984,2020-12-16,4,Yes,2020-12-16,2021-03-10,,Ndep Mary
+cr Holy Family Catholic Hospital,C014982,2020-10-13,3,Yes,2020-10-13,2021-01-05,,Enang Jovita Etung
+cr Holy Family Catholic Hospital,C014983,2020-10-13,3,Yes,2020-10-13,2021-01-05,,Nicolas Egede
+cr Holy Family Catholic Hospital,C014980,2020-10-12,3,Yes,2020-10-12,2021-01-04,,Enang Jovita Etung
+cr Holy Family Catholic Hospital,C014988,2020-10-14,3,,,,,Owui Agom
+cr Holy Family Catholic Hospital,C014985,2020-10-14,3,Yes,2020-10-14,2021-03-31,,Ndep Mary
+cr Holy Family Catholic Hospital,C014989,2020-10-13,3,Yes,2020-10-13,2021-01-05,,Ofem Offor Igri
+cr Holy Family Catholic Hospital,014991CI,2020-11-23,3,Yes,2020-11-23,2021-02-15,,Ntui Margaret Etung
+cr Holy Family Catholic Hospital,C014990,2020-10-16,3,Yes,2020-10-16,2021-01-08,,Agara Winifred
+cr Holy Family Catholic Hospital,C014986,2020-10-14,3,Yes,2020-10-14,2021-03-31,,Ndep Mary
+cr Holy Family Catholic Hospital,C014987,2020-10-14,3,Yes,2020-10-14,2021-03-31,,Nicolas Egede
+cr Holy Family Catholic Hospital,C014992,2020-10-15,3,Yes,2020-10-15,2021-04-01,,Ntui Margaret Etung
+cr Holy Family Catholic Hospital,C014993,2020-10-16,3,Yes,2020-10-16,2021-04-02,,Ntui Margaret Etung
+cr Holy Family Catholic Hospital,C014996,2020-10-18,3,Yes,2020-10-18,2021-01-16,,Agara Winifred
+cr Holy Family Catholic Hospital,C014994,2020-10-16,3,Yes,2020-10-16,2021-01-14,,Etta Patricia
+cr Holy Family Catholic Hospital,C014995,2020-11-17,5,Yes,2020-10-18,2021-02-09,2020-11-23,Etta Patricia
+cr Holy Family Catholic Hospital,C015000,2020-10-19,3,Yes,2020-10-19,2021-04-05,,Asebe Mary Etung
+cr Holy Family Catholic Hospital,014998CI,2020-10-19,3,Yes,2020-10-19,2021-01-17,,Ofem Offor Igri
+cr Holy Family Catholic Hospital,C014997,2020-10-19,3,Yes,2020-10-19,2021-01-17,,Agara Winifred
+cr Holy Family Catholic Hospital,C015002,2020-10-20,3,Yes,2020-10-20,2021-01-12,,Ntui Margaret Etung
+cr Holy Family Catholic Hospital,C015003,2020-10-20,3,Yes,2020-10-20,2021-01-12,,Asebe Mary Etung
+cr Holy Family Catholic Hospital,0014999,2020-10-20,3,Yes,2020-10-20,2021-04-06,,Etta Egbe Atim
+cr Holy Family Catholic Hospital,c015004,2020-10-21,3,Yes,2020-10-21,2021-01-13,,Agara Winifred
+cr Holy Family Catholic Hospital,c015005,2020-10-21,3,Yes,2020-10-21,2021-01-13,,Etta Patricia
+cr Holy Family Catholic Hospital,C015008,2020-10-22,3,Yes,2020-10-22,2021-01-14,,Asebe Mary Etung
+cr Holy Family Catholic Hospital,15001CI,2020-10-20,3,Yes,2020-10-20,2021-01-12,,Agara Winifred
+cr Holy Family Catholic Hospital,c015006,2020-10-21,3,Yes,2020-10-21,2021-01-13,,Ntui Margaret Etung
+cr Holy Family Catholic Hospital,C015007,2020-10-22,3,Yes,2020-10-22,2021-01-14,,Owui Agom
+cr Holy Family Catholic Hospital,C015010,2020-10-26,3,Yes,2020-10-26,2021-01-18,,Agara Winifred
+cr Holy Family Catholic Hospital,C015011,2020-10-26,3,Yes,2020-10-26,2021-01-18,,Etta Patricia
+cr Holy Family Catholic Hospital,15009CI,2020-10-23,3,Yes,2020-10-23,2021-01-15,,Agara Winifred
+cr Holy Family Catholic Hospital,C015013,2020-10-26,3,Yes,2020-10-26,2021-01-18,,Agara Winifred
+cr Holy Family Catholic Hospital,15012CI,2020-10-26,3,Yes,2020-10-26,2021-01-18,,Agara Winifred
+cr Holy Family Catholic Hospital,C015016,2020-10-26,3,Yes,2020-10-26,2021-01-19,,Etta Patricia
+cr Holy Family Catholic Hospital,C015017,2020-10-26,3,Yes,2020-10-26,2021-01-18,,Agara Winifred
+cr Holy Family Catholic Hospital,C015014,2020-10-26,3,Yes,2020-10-26,2021-01-18,,Etta Patricia
+cr Holy Family Catholic Hospital,C015019,2020-10-28,3,Yes,2020-10-28,2021-01-20,,Asebe Mary Etung
+cr Holy Family Catholic Hospital,C015015,2020-10-26,3,Yes,2020-10-26,2021-01-18,,Etta Patricia
+cr Holy Family Catholic Hospital,15018,2020-10-27,3,,,,,Odu Martha
+cr Holy Family Catholic Hospital,15020CI,2020-10-28,3,Yes,2020-10-28,2021-01-20,,Etta Patricia
+cr Holy Family Catholic Hospital,C015023,2020-10-30,3,Yes,2020-10-30,2021-01-22,,Etta Patricia
+cr Holy Family Catholic Hospital,C015021,2020-10-28,3,Yes,2020-10-28,2021-01-20,,Etta Patricia
+cr Holy Family Catholic Hospital,C015022,2020-10-30,3,Yes,2020-10-30,2021-01-22,,Agara Winifred
+cr Holy Family Catholic Hospital,15025CI,2020-11-02,3,Yes,2020-11-02,2021-01-25,,Asebe Mary Etung
+cr Holy Family Catholic Hospital,C015024,2020-11-02,3,Yes,2020-11-02,2021-01-25,,Enang Jovita Etung
+cr Holy Family Catholic Hospital,C015029,2020-11-02,3,Yes,2020-11-02,2021-01-25,,Ntui Margaret Etung
+cr Holy Family Catholic Hospital,C015028,2020-11-02,3,Yes,2020-11-02,2021-01-25,,Ntui Margaret Etung
+cr Holy Family Catholic Hospital,C015027,2020-11-02,3,Yes,2020-11-02,2021-01-25,,Ntui Margaret Etung
+cr Holy Family Catholic Hospital,C015026,2020-11-02,3,Yes,2020-11-02,2021-01-25,,Enang Jovita Etung
+cr Holy Family Catholic Hospital,C015031,2020-11-02,3,Yes,2020-11-02,2021-01-25,,Enang Jovita Etung
+cr Holy Family Catholic Hospital,C015032,2020-11-02,3,Yes,2020-11-02,2021-01-25,,Enang Jovita Etung
+cr Holy Family Catholic Hospital,C015030,2020-11-02,3,Yes,2020-11-02,2021-01-25,,Asebe Mary Etung
+cr Holy Family Catholic Hospital,C015033,2020-11-02,3,Yes,2020-11-02,2021-01-25,,Ntui Margaret Etung
+cr Holy Family Catholic Hospital,15034,2020-11-03,3,,,,,EGON MARGARET MUZE
+cr Holy Family Catholic Hospital,C015037,2020-11-02,3,Yes,2020-11-02,2021-01-25,,Enang Jovita Etung
+cr Holy Family Catholic Hospital,C015038,2020-11-03,3,Yes,2020-11-03,2021-01-26,,Etta Patricia
+cr Holy Family Catholic Hospital,C015036,2020-11-02,3,Yes,2020-11-02,2021-01-25,,Ntui Margaret Etung
+cr Holy Family Catholic Hospital,C015040,2020-11-03,3,Yes,2020-11-03,2021-01-26,,Asebe Mary Etung
+cr Holy Family Catholic Hospital,C015041,2020-11-04,3,Yes,2020-11-04,2021-01-27,,Ndep Mary
+cr Holy Family Catholic Hospital,C015044,2020-11-04,3,Yes,2020-11-04,2021-01-27,,Ofem Offor Igri
+cr Holy Family Catholic Hospital,C015039,2020-11-04,3,Yes,2020-11-04,2021-01-27,,EGON MARGARET MUZE
+cr Holy Family Catholic Hospital,C015042,2020-11-04,3,Yes,2020-11-04,2021-01-27,,Nicolas Egede
+cr Holy Family Catholic Hospital,C015045,2020-11-05,3,Yes,2020-11-05,2021-01-28,,Owui Agom
+cr Holy Family Catholic Hospital,C015035,2020-11-02,3,Yes,2020-11-02,2021-01-25,,Etta Patricia
+cr Holy Family Catholic Hospital,C015048,2020-11-08,3,Yes,2020-11-08,2021-01-31,,Ndep Mary
+cr Holy Family Catholic Hospital,C015043,2020-11-04,3,Yes,2020-11-04,2021-01-27,,Ofem Offor Igri
+cr Holy Family Catholic Hospital,C015046,2020-11-05,3,Yes,2020-11-05,2021-01-28,,Ofem Offor Igri
+cr Holy Family Catholic Hospital,C015050,2020-11-08,3,Yes,2020-11-08,2021-01-31,,Ofem Offor Igri
+cr Holy Family Catholic Hospital,C015051,2020-11-06,3,Yes,2020-11-06,2021-01-29,,Ofem Offor Igri
+cr Holy Family Catholic Hospital,C015047,2020-11-06,3,Yes,2020-11-06,2021-01-29,,Nicolas Egede
+cr Holy Family Catholic Hospital,C015049,2020-11-08,3,Yes,2020-11-08,2021-01-31,,Etta Patricia
+cr Holy Family Catholic Hospital,15052CI,2020-11-09,3,Yes,2020-11-09,2021-02-01,,Etta Patricia
+cr Holy Family Catholic Hospital,c015054,2020-11-10,3,Yes,2020-11-10,2021-02-08,,Etta Patricia
+cr Holy Family Catholic Hospital,15053CI,2020-11-09,3,Yes,2020-11-09,2021-02-01,,Agara Winifred
+cr Holy Family Catholic Hospital,0015057,2020-11-11,3,Yes,2020-11-11,2021-02-03,,Ndep Mary
+cr Holy Family Catholic Hospital,c015055,2020-11-10,3,Yes,2020-11-10,2021-02-08,,Ofem Offor Igri
+cr Holy Family Catholic Hospital,C015059,2020-11-12,3,Yes,2020-11-12,2021-02-04,,Ofem Offor Igri
+cr Holy Family Catholic Hospital,C015058,2020-11-11,3,Yes,2020-11-11,2021-02-03,,Nicolas Egede
+cr Holy Family Catholic Hospital,15060CI,2020-11-12,3,Yes,2020-11-12,2021-02-04,,Ofem Offor Igri
+cr Holy Family Catholic Hospital,C015062,2020-11-12,3,Yes,2020-11-12,2021-02-04,,Etta Patricia
+cr Holy Family Catholic Hospital,C015061,2020-11-12,3,Yes,2020-11-12,2021-02-04,,Etta Patricia
+cr Holy Family Catholic Hospital,C015063,2020-11-12,3,Yes,2020-11-12,2021-02-10,,Asebe Mary Etung
+cr Holy Family Catholic Hospital,C015065,2020-11-13,3,Yes,2020-11-13,2021-02-05,,Owui Agom
+cr Holy Family Catholic Hospital,C015064,2020-11-13,3,Yes,2020-11-13,2021-02-05,,Agara Winifred
+cr Holy Family Catholic Hospital,C015066,2020-11-15,3,Yes,2020-11-15,2021-02-07,,Ndep Mary
+cr Holy Family Catholic Hospital,C015070,2020-11-16,3,Yes,2020-11-16,2021-02-08,,Enang Jovita Etung
+cr Holy Family Catholic Hospital,0015068,2020-11-16,3,Yes,2020-11-16,2021-02-08,,EGON MARGARET MUZE
+cr Holy Family Catholic Hospital,C015071,2020-11-16,3,Yes,2020-11-16,2021-02-08,,Agara Winifred
+cr Holy Family Catholic Hospital,C015067,2020-11-13,3,Yes,2020-11-13,2021-02-05,,Nicolas Egede
+cr Holy Family Catholic Hospital,0015069,2020-11-16,3,Yes,2020-11-16,2021-02-08,,EGON MARGARET MUZE
+cr Holy Family Catholic Hospital,C015072,2020-11-16,3,Yes,2020-11-16,2021-02-08,,Owui Agom
+cr Holy Family Catholic Hospital,C015073,2020-11-17,3,Yes,2020-11-17,2021-02-09,,Ofem Offor Igri
+cr Holy Family Catholic Hospital,C015074,2020-11-17,3,Yes,2020-11-17,2021-02-09,,Nicolas Egede
+cr Holy Family Catholic Hospital,C015076,2020-11-18,3,Yes,2020-11-18,2021-02-10,,Owui Agom
+cr Holy Family Catholic Hospital,C015075,2020-11-18,3,Yes,2020-11-18,2021-02-10,,Ndep Mary
+cr Holy Family Catholic Hospital,15080CI,2020-11-19,3,Yes,2020-11-19,2021-02-11,,Ndep Mary
+cr Holy Family Catholic Hospital,C015082,2020-11-20,3,Yes,2020-11-20,2021-02-12,,Ntui Margaret Etung
+cr Holy Family Catholic Hospital,C015079,2020-11-20,3,Yes,2020-11-20,2021-02-12,,Owui Agom
+cr Holy Family Catholic Hospital,15085CI,2020-11-20,3,Yes,2020-11-20,2021-02-18,,Nicolas Egede
+cr Holy Family Catholic Hospital,15081CI,2020-11-19,3,Yes,2020-11-19,2021-02-11,,Nicolas Egede
+cr Holy Family Catholic Hospital,0015083,2020-11-20,3,Yes,2020-11-20,2021-02-12,,Ofem Offor Igri
+cr Holy Family Catholic Hospital,15086CI,2020-11-23,3,Yes,2020-11-23,2021-02-15,,Owui Agom
+cr Holy Family Catholic Hospital,0015084,2020-11-20,3,Yes,2020-11-20,2021-02-12,,Ndep Mary
+cr Holy Family Catholic Hospital,15088CI,2020-11-23,3,Yes,2020-11-23,2021-02-15,,Etta Patricia
+cr Holy Family Catholic Hospital,15089CI,2020-11-23,3,Yes,2020-11-23,2021-02-15,,Agara Winifred
+cr Holy Family Catholic Hospital,0015087,2020-11-23,3,Yes,2020-11-23,2021-02-15,,EGON MARGARET MUZE
+cr Holy Family Catholic Hospital,C015091,2020-11-23,3,Yes,2020-11-23,2021-02-15,,Ofem Offor Igri
+cr Holy Family Catholic Hospital,C015090,2020-11-23,3,Yes,2020-11-23,2021-02-15,,Asebe Mary Etung
+cr Holy Family Catholic Hospital,0015092CI,2020-11-24,3,Yes,2020-11-24,2021-02-16,,Etta Patricia
+cr Holy Family Catholic Hospital,C015093,2020-11-24,3,Yes,2020-11-24,2021-02-16,,Agara Winifred
+cr Holy Family Catholic Hospital,C015098,2020-11-25,3,Yes,2020-11-25,2021-02-18,,Enang Jovita Etung
+cr Holy Family Catholic Hospital,C015094,2020-11-24,3,Yes,2020-11-24,2021-02-16,,Ntui Margaret Etung
+cr Holy Family Catholic Hospital,0015095,2020-11-25,3,Yes,2020-11-25,2021-02-17,,EGON MARGARET MUZE
+cr Holy Family Catholic Hospital,C015097,2020-11-25,3,Yes,2020-11-25,2021-02-17,,Nicolas Egede
+cr Holy Family Catholic Hospital,015096CI,2020-11-25,3,Yes,2020-11-25,2021-02-17,,Owui Agom
+cr Holy Family Catholic Hospital,C015101,2020-11-26,3,Yes,2020-11-26,2021-02-18,,Enang Jovita Etung
+cr Holy Family Catholic Hospital,0015100CI,2020-11-26,3,Yes,2020-11-26,2021-02-18,,Ndep Mary
+cr Holy Family Catholic Hospital,0015099CI,2020-11-26,3,Yes,2020-11-26,2021-02-18,,Nicolas Egede
+cr Holy Family Catholic Hospital,C015103,2020-11-30,3,Yes,2020-11-30,2021-02-22,,Asebe Mary Etung
+cr Holy Family Catholic Hospital,C015102,2020-11-30,3,Yes,2020-11-30,2021-02-22,,Ndep Mary
+cr Holy Family Catholic Hospital,0015107,2020-12-01,3,Yes,2020-12-01,2021-02-23,,EGON MARGARET MUZE
+cr Holy Family Catholic Hospital,C015104,2020-11-30,3,Yes,2020-11-30,2021-02-22,,Agara Winifred
+cr Holy Family Catholic Hospital,C0015105,2020-11-30,3,Yes,2020-11-30,2021-02-22,,Etta Patricia
+cr Holy Family Catholic Hospital,15108CI,2020-12-01,3,Yes,2020-12-01,2021-02-23,,Etta Patricia
+cr Holy Family Catholic Hospital,0015112CI,2020-12-02,3,Yes,2020-12-02,2021-02-24,,Egba Nyen
+cr Holy Family Catholic Hospital,15114CI,2020-12-02,3,Yes,2020-12-02,2021-02-24,,Asebe Mary Etung
+cr Holy Family Catholic Hospital,C015111,2020-12-02,3,Yes,2020-12-02,2021-02-24,,Egba Nyen
+cr Holy Family Catholic Hospital,C015109,2020-12-01,3,Yes,2020-12-01,2021-02-23,,Agara Winifred
+cr Holy Family Catholic Hospital,C015110,2020-12-01,3,Yes,2020-12-01,2021-02-23,,Asebe Mary Etung
+cr Holy Family Catholic Hospital,0015113CI,2020-12-02,3,Yes,2020-12-02,2021-02-24,,Ntui Margaret Etung
+cr Holy Family Catholic Hospital,15117CI,2020-12-03,3,Yes,2020-12-03,2021-02-25,,Ntui Margaret Etung
+cr Holy Family Catholic Hospital,C015116,2020-12-03,3,Yes,2020-12-03,2021-02-25,,Agara Winifred
+cr Holy Family Catholic Hospital,C015119,2020-12-06,3,Yes,2020-12-06,2021-03-01,,Agara Winifred
+cr Holy Family Catholic Hospital,15118CI,2020-12-03,3,Yes,2020-12-03,2021-02-25,,Ofem Offor Igri
+cr Holy Family Catholic Hospital,C015115,2020-12-03,3,Yes,2020-12-03,2021-02-25,,Ade Uke Philips
+cr Holy Family Catholic Hospital,C015120,2020-12-04,3,Yes,2020-12-04,2021-02-26,,Etta Patricia
+cr Holy Family Catholic Hospital,C015121,2020-12-07,3,Yes,2020-12-07,2021-03-01,,Agara Winifred
+cr Holy Family Catholic Hospital,0015123,2020-12-08,3,Yes,2020-12-08,2021-03-02,,EGON MARGARET MUZE
+cr Holy Family Catholic Hospital,C015124,2020-12-08,3,Yes,2020-12-08,2021-03-02,,Etta Patricia
+cr Holy Family Catholic Hospital,15126CI,2020-12-08,3,Yes,2020-12-08,2021-03-02,,Etta Patricia
+cr Holy Family Catholic Hospital,15125CI,2020-12-08,3,Yes,2020-12-08,2021-03-02,,Enang Jovita Etung
+cr Holy Family Catholic Hospital,15129CI,2020-12-09,3,Yes,2020-12-09,2021-03-03,,Enang Jovita Etung
+cr Holy Family Catholic Hospital,0015127,2020-12-09,3,Yes,2020-12-09,2021-03-03,,EGON MARGARET MUZE
+cr Holy Family Catholic Hospital,0015131CI,2020-12-09,3,Yes,2020-12-09,2021-03-03,,Egba Nyen
+cr Holy Family Catholic Hospital,15128CI,2020-12-09,3,Yes,2020-12-09,2021-03-03,,Ntui Margaret Etung
+cr Holy Family Catholic Hospital,C015130,2020-12-09,3,Yes,2020-12-09,2021-03-03,,Egba Nyen
+cr Holy Family Catholic Hospital,15133CI,2020-12-10,3,Yes,2020-12-10,2021-03-04,,Ntui Margaret Etung
+cr Holy Family Catholic Hospital,C015132,2020-12-10,3,Yes,2020-12-10,2021-03-04,,Ofem Offor Igri
+cr Holy Family Catholic Hospital,C015134,2020-12-10,3,Yes,2020-12-10,2021-03-04,,Egba Nyen
+cr Holy Family Catholic Hospital,C015135,2020-12-11,3,Yes,2020-12-11,2021-03-04,,Egba Nyen
+cr Holy Family Catholic Hospital,C015136,2020-12-11,3,Yes,2020-12-11,2021-03-05,,Enang Jovita Etung
+cr Holy Family Catholic Hospital,C015139,2020-12-14,3,Yes,2020-12-14,2021-03-08,,Ofem Offor Igri
+cr Holy Family Catholic Hospital,C015138,2020-12-14,3,Yes,2020-12-14,2021-03-08,,Ndep Mary
+cr Holy Family Catholic Hospital,C015137,2020-12-13,3,Yes,2020-12-13,2021-03-07,,Ndep Mary
+cr Holy Family Catholic Hospital,0015144,2020-12-17,3,Yes,2020-12-17,2021-03-11,,EGON MARGARET MUZE
+cr Holy Family Catholic Hospital,C015142,2020-12-15,3,Yes,2020-12-15,2021-03-09,,Ofem Offor Igri
+cr Holy Family Catholic Hospital,C015140,2020-12-15,3,Yes,2020-12-15,2021-03-08,,Owui Agom
+cr Holy Family Catholic Hospital,0015143CI,2020-12-16,3,Yes,2020-12-16,2021-03-10,,Enang Jovita Etung
+cr Holy Family Catholic Hospital,C015146,2020-12-16,3,Yes,2020-12-16,2021-03-10,,Egba Nyen
+cr Holy Family Catholic Hospital,15147CI,2020-12-18,3,Yes,2020-12-18,2021-03-12,,Egba Nyen
+cr Holy Family Catholic Hospital,C015141,2020-12-15,3,Yes,2020-12-15,2021-03-09,,Ndep Mary
+cr Holy Family Catholic Hospital,C015145,2020-12-17,3,Yes,2020-12-17,2021-03-11,,Egba Nyen
+cr Holy Family Catholic Hospital,0015154,2020-12-22,3,Yes,2020-12-22,,,EGON MARGARET MUZE
+cr Holy Family Catholic Hospital,C015148,2020-12-20,3,Yes,2020-12-20,2021-03-14,,Egba Nyen
+cr Holy Family Catholic Hospital,0015149,2020-12-22,3,Yes,2020-12-22,2021-03-16,,EGON MARGARET MUZE
+cr Holy Family Catholic Hospital,15153CI,2020-12-21,3,Yes,2020-12-21,,,Asebe Mary Etung
+cr Holy Family Catholic Hospital,15151CI,2020-12-21,3,Yes,2020-12-21,,,Egba Nyen
+cr Holy Family Catholic Hospital,15152CI,2020-12-21,3,Yes,2020-12-21,,,Enang Jovita Etung
+cr Holy Family Catholic Hospital,C015157,2020-12-30,3,Yes,2020-12-30,,,Egba Nyen
+cr Holy Family Catholic Hospital,C015155,2020-12-24,3,Yes,2020-12-24,,,Egba Nyen
+cr Holy Family Catholic Hospital,C015156,2020-12-27,3,Yes,2020-12-27,,,Nicolas Egede
+cr Holy Family Catholic Hospital,15158CI,2020-12-19,3,Yes,2020-12-19,,,Ntui Margaret Etung
+cr Holy Family Catholic Hospital,15159CI,2020-12-22,3,Yes,2020-12-22,,,Asebe Mary Etung
+cr Holy Family Catholic Hospital,15160CI,2020-12-24,3,Yes,2020-12-24,,,Asebe Mary Etung
+cr Holy Family Catholic Hospital,15161CI,2020-12-29,3,Yes,2020-12-29,,,Enang Jovita Etung
+cr Akani Esuk Health Centre,0145/20,2020-12-01,3,Yes,2020-10-02,2021-02-23,,Mbu Anthony Erim
+cr Akani Esuk Health Centre,0147/20,2020-12-21,3,Yes,2020-12-21,2021-03-15,,
+cr Akani Esuk Health Centre,0148/20,2020-12-23,1,Yes,2020-12-23,,,
+cr Akani Esuk Health Centre,0146/20,2020-12-08,1,Yes,2020-12-08,2021-01-07,,
+cr Country Specialist Hospital,772/20,2020-12-08,3,Yes,2020-12-08,2021-03-08,,ODAY NYAMBI
+cr Country Specialist Hospital,59517/20,2020-12-17,3,,,,,ODAY NYAMBI
+cr Calabar General Hospital,14582C,2020-12-01,3,Yes,2020-10-05,2020-12-28,,OWOCHE EMMANUEL ODEY
+cr Calabar General Hospital,14583,2020-10-05,3,Yes,2020-10-05,2020-12-28,,Ushie Vera Akpana
+cr Calabar General Hospital,14580,2020-12-16,3,Yes,2020-10-05,2020-12-28,,Ushie Vera Akpana
+cr Calabar General Hospital,14581,2020-10-05,3,Yes,2020-10-05,2020-12-28,,Ushie Vera Akpana
+cr Calabar General Hospital,14584,2020-10-06,3,Yes,2020-10-06,2020-12-29,,Ushie Vera Akpana
+cr Calabar General Hospital,14579,2020-10-02,3,Yes,2020-10-02,2020-12-25,,Ushie Vera Akpana
+cr Calabar General Hospital,14586C,2020-10-06,3,Yes,2020-10-06,2020-12-29,,Ushie Vera Akpana
+cr Calabar General Hospital,14585C,2020-12-18,3,Yes,2020-10-05,2020-12-28,,OWOCHE EMMANUEL ODEY
+cr Calabar General Hospital,0014587,2020-10-08,3,Yes,2020-10-08,2020-12-31,,Ushie Vera Akpana
+cr Calabar General Hospital,14589C,2020-10-09,3,Yes,2020-10-09,2021-01-01,,OWOCHE EMMANUEL ODEY
+cr Calabar General Hospital,14590C,2020-10-09,3,Yes,,2021-01-01,,OWOCHE EMMANUEL ODEY
+cr Calabar General Hospital,14588C,2020-10-10,3,Yes,2020-10-10,2021-01-02,,OWOCHE EMMANUEL ODEY
+cr Calabar General Hospital,14591C,2020-12-02,4,Yes,2020-10-12,2021-03-25,,OWOCHE EMMANUEL ODEY
+cr Calabar General Hospital,14592c,2020-10-12,3,Yes,2020-10-12,2021-01-04,,OWOCHE EMMANUEL ODEY
+cr Calabar General Hospital,14593,2020-10-14,3,,,,,Ushie Vera Akpana
+cr Calabar General Hospital,14595C,2020-10-13,3,Yes,2020-10-13,2021-01-05,,OWOCHE EMMANUEL ODEY
+cr Calabar General Hospital,014594C,2020-10-13,3,Yes,2020-10-13,2021-01-05,,OWOCHE EMMANUEL ODEY
+cr Calabar General Hospital,14598C,2020-12-13,3,Yes,2020-10-07,2021-03-07,,OWOCHE EMMANUEL ODEY
+cr Calabar General Hospital,14599C,2020-12-18,3,Yes,2020-10-07,2020-12-30,,OWOCHE EMMANUEL ODEY
+cr Calabar General Hospital,14597C,2020-11-24,3,,,,,OWOCHE EMMANUEL ODEY
+cr Calabar General Hospital,14596,2020-10-15,3,Yes,2020-10-15,2021-01-07,,Osim Egwom Eyaba
+cr Calabar General Hospital,14600,2020-10-16,3,Yes,2020-10-16,2021-01-08,,Osim Egwom Eyaba
+cr Calabar General Hospital,14604C,2020-10-16,3,Yes,2020-10-16,2021-01-08,,OWOCHE EMMANUEL ODEY
+cr Calabar General Hospital,14602C,2020-10-15,3,Yes,2020-10-15,2021-01-07,,OWOCHE EMMANUEL ODEY
+cr Calabar General Hospital,14603C,2020-10-15,3,Yes,2020-10-15,2021-01-07,,OWOCHE EMMANUEL ODEY
+cr Calabar General Hospital,14605C,2020-10-16,3,Yes,2020-10-16,2021-01-08,,OWOCHE EMMANUEL ODEY
+cr Calabar General Hospital,14609,2020-10-20,3,,,,,Osim Egwom Eyaba
+cr Calabar General Hospital,14608C,2020-10-19,3,Yes,2020-10-19,2021-01-11,,OWOCHE EMMANUEL ODEY
+cr Calabar General Hospital,14610,2020-10-20,3,Yes,2020-10-20,2021-01-12,,Onoja Ella
+cr Calabar General Hospital,14607C,2020-10-19,3,Yes,2020-10-19,2021-01-11,,OWOCHE EMMANUEL ODEY
+cr Calabar General Hospital,014611C,2020-10-20,3,Yes,2020-10-20,2021-01-12,,Grace Oxford
+cr Calabar General Hospital,14612,2020-10-21,3,Yes,,2021-01-13,,Onoja Ella
+cr Calabar General Hospital,14614C,2020-10-22,3,Yes,2020-10-22,2021-01-14,,Grace Oxford
+cr Calabar General Hospital,14615C,2020-10-22,3,Yes,2020-10-22,2021-01-14,,Grace Oxford
+cr Calabar General Hospital,14616C,2020-10-23,3,,,,,OWOCHE EMMANUEL ODEY
+cr Calabar General Hospital,14617C,2020-10-23,3,,,,,OWOCHE EMMANUEL ODEY
+cr Calabar General Hospital,14618,2020-10-28,3,Yes,2020-10-28,2021-01-20,,Ushie Vera Akpana
+cr Calabar General Hospital,0014619,2020-10-30,3,Yes,2020-10-30,2021-01-22,,Ushie Vera Akpana
+cr Calabar General Hospital,14620C,2020-10-31,3,Yes,2020-10-31,2021-01-23,,OWOCHE EMMANUEL ODEY
+cr Calabar General Hospital,14622,2020-11-02,3,Yes,2020-11-02,2021-01-25,,Ushie Vera Akpana
+cr Calabar General Hospital,14621,2020-11-02,3,,,,,Ushie Vera Akpana
+cr Calabar General Hospital,14623C,2020-11-02,3,Yes,2020-11-02,2021-01-25,,OWOCHE EMMANUEL ODEY
+cr Calabar General Hospital,14624C,2020-11-02,3,Yes,2020-11-02,2021-01-25,,OWOCHE EMMANUEL ODEY
+cr Calabar General Hospital,14626C,2020-11-03,3,Yes,,2021-01-26,,OWOCHE EMMANUEL ODEY
+cr Calabar General Hospital,14625C,2020-11-03,3,Yes,2020-11-03,2021-01-26,,OWOCHE EMMANUEL ODEY
+cr Calabar General Hospital,14628,2020-11-04,3,Yes,2020-11-04,2021-01-27,,Ushie Vera Akpana
+cr Calabar General Hospital,14630C,2020-11-04,3,Yes,2020-11-04,2021-01-27,,OWOCHE EMMANUEL ODEY
+cr Calabar General Hospital,14629C,2020-11-04,3,Yes,2020-11-04,2021-01-27,,Ushie Vera Akpana
+cr Calabar General Hospital,14631,2020-11-05,3,Yes,2020-11-05,2021-01-28,,Ushie Vera Akpana
+cr Calabar General Hospital,14632,2020-11-05,3,,,,,Ushie Vera Akpana
+cr Calabar General Hospital,14633C,2020-11-05,3,Yes,2020-11-05,2021-01-28,,OWOCHE EMMANUEL ODEY
+cr Calabar General Hospital,14634C,2020-11-05,3,Yes,2020-11-05,2021-01-28,,OWOCHE EMMANUEL ODEY
+cr Calabar General Hospital,14635C,2020-11-06,3,Yes,2020-11-06,2021-01-29,,OWOCHE EMMANUEL ODEY
+cr Calabar General Hospital,14637,2020-11-09,3,Yes,2020-11-09,2021-02-01,,Enobong Michael Udofia
+cr Calabar General Hospital,14640C,2020-11-09,3,Yes,2020-11-09,2021-02-01,,OWOCHE EMMANUEL ODEY
+cr Calabar General Hospital,14639C,2020-11-09,3,Yes,2020-11-09,2021-02-01,,OWOCHE EMMANUEL ODEY
+cr Calabar General Hospital,14638C,2020-11-07,3,Yes,2020-11-07,2021-01-30,,OWOCHE EMMANUEL ODEY
+cr Calabar General Hospital,14642C,2020-11-10,3,Yes,2020-11-10,2021-02-02,,OWOCHE EMMANUEL ODEY
+cr Calabar General Hospital,14644C,2020-11-11,3,Yes,2020-11-11,2021-02-03,,OWOCHE EMMANUEL ODEY
+cr Calabar General Hospital,14643C,2020-11-10,3,Yes,2020-11-10,2021-02-02,,OWOCHE EMMANUEL ODEY
+cr Calabar General Hospital,14646,2020-11-12,3,Yes,2020-11-12,2021-02-04,,Enobong Michael Udofia
+cr Calabar General Hospital,14641,2020-11-11,3,,,,,Enobong Michael Udofia
+cr Calabar General Hospital,14647,2020-11-13,3,Yes,,2021-02-05,2020-11-13,Enobong Michael Udofia
+cr Calabar General Hospital,14648C,2020-11-12,3,Yes,,2021-02-04,,OWOCHE EMMANUEL ODEY
+cr Calabar General Hospital,14649C,2020-11-12,3,Yes,,2021-02-04,,OWOCHE EMMANUEL ODEY
+cr Calabar General Hospital,14650C,2020-11-13,3,Yes,2020-11-13,2021-02-11,,OWOCHE EMMANUEL ODEY
+cr Calabar General Hospital,14652C,2020-11-14,3,Yes,2020-11-14,2021-02-06,,OWOCHE EMMANUEL ODEY
+cr Calabar General Hospital,14651C,2020-11-13,3,Yes,2020-11-13,2021-02-05,,OWOCHE EMMANUEL ODEY
+cr Calabar General Hospital,14654C,2020-11-16,3,Yes,2020-11-16,2021-02-08,,OWOCHE EMMANUEL ODEY
+cr Calabar General Hospital,14653,2020-11-16,3,Yes,2020-11-16,2021-02-08,,Afuoh Charity Ohiama
+cr Calabar General Hospital,14655C,2020-11-16,3,Yes,2020-11-16,2021-02-08,,OWOCHE EMMANUEL ODEY
+cr Calabar General Hospital,14656,2020-11-18,3,Yes,,2021-02-10,,Afuoh Charity Ohiama
+cr Calabar General Hospital,14659C,2020-11-18,3,Yes,2020-11-18,2021-02-10,,OWOCHE EMMANUEL ODEY
+cr Calabar General Hospital,14657,2020-11-18,3,Yes,2020-11-18,2021-02-10,,Afuoh Charity Ohiama
+cr Calabar General Hospital,14658C,2020-11-18,3,Yes,2020-11-18,2021-02-10,,OWOCHE EMMANUEL ODEY
+cr Calabar General Hospital,14660C,2020-11-17,3,Yes,,2021-02-09,,OWOCHE EMMANUEL ODEY
+cr Calabar General Hospital,14661C,2020-11-17,3,Yes,,2021-02-09,,OWOCHE EMMANUEL ODEY
+cr Calabar General Hospital,14662,2020-11-19,3,Yes,,2021-02-11,,Afuoh Charity Ohiama
+cr Calabar General Hospital,14666C,2020-11-20,3,Yes,2020-11-20,2021-02-12,,OWOCHE EMMANUEL ODEY
+cr Calabar General Hospital,14665C,2020-11-20,3,Yes,2020-11-20,2021-02-18,,OWOCHE EMMANUEL ODEY
+cr Calabar General Hospital,14667,2020-11-23,3,Yes,2020-11-23,2021-02-15,,CHRISTIANA BLESSED
+cr Calabar General Hospital,14669C,2020-11-23,3,Yes,,2021-02-15,,OWOCHE EMMANUEL ODEY
+cr Calabar General Hospital,14668C,2020-11-21,3,Yes,,2021-02-13,,OWOCHE EMMANUEL ODEY
+cr Calabar General Hospital,14674C,2020-11-25,3,Yes,2020-11-25,2021-02-17,,OWOCHE EMMANUEL ODEY
+cr Calabar General Hospital,14673C,2020-11-25,3,Yes,2020-11-25,2021-02-17,,OWOCHE EMMANUEL ODEY
+cr Calabar General Hospital,14670,2020-11-25,3,Yes,2020-11-25,2021-02-17,,CHRISTIANA BLESSED
+cr Calabar General Hospital,14675C,2020-11-26,3,,,,,OWOCHE EMMANUEL ODEY
+cr Calabar General Hospital,14679C,2020-11-28,3,Yes,2020-11-28,2021-02-20,,OWOCHE EMMANUEL ODEY
+cr Calabar General Hospital,14681C,2020-11-30,3,,,,,OWOCHE EMMANUEL ODEY
+cr Calabar General Hospital,14683C,2020-12-01,3,Yes,2020-12-01,2021-03-01,,OWOCHE EMMANUEL ODEY
+cr Calabar General Hospital,14684C,2020-12-01,3,Yes,2020-12-01,2021-02-23,,OWOCHE EMMANUEL ODEY
+cr Calabar General Hospital,14686,2020-12-02,3,Yes,2020-12-02,2021-02-23,,CHRISTIANA BLESSED
+cr Calabar General Hospital,14687C,2020-12-02,3,Yes,2020-12-02,2021-02-24,,OWOCHE EMMANUEL ODEY
+cr Calabar General Hospital,14688C,2020-12-02,3,Yes,2020-12-02,2021-02-24,,OWOCHE EMMANUEL ODEY
+cr Calabar General Hospital,14685,2020-12-02,3,Yes,2020-12-02,2021-02-24,,CHRISTIANA BLESSED
+cr Calabar General Hospital,14682,2020-12-01,3,Yes,2020-12-01,2021-02-23,,CHRISTIANA BLESSED
+cr Calabar General Hospital,14671C,2020-11-24,3,Yes,2020-11-24,2021-02-16,,OWOCHE EMMANUEL ODEY
+cr Calabar General Hospital,14672C,2020-11-24,3,Yes,2020-11-24,2021-02-16,,OWOCHE EMMANUEL ODEY
+cr Calabar General Hospital,14677C,2020-11-27,3,Yes,2020-11-27,2021-02-19,,OWOCHE EMMANUEL ODEY
+cr Calabar General Hospital,14664C,2020-11-19,3,Yes,2020-11-19,2021-02-11,,OWOCHE EMMANUEL ODEY
+cr Calabar General Hospital,14663C,2020-11-19,3,Yes,2020-11-19,2021-02-11,,OWOCHE EMMANUEL ODEY
+cr Calabar General Hospital,14690C,2020-12-03,3,Yes,2020-12-03,2021-02-25,,OWOCHE EMMANUEL ODEY
+cr Calabar General Hospital,14689C,2020-12-03,3,Yes,2020-12-03,2021-02-25,,OWOCHE EMMANUEL ODEY
+cr Calabar General Hospital,14678C,2020-11-28,3,Yes,2020-11-28,2021-02-20,,OWOCHE EMMANUEL ODEY
+cr Calabar General Hospital,14680C,2020-11-30,3,Yes,2020-11-30,2021-02-22,,OWOCHE EMMANUEL ODEY
+cr Calabar General Hospital,14694,2020-12-07,3,Yes,,2021-03-01,,Bojor Mary
+cr Calabar General Hospital,14695,2020-12-07,3,Yes,,2021-03-01,,Bojor Mary
+cr Calabar General Hospital,14691,2020-12-04,3,Yes,,2021-03-01,,Bojor Mary
+cr Calabar General Hospital,14696C,2020-12-07,3,Yes,,2021-03-01,,OWOCHE EMMANUEL ODEY
+cr Calabar General Hospital,14697C,2020-12-05,3,Yes,,2021-02-27,,OWOCHE EMMANUEL ODEY
+cr Calabar General Hospital,14698C,2020-12-08,3,Yes,2020-12-08,2021-03-02,,OWOCHE EMMANUEL ODEY
+cr Calabar General Hospital,14700i,2020-12-09,3,Yes,2020-12-09,2021-03-03,,Egbe Elias John
+cr Calabar General Hospital,014701C,2020-12-09,3,Yes,2020-12-09,2021-03-03,,OWOCHE EMMANUEL ODEY
+cr Calabar General Hospital,0014703,2020-12-14,3,Yes,2020-12-14,2021-03-08,,Aisha Abubakar
+cr Calabar General Hospital,014704c,2020-12-14,3,Yes,2020-12-14,2021-03-08,,Grace Oxford
+cr Calabar General Hospital,0014710,2020-12-16,3,Yes,2020-12-16,,,Aisha Abubakar
+cr Calabar General Hospital,014705c,2020-12-14,3,Yes,2020-12-14,2021-03-08,,Grace Oxford
+cr Calabar General Hospital,0014708,2020-12-16,3,Yes,2020-12-16,,,Afuoh Charity Ohiama
+cr Calabar General Hospital,14709C,2020-12-11,3,Yes,2020-12-11,,,Grace Oxford
+cr Calabar General Hospital,14707C,2020-12-15,3,Yes,2020-12-15,,,Grace Oxford
+cr Calabar General Hospital,14706C,2020-12-15,3,Yes,2020-12-15,,,Grace Oxford
+cr Calabar General Hospital,0014714,2020-12-18,3,Yes,2020-12-18,,,Afuoh Charity Ohiama
+cr Calabar General Hospital,014712C,2020-12-16,3,Yes,2020-12-16,,,Grace Oxford
+cr Calabar General Hospital,14715C,2020-12-18,3,Yes,2020-12-18,,,Grace Oxford
+cr Calabar General Hospital,14717C,2020-12-21,3,Yes,2020-12-21,,,Grace Oxford
+cr Calabar General Hospital,14718C,2020-12-22,3,Yes,2020-12-22,,,Grace Oxford
+cr Calabar General Hospital,14719C,2020-12-23,3,Yes,2020-12-23,,,Grace Oxford
+cr Calabar General Hospital,0014720,2020-12-24,3,Yes,2020-12-24,,,Afuoh Charity Ohiama
+cr Calabar General Hospital,14721C,2020-12-23,3,Yes,2020-12-23,,,OWOCHE EMMANUEL ODEY
+cr Calabar General Hospital,14722C,2020-12-24,3,Yes,2020-12-24,,,OWOCHE EMMANUEL ODEY
+cr Calabar General Hospital,14724C,2020-12-29,3,Yes,2020-12-29,,,OWOCHE EMMANUEL ODEY
+cr Calabar General Hospital,14723C,2020-12-29,3,Yes,2020-12-29,,,OWOCHE EMMANUEL ODEY
+cr Calabar General Hospital,14725,2020-12-30,3,Yes,2020-12-30,,,Onoja Ella
+cr Ikot Edem Odo Health Centre,054/20,2020-10-23,3,Yes,2020-10-23,2021-01-15,,
+cr Ikot Edem Odo Health Centre,056/20,2020-11-16,3,Yes,2020-11-16,2021-02-14,,
+cr Aningeje Primary Health Centre,2079/20,2020-10-12,3,Yes,2020-10-12,2021-01-10,,OJONG PRINCE
+cr Aningeje Primary Health Centre,02141/20,2020-11-18,3,Yes,2020-10-20,2021-02-16,,OJONG PRINCE
+cr Aningeje Primary Health Centre,2128/20,2020-11-02,3,Yes,2020-11-02,2021-01-25,,OJONG PRINCE
+cr Aningeje Primary Health Centre,2217/20,2020-11-10,3,Yes,2020-11-10,2021-02-02,,OJONG PRINCE
+cr Aningeje Primary Health Centre,2130/20,2020-11-01,3,Yes,2020-11-01,2021-01-30,,OJONG PRINCE
+cr Aningeje Primary Health Centre,02243/20,2020-11-25,3,,,,,OJONG PRINCE
+cr Aningeje Primary Health Centre,2259/20,2020-12-01,3,Yes,2020-12-01,2021-02-23,,

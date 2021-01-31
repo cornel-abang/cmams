@@ -20,7 +20,7 @@ class ClientController extends Controller
     public function index()
     {
         $title = 'All Clients';
-        $clients = Patient::paginate(10);
+        $clients = Patient::paginate(20);
         $facilities = Facility::all();
         $case_managers = CaseManager::all();
         return view('clients.index', compact('title','clients','facilities','case_managers'));

@@ -4,16 +4,24 @@
     <title>Case Manager Attendance Tracker</title>
     <script src="{{asset('assets/js/vendor-all.min.js')}}"></script>
     <link rel="stylesheet" href="{{asset('assets/css/plugins/bootstrap.min.css')}}">
+    <script src="{{asset('assets/js/sweetalert2.js')}}" defer></script>
     <script type='text/javascript'>
         var page_data = {!! pageJsonData() !!};
     </script>
 </head>
 
 <body>
-    <div class="jumbotron" style="margin-top:20px;padding:20px;">    
+    <div class="jumbotron" style="margin-top:20px;padding:20px;">
+    <div class="header">
+      <img src="{{asset('assets/images/logo-dark.png')}}" alt="" class="logo-thumb"> 
+      <h3>FHI360 - Case Manager Analysis & Monitoring System</h3> 
+      <h5>Attendance Tracker and Verifier</h5>
+      <i class="badge badge-primary">Please make sure you're in the facility and the image is clear enough</i>
+    </div>  
     <p><span id="errorMsg"></span></p>    
     <div class="row">    
-        <div class="col-lg-6">    
+        <div class="col-md-6"> 
+
             <!-- Here we streaming video from webcam -->       
             <video id="video" playsinline autoplay></video>
             <h4>    
@@ -21,20 +29,26 @@
             </h4>     
         </div>    
     
-        <div class="col-lg-6"> 
+        <div class="col-md-6"> 
             <form id="att_frm" method="POST" action="{{route('check_attendance')}}" enctype="multipart/formdata">
             @csrf     
                 <!-- Webcam video snapshot -->    
                 <canvas style="border:solid 1px #ddd;background-color:white;" id="canvas" width="475" height="475"></canvas>
                 <div class="form-group col-lg-6">
-                    <input type="text" name="name" placeholder="Enter case manager name" class="form-control" id="mg_name">
+                    {{-- <input type="text" name="case_manager" placeholder="Enter case manager name" class="form-control" id="mg_name"> --}}
                 </div>
-                <div class="form-group col-lg-6">
+                <div class="form-group col-md-6">
                     <select name="facility" class="form-control" id="facility">
                       <option value="">--Select facility--</option>
                       @foreach( __facilities() as $facility)
-                        <option value="{{$facility->name}}">{{ $facility->name }}</option>
+                        <option value="{{$facility->name}}" class="fac-option">{{ $facility->name }}</option>
                       @endforeach
+                    </select>
+                </div>
+                <div class="form-group col-md-6">
+                    <select name="case_manager" class="form-control" id="mg_name">
+                      <option value="">--Case Manager--</option>
+                      {{-- Case Managers --}}
                     </select>
                 </div>
                 <input type="hidden" name="cm_img" value="" id="img_area">
@@ -42,13 +56,24 @@
                 <input type="hidden" name="longitude" id="longitude">
                 <input type="hidden" name="latitude" id="latitude">
                 <h4>    
-                    <input type="button" class="btn btn-primary" id="btnSave" name="btnSave" value="Send" />    
+                    <input type="button" class="btn btn-primary" id="btnSave" name="btnSave" value="Sign" />    
                 </h4>
             </form>  
         </div>    
     </div>    
 </div>
-<style type="text/css">  
+<style type="text/css">
+  .header{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+  }
+    h3, h5{
+      text-align: center;
+      margin-bottom: 30px;
+      width: 40%;
+    } 
     /* Flipping the video as it was not mirror view */  
     video {  
         -webkit-transform: scaleX(-1);  
@@ -105,7 +130,28 @@
     }  
 </script>
 
-<script type="text/javascript">  
+<script type="text/javascript">
+   //Facility Case manager select
+    $(document).on('change','#facility',function(){
+        let facility = $(this).val();
+        $('#mg_name').empty();
+        $.ajax({
+          type: "GET",
+          url: page_data.routes.get_managers,
+          data: { facility, _token: page_data.csrf_token },
+          success: function (data) {
+            if (data.success) {
+              $('#mg_name').append('<option>Select case manager</option>');
+              for (let i = 0; i < data.managers.length; i++) {
+                $('#mg_name').append('<option value="'+data.managers[i].names+'">'+data.managers[i].names+'</option>');
+              }
+            }else{
+                $('#mg_name').append('<option>No case managers yet</option>');
+            }
+            // console.log(data);
+          },
+        });
+    });  
     // Below code to capture image from Video tag (Webcam streaming)  
     $("#btnCapture").click(function () {  
         var canvas = document.getElementById('canvas');  
@@ -141,7 +187,7 @@
                 'LOCATION: '+$('#location_area').val(),
                 'TIMESTAMP: '+ new Date() 
                 )
-        // $('#att_frm').submit();
+        $('#att_frm').submit();
         // $.ajax({  
         //     type: 'POST',  
         //     url: page_data.routes.check_attendance,  
@@ -188,6 +234,7 @@ function getAddress (latitude, longitude) {
    )
 }
 if ("geolocation" in navigator) {
+  // ipLookUp()
   // check if geolocation is supported/enabled on current browser
   navigator.geolocation.getCurrentPosition(
    function success(position) {
@@ -209,7 +256,8 @@ else {
   ipLookUp()
 }
 </script>
-<script src="{{asset('assets/js/plugins/bootstrap.min.js')}}"></script>    
+<script src="{{asset('assets/js/plugins/bootstrap.min.js')}}"></script>  
+<script src="{{asset('assets/js/custom.js')}}"></script>  
 </body>
 
 </html>

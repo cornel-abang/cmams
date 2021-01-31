@@ -13,10 +13,10 @@ class CaseManager extends Model
     	return $this->belongsTo(Facility::class);
     }
 
-    public function clients()
-    {
-    	return $this->hasMany(Client::class);
-    }
+    // public function clients()
+    // {
+    // 	return Patient::where('case_manager', $this->names)->get();
+    // }
 
     public function reports()
     {

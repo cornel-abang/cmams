@@ -8,6 +8,14 @@ File: style.css
 =================================================================================== */
 /* cyrillic-ext */
 @import url(plugins/animate.min.css);
+.client-count{
+  font-weight: bolder;
+  font-size: 15px;
+}
+
+.clients-analytica span{
+  font-weight: bold;
+}
 
 /*upload options*/
 .single-upload, .bulk-upload{
@@ -21,6 +29,12 @@ File: style.css
 
 div.dataTables_wrapper div.dataTables_length select{
   border:1px solid #ced4da
+}
+
+.week-period{
+  font-size: 12px;
+  color: #ff7a59;
+  font-weight: bolder;
 }
 
 .options{

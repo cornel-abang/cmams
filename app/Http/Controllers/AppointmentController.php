@@ -4,8 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Appointment;
+use App\RadetAppt;
 use Carbon\Carbon;
 use App\CaseManager;
+use App\Result;
 
 class AppointmentController extends Controller
 {
@@ -18,20 +20,6 @@ class AppointmentController extends Controller
     {
         $title = 'This week\'s case manager appointments';
         $appointments = $this->getAppointments();
-        // $appts = $appointments->groupBy('email');
-        // foreach ($appts as $key => $value) {
-        //     $appt_data = [
-        //                     'email' => $key,
-        //                     'appts' => $value
-        //                 ];
-        //     $msg = 'THIS WEEK\'S APPOINTMENTS REMINDER *-* ';
-        //     foreach ($appt_data['appts'] as $apt) {
-        //         $msg .= ' CLIENT NAME: '.$apt->client->name.', APPOINTMENT TYPE: '.ucfirst($apt->type).', DATE: '.Carbon::parse($apt->appt_date)->format('l jS \of F Y').' *-* ';
-        //         $msg .= ' Please ensure to attend to all your appointments with the clients.';
-        //     }
-
-        //     dd($msg);
-        // }
         return view('appts.index',compact('title','appointments')); 
     }
 
@@ -42,7 +30,7 @@ class AppointmentController extends Controller
      */
     public function getAppointments()
     {
-        return $appointments = Appointment::orderBy('appt_date','desc')->whereBetween('appt_date', 
+        return RadetAppt::orderBy('appt_date','desc')->whereBetween('appt_date', 
                         [
                             Carbon::now()->startOfWeek(), 
                             Carbon::now()->endOfWeek()
@@ -57,6 +45,18 @@ class AppointmentController extends Controller
     public function getTodyAppts()
     {
         return $appointments = Appointment::where('appt_date', Carbon::now()->today())->get();
+    }
+
+    public function vlc()
+    {
+        $title = 'Viral Load Turnaround Time';
+        $vlcs = Result::orderBy('due_date','ASC')->whereBetween('due_date', 
+                        [
+                            Carbon::now()->startOfWeek(), 
+                            Carbon::now()->endOfWeek()
+                        ])->get();
+
+        return view('appts.vlc',compact('vlcs','title'));
     }
 
     /**

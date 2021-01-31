@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-	//dd(Hash::make('@cmams22+'));
+	// dd(Hash::make('@cmams22+'));
     return view('welcome');
 })->name('home');
 
@@ -29,6 +29,8 @@ Route::get('facility/coordinates', function(){
 	return view('attendance.coordinates');
 });
 
+Route::get('managers','CaseManagerController@getManagers')->name('get_managers');
+
 Route::post('check_attendance', 'CaseManagerController@attendance')->name('check_attendance');
 Route::post('facility/coordinates', 'FacilityController@saveCoords')->name('save.coords');
 
@@ -37,7 +39,7 @@ Route::post('login', 'UserController@login')->name('login');
 Route::group(['middleware'=>'auth:web'], function(){
 	Route::group(['prefix'=>'fhi360'], function(){
 		Route::get('dashboard', 'DashboardController@index')->name('dashboard');
-		Route::get('get_refill_data','DashboardController@getRefillData')->name('get_refill_data');
+		Route::get('chart_data','DashboardController@getChartData')->name('chart_data');
 		Route::get('leaderboard', 'DashboardController@leaderboard')->name('leaderboard');
 		Route::get('get_btm_4', 'DashboardController@bottomFour')->name('get_btm_4');
 		Route::get('logout', 'UserController@logout')->name('logout');
@@ -61,6 +63,9 @@ Route::group(['middleware'=>'auth:web'], function(){
 		Route::get('destroy_manager/{id}','CaseManagerController@destroy')->name('destroy_manager');
 		Route::get('{id}/view_clients', 'CaseManagerController@viewClients')->name('view_clients_cm');
 		Route::any('search_client', 'CaseManagerController@search')->name('search_client');
+		Route::post('cm_uploads', 'CaseManagerController@managersUpload')->name('cm-upload');
+		Route::get('case_manager_attendance', 'CaseManagerController@allAttendance')->name('atts');
+		Route::get('timesheet','CaseManagerController@timesheet')->name('timesheets');
 	});
 
 	Route::group(['prefix'=>'clients'], function(){
@@ -101,5 +106,26 @@ Route::group(['middleware'=>'auth:web'], function(){
 		Route::post('add', 'AppointmentController@store');
 		Route::get('/', 'AppointmentController@index')->name('appointments');
 		Route::get('verify_appt/{cm_id}', 'AppointmentController@verifyAppt')->name('verify_appt');
+		Route::get('vlc', 'AppointmentController@vlc')->name('vlc');
 	});
+
+	Route::group(['prefix' => 'radet_file'], function(){
+		Route::get('upload_radet', 'RadetController@uploadRadet')->name('upload.radet');
+		Route::post('radet/import', 'RadetController@importRadetFile')->name('import.radet');
+	});
+
+	//Add vLC Results
+	// Route::get('results', 'RadetController@saveVlcRes');
+
+	//some test route
+	Route::get('performance/eval', 'RadetController@evalPerformance');
+
+	//coords
+	Route::post('coords', 'FacilityController@uploadCoords')->name('coords');
+
+	//Managers update
+	Route::post('update-managers', 'CaseManagerController@managersUpload')->name('u-managers');
+
+	//Analyse 
+	Route::get('analyse', 'RadetController@evalPerformance')->name('analyse');
 });

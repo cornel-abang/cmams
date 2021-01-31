@@ -8,7 +8,7 @@ use Maatwebsite\Excel\Concerns\WithHeadingRow;
 use Maatwebsite\Excel\Concerns\WithBatchInserts;
 use Maatwebsite\Excel\Concerns\WithChunkReading;
 
-class PatientsImport implements ToModel, WithHeadingRow, WithBatchInserts, WithChunkReading
+class PatientsImport implements ToModel, WithHeadingRow
 {
     /**
     * @param array $row
@@ -18,24 +18,23 @@ class PatientsImport implements ToModel, WithHeadingRow, WithBatchInserts, WithC
     public function model(array $row)
     {
         // dd($row);
-        return new Patient([
+        return Patient::Create([
             'hospital_num'  => $row['hospital_num'],
-            'sex'           => $row['sex'],
             'status'        => $row['current_art_status'],
-            'case_manager'  => $row['case_manager'],
-            'facility'      => $row['facility']
+            'case_manager'  => $row['case_manager'] ? $row['case_manager'] : 'No Case Manager',
+            'facility'      => $row['facility'] ? $row['facility'] : 'None'
         ]);
     }
 
-    public function batchSize(): int
-    {
-        return 1000;
-    }
+    // public function batchSize(): int
+    // {
+    //     return 1000;
+    // }
 
-    public function chunkSize(): int
-    {
-        return 1000;
-    }
+    // public function chunkSize(): int
+    // {
+    //     return 1000;
+    // }
 }
 
 //for duplicate hospital_num, concatenate the the facility name and the hospital_num

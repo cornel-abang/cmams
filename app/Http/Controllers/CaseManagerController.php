@@ -3,9 +3,17 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\CaseManager;
+use App\Manager;
 use App\Facility;
 use App\Client;
+use App\Attendance;
+use App\Coordinate;
+use Carbon\Carbon;
+use PDF;
+use ZipArchive;
+use App\Imports\ManagerUpdateImport;
+use App\Imports\ManagersImport;
+use Maatwebsite\Excel\Facades\Excel;
 use Illuminate\Support\Facades\Storage;
 
 class CaseManagerController extends Controller
@@ -19,8 +27,99 @@ class CaseManagerController extends Controller
     {
         $title = 'Case Managers';
         $facilities = Facility::all();  
-        $case_managers = CaseManager::orderBy('name','asc')->get();
+        $case_managers = Manager::all();
+
         return view('case_manager.index', compact('title', 'case_managers','facilities'));
+    }
+
+    public function timesheet()
+    {
+        $atts = $this->getMonthlyAtt();
+        $cmAtts = $atts->groupBy('case_manager');
+        $sheetsArr = [];
+
+        foreach ($cmAtts as $key => $val) {
+            $output = PDF::loadView('case_manager.timesheet', ['atts'=>$val, 'names'=>$key])->setPaper("a4", "portrait")->output();
+            
+            file_put_contents($key.'_timesheet.pdf', $output);
+            $sheetsArr[] = $key.'_timesheet.pdf';
+            // $title = $key.' work timesheet';
+            // $pdf = PDF::loadView('case_manager.timesheet', ['atts'=>$val, 'names'=>$key]);
+            // return $pdf->download($key.'_timesheet.pdf');
+        }
+        // dd($sheetsArr);
+
+        $month = $atts[0]->created_at->format('F Y');
+        return $this->zip_n_Save($sheetsArr, $month);
+    }
+
+    // private function zip_n_Save(array $sheets, $month)
+    // {
+    //     $zipname = str_replace(' ', '-', $month.'-timesheets.zip');
+    //     $zip = new ZipArchive;
+    //     $zip->open(public_path('assets/timesheets/'.$zipname), ZipArchive::CREATE);
+    //     // $zip->open($zipname, ZipArchive::CREATE);
+    //     foreach ($sheets as $sheet) {
+    //         $zip->addFile($sheet);
+    //     }      
+        
+
+    //     $zip->close();
+    //     header('Content-Type: application/zip');
+    //     header("Content-Disposition: attachment; filename=".$zipname);
+    //     header("Pragma: no-cache"); 
+    //     header("Expires: 0");
+    //     header('Cache-Control: must-revalidate');
+    //     header('Content-Length: ' . filesize($zipname));
+    // }
+
+    public function zip_n_Save(array $sheets, $month)
+    {
+                    // Define Dir Folder
+        $public_dir=public_path();
+                    // Zip File Name
+        $zipFileName = str_replace(' ', '-', $month.'-timesheets.zip');
+                    // Create ZipArchive Obj
+        $zip = new ZipArchive;
+        if ($zip->open($public_dir . '/' . $zipFileName, ZipArchive::CREATE) === TRUE) {
+                foreach ($sheets as $sheet) {
+                    $zip->addFile($sheet);
+                }
+                           
+            $zip->close();
+        }
+                    // Set Header
+        $headers = array(
+                'Content-Type' => 'application/octet-stream',
+                'Content-Type'=> 'application/zip',
+                'Content-Disposition' => 'attachment; filename='.$zipFileName
+        );
+        $filetopath=$public_dir.'/'.$zipFileName;
+                    // Create Download Response
+        return response()->download($filetopath,$zipFileName,$headers);
+    }
+
+    private function getMonthlyAtt()
+    {
+        return Attendance::orderBy('created_at','desc')->whereBetween('created_at', 
+                        [
+                            Carbon::now()->startOfMonth(), 
+                            Carbon::now()->endOfMonth()
+                        ])->get();
+    }
+
+    public function managersUpload(Request $request)
+    {
+        $file = $request->file('bulk-cms');
+        Excel::import(new ManagersImport, $file);
+        return redirect(route('case-managers'))->with('success', 'All Case Managers uploaded');
+    }
+
+    public function updateManagers(Request$request)
+    {
+        $file = $request->file('mg-updates');
+        Excel::import(new ManagerUpdateImport, $file);
+        return redirect(route('case-managers'))->with('success', 'All Case Managers Updated');
     }
 
     /**
@@ -55,7 +154,7 @@ class CaseManagerController extends Controller
                  'email'            => $request->email,
                  'phone'            => $request->phone
                 ];
-                CaseManager::create($data);
+                Manager::create($data);
                 return redirect(route('case-managers'))->with('success', 'Case Manager successfully registered');
             }
         }
@@ -82,7 +181,7 @@ class CaseManagerController extends Controller
      */
     public function edit($id)
     {
-        $manager = CaseManager::find($id);
+        $manager = Manager::find($id);
         $facilities = Facility::all();
         $title = 'Edit Case Manager: '.$manager->name;
         return view('case_manager.edit', compact('manager', 'title','facilities'));
@@ -105,7 +204,7 @@ class CaseManagerController extends Controller
             'profile_photo'  => ['mimes: jpeg, jpg, png']
         ];
         $this->validate($request, $rules);
-        $manager = CaseManager::find($id);
+        $manager = Manager::find($id);
         if ($request->hasFile('profile_photo')) {
                 if ($file = $request->file('profile_photo')) {
                     $img_name = $file->getClientOriginalName();
@@ -137,15 +236,15 @@ class CaseManagerController extends Controller
      */
     public function destroy(Request $request)
     {
-        $case_manager = CaseManager::find($request->id);
+        $case_manager = Manager::find($request->id);
         $case_manager->delete();
         return true;
     }
 
     public function viewClients($id)
     {
-        $manager = CaseManager::find($id);
-        $title = 'Clients assigned to '.$manager->name.' facility';
+        $manager = Manager::find($id);
+        $title = 'Clients assigned to '.$manager->names;
         return view('case_manager.clients', compact('title','manager'));
     }
 
@@ -165,15 +264,67 @@ class CaseManagerController extends Controller
 
     public function attendance(Request $request)
     {
+        // $facility = Coordinate::where('facility', $request->facility)->first();
+        // $facility_coord = $facility->longitude.', '.$facility->latitude;
+        // if ($request->longitude.', '.$request->latitude !== $facility_coord) {
+        //     session()->flash('attendance_not_verified', true);
+        //     session()->flash('location', $request->location);
+        //     return redirect()->back();
+        // }
         $image = $request->cm_img;  // your base64 encoded
         $image = str_replace('data:image/png;base64,', '', $image);
         $image = str_replace(' ', '+', $image);
         $imageName = time(). '.png';
 
         Storage::disk('public')->put($imageName, base64_decode($image));
-        dd($request->all());
+
+        $title = 'att_'.$request->case_manager.'_'.Carbon::now()->toDateString();
+
+        $checkedIn = Attendance::where('title',$title)->first();
+
+        if ($checkedIn) {
+            $checkedIn->checkoutTime = Carbon::now();
+            $checkedIn->checkOutImg = $imageName;
+            $checkedIn->save();
+
+            session()->flash('checked_out',true);
+            return redirect()->back();
+        }
+        
+        $att = new Attendance;
+        $att->title = $title;
+        $att->case_manager = $request->case_manager;
+        $att->facility = $request->facility;
+        $att->coordinates  = $request->longitude.', '.$request->latitude;
+        $att->checkInImg = $imageName;
+        $att->checkInTime = Carbon::now();
+        $att->save();
+
+        session()->flash('checked_in', true);
+        return redirect()->back();
         // $data->photo_name = $photo_name;
         // $data->photo_url = $img_url;
         // $data->save();
+    }
+
+    public function allAttendance()
+    {
+        $atts = Attendance::orderBy('created_at','desc')->whereBetween('created_at', 
+                        [
+                            Carbon::now()->startOfMonth(), 
+                            Carbon::now()->endOfMonth()
+                        ])->get();
+        $title = 'Case Managers attendance timesheet';
+        return view('case_manager.attendance',compact('title','atts'));
+    }
+
+    public function getManagers(Request $request)
+    {
+        $mgs = Manager::where('facility',$request->facility)->get();
+        $success = true;
+        if ($mgs->isEmpty()) {
+            $success = false;
+        }
+        return response()->json(['success'=>$success,'managers'=>$mgs]);
     }
 }

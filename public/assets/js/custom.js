@@ -7,6 +7,22 @@
     if (page_data.case_manager_reg_valid_fail) {
       $("#add-case-manager-form").modal("show");
     }
+    
+    if (page_data.attendance_verified){
+      Swal.fire("Done!", "Attendance verified", "success");
+    }
+
+    if (page_data.attendance_not_verified) {
+      Swal.fire("Not verified!", "You are not close enough to the facility.", "error");
+    }
+
+    if (page_data.checked_in) {
+      Swal.fire('Checked In!', 'You have successfully checked in', 'success');
+    }
+
+    if (page_data.checked_out) {
+      Swal.fire('Checked Out!', 'You have successfully checked out.', 'success');
+    }
 
     if (page_data.report_valid_fail) {
       $("#add-report-form").modal("show");
@@ -14,6 +30,7 @@
 
     $("#entry-table").DataTable({
       ordering: true,
+     
     });
 
     $(".dataTables_filter input[type='search']").attr("placeholder","Find here...");
@@ -669,24 +686,24 @@
   });
 
   //check for error while registering facility
-  if (page_data.facility_reg_valid_fail.failed) {
-      $("#add-facility-form").modal("show");
-      if (page_data.facility_reg_valid_fail.msg === 'csv failed') {
-        openBulkFrm();
-      }else if(page_data.facility_reg_valid_fail.msg === 'single failed'){
-        openSingleFrm();
-      }
-  }
+  // if (page_data.facility_reg_valid_fail.failed) {
+  //     $("#add-facility-form").modal("show");
+  //     if (page_data.facility_reg_valid_fail.msg === 'csv failed') {
+  //       openBulkFrm();
+  //     }else if(page_data.facility_reg_valid_fail.msg === 'single failed'){
+  //       openSingleFrm();
+  //     }
+  // }
 
    //check for error while registering client
-  if (page_data.client_reg_valid_fail.failed) {
-      $("#add-client-form").modal("show");
-      if (page_data.client_reg_valid_fail.msg === 'csv failed') {
-        openBulkFrm();
-      }else if(page_data.client_reg_valid_fail.msg === 'single failed'){
-        openSingleFrm();
-      }
-  }
+  // if (page_data.client_reg_valid_fail.failed) {
+  //     $("#add-client-form").modal("show");
+  //     if (page_data.client_reg_valid_fail.msg === 'csv failed') {
+  //       openBulkFrm();
+  //     }else if(page_data.client_reg_valid_fail.msg === 'single failed'){
+  //       openSingleFrm();
+  //     }
+  // }
 
   function openBulkFrm()
   {

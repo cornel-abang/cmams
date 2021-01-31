@@ -7,6 +7,7 @@ use App\Report;
 use App\CaseManager;
 use Carbon\Carbon;
 use App\Performance;
+use App\RadetPerformance;
 
 class ReportController extends Controller
 {
@@ -18,7 +19,7 @@ class ReportController extends Controller
     public function index()
     {
         $title = 'Daily Reports';
-        $reports = Report::latest()->get();
+        $reports = RadetPerformance::whereDate('created_at', Carbon::today())->get();
         return view('report.daily',compact('title','reports'));
     }
 

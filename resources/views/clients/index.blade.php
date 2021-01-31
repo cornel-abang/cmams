@@ -9,7 +9,7 @@
                 <div class="card">
                     <div class="card-header">
                         <h5>Registered Clients</h5>
-                        <span class="d-block m-t-5">There are a total of <b><code>{{$clients->count()}}</code></b> client(s) registered</span>
+                        <span class="d-block m-t-5">There are a total of <b><code>{{ number_format( cmCount() ) }}</code></b> clients registered</span>
                         <button type="button" class="btn btn-info btn-sm add-btn" data-toggle="modal" data-target="#add-client-form">
                             <i class="la la-plus-circle"></i> Add Client</button>
                     </div>
@@ -32,12 +32,12 @@
                                     <tr id="de-{{$client->id}}">
                                         <td>{{$client->hospital_num}}</td>
                                         <td>{{$client->sex}}</td>
-                                        <td>{{$client->facility}}</td>
                                         <td>
-                                            <a href="" data-toggle="tooltip"
+                                            {{$client->facility}}
+                                           {{--  <a href="{{ route('view_clients', $client->facility->id) }}" data-toggle="tooltip"
                                                 title="View clients in facility">
                                                 {{$client->facility}}
-                                            </a>
+                                            </a> --}}
                                         </td>
                                         <td>{{$client->case_manager}}</td>
                                         <td>{{$client->status}}</td>
@@ -65,10 +65,13 @@
                                     @endforeach
                                 </tbody>
                             </table>
+                             {{ $clients->links() }}
                         </div>
                     </div>
                 </div>
             </div>
+
+
 
             {{-- View Facility Modal --}}
         @foreach($clients as $client)

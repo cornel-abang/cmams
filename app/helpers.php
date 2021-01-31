@@ -1,8 +1,11 @@
 <?php
 
 use App\DailyPerformance;
+use App\RadetDailyPerformance;
 use Carbon\Carbon;
 use App\Facility;
+use App\Attendance;
+use App\Patient;
 /**
  * @return mixed
  * Custom functions made by Cornel
@@ -26,10 +29,15 @@ if ( ! function_exists('pageJsonData')){
             'client_reg_valid_fail'       => session('client_reg_valid_fail'),
             'case_manager_reg_valid_fail' => session('case_manager_reg_valid_fail'),
             'report_valid_fail'           => session('report_valid_fail'),
+            'attendance_verified'         => session('attendance_verified'),
             'home_url'                    => route('home'),
             'asset_url'                   => asset('assets'),
             'csrf_token'                  => csrf_token(),
             'uploads'                     => asset('/assets/images/uploads/'),
+            'attendance_not_verified'     => session('attendance_not_verified'),
+            'location'                    => session('location'),
+            'checked_in'                  => session('checked_in'),
+            'checked_out'                 => session('checked_out')
         ];
 
         $routeLists = \Illuminate\Support\Facades\Route::getRoutes();
@@ -50,7 +58,7 @@ if ( ! function_exists('pageJsonData')){
  */
 function getWeekRefillAvg()
 {
-    $refill = DailyPerformance::select('refill_performance')
+    $refill = RadetDailyPerformance::select('refill_performance')
             ->whereBetween('created_at', [
                             Carbon::now()->startOfWeek(), 
                             Carbon::now()->endOfWeek()
@@ -64,7 +72,7 @@ function getWeekRefillAvg()
 
 function getWeekViralLoadAvg()
 {
-    $vrl = DailyPerformance::select('viral_load_performance')
+    $vrl = RadetDailyPerformance::select('viral_load_performance')
             ->whereBetween('created_at', [
                             Carbon::now()->startOfWeek(), 
                             Carbon::now()->endOfWeek()
@@ -92,7 +100,7 @@ function getWeekIctAvg()
 
 function getWeekTptAvg()
 {
-    $tpt = DailyPerformance::select('tpt_performance')
+    $tpt = RadetDailyPerformance::select('tpt_performance')
             ->whereBetween('created_at', [
                             Carbon::now()->startOfWeek(), 
                             Carbon::now()->endOfWeek()
@@ -120,7 +128,7 @@ function getWeekTrackingAvg()
 
 function getWeekAttAvg()
 {
-    $att = DailyPerformance::select('attendance_performance')
+    $att = RadetDailyPerformance::select('attendance_performance')
             ->whereBetween('created_at', [
                             Carbon::now()->startOfWeek(), 
                             Carbon::now()->endOfWeek()
@@ -155,7 +163,7 @@ function performanceDiff($indicator, $thisWeekAvg)
 //function to get the last week average for the indicator 
 function lastWeekIndicatorAvg($indicator)
 {
-    $indicatorAvg = DailyPerformance::select($indicator)
+    $indicatorAvg = RadetDailyPerformance::select($indicator)
                     ->whereBetween('created_at', [
                         Carbon::now()->subWeek(),
                         Carbon::now()->startOfWeek()
@@ -208,11 +216,51 @@ function timeAgo($date)
 
 //get a specific case manager average weekly peformance
 function cm_performance($case_mg){
-    $performances = $case_mg->performances;
+    $performances = $case_mg->performances()??0;
     $perf_arr = array_map(function($performances){
         return $performances['performance'];
     }, $performances->toArray());
     return collect($perf_arr)->avg();
+}
+
+function managersClients($manager)
+{
+    return Patient::where('case_manager', $manager)->get();
+}
+
+function clientsAnalyzer($case_mg, $status)
+{
+    if ($status === 'Active') {
+        $active = Patient::where('status','Active')
+                      ->where('case_manager',$case_mg)
+                      ->count();
+
+        $activeR = Patient::where('status','Active-Restart')
+                           ->where('case_manager', $case_mg)
+                           ->count();
+
+        $activeTI = Patient::where('status','Active-Transfer In')
+                           ->where('case_manager', $case_mg)
+                           ->count();
+        return $active+$activeR+$activeTI;
+    }
+
+    return Patient::where('case_manager', $case_mg)
+                    ->where('status', $status)
+                    ->count();
+}
+
+function __verifyAttendance($case_manager, $date)
+{
+    $attended = false;
+    $att = Attendance::whereDate('created_at', Carbon::parse($date))
+                        ->where('case_manager', $case_manager)
+                        ->get();
+    if (!$att->isEmpty()) {
+        $attended = true;
+    }
+
+    return $attended;
 }
 
 
@@ -343,6 +391,16 @@ if (! function_exists('__facilities')) {
     {
         return Facility::all();
     }
+}
+
+function cmCount()
+{
+    return Patient::count();
+}
+
+function facilityCount()
+{
+    return Facility::count();
 }
 /**
  * End Form Helper

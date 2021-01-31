@@ -152,12 +152,12 @@
                                     <tr>
                                         <th>Date</th>
                                         <th>Case Manager</th>
-                                        {{-- <th>Attendance</th> --}}
-                                        <th>Refill</th>
-                                        <th>Viral Load</th>
-                                        <th>ICT</th>
-                                        <th>TPT</th>
+                                        <th>Attendance</th>
                                         <th>Performance</th>
+                                        {{-- <th>Viral Load</th> --}}
+                                        {{-- <th>ICT</th>
+                                        <th>TPT</th>
+                                        <th>Performance</th> --}}
                                         <th>Actions</th>
                                     </tr>
                                 </thead>
@@ -165,60 +165,29 @@
                                     @foreach($reports as $report)
                                     <tr id="de-{{$report->id}}">
                                         <td>{{$report->created_at->format('l jS \of F Y') }}</td>
-                                        <td>{{$report->caseManager->name}}</td>
-                                        {{-- <td> 1/1 <span class="badge-pill badge-success">{{$report->attendance}}<code>%</code></span></td> --}}
+                                        <td>{{$report->case_manager}}</td>
                                         <td>
-                                            {{ $report->refill_numo }}/{{ $report->refill_deno }}
-                                            @if(ceil(($report->refill_numo / $report->refill_deno)*100) > 69)
+                                            {{-- @if(__verifyAttendance($report->case_manager, $report->created_at))  --}}
+                                            @if($report->indicators->attendance === 'Yes')
+                                                <span class="badge-pill badge-success la la-check-circle"> Verified</span>
+                                            @else
+                                                <span class="badge-pill badge-danger la la-times-circle"> Unverified</span>
+                                            @endif
+                                        </td>
+                                        <td>
+                                            {{-- {{ $report->performance }} --}}
+                                            @if( $report->performance > 69)
                                                 <span class="badge-pill badge-success">
-                                            @elseif(ceil(($report->refill_numo / $report->refill_deno)*100) > 49 && 
-                                                    ceil(($report->refill_numo / $report->refill_deno)*100) < 70)
+                                            @elseif($report->performance > 49 && 
+                                                    $report->performance < 70)
                                                 <span class="badge-pill badge-info">
-                                            @elseif(ceil(($report->refill_numo / $report->refill_deno)*100) < 50)
+                                            @elseif( $report->performance < 50)
                                                 <span class="badge-pill badge-danger">
                                             @endif
-                                                {!! ceil(($report->refill_numo / $report->refill_deno)*100) !!}<code>%</code>
+                                                {!! $report->performance !!}<code>%</code>
                                                 </span>
                                         </td>
-                                        <td>
-                                            {{ $report->viral_load_numo }}/{{ $report->viral_load_deno }}
-                                            @if(ceil(($report->viral_load_numo / $report->viral_load_deno)*100) > 69)
-                                                <span class="badge-pill badge-success">
-                                            @elseif(ceil(($report->viral_load_numo / $report->viral_load_deno)*100) > 49 &&
-                                                    ceil(($report->viral_load_numo / $report->viral_load_deno)*100) < 70)
-                                                <span class="badge-pill badge-info">
-                                            @elseif(ceil(($report->viral_load_numo / $report->viral_load_deno)*100) < 50)
-                                                <span class="badge-pill badge-danger">
-                                            @endif
-                                                    {!! ceil(($report->viral_load_numo / $report->viral_load_deno)*100) !!}<code>%</code>
-                                                </span>
-                                        </td>
-                                        <td>
-                                            {{ $report->ict_numo }}/{{ $report->ict_deno }}
-                                            @if(ceil(($report->ict_numo / $report->ict_deno)*100) > 69)
-                                                <span class="badge-pill badge-success">
-                                            @elseif(ceil(($report->ict_numo / $report->ict_deno)*100) > 49 &&
-                                                    ceil(($report->ict_numo / $report->ict_deno)*100) < 70)
-                                                <span class="badge-pill badge-info">
-                                            @elseif(ceil(($report->ict_numo / $report->ict_deno)*100) < 50)
-                                                <span class="badge-pill badge-danger">
-                                            @endif
-                                                {!! ceil(($report->ict_numo / $report->ict_deno)*100) !!}<code>%</code>
-                                            </span>
-                                        </td>
-                                        <td>
-                                           {{ $report->tpt_numo }}/{{ $report->tpt_deno }}
-                                            @if(ceil(($report->tpt_numo / $report->tpt_deno)*100) > 69)
-                                                <span class="badge-pill badge-success">
-                                            @elseif(ceil(($report->tpt_numo / $report->tpt_deno)*100) > 49 &&
-                                                    ceil(($report->tpt_numo / $report->tpt_deno)*100) < 70)
-                                                <span class="badge-pill badge-info">
-                                            @elseif(ceil(($report->tpt_numo / $report->tpt_deno)*100) < 50)
-                                                <span class="badge-pill badge-danger">
-                                            @endif
-                                                {!! ceil(($report->tpt_numo / $report->tpt_deno)*100) !!}<code>%</code>
-                                            </span>
-                                        </td>
+                                        {{-- 
                                         <td class="{{$score = calcAverage($report)}}">
                                             @if($score > 69)
                                                 <span class="badge-pill badge-success">
@@ -229,13 +198,13 @@
                                             @endif
                                             {{$score }}<code>%</code>
                                                 </span>
-                                        </td>
+                                        </td> --}}
                                         <td>
                                             <div class="row">
-                                                <div class="col-md-4">
+                                                {{-- <div class="col-md-4">
                                                     <button type="button" class="btn btn-info btn-sm" data-toggle="tooltip" title="Edit report info" onclick="window.location.href='{{route('edit_report',$report->id)}}'"><i class="la la-edit"></i>
                                                     </button>
-                                                </div>
+                                                </div> --}}
                                                 <div class="col-md-4">
                                                 <span data-toggle="modal" data-target="#rep{{$report->id}}">
                                                     <button type="button" class="btn btn-primary btn-sm" data-toggle="tooltip" data-placement="top" title="View report summary">
@@ -259,15 +228,15 @@
                 </div>
             </div>
 
-            {{-- View Facility Modal --}}
+        {{-- View Facility Modal --}}
         @foreach($reports as $report)
         <div class="modal fade" id="rep{{$report->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog" role="document">
             <div class="modal-content">
               <div class="modal-header">
                 <h4 class="modal-title report_view_title" id="exampleModalLabel">
-                    <i class="la la-file-alt"></i> Report by <br><span class="styled-header">{{$report->caseManager->name}}</span> 
-                </h4>{!! $report->tag === 'on' ? '<span class="badge badge-pill badge-info client-status">Featured</span>':'' !!}
+                    <i class="la la-file-alt"></i><span class="styled-header">{{$report->case_manager}}</span> 
+                </h4>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span>
                 </button>
@@ -278,80 +247,73 @@
                             <div class="card">
                                 <div class="card-body">
                                     <table class="table table-bordered table-striped">
-                                        <tr><th>{{$report->created_at->format('l jS \of F Y')}}</th></tr>
+                                        <tr>
+                                            <th class="la la-calendar"> {{$report->created_at->format('l jS \of F Y')}}</th>
+                                        </tr>
                                         <tr>
                                             <th>Attendance</th>
                                             <td>
-                                                1/1 <span class="badge-pill badge-success">{{$report->attendance}}<code>%</code></span>
+                                                {!! $report->indicators->attendance === 'Yes'?'<span class="badge-pill badge-success la la-check-circle"> Verified</span>':'<span class="badge-pill badge-danger la la-times-circle"> Unverified</span>' !!}
                                             </td>
                                         </tr>
                                         <tr>
                                             <th>Refill</th>
                                             <td>
-                                            {{ $report->refill_numo }}/{{ $report->refill_deno }}
-                                            @if(ceil(($report->refill_numo / $report->refill_deno)*100) > 69)
-                                                <span class="badge-pill badge-success">
-                                            @elseif(ceil(($report->refill_numo / $report->refill_deno)*100) > 49 && 
-                                                    ceil(($report->refill_numo / $report->refill_deno)*100) < 70)
-                                                <span class="badge-pill badge-info">
-                                            @elseif(ceil(($report->refill_numo / $report->refill_deno)*100) < 50)
-                                                <span class="badge-pill badge-danger">
-                                            @endif
-                                                {!! ceil(($report->refill_numo / $report->refill_deno)*100) !!}<code>%</code>
-                                                </span>
+                                                {{ $report->indicators->refill_met }} / {{ $report->indicators->refill_exp }}  
+                                                @if($report->indicators->refill_pc > 69)
+                                                    <span class="badge-pill badge-success">
+                                                @elseif($report->indicators->refill_pc > 49 && 
+                                                        $report->indicators->refill_pc < 70)
+                                                    <span class="badge-pill badge-info">
+                                                @elseif($report->indicators->refill_pc < 50)
+                                                    <span class="badge-pill badge-danger">
+                                                @endif
+                                                    {!! $report->indicators->refill_pc !!}<code>%</code>
+                                                    </span><br/>
+                                                {!! $report->indicators->refill === 'No'? '<span class="no-appt badge-pill badge-primary">No Refill appointment on this day</span>':'' !!}
                                             </td>
                                         </tr>
                                         <tr>
                                             <th>Viral Load</th>
                                             <td>
-                                            {{ $report->viral_load_numo }}/{{ $report->viral_load_deno }}
-                                            @if(ceil(($report->viral_load_numo / $report->viral_load_deno)*100) > 69)
-                                                <span class="badge-pill badge-success">
-                                            @elseif(ceil(($report->viral_load_numo / $report->viral_load_deno)*100) > 49 &&
-                                                    ceil(($report->viral_load_numo / $report->viral_load_deno)*100) < 70)
-                                                <span class="badge-pill badge-info">
-                                            @elseif(ceil(($report->viral_load_numo / $report->viral_load_deno)*100) < 50)
-                                                <span class="badge-pill badge-danger">
-                                            @endif
-                                                    {!! ceil(($report->viral_load_numo / $report->viral_load_deno)*100) !!}<code>%</code>
-                                                </span>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <th>ICT</th>
-                                            <td>
-                                            {{ $report->ict_numo }}/{{ $report->ict_deno }}
-                                            @if(ceil(($report->ict_numo / $report->ict_deno)*100) > 69)
-                                                <span class="badge-pill badge-success">
-                                            @elseif(ceil(($report->ict_numo / $report->ict_deno)*100) > 49 &&
-                                                    ceil(($report->ict_numo / $report->ict_deno)*100) < 70)
-                                                <span class="badge-pill badge-info">
-                                            @elseif(ceil(($report->ict_numo / $report->ict_deno)*100) < 50)
-                                                <span class="badge-pill badge-danger">
-                                            @endif
-                                                {!! ceil(($report->ict_numo / $report->ict_deno)*100) !!}<code>%</code>
-                                            </span>
+                                                {{-- {{ $report->indicators->vlc_met }} / {{ $report->indicators->vlc_exp }} --}}
+                                                @if($report->indicators->vlc_exp >= 1)  
+                                                    @if($report->indicators->vlc_pc > 69)
+                                                        <span class="badge-pill badge-success">
+                                                    @elseif($report->indicators->vlc_pc > 49 && 
+                                                            $report->indicators->vlc_pc < 70)
+                                                        <span class="badge-pill badge-info">
+                                                    @elseif($report->indicators->vlc_pc < 50)
+                                                        <span class="badge-pill badge-danger">
+                                                    @endif
+                                                    {!! $report->indicators->vlc_pc !!}<code>%</code>
+                                                    </span><br/>
+                                                    {!! $report->indicators->vlc_pc >= 90 ? '<span class="no-appt  la la-caret-up badge-pill badge-success"> Above the 90% VLC mark</span>':'<span class="badge-pill badge-danger la la-caret-down"> Below the 90% VLC mark</span>' !!}
+                                                @else
+                                                    <span class="badge-pill btn-primary badge-primary">Had no eligible clients on this day</span>
+                                                @endif
                                             </td>
                                         </tr>
                                         <tr>
                                             <th>TPT </th>
                                             <td>
-                                            {{ $report->tpt_numo }}/{{ $report->tpt_deno }}
-                                            @if(ceil(($report->tpt_numo / $report->tpt_deno)*100) > 69)
-                                                <span class="badge-pill badge-success">
-                                            @elseif(ceil(($report->tpt_numo / $report->tpt_deno)*100) > 49 &&
-                                                    ceil(($report->tpt_numo / $report->tpt_deno)*100) < 70)
-                                                <span class="badge-pill badge-info">
-                                            @elseif(ceil(($report->tpt_numo / $report->tpt_deno)*100) < 50)
-                                                <span class="badge-pill badge-danger">
-                                            @endif
-                                                {!! ceil(($report->tpt_numo / $report->tpt_deno)*100) !!}<code>%</code>
-                                            </span>
+                                                {{-- {{ $report->indicators->tpt_met }} / {{ $report->indicators->tpt_exp }}   --}}
+                                                @if($report->indicators->tpt_pc > 69)
+                                                    <span class="badge-pill badge-success">
+                                                @elseif($report->indicators->tpt_pc > 49 && 
+                                                        $report->indicators->tpt_pc < 70)
+                                                    <span class="badge-pill badge-info">
+                                                @elseif($report->indicators->tpt_pc < 50)
+                                                    <span class="badge-pill badge-danger">
+                                                @endif
+                                                {!! $report->indicators->tpt_pc !!}<code>%</code>
+                                                </span><br/>
+                                                {!! $report->indicators->tpt_pc >= 95 ? '<span class="no-appt  la la-caret-up"> Above the 95% TPT mark</span>':'<span class="badge-pill badge-danger la la-caret-down"> Below the 95% TPT mark</span>' !!}
                                             </td>
                                         </tr>
                                         <tr>
-                                            <th>Performance</th>
-                                            <td class="{{$score = calcAverage($report)}}">
+                                            <th>Average Performance</th>
+                                            <td class="{{$score = $report->performance }}">
                                             @if($score > 69)
                                                 <span class="badge-pill badge-success">
                                             @elseif($score > 49 && $score < 70)
@@ -364,21 +326,21 @@
                                             </td>
                                         </tr>
                                     </table>
-                                    <div class="jumbotron">
+                                    {{-- <div class="jumbotron">
                                         <h2 class="la la-comment-medical"></h2><br>
                                         {{$report->comment}}
-                                    </div>
+                                    </div> --}}
                                 </div>
                             </div>
                         </div>
                     </div>
               </div>
-              {{-- <div class="modal-footer">
+              <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              </div> --}}
-            </div>
-          </div>
-        </div>
+              </div>
+           </div>
+          </div> 
+        </div>  
         @endforeach
     </div>
    

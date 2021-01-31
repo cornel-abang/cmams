@@ -26,6 +26,7 @@ class Kernel extends ConsoleKernel
     {
         $schedule->command('save:daily_performance')->weekDays();
         $schedule->command('remind:case_managers')->weekDays();
+        $schedule->commands('vlc:email')->daily();
     }
 
     /**

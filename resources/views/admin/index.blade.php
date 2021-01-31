@@ -52,8 +52,13 @@
                         <div class="card text-center">
                             <div class="card-body">
                                 <h3 class="card-title">Clients</h3>
-                                <p class="card-text"><h3 class="card-title">{{$clients->count()}}</h3></p>
+                                <p class="card-text"><h3 class="card-title">{{ number_format(cmCount()) }}</h3></p>
                                 <a href="{{ route('clients') }}" class="btn  btn-primary">See all</a>
+                                {{-- <form action="{{ route('u-managers') }}" method="post" enctype='multipart/form-data'>
+                                    @csrf
+                                    <input type="file" name="bulk-cms">
+                                    <input type="submit" value="Upload">
+                                </form> --}}
                             </div>
                         </div>
                     </div>
@@ -85,7 +90,7 @@
                                 <thead>
                                     <tr>
                                         <th>Name</th>
-                                        <th>Facility</th>
+                                        {{-- <th>Facility</th> --}}
                                         <th class="text-right">Score (%)</th>
                                     </tr>
                                 </thead>
@@ -94,15 +99,15 @@
                                             <tr>
                                                 <td>
                                                     <div class="d-inline-block align-middle">
-                                                        <img src="{{asset('/assets/images/uploads/'.$perfs['image'])}}"
-                                                            alt="cm image" class="img-radius wid-40 align-top m-r-15">
+                                                        {{-- <img src="{{asset('/assets/images/uploads/'.$perfs['image'])}}"
+                                                            alt="cm image" class="img-radius wid-40 align-top m-r-15"> --}}
                                                         <div class="d-inline-block">
                                                             <h6 class="leader-name">{{ $perfs['name'] }}</h6>
-                                                            <p class="text-muted m-b-0">{{ $perfs['clients'] }} client(s)</p>
+                                                            {{-- <p class="text-muted m-b-0">{{ $perfs['clients'] }} client(s)</p> --}}
                                                         </div>
                                                     </div>
                                                 </td>
-                                                <td>{{ $perfs['facility'] }}</td>
+                                                {{-- <td>{{ $perfs['facility'] }}</td> --}}
                                                 <td class="text-right">
                                                     @if( $perfs['performance'] > 69 )
                                                         <label class="badge-pill badge-success">{{ $perfs['performance'] }}</label></td>
@@ -120,15 +125,15 @@
                                             <tr>
                                                 <td>
                                                     <div class="d-inline-block align-middle">
-                                                        <img src="{{asset('/assets/images/uploads/'.$perfs['image'])}}"
-                                                            alt="cm image" class="img-radius wid-40 align-top m-r-15">
+                                                       {{--  <img src="{{asset('/assets/images/uploads/'.$perfs['image'])}}"
+                                                            alt="cm image" class="img-radius wid-40 align-top m-r-15"> --}}
                                                         <div class="d-inline-block">
                                                             <h6 class="leader-name">{{ $perfs['name'] }}</h6>
-                                                            <p class="text-muted m-b-0">{{ $perfs['clients'] }} client(s)</p>
+                                                            {{-- <p class="text-muted m-b-0">{{ $perfs['clients'] }} client(s)</p> --}}
                                                         </div>
                                                     </div>
                                                 </td>
-                                                <td>{{ $perfs['facility'] }}</td>
+                                                {{-- <td>{{ $perfs['facility'] }}</td> --}}
                                                 <td class="text-right">
                                                     @if( $perfs['performance'] > 69 )
                                                         <label class="badge-pill badge-success">{{ $perfs['performance'] }}</label></td>
@@ -147,25 +152,25 @@
                 </div>
             </div>
             <div class="col-xl-6 col-md-12">
-                <div class="card latest-update-card">
+                <div class="card latest-update-card text-center">
                     <div class="card-header">
-                        <h5>Latest report comments</h5>
+                        <h5>KPI Tide Period</h5>
                         <div class="card-header-right">
                             <div class="btn-group card-option">
-                                <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                {{-- <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     <i class="feather icon-more-horizontal"></i>
-                                </button>
-                                <ul class="list-unstyled card-option dropdown-menu dropdown-menu-right">
+                                </button> --}}
+                                {{-- <ul class="list-unstyled card-option dropdown-menu dropdown-menu-right">
                                     <li class="dropdown-item"><a href="{{route('daily')}}"><span><i class="feather icon-maximize"></i> See all</span></a></li>
-                                </ul>
+                                </ul> --}}
                             </div>
                         </div>
                     </div>
                     <div class="card-body">
-                        <div class="latest-update-box">
-                            @foreach($comments as $cm)
+                        <div class="">
+                            {{-- @foreach($comments as $cm) --}}
                             <div class="row p-t-30 p-b-30">
-                                <div class="col-auto text-right update-meta">
+                               {{--  <div class="col-auto text-right update-meta">
                                     <p class="text-muted m-b-0 d-inline-flex">{{ timeAgo($cm->created_at)}}</p>
                                     <i class="update-icon">
                                         <img class="cm-img" src="{{asset('/assets/images/uploads/'.$cm->caseManager->profile_photo) }}">
@@ -176,9 +181,12 @@
                                         <h6>{{ $cm->caseManager->name}}</h6>
                                     </a>
                                     <p class="text-muted m-b-0">{{ $cm->comment }}</p>
-                                </div>
+                                </div> --}}
+                                <span class="week-period" data-lw="{{ $startOfLastWeek = \Carbon\Carbon::now()->subDays(7)->startOfWeek() }}">
+                                            Between<br> Last Week ({{ $startOfLastWeek->format('l jS \of F Y') }} - {{ $startOfLastWeek->endOfWeek()->format('l jS \of F Y') }}) & This Week ({{ \Carbon\Carbon::now()->startOfWeek()->format('l jS \of F Y') }} - Till Date)
+                                </span>
                             </div>
-                            @endforeach
+                            {{-- @endforeach --}}
                         </div>
                         {{-- <div class="text-center">
                             <a href="#!" class="b-b-primary text-primary">View all Projects</a>
@@ -207,7 +215,7 @@
                                 <div class="row align-items-center">
                                     <div class="col-8">
                                         <h4 class="">{{ getWeekRefillAvg() }}%</h4>
-                                        <h6 class="text-muted m-b-0">Refill</h6>
+                                        <h6 class="text-muted m-b-0">Refill</h6><br/><br/>
                                     </div>
                                     <div class="col-4 text-right">
                                         <i class="icofont icofont-pills f-28"></i>
@@ -257,7 +265,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-6">
+                   {{--  <div class="col-sm-6">
                         <div class="card">
                             <div class="card-body">
                                 <div class="row align-items-center">
@@ -284,7 +292,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> --}}
                     <div class="col-sm-6">
                         <div class="card">
                             <div class="card-body">
@@ -313,7 +321,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-6">
+                    {{-- <div class="col-sm-6">
                         <div class="card">
                             <div class="card-body">
                                 <div class="row align-items-center">
@@ -340,7 +348,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> --}}
                     <div class="col-sm-6">
                         <div class="card">
                             <div class="card-body">

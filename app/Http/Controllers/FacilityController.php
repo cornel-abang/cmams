@@ -9,6 +9,7 @@ use App\CaseManager;
 use App\Coordinate;
 use Illuminate\Http\Request;
 use App\Imports\FacilitiesImport;
+use App\Imports\CoordinatesImport;
 use Maatwebsite\Excel\Facades\Excel;
 
 class FacilityController extends Controller
@@ -21,7 +22,7 @@ class FacilityController extends Controller
     public function index()
     {
         $title = 'Facilities';
-        $facilities = Facility::latest()->get();
+        $facilities = Facility::all();
         return view('facility.index', compact('title', 'facilities'));
     }
 
@@ -72,6 +73,13 @@ class FacilityController extends Controller
         //return $validator still, but without fail
         $msg = 'All facilities file successfully registered';
         return array($validator, $msg);
+    }
+
+    public function uploadCoords(Request $request)
+    {
+        $file = $request->file('bulk-coords');
+        Excel::import(new CoordinatesImport, $file);
+        return redirect(route('facilities'))->with('success', 'All Coordinates uploaded');
     }
 
     // upload single facility

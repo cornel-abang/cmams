@@ -13,7 +13,7 @@
                                 <thead>
                                     <tr>
                                         <th>Name</th>
-                                        <th>Facility</th>
+                                        {{-- <th>Facility</th> --}}
                                         <th class="text-right">Score</th>
                                     </tr>
                                 </thead>
@@ -22,15 +22,15 @@
                                             <tr>
                                                 <td>
                                                     <div class="d-inline-block align-middle">
-                                                        <img src="{{asset('/assets/images/uploads/'.$perfs['image'])}}" 
-                                                            alt="cm image" class="img-radius wid-40 align-top m-r-15">
+                                                       {{--  <img src="{{asset('/assets/images/uploads/'.$perfs['image'])}}" 
+                                                            alt="cm image" class="img-radius wid-40 align-top m-r-15"> --}}
                                                         <div class="d-inline-block">
                                                             <h6 class="leader-name">{{ $perfs['name'] }}</h6>
-                                                            <p class="text-muted m-b-0">{{ $perfs['clients'] }} client(s)</p>
+                                                            {{-- <p class="text-muted m-b-0">{{ $perfs['clients'] }} client(s)</p> --}}
                                                         </div>
                                                     </div>
                                                 </td>
-                                                <td>{{ $perfs['facility'] }}</td>
+                                                {{-- <td>{{ $perfs['facility'] }}</td> --}}
                                                 <td class="text-right">
                                                     @if( $perfs['performance'] > 69 )
                                                         <label class="badge-pill badge-success">{{ $perfs['performance'] }}</label></td>

@@ -1,7 +1,7 @@
 "use strict";
 	// Initialize fetch data and send to return a promise
 	const options = {method:"GET",headers:{'X-CSRF-TOKEN':page_data.csrf_token,'Content-Type':'application/json'}};
-	let url = page_data.routes.get_refill_data;
+	let url = page_data.routes.chart_data;
 	JSC.fetch(url,options)
 	.then(response => response.json())
 	.then(response => renderChart(response))
@@ -38,9 +38,9 @@
 		let refill_series = [];
 		let viral_load_series = [];
 		let att_series = [];
-		let ict_series = [];
 		let tpt_series = [];
-		let tracking_series = [];
+		// let ict_series = [];
+		// let tracking_series = [];
 		// Create attendance series
 		for( let i=0; i<data['attendance'].length; i++){
 			att_series.push({ x:days[i], y:data['attendance'][i] });
@@ -53,24 +53,24 @@
 		for( let i=0; i<data['viral_load'].length; i++){
 			viral_load_series.push({ x:days[i], y:data['viral_load'][i] });
 		}
-		// Create ict series
-		for( let i=0; i<data['ict'].length; i++){
-			ict_series.push({ x:days[i], y:data['ict'][i] });
-		}
 		// Create tpt series
 		for( let i=0; i<data['tpt'].length; i++){
 			tpt_series.push({ x:days[i], y:data['tpt'][i] });
 		}
-		// Create tracking series
-		for( let i=0; i<data['tracking'].length; i++){
-			tracking_series.push({ x:days[i], y:data['tracking'][i] });
-		}
+		// Create ict series
+		// for( let i=0; i<data['ict'].length; i++){
+		// 	ict_series.push({ x:days[i], y:data['ict'][i] });
+		// }
+		// // Create tracking series
+		// for( let i=0; i<data['tracking'].length; i++){
+		// 	tracking_series.push({ x:days[i], y:data['tracking'][i] });
+		// }
 		return [
 			{name: 'Attendance', points: att_series},
 			{name: 'Refill', points: refill_series},
 			{name: 'Viral Load', points: viral_load_series},
-			{name: 'ICT', points: ict_series},
 			{name: 'TPT', points: tpt_series},
-			{name: 'Tracking', points: tracking_series}
+			// {name: 'ICT', points: ict_series},
+			// {name: 'Tracking', points: tracking_series}
 		]
 	}
