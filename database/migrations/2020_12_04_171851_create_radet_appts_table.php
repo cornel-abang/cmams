@@ -18,7 +18,8 @@ class CreateRadetApptsTable extends Migration
             $table->string('appt_type');
             $table->string('client_hospital_num');
             $table->string('case_manager')->nullable();
-            $table->date('last_pickup_date');
+            $table->date('last_pickup_date')->nullable();
+            $table->date('last_vl_date')->nullable();
             $table->date('appt_date');
             $table->timestamps();
         });

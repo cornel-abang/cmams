@@ -214,13 +214,13 @@ function timeAgo($date)
     }
 }
 
-//get a specific case manager average weekly peformance
+//get a specific case manager average peformance
 function cm_performance($case_mg){
     $performances = $case_mg->performances()??0;
     $perf_arr = array_map(function($performances){
         return $performances['performance'];
     }, $performances->toArray());
-    return collect($perf_arr)->avg();
+    return ceil(collect($perf_arr)->avg());
 }
 
 function managersClients($manager)

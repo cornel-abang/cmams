@@ -8,6 +8,7 @@ use App\RadetAppt;
 use Carbon\Carbon;
 use App\CaseManager;
 use App\Result;
+use App\BeforeDue;
 
 class AppointmentController extends Controller
 {
@@ -15,7 +16,7 @@ class AppointmentController extends Controller
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
-     */
+     */  
     public function index()
     {
         $title = 'This week\'s case manager appointments';
@@ -30,7 +31,7 @@ class AppointmentController extends Controller
      */
     public function getAppointments()
     {
-        return RadetAppt::orderBy('appt_date','desc')->whereBetween('appt_date', 
+        return RadetAppt::orderBy('appt_date','asc')->whereBetween('appt_date', 
                         [
                             Carbon::now()->startOfWeek(), 
                             Carbon::now()->endOfWeek()
@@ -50,7 +51,7 @@ class AppointmentController extends Controller
     public function vlc()
     {
         $title = 'Viral Load Turnaround Time';
-        $vlcs = Result::orderBy('due_date','ASC')->whereBetween('due_date', 
+        $vlcs = Result::orderBy('due_date','asc')->whereBetween('due_date', 
                         [
                             Carbon::now()->startOfWeek(), 
                             Carbon::now()->endOfWeek()
@@ -95,7 +96,7 @@ class AppointmentController extends Controller
     /**
          * Verify that a case manager didnt miss her/her appointment due for 
          * the day a report was submitted
-         *
+         * 
          * @param  int  $id
          * @return \Illuminate\Http\Response
     */
@@ -116,9 +117,15 @@ class AppointmentController extends Controller
         return response()->json($appt_arr);
     }
 
-    public function show($id)
+    public function beforeDue()
     {
-        //
+        $title = 'Clients early to appointments';
+        $befores = BeforeDue::orderBy('due_date','ASC')->whereBetween('created_at', 
+                        [
+                            Carbon::now()->startOfWeek(), 
+                            Carbon::now()->endOfWeek()
+                        ])->get();
+        return view('appts.before_due', compact('title', 'befores'));
     }
 
     /**

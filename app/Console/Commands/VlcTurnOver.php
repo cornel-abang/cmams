@@ -39,27 +39,40 @@ class VlcTurnOver extends Command
      */
     public function handle()
     {
-        $results2Days = Result::whereDate('due_date', Carbon::now()->addDays(1))->get();
+        $results3Days = Result::whereDate('due_date', Carbon::now()->addDays(3))->get();
+        $results2Days = Result::whereDate('due_date', Carbon::now()->addDays(2))->get();
+        $results1Day = Result::whereDate('due_date', Carbon::now()->addDays(1))->get();
+
+        if (!$results3Days->isEmpty()) {
+            $this->sendDue($results3Days, 3);
+        }
+
         if (!$results2Days->isEmpty()) {
-            $this->sendTwoDaysDue($results2Days);
+            $this->sendDue($results2Days, 2);
+        }
+
+        if (!$results1Day->isEmpty()) {
+            $this->sendDue($results1Day, 1);
         }
     }
 
-    private function sendTwoDaysDue($results)
+    private function sendDue($results, $days)
     {
-        $date = Carbon::now()->addDays(2);
+        $date = Carbon::now()->addDays($days);
 
         $beautymail = app()->make(\Snowfire\Beautymail\Beautymail::class);
-        $beautymail->send('emails.due_vlc', ['data'=>$results, 'due_date'=>$date], function($message) use ($results)
+        $beautymail->send('emails.due_vlc', ['data'=>$results, 'due_date'=>$date, 'days'=>$days], function($message) use ($results)
         {
             $message
                 ->from('smtp@mailshunt.com','CMAMS - Fhi360')
-                ->to('shupel16@gmail.com')
-                ->cc('ekupnse16@gmail.com')
-                ->cc('pimohi@ahnigeria.org', 'Philip Imohi')
-                ->cc('IAbah@ahnigeria.org', 'Ikechukwuka Abah')
-                ->cc('bigmikeeneji@gmail.com', 'Michael Eneji')
-                ->subject('Viral Load Due Results Reminder');
+                ->to('ekupnse16@gmail.com')
+                // ->cc('pimohi@ahnigeria.org', 'Philip Imohi')
+                // ->cc('IAbah@ahnigeria.org', 'Ikechukwuka Abah')
+                // ->cc('bigmikeeneji@gmail.com', 'Michael Eneji')
+                // ->cc('feyam@ng.fhi360.org', 'Frank Eyam');
+                // ->cc('cobi@ahnigeria.org', 'Cajetan Obi');
+                // ->cc('oogieva@ahnigeria.org', 'Osasere Anika');
+                ->subject('VL Results TAT Reminder');
         });
         return true;
     }

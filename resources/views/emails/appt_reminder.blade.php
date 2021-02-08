@@ -2,16 +2,17 @@
 
 @section('content')
 @include('beautymail::templates.widgets.articleStart', ['color' => 'black'])
-<h1>Weekly client appointments reminder</h1>
-	This is a reminder of your appointments with clients that are due this week.<br> They are enumerated below:
+<h1>Pre-appointment Notice - Refill</h1><br>
+	Dear {{ $case_manager }},<br>
+	This is a reminder of your appointments with clients that are due for Refill in <strong>{{ $days }} Day{{ $days===1?'':'s' }} - {{ Carbon\Carbon::parse($date)->format('l jS \of F Y') }}</strong> <br> They are enumerated below:
 @include('beautymail::templates.widgets.articleEnd')
 
 @include('beautymail::templates.widgets.newfeatureStart', ['color'=>'#ffbf00'])
 <table class="table table-bordered table-striped">
-	@foreach($data['appts'] as $appt)
+	@foreach($data as $appt)
 		<tr>
-			<th>Client Name:</th>
-			 <td>{{ $appt->client->name }}</td>
+			<th>Client:</th>
+			 <td>{{ $appt->client_hospital_num }}</td>
 			</tr>
 			<hr>
 		<tr>
@@ -27,7 +28,8 @@
 		################
 	@endforeach
 </table>
-<p><b>Please endeavor to meet all your appointments as they will be checked on CMAMS when reporting on due date.</b></p>
+<p><b>Please endeavor to meet all your appointments as they will be checked on CMAMS (Case Manager Analysis & Monitoring System) when reporting on due date.</b></p><br/>
+<em style="font-weight: bold; font-size: 15px;">Have a wonderful day.</em>
 @include('beautymail::templates.widgets.newfeatureEnd')
 @stop
 

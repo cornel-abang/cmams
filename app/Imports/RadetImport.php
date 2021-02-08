@@ -34,16 +34,21 @@ class RadetImport implements ToModel, WithHeadingRow, WithBatchInserts, WithChun
             'art_status'            => $row['current_art_status'],
             'date_of_current_viral_load' => Carbon::parse($row['date_of_current_viral_load_yyyy_mm_dd']),
             'case_manager'         => $row['case_manager'],
+            'current_viral_load'   => $row['current_viral_load_cml'],
+            'regimen_at_art_start' => $row['regimen_at_art_start'],
+            'current_regimen'      => $row['current_art_regimen'],
+            'last_vl_result'       => Carbon::parse($row['date_of_vl_result_after_vl_sample_collection_yyyy_mm_dd']),
+            'created_at'           => '2021-01-26 08:47:30'
         ]);
     }
 
     public function batchSize(): int
     {
-        return 1000;
+        return 500;
     }
 
     public function chunkSize(): int
     {
-        return 1000;
+        return 500;
     }
 }

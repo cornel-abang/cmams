@@ -34,13 +34,13 @@
                                         <td>{{ $facility->name }}</td>
                                         <td>{{$facility->backstop}}</td>
                                         <td>
-                                            @if($facility->caseManagers->count() > 0)
+                                            @if($facility->caseManagers()->count() > 0)
                                                 <a href="{{route('view_case_managers',$facility->id)}}" data-toggle="tooltip" 
                                                     title="View case managers in {{$facility->name}}">
-                                                    {{$facility->caseManagers->count()}}
+                                                    {{$facility->caseManagers()->count()}}
                                                 </a>
                                             @else
-                                                {{$facility->caseManagers->count()}}
+                                                {{$facility->caseManagers()->count()}}
                                             @endif
                                         </td>
                                         <td>
@@ -107,11 +107,11 @@
                                         </tr>
                                         <tr>
                                             <th>No. of Case Managers</th>
-                                            <td>{{ $facility->caseManagers->count() }}</td>
+                                            <td>{{ $facility->caseManagers()->count() }}</td>
                                         </tr>
                                         <tr>
                                             <th>No. of Clients</th>
-                                            <td>0</td>
+                                            <td>{{$facility->clients()->count()}}</td>
                                         </tr>
                                     </table>
                                 </div>

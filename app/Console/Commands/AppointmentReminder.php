@@ -3,9 +3,10 @@
 namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
-use App\Appointment;
+use App\RadetAppt;
 use SmsTo;
 use Carbon\Carbon;
+use App\Manager;
 use App\Http\Controllers\AppointmentController as Appointments;
 
 class AppointmentReminder extends Command
@@ -41,35 +42,64 @@ class AppointmentReminder extends Command
      */
     public function handle()
     {
-      try {
-        $apt = new Appointments;
-        $appointments = $apt->getAppointments();
-        $appts = $appointments->groupBy('email');
-        foreach ($appts as $key => $value) {
-            $appt_data = [
-                            'email' => $key,
-                            'appts' => $value
-                        ];
-            $this->sendMailReminder($appt_data);
-            $this->sendSMSReminder($appt_data);
+        $appt3Days = RadetAppt::whereDate('appt_date', Carbon::now()->addDays(3))->get();
+        $appt2Days = RadetAppt::whereDate('appt_date', Carbon::now()->addDays(2))->get();
+        $appt1Day = RadetAppt::whereDate('appt_date', Carbon::now()->addDays(1))->get();
+
+        //3 days to
+        if (!$appt3Days->isEmpty()) {
+            $appts = $appt3Days->groupBy('case_manager');
+            foreach ($appts as $key => $value) {
+                $email = $this->getEmail($key);
+                if (empty($email)) {
+                    continue;
+                }
+                $this->sendMailReminder($value, 3, $email, $key);
+            }
         }
-        $this->info('Reminders sent!');
-      } catch (Exception $e) {
-          $this->info('Some went wrong: '.$e->getMessage());
-      }
+
+        //Two days to
+        if (!$appt2Days->isEmpty()) {
+            $appts = $appt2Days->groupBy('case_manager');
+            foreach ($appts as $key => $value) {
+                $email = $this->getEmail($key);
+                if (empty($email)) {
+                    continue;
+                }
+                $this->sendMailReminder($value, 2, $email, $key);
+            }
+        }
+
+        //1 day to
+        if (!$appt1Day->isEmpty()) {
+            $appts = $appt1Day->groupBy('case_manager');
+            foreach ($appts as $key => $value) {
+                $email = $this->getEmail($key);
+                if (empty($email)) {
+                    continue;
+                }
+                $this->sendMailReminder($value, 1, $email, $key);
+            }
+        }
     }
 
-     private function sendMailReminder($appt_data)
+    private function sendMailReminder($appt_data, $days, $email, $case_manager)
     {
+        $date = $appt_data[0]->created_at;
         $beautymail = app()->make(\Snowfire\Beautymail\Beautymail::class);
-        $beautymail->send('emails.appt_reminder', ['data'=>$appt_data], function($message) use ($appt_data)
+        $beautymail->send('emails.appt_reminder', ['data'=>$appt_data, 'days'=>$days, 'case_manager'=>$case_manager, 'date'=>$date], function($message) use ($email)
         {
             $message
-                ->from('info@cmams.com','FHI360 - Calabar Team')
-                ->to($appt_data['email'])
-                ->subject('Client appointment reminder');
+                ->from('smtp@mailshunt.com','CMAMS - Fhi360')
+                ->to($email)
+                ->subject('Pre-appointment Notice - Refill');
         });
         return true;
+    }
+
+    private function getEmail($case_manager)
+    {
+       return Manager::select('email')->where('case_manager', $case_manager)->pluck('email')->first();
     }
 
     private function sendSMSReminder($appt_data)

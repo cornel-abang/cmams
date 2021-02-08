@@ -2,8 +2,8 @@
 
 @section('content')
 @include('beautymail::templates.widgets.articleStart', ['color' => 'black'])
-<h1>Due Viral Load Results - <strong>(2-days)</strong></h1>
-	This is a reminder that the following clients, whose information appear below, have Viral Load Results due in <strong>2 Days</strong> <strong>({{ \Carbon\Carbon::parse($due_date)->format('l jS \of F Y') }})</strong>.<br> They are enumerated below:
+<h1>VL Results TAT Reminder - <strong>({{ $days }}-day{{ $days===1?'':'s' }})</strong></h1>
+	This is a reminder that the following client{{ $data->count()>1?'s':'' }}, whose information appear below, {{ $data->count()>1?'have':'has' }} Viral Load Result{{ $data->count()>1?'s':'' }} due in <strong>{{ $days }} Day{{ $days===1?'':'s' }}</strong> <strong>({{ \Carbon\Carbon::parse($due_date)->format('l jS \of F Y') }})</strong>.<br>Information enumerated below:
 @include('beautymail::templates.widgets.articleEnd')
 
 @include('beautymail::templates.widgets.newfeatureStart', ['color'=>'#ffbf00'])

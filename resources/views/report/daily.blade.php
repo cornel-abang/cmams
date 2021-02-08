@@ -276,7 +276,7 @@
                                         <tr>
                                             <th>Viral Load</th>
                                             <td>
-                                                {{-- {{ $report->indicators->vlc_met }} / {{ $report->indicators->vlc_exp }} --}}
+                                                {{ $report->indicators->vlc_met }} / {{ $report->indicators->vlc_exp }}
                                                 @if($report->indicators->vlc_exp >= 1)  
                                                     @if($report->indicators->vlc_pc > 69)
                                                         <span class="badge-pill badge-success">
@@ -288,16 +288,18 @@
                                                     @endif
                                                     {!! $report->indicators->vlc_pc !!}<code>%</code>
                                                     </span><br/>
-                                                    {!! $report->indicators->vlc_pc >= 90 ? '<span class="no-appt  la la-caret-up badge-pill badge-success"> Above the 90% VLC mark</span>':'<span class="badge-pill badge-danger la la-caret-down"> Below the 90% VLC mark</span>' !!}
-                                                @else
-                                                    <span class="badge-pill btn-primary badge-primary">Had no eligible clients on this day</span>
+                                                    {!! $report->indicators->vlc_pc >= 90 ? '<span class="no-appt la la-caret-up badge-pill badge-success"> Above the 90% VLC mark</span>':'<span class="badge-pill badge-danger la la-caret-down"> Below the 90% VLC mark</span>' !!}
+                                                {{-- @elseif($report->indicators->vlc_exp < 1)
+                                                    <span class="badge-pill btn-primary badge-primary">Had no eligible clients on this day</span> --}}
+                                                @elseif($report->indicators->vlc == 'No')
+                                                    <span class="badge-pill btn-primary badge-primary">No analysis day</span>
                                                 @endif
                                             </td>
                                         </tr>
                                         <tr>
                                             <th>TPT </th>
                                             <td>
-                                                {{-- {{ $report->indicators->tpt_met }} / {{ $report->indicators->tpt_exp }}   --}}
+                                                {{ $report->indicators->tpt_met }} / {{ $report->indicators->tpt_exp }}  
                                                 @if($report->indicators->tpt_pc > 69)
                                                     <span class="badge-pill badge-success">
                                                 @elseif($report->indicators->tpt_pc > 49 && 

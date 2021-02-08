@@ -19,6 +19,7 @@ class RadetIndicator extends Model
         'tpt_met',
         'tpt_pc',
         'attendance',
-        'case_manager'
+        'case_manager',
+        'created_at'
     ];
 }

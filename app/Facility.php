@@ -10,7 +10,7 @@ class Facility extends Model
 
     public function caseManagers()
     {
-    	return $this->hasMany(CaseManager::class);
+    	return Manager::where('facility', $this->name)->get();
     }
 
     public function clients()

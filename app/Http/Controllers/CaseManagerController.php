@@ -11,6 +11,7 @@ use App\Coordinate;
 use Carbon\Carbon;
 use PDF;
 use ZipArchive;
+use App\Permitted;
 use App\Imports\ManagerUpdateImport;
 use App\Imports\ManagersImport;
 use Maatwebsite\Excel\Facades\Excel;
@@ -32,25 +33,44 @@ class CaseManagerController extends Controller
         return view('case_manager.index', compact('title', 'case_managers','facilities'));
     }
 
-    public function timesheet()
+    public function timesheets()
     {
         $atts = $this->getMonthlyAtt();
         $cmAtts = $atts->groupBy('case_manager');
         $sheetsArr = [];
 
         foreach ($cmAtts as $key => $val) {
-            $output = PDF::loadView('case_manager.timesheet', ['atts'=>$val, 'names'=>$key])->setPaper("a4", "portrait")->output();
+            $output = PDF::loadView('case_manager.timesheets', ['atts'=>$val, 'names'=>$key])->setPaper("a4", "portrait")->output();
             
             file_put_contents($key.'_timesheet.pdf', $output);
             $sheetsArr[] = $key.'_timesheet.pdf';
-            // $title = $key.' work timesheet';
-            // $pdf = PDF::loadView('case_manager.timesheet', ['atts'=>$val, 'names'=>$key]);
-            // return $pdf->download($key.'_timesheet.pdf');
         }
-        // dd($sheetsArr);
 
         $month = $atts[0]->created_at->format('F Y');
         return $this->zip_n_Save($sheetsArr, $month);
+    }
+
+    public function timesheet($id)
+    {
+        $cm = Manager::find($id);
+        $times = $cm->timesheets();
+        if ($times->isEmpty()) {
+            session()->flash('error', 'No timesheet found for '.$cm->names.' this month.');
+            return redirect()->back();
+        }
+
+        $month = $times[0]->created_at->format('F Y');
+        $title = $cm->names.' '.$month.' work timesheet';
+        $pdf = new PDF;
+        $pdf = PDF::loadView('case_manager.timesheet', ['times'=>$times, 'names'=>$cm->names]);
+        return $pdf->download($cm->names.'_timesheet.pdf');
+    }
+
+    public function permittedList()
+    {
+        $p_lists = Permitted::all();
+        $title = 'List of permitted case managers';
+        return view('case_manager.permitted', compact('title', 'p_lists'));
     }
 
     // private function zip_n_Save(array $sheets, $month)

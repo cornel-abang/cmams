@@ -15,8 +15,8 @@ use App\RadetPerformance;
 class DashboardController extends Controller
 {
     public function index()
-    {
-        // dd(Carbon::today()->equalTo( Carbon::parse('2020-12-6')));
+    {   
+        // dd( Carbon::now()->diffInMonths(Carbon::parse('2020-12-01')) );
     	$title = 'FHI360 admin area';
     	$facilities 	= Facility::all();
     	$case_managers	= Manager::all();
@@ -147,6 +147,15 @@ class DashboardController extends Controller
 
     public function getChartData()
     {
+        //last week
+        // $lastWeek = Carbon::now()->startOfWeek()->subDays(7);
+        // $end = $lastWeek->addDays(7);
+
+        // $indicators = RadetDailyPerformance::whereBetween('created_at', [
+        //                     Carbon::now()->startOfWeek()->subDays(7), 
+        //                     Carbon::parse($end)
+        //                 ])->get();
+
         $indicators = RadetDailyPerformance::whereBetween('created_at', [
                             Carbon::now()->startOfWeek(), 
                             Carbon::now()->endOfWeek()

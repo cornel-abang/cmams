@@ -64,8 +64,12 @@ Route::group(['middleware'=>'auth:web'], function(){
 		Route::get('{id}/view_clients', 'CaseManagerController@viewClients')->name('view_clients_cm');
 		Route::any('search_client', 'CaseManagerController@search')->name('search_client');
 		Route::post('cm_uploads', 'CaseManagerController@managersUpload')->name('cm-upload');
-		Route::get('case_manager_attendance', 'CaseManagerController@allAttendance')->name('atts');
-		Route::get('timesheet','CaseManagerController@timesheet')->name('timesheets');
+
+		//Attendance
+		Route::get('attendance', 'CaseManagerController@allAttendance')->name('atts');
+		Route::get('permitted_list', 'CaseManagerController@permittedList')->name('permitted');
+		Route::get('timesheets','CaseManagerController@timesheets')->name('timesheets');
+		Route::get('timesheet/{id}','CaseManagerController@timesheet')->name('timesheet');
 	});
 
 	Route::group(['prefix'=>'clients'], function(){
@@ -107,6 +111,7 @@ Route::group(['middleware'=>'auth:web'], function(){
 		Route::get('/', 'AppointmentController@index')->name('appointments');
 		Route::get('verify_appt/{cm_id}', 'AppointmentController@verifyAppt')->name('verify_appt');
 		Route::get('vlc', 'AppointmentController@vlc')->name('vlc');
+		Route::get('before_due', 'AppointmentController@beforeDue')->name('before');
 	});
 
 	Route::group(['prefix' => 'radet_file'], function(){

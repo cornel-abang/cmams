@@ -13,7 +13,7 @@
                         <h5>{{ $title }}</h5>
                         <span class="d-block m-t-5">There are a total of <b><code>{{$atts->count()}}</code></b> attendance record(s) so far</span>
                         <button type="button" class="btn btn-info btn-sm add-btn" data-toggle="modal" data-target="#add-case-manager-form" onclick="window.location.href='{{ route('timesheets') }}'">
-                            <i class="la la-download"></i> Download Tmesheet</button>
+                            <i class="la la-cloud-download-alt"></i> Download Tmesheet</button>
                     </div>
                     <div class="card-body table-border-style">
                         <div class="table-responsive">

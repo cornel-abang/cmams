@@ -77,7 +77,7 @@
 					</li>
 					<li class="nav-item">
 					    <a href="{{route('upload.radet')}}" class="nav-link "><span class="pcoded-micon">
-					    	<i class="icofont icofont-file-alt"></i></span><span class="pcoded-mtext">Radet Report</span></a>
+					    	<i class="icofont icofont-file-alt"></i></span><span class="pcoded-mtext">Radet Import</span></a>
 					</li>
 
 					<li class="nav-item">
@@ -105,12 +105,21 @@
 					    <ul class="pcoded-submenu">
 					        <li><a href="{{route('add-appts')}}">Add</a></li>
 					        <li><a href="{{route('appointments')}}">View all </a></li>
+					        <li><a href="{{ route('before') }}">Before Due</a></li>
 					    </ul>
 					</li>
-					<li class="nav-item">
+					<li class="nav-item pcoded-hasmenu">
+					    <a href="#!" class="nav-link "><span class="pcoded-micon"><i class="fa fa-hospital-user"></i></span>
+					    	<span class="pcoded-mtext">Attendance</span></a>
+					    <ul class="pcoded-submenu">
+					        <li><a href="{{route('atts')}}">Today</a></li>
+					        <li><a href="{{route('permitted')}}">Permitted List </a></li>
+					    </ul>
+					</li>
+					{{-- <li class="nav-item">
 					    <a href="{{route('atts')}}" class="nav-link "><span class="pcoded-micon">
 					    	<i class="fa fa-hospital-user"></i></span><span class="pcoded-mtext">Attendance</span></a>
-					</li>
+					</li> --}}
 				</ul>
 			</div>
 		</div>

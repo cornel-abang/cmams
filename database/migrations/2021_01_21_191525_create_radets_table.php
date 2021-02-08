@@ -26,6 +26,10 @@ class CreateRadetsTable extends Migration
             $table->date('art_start_date')->nullable();
             $table->string('art_status')->nullable();
             $table->date('date_of_current_viral_load')->nullable();
+            $table->string('current_viral_load')->nullable();
+            $table->date('last_vl_result')->nullable();
+            $table->string('current_regimen')->nullable();
+            $table->string('regimen_at_art_start')->nullable();
             $table->string('case_manager')->nullable();
             $table->timestamps();
         });

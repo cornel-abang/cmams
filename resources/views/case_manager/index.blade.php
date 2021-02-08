@@ -126,7 +126,13 @@
                                         </tr>
                                         <tr>
                                             <th>Facility</th>
-                                            <td>{{ $case_mg->facility??'None' }}</td>
+                                            <td>
+                                                @if(strlen($case_mg->facility) >= 30)
+                                                    {!!substr($case_mg->facility,0,20).' <span style="color: #4680ff;">...</span> '.substr($case_mg->facility,-6)!!}
+                                                @else
+                                                    {{ $case_mg->facility??'None' }}
+                                                @endif
+                                            </td>
                                         </tr>
                                         <tr>
                                             <th>No. of Clients</th>
@@ -136,14 +142,14 @@
                                                     <span class="badge-pill badge-success">Active: {{ clientsAnalyzer($case_mg->names, 'Active') }}</span>
                                                     <br/>
                                                     <span class="badge-pill badge-info">Transferred Out: {{ clientsAnalyzer($case_mg->names, 'Transferred Out') }}</span><br/>
-                                                    <span class="badge-pill badge-secondary">LTFU: {{ clientsAnalyzer($case_mg->names, 'LTFU') }}</span><br/>
+                                                    <span class="badge-pill badge-secondary">IIT: {{ clientsAnalyzer($case_mg->names, 'LTFU') }}</span><br/>
                                                     <span class="badge-pill badge-warning">Stopped: {{ clientsAnalyzer($case_mg->names, 'Stopped') }}</span><br/>
                                                     <span class="badge-pill badge-danger">Dead: {{ clientsAnalyzer($case_mg->names, 'Dead') }}</span>
                                                 </div>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <th>Avg. Performamce</th>
+                                            <th>Avg. Performance</th>
                                             <td>{{ cm_performance($case_mg) }}%</td>
                                         </tr>
                                     </table>
@@ -170,7 +176,10 @@
                     {{-- <i class="la la-briefcase-medical"></i> --}}
                        {{--  <img class="img-radius case-mg-photo-view" src="{{asset('assets/images/uploads/'.$case_mg->profile_photo)}}" alt="User-Profile-Image"> --}}
                         <div class="user-details manager-name">
-                            <div id="more-details">{{$case_mg->names}} - Work Timesheet</div>
+                            <div id="more-details">{{$case_mg->names}}<br>
+                                <em style="font-size: 13px">Work Timesheet</em>
+                            </div>
+                            <button class="btn btn-info la la-cloud-download-alt" onclick="window.location.href='{{ route('timesheet', $case_mg->id) }}'"> Download</button>
                         </div>
                 </h3>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">

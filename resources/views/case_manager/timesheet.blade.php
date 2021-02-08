@@ -37,7 +37,7 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            @foreach($atts as $time)
+                                            @foreach($times as $time)
                                                 <tr>
                                                     <td>{{ $time->created_at->format('l jS \of F Y') }}</td>
                                                     <td>

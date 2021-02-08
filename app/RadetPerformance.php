@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class RadetPerformance extends Model
 {
-    protected $fillable = ['case_manager', 'performance'];
+    protected $fillable = ['case_manager', 'performance', 'created_at'];
 
     public function indicators()
     {
