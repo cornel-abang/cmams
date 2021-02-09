@@ -26,7 +26,7 @@
                                         <th>Case Manager</th>
                                         <th>Client</th>
                                         <th>Type</th>
-                                        <th>Action</th>
+                                        {{-- <th>Action</th> --}}
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -36,7 +36,7 @@
                                         <td>{{ $appt->case_manager }}</td>
                                         <td>{{ $appt->client_hospital_num }}</td>
                                         <td>{!! ucfirst($appt->appt_type) !!}</td>
-                                        <td>
+                                        {{-- <td>
                                             <div class="row">
                                                 <div class="col-md-4">
                                                     <span data-toggle="modal" data-target="#appt{{$appt->id}}">
@@ -46,7 +46,7 @@
                                                     </span>
                                                 </div>
                                             </div>
-                                        </td>
+                                        </td> --}}
                                     </tr>
                                     @endforeach
                                 </tbody>

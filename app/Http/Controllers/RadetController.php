@@ -53,7 +53,7 @@ class RadetController extends Controller
 
     public function getTodaysRadet()
     {
-        return Radet::whereDate('created_at', Carbon::parse('2021-01-26 08:47:30'))->get();
+        return Radet::whereDate('created_at', Carbon::parse('2021-02-02 9:15:17'))->get();
     }
 
     public function saveAppointments($todays_radet)
@@ -63,7 +63,7 @@ class RadetController extends Controller
 
             if (!empty($appt->last_pickup_date)) {
                 //save refill appointments
-                if ( Carbon::parse($appt->last_pickup_date)->equalTo( Carbon::parse('2021-01-26') ) ) {
+                if ( Carbon::parse($appt->last_pickup_date)->equalTo( Carbon::parse('2021-02-02') ) ) {
                     $new_appt = new RadetAppt;
                     $new_appt->appt_type            = 'Refill';
                     $new_appt->client_hospital_num  = $appt->client_hospital_num;
@@ -76,7 +76,7 @@ class RadetController extends Controller
 
             // save VL expected VL Results
             if (!empty($appt->date_of_viral_load)) {
-                if ( Carbon::parse($appt->date_of_viral_load)->equalTo( Carbon::parse('2021-01-26') ) ) {
+                if ( Carbon::parse($appt->date_of_viral_load)->equalTo( Carbon::parse('2021-02-02') ) ) {
                     //save result exp date
                     $result = new Result;
                     $result->due_date = Carbon::parse($appt->date_of_viral_load)->addDays(14);
@@ -86,16 +86,14 @@ class RadetController extends Controller
                     $result->save();
                 }
 
-                //check for expected results that have returned
+                // check for expected results that have returned
                 $this->checkVlResult($appt);
             }
 
-            // if (Carbon::parse($appt->art_start_date)->greaterThanOrEqualTo( Carbon::parse('2020-01-01') )) {
-            //     if (!empty($appt->date_of_viral_load)) {
-            //         $this->setVLCAppt($appt);
-            //         $this->checkVlResult($appt);
-            //     }
-            // } 
+            // if (!empty($appt->date_of_viral_load)) {
+            //     $this->setVLCAppt($appt);
+            //     $this->checkVlResult($appt);
+            // }
     	}
 
         //alert all EAC Stakeholders
@@ -173,7 +171,7 @@ class RadetController extends Controller
 			    			//get the cm's appts
 			    			$matchThese = ['case_manager' => $key, 'appt_type' => 'Refill'];
 
-			    			$appts = RadetAppt::whereDate('appt_date', Carbon::parse('2021-01-26'))
+			    			$appts = RadetAppt::whereDate('appt_date', Carbon::parse('2021-02-02'))
 			    							->where($matchThese)
 			    							->get();
 			    			
@@ -185,30 +183,36 @@ class RadetController extends Controller
 			    			//check thier current refill data (last pickup) from the radet data
 			    			foreach ($appts as $appt) {
 			    				//get that client instance from today's radet data
-			    			 	$client = Radet::whereDate('created_at', Carbon::parse('2021-01-26 08:47:30'))
+			    			 	$client = Radet::whereDate('created_at', Carbon::parse('2021-02-02 9:15:17'))
 			    			 					->where('client_hospital_num', $appt->client_hospital_num)
 			    			 					->first();
-			    			 	if (Carbon::parse($client->last_pickup_date)->greaterThan(Carbon::parse($appt->last_pickup_date)) ) {
-                                    // && Carbon::parse($client->last_pickup_date)->lessThanOrEqualTo(Carbon::parse($appt->appt_date))
-			    			 		array_push($points, 1);
 
-                                    // save before due date appointments
-                                    if (Carbon::parse($client->last_pickup_date)->lessThan(Carbon::parse($appt->appt_date))) {
-                                        $before = new BeforeDue;
-                                        $before->client         = $appt->client_hospital_num;
-                                        $before->case_manager   = $key;
-                                        $before->facility       = $client->facility;
-                                        $before->due_date       = Carbon::parse($appt->appt_date);
-                                        $before->returned_date  = Carbon::parse($client->last_pickup_date);
-                                        $before->save();
+                                //if client stil exist
+			    			 	if ($client) {
+                                    if (Carbon::parse($client->last_pickup_date)->greaterThan(Carbon::parse($appt->last_pickup_date)) ) {
+                                        // && Carbon::parse($client->last_pickup_date)->lessThanOrEqualTo(Carbon::parse($appt->appt_date))
+                                        array_push($points, 1);
+
+                                        // save before due date appointments
+                                        if (Carbon::parse($client->last_pickup_date)->lessThan(Carbon::parse($appt->appt_date))) {
+                                            $before = new BeforeDue;
+                                            $before->client         = $appt->client_hospital_num;
+                                            $before->case_manager   = $key;
+                                            $before->facility       = $client->facility;
+                                            $before->due_date       = Carbon::parse($appt->appt_date);
+                                            $before->returned_date  = Carbon::parse($client->last_pickup_date);
+                                            $before->save();
+                                        }
+
+                                        $this->saveNextRefillAppt($key, $appt->client_hospital_num, $client->last_pickup_date, $client->months_of_refil);
+                                        //increment the met appts
+                                        $appts_met++;
+                                    }else{
+                                        array_push($points, 0);
                                     }
-
-                                    $this->saveNextRefillAppt($key, $appt->client_hospital_num, $client->last_pickup_date, $client->months_of_refil);
-                                    //increment the met appts
-                                    $appts_met++;
-			    			 	}else{
-			    			 		array_push($points, 0);
-			    			 	}
+                                }else{
+                                    array_push($points, 0);
+                                }
 			    			}
 
                             //add met appt count to array
@@ -236,7 +240,7 @@ class RadetController extends Controller
 			    			//get the cm's appts
 			    			$matchThese = ['case_manager' => $key, 'appt_type' => 'VL Sample Collection'];
 
-			    			$appts = RadetAppt::whereDate('appt_date', Carbon::parse('2021-01-26'))
+			    			$appts = RadetAppt::whereDate('appt_date', Carbon::parse('2021-02-02'))
 			    							->where($matchThese)
 			    							->get();
 
@@ -247,7 +251,7 @@ class RadetController extends Controller
 			    			//check thier current refill data (last pickup) from the radet data
 			    			foreach ($appts as $appt) {
 			    				//get that client instance from today's radet data
-			    			 	$client = Radet::whereDate('created_at', Carbon::parse('2021-01-26 08:47:30'))
+			    			 	$client = Radet::whereDate('created_at', Carbon::parse('2021-02-02 9:15:17'))
 			    			 					->where('client_hospital_num', $appt->client_hospital_num)
 			    			 					->first();
 
@@ -308,7 +312,7 @@ class RadetController extends Controller
 			    		RadetPerformance::create([
 			    			'case_manager' => $key,
 			    			'performance'  => $avg,
-                            'created_at'   => '2021-01-26 08:47:30'
+                            'created_at'   => '2021-02-02 9:15:17'
 			    		]);
 			    		
                         //build array to hold indicator performances
@@ -326,7 +330,7 @@ class RadetController extends Controller
                             'tpt_pc'       => $tpt_avg,
                             'attendance'   => $indicators['attendance'],
                             'case_manager' => $key,
-                            'created_at'   => '2021-01-26 08:47:30'
+                            'created_at'   => '2021-02-02 9:15:17'
                         ];
                         //save Radet Indicator performances 
                         RadetIndicator::create($indcArr);
@@ -359,7 +363,7 @@ class RadetController extends Controller
     	$daily_perf->viral_load_performance = $daily_vl_avg;
         $daily_perf->tpt_performance = $daily_tpt_avg;
     	$daily_perf->attendance_performance = $this->getDailyAtt();
-        $daily_perf->created_at = '2021-01-26 08:47:30';
+        $daily_perf->created_at = '2021-02-02 9:15:17';
     	$daily_perf->save();
 
     	session()->flash('success','Performance evaluation done!');
@@ -382,7 +386,7 @@ class RadetController extends Controller
     	$has_appt = false;
     	$matchThese = ['case_manager'=>$case_manager, 'appt_type'=> 'Refill'];
 
-    	$cm_appts = RadetAppt::whereDate('appt_date', Carbon::parse('2021-01-26'))
+    	$cm_appts = RadetAppt::whereDate('appt_date', Carbon::parse('2021-02-02'))
     							->where($matchThese)
     							->get();
                                 
@@ -398,7 +402,7 @@ class RadetController extends Controller
     	$has_appt = false;
     	$matchThese = ['case_manager'=>$case_manager, 'appt_type'=> 'VL Sample Collection'];
 
-    	$cm_appts = RadetAppt::whereDate('appt_date', Carbon::parse('2021-01-26'))
+    	$cm_appts = RadetAppt::whereDate('appt_date', Carbon::parse('2021-02-02'))
     							->where($matchThese)
     							->get();
 
@@ -431,7 +435,7 @@ class RadetController extends Controller
 
         // get total active clients 
         // get case_manager's clients
-        $clientsCount = Radet::whereDate('created_at', Carbon::parse('2021-01-26 08:47:30'))
+        $clientsCount = Radet::whereDate('created_at', Carbon::parse('2021-02-02 9:15:17'))
                         ->where('case_manager', $case_manager)
                         ->where(function($q){
                             $q->where('art_status', 'Active')
@@ -443,7 +447,7 @@ class RadetController extends Controller
             return array(0,0,0);
         }
 
-        $clientsTptCount = Radet::whereDate('created_at', Carbon::parse('2021-01-26 08:47:30'))
+        $clientsTptCount = Radet::whereDate('created_at', Carbon::parse('2021-02-02 9:15:17'))
                         ->where('case_manager', $case_manager)
                         ->where('tpt_in_the_last_2_years', 'Yes')
                         ->where(function($q){
@@ -526,7 +530,7 @@ class RadetController extends Controller
             }
         //save new vl client
         }else{
-            if (Carbon::parse($radet->art_start_date)->equalTo(Carbon::parse('2020-01-26'))) {
+            // if (Carbon::parse($radet->art_start_date)->equalTo(Carbon::parse('2020-01-25'))) {
                 $dateDiff = Carbon::now()->diffInMonths(Carbon::parse($radet->art_start_date));
 
                 if ( $dateDiff >= 12 ){
@@ -547,7 +551,7 @@ class RadetController extends Controller
                         $this->moveToGroup($radet, 'new_non_tld_client', 6);
                     }
                 }
-            }
+            // }
         }
 
         return true;
@@ -801,6 +805,8 @@ class RadetController extends Controller
         $eac_client = new EACList;
         $eac_client->client             = $vlc_client->client;
         $eac_client->current_viral_load = $vlc_client->current_vl;
+        $eac_client->art_start_date     = Carbon::parse($vlc_client->art_start_date);
+        $eac_client->last_vl_result     = Carbon::parse($vlc_client->last_vl_result);
         $eac_client->case_manager       = $vlc_client->case_manager;
         $eac_client->facility           = $vlc_client->facility;
         $eac_client->save();
@@ -860,7 +866,7 @@ class RadetController extends Controller
 
             //send to other stakeholders
             $beautymail = app()->make(\Snowfire\Beautymail\Beautymail::class);
-            $beautymail->send('emails.gen_eac_alert', ['data'=>$todaysEAC], function($message) use ($email)
+            $beautymail->send('emails.gen_eac_alert', ['data'=>$todaysEAC], function($message)
             {
                 $message
                     ->from('smtp@mailshunt.com','CMAMS - Fhi360')
@@ -877,7 +883,7 @@ class RadetController extends Controller
             $case_manager = Manager::where('names', $key)->first();
             if ($case_manager) {
                 $beautymail = app()->make(\Snowfire\Beautymail\Beautymail::class);
-                $beautymail->send('emails.cm_eac_alert', ['data'=>$value], function($message) use ($case_manager)
+                $beautymail->send('emails.cm_eac_alert', ['case_manager'=>$key,'data'=>$value], function($message) use ($case_manager)
                 {
                     $message
                         ->from('smtp@mailshunt.com','CMAMS - Fhi360')
@@ -896,15 +902,15 @@ class RadetController extends Controller
         $matchRestart = ['case_manager' => $case_manager, 'art_status' => 'Active-Restart'];
         $matchIn =       ['case_manager' => $case_manager, 'art_status' => 'Active-Transfer In'];
         // get case_manager's clients
-        $active = Radet::whereDate('created_at', Carbon::parse('2021-01-26 08:47:30'))
+        $active = Radet::whereDate('created_at', Carbon::parse('2021-02-02 9:15:17'))
                         ->where($matchActive) 
                         ->count();
 
-        $activeR = Radet::whereDate('created_at', Carbon::parse('2021-01-26 08:47:30'))
+        $activeR = Radet::whereDate('created_at', Carbon::parse('2021-02-02 9:15:17'))
                         ->where($matchRestart) 
                         ->count();
 
-        $activeTI = Radet::whereDate('created_at', Carbon::parse('2021-01-26 08:47:30'))
+        $activeTI = Radet::whereDate('created_at', Carbon::parse('2021-02-02 9:15:17'))
                         ->where($matchIn) 
                         ->count();
 

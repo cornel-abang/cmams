@@ -291,23 +291,31 @@ class CaseManagerController extends Controller
         //     session()->flash('location', $request->location);
         //     return redirect()->back();
         // }
-        $image = $request->cm_img;  // your base64 encoded
+        $image = $request->cm_img;  // base64 encoded
         $image = str_replace('data:image/png;base64,', '', $image);
         $image = str_replace(' ', '+', $image);
         $imageName = time(). '.png';
 
-        Storage::disk('public')->put($imageName, base64_decode($image));
+        // Storage::disk('public')->put($imageName, base64_decode($image));
+    
+        $storagePath = public_path('/assets/images/uploads/attendance/'.$imageName);
+        file_put_contents($storagePath, base64_decode($image));
 
         $title = 'att_'.$request->case_manager.'_'.Carbon::now()->toDateString();
 
         $checkedIn = Attendance::where('title',$title)->first();
 
-        if ($checkedIn) {
-            $checkedIn->checkoutTime = Carbon::now();
+        if ($checkedIn && Carbon::parse($checkedIn->checkoutTime)->equalTo(Carbon::parse($checkedIn->checkInTime))) {
+            $checkedIn->checkoutTime = Carbon::now()->setTimezone('WAT');
             $checkedIn->checkOutImg = $imageName;
             $checkedIn->save();
 
-            session()->flash('checked_out',true);
+            session()->flash('case_manager', $request->case_manager);
+            session()->flash('checked_out', true);
+            return redirect()->back();
+        }elseif ($checkedIn && Carbon::parse($checkedIn->checkoutTime)->greaterThan(Carbon::parse($checkedIn->checkInTime))) {
+            session()->flash('case_manager', $request->case_manager);
+            session()->flash('checked_twice', true);
             return redirect()->back();
         }
         
@@ -317,9 +325,14 @@ class CaseManagerController extends Controller
         $att->facility = $request->facility;
         $att->coordinates  = $request->longitude.', '.$request->latitude;
         $att->checkInImg = $imageName;
-        $att->checkInTime = Carbon::now();
+        $att->checkInTime = Carbon::now()->setTimezone('WAT');
         $att->save();
 
+        //save checkout time to be equal to checkin time for validation puposes
+        $att->checkoutTime = Carbon::parse($att->checkInTime);
+        $att->save();
+
+        session()->flash('case_manager', $request->case_manager);
         session()->flash('checked_in', true);
         return redirect()->back();
         // $data->photo_name = $photo_name;

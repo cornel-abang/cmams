@@ -37,7 +37,9 @@ if ( ! function_exists('pageJsonData')){
             'attendance_not_verified'     => session('attendance_not_verified'),
             'location'                    => session('location'),
             'checked_in'                  => session('checked_in'),
-            'checked_out'                 => session('checked_out')
+            'checked_out'                 => session('checked_out'),
+            'case_manager'                => session('case_manager'),
+            'checked_twice'               => session('checked_twice')
         ];
 
         $routeLists = \Illuminate\Support\Facades\Route::getRoutes();

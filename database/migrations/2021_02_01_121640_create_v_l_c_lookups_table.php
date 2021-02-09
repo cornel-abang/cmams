@@ -27,7 +27,7 @@ class CreateVLCLookupsTable extends Migration
             $table->date('last_vlc_date')->nullable();
             $table->string('result_status')->nullable();
             $table->string('case_manager')->nullable();
-            $table->string('facility');
+            $table->string('facility')->nullable();
             $table->timestamps();
         });
     }

@@ -4,7 +4,7 @@
 @include('beautymail::templates.widgets.articleStart', ['color' => 'black'])
 <h1>Pre-appointment Notice - Refill</h1><br>
 	Dear {{ $case_manager }},<br>
-	This is a reminder of your appointments with clients that are due for Refill in <strong>{{ $days }} Day{{ $days===1?'':'s' }} - {{ Carbon\Carbon::parse($date)->format('l jS \of F Y') }}</strong> <br> They are enumerated below:
+	This is a reminder of your appointments with clients due in <strong>{{ $days }} Day{{ $days===1?'':'s' }} - {{ Carbon\Carbon::parse($date)->format('l jS \of F Y') }}</strong> <br> They are enumerated below:
 @include('beautymail::templates.widgets.articleEnd')
 
 @include('beautymail::templates.widgets.newfeatureStart', ['color'=>'#ffbf00'])

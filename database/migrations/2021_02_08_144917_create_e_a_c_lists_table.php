@@ -16,9 +16,11 @@ class CreateEACListsTable extends Migration
         Schema::create('e_a_c_lists', function (Blueprint $table) {
             $table->id();
             $table->string('client');
-            $table->integer('current_viral_load');
-            $table->string('case_manager');
-            $table->string('facility');
+            $table->integer('current_viral_load')->nullable();
+            $table->string('case_manager')->nullable();
+            $table->date('art_start_date');
+            $table->date('last_vl_result');
+            $table->string('facility')->nullable();
             $table->timestamps();
         });
     }

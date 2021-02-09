@@ -27,6 +27,7 @@ class Kernel extends ConsoleKernel
         $schedule->command('remind:case_managers')->daily();
         $schedule->commands('vlc:email')->daily();
         $schedule->commands('remind:weekly')->weeklyOn(1, '07:00');//mondays at 7am
+        $schedule->commands('eac:alert')->daily();
     }
 
     /**

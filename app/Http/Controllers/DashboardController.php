@@ -16,7 +16,7 @@ class DashboardController extends Controller
 {
     public function index()
     {   
-        // dd( Carbon::now()->diffInMonths(Carbon::parse('2020-12-01')) );
+        // dd(Carbon::now()->setTimezone('WAT')->format('g:i A'));
     	$title = 'FHI360 admin area';
     	$facilities 	= Facility::all();
     	$case_managers	= Manager::all();

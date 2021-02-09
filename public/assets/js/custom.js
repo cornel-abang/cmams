@@ -13,15 +13,19 @@
     }
 
     if (page_data.attendance_not_verified) {
-      Swal.fire("Not verified!", "You are not close enough to the facility.", "error");
+      Swal.fire('Not verified!', 'You are not close enough to the facility.', 'error');
     }
 
     if (page_data.checked_in) {
-      Swal.fire('Checked In!', 'You have successfully checked in', 'success');
+      Swal.fire('Checked In!', page_data.case_manager+' has successfully checked in', 'success');
     }
 
     if (page_data.checked_out) {
-      Swal.fire('Checked Out!', 'You have successfully checked out.', 'success');
+      Swal.fire('Checked Out!', page_data.case_manager+' has successfully checked out.', 'success');
+    }
+
+    if (page_data.checked_twice) {
+      Swal.fire('Already Checked Out!', page_data.case_manager+' has already checked out today.', 'error');
     }
 
     if (page_data.report_valid_fail) {
@@ -718,4 +722,16 @@
       $(".single-upload").fadeIn(500);
     });
   }
+
+  $(document).on("click", "#attImg", function () {
+    let img = $(this).data("img");
+    let case_manager_name = $(this).data("cm");
+    let displayModal = $("#att_img_area");
+    let displayArea = $("#att_img_tag");
+    let time = $(this).data('time');
+    $("#cm_name").text(case_manager_name);
+    $(displayArea).attr("src", img);
+    $("#timestamp").text(time);
+    $(displayModal).modal("show");
+  });
 })(jQuery);
