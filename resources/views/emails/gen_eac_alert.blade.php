@@ -9,6 +9,30 @@
 
 @include('beautymail::templates.widgets.newfeatureStart', ['color'=>'#ffbf00'])
 <table class="table table-bordered table-striped">
+	{{-- <thead>
+		<tr>
+			<th>Client</th>
+			<th>Current VL</th>
+			<th>Result Return Date</th>
+			<td>First EAC Session</td>
+			<td>Second EAC Session</td>
+			<td>Next Sample Collection</td>
+			<td>Case Manager</td>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach($data as $appt)
+		<tr>
+			<td>{{ $appt->client }}</td>
+			<td>{{ $appt->current_viral_load }}</td>
+			<td>{{ Carbon\Carbon::parse($appt->last_vl_result)->format('l jS \of F Y') }}</td>
+			<td>{{ Carbon\Carbon::parse($appt->last_vl_result)->addMonths(1)->format('l jS \of F Y') }}</td>
+			<td>{{ Carbon\Carbon::parse($appt->last_vl_result)->addMonths(2)->format('l jS \of F Y') }}</td>
+			<td>{{ Carbon\Carbon::parse($appt->last_vl_result)->addMonths(3)->format('l jS \of F Y') }}</td>
+			<td>{{ $appt->case_manager }}</td>
+		</tr>
+		@endforeach
+	</tbody> --}}
 	@foreach($data as $appt)
 		<tr>
 			<th>Client:</th>
@@ -18,7 +42,6 @@
 			<th>Current Viral Load:</th>
 			<td>{{ $appt->current_viral_load }}</td>
 		</tr>
-		<hr>
 		<tr>
 			<th>Result Return Date:</th>
 			<td>{{ Carbon\Carbon::parse($appt->last_vl_result)->format('l jS \of F Y') }}</td>

@@ -39,9 +39,9 @@ class VlcTurnOver extends Command
      */
     public function handle()
     {
-        $results3Days = Result::whereDate('due_date', Carbon::now()->addDays(3))->get();
-        $results2Days = Result::whereDate('due_date', Carbon::now()->addDays(2))->get();
-        $results1Day = Result::whereDate('due_date', Carbon::now()->addDays(1))->get();
+        $results3Days = Result::whereDate('due_date', Carbon::now()->addDays(3))->limit(3)->get();
+        $results2Days = Result::whereDate('due_date', Carbon::now()->addDays(2))->limit(3)->get();
+        $results1Day = Result::whereDate('due_date', Carbon::now()->addDays(1))->limit(3)->get();
 
         if (!$results3Days->isEmpty()) {
             $this->sendDue($results3Days, 3);
@@ -64,14 +64,17 @@ class VlcTurnOver extends Command
         $beautymail->send('emails.due_vlc', ['data'=>$results, 'due_date'=>$date, 'days'=>$days], function($message) use ($results)
         {
             $message
-                ->from('smtp@mailshunt.com','CMAMS - Fhi360')
-                ->to('ekupnse16@gmail.com')
-                // ->cc('pimohi@ahnigeria.org', 'Philip Imohi')
-                // ->cc('IAbah@ahnigeria.org', 'Ikechukwuka Abah')
-                // ->cc('bigmikeeneji@gmail.com', 'Michael Eneji')
-                // ->cc('feyam@ng.fhi360.org', 'Frank Eyam');
-                // ->cc('cobi@ahnigeria.org', 'Cajetan Obi');
-                // ->cc('oogieva@ahnigeria.org', 'Osasere Anika');
+                ->from('smtp@mailshunt.com','Q-MAMS - Fhi360')
+                ->to('ekupnse16@gmail.com', 'Ekupnse Cornelius')
+                ->cc('pimohi@ahnigeria.org', 'Philip Imohi')
+                ->cc('IAbah@ahnigeria.org', 'Ikechukwuka Abah')
+                ->cc('bigmikeeneji@gmail.com', 'Michael Eneji')
+                ->cc('osanwo@fhi360.org')
+                ->cc('spandey@fhi360.org')
+                ->cc('cobiora-okafo@fhi360.org')
+                ->cc('feyam@ng.fhi360.org', 'Frank Eyam')
+                ->cc('cobi@ahnigeria.org', 'Cajetan Obi')
+                ->cc('oogieva@ahnigeria.org', 'Osasere Anika')
                 ->subject('VL Results TAT Reminder');
         });
         return true;

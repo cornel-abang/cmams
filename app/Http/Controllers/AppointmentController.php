@@ -120,7 +120,7 @@ class AppointmentController extends Controller
     public function beforeDue()
     {
         $title = 'Clients early to appointments';
-        $befores = BeforeDue::orderBy('due_date','ASC')->whereBetween('created_at', 
+        $befores = BeforeDue::orderBy('due_date','asc')->whereBetween('due_date', 
                         [
                             Carbon::now()->startOfWeek(), 
                             Carbon::now()->endOfWeek()

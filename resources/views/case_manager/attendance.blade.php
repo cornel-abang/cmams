@@ -51,7 +51,7 @@
                                                 </button>
                                             </span>  
                                             @if(\Carbon\Carbon::parse($att->checkoutTime)->greaterThan($att->checkInTime))
-                                                <span id="attImg" data-img="{{ asset('assets/images/uploads/attendance/'.$att->checkOutImg) }}" data-cm="{{ $att->case_manager }}" data-time={{ \Carbon\Carbon::parse($att->checkoutTime)->format('l jS \of F Y \@ g:i A') }}>
+                                                <span id="attImg" data-img="{{ asset('assets/images/uploads/attendance/'.$att->checkOutImg) }}" data-cm="{{ $att->case_manager }}" data-time="{{ \Carbon\Carbon::parse($att->checkoutTime)->format('l jS \of F Y \@ g:i A') }}">
                                                     <button type="button" class="btn btn-warning btn-sm" data-toggle="tooltip" data-placement="top" title="View checkout image">
                                                         <i class="la la-eye"></i>
                                                     </button>

@@ -2,7 +2,7 @@
 
 @section('content')
 @include('beautymail::templates.widgets.articleStart', ['color' => 'black'])
-<h1>Pre-appointment Notice - Refill</h1><br>
+<h1>Pre-appointment Notice</h1><br>
 	Dear {{ $case_manager }},<br>
 	This is a reminder of your appointments with clients due in <strong>{{ $days }} Day{{ $days===1?'':'s' }} - {{ Carbon\Carbon::parse($date)->format('l jS \of F Y') }}</strong> <br> They are enumerated below:
 @include('beautymail::templates.widgets.articleEnd')
@@ -17,7 +17,7 @@
 			<hr>
 		<tr>
 			<th>Appointment Type:</th>
-			<td>{{ ucfirst($appt->type) }}</td>
+			<td>{{ ucfirst($appt->appt_type) }}</td>
 		</tr>
 		<hr>
 		<tr>
@@ -28,7 +28,7 @@
 		################
 	@endforeach
 </table>
-<p><b>Please endeavor to meet all your appointments as they will be checked on CMAMS (Case Manager Analysis & Monitoring System) when reporting on due date.</b></p><br/>
+<p><b>Please endeavor to meet all your appointments as they will be checked on Q-MAMS (Quality Management & Accountability Monitoring System) when reporting on due date.</b></p><br/>
 <em style="font-weight: bold; font-size: 15px;">Have a wonderful day.</em>
 @include('beautymail::templates.widgets.newfeatureEnd')
 @stop

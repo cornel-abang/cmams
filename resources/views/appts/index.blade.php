@@ -36,17 +36,6 @@
                                         <td>{{ $appt->case_manager }}</td>
                                         <td>{{ $appt->client_hospital_num }}</td>
                                         <td>{!! ucfirst($appt->appt_type) !!}</td>
-                                        {{-- <td>
-                                            <div class="row">
-                                                <div class="col-md-4">
-                                                    <span data-toggle="modal" data-target="#appt{{$appt->id}}">
-                                                        <button type="button" class="btn btn-primary btn-sm" data-toggle="tooltip" data-placement="top" title="View appointment summary">
-                                                            <i class="la la-eye"></i>
-                                                        </button>
-                                                    </span>
-                                                </div>
-                                            </div>
-                                        </td> --}}
                                     </tr>
                                     @endforeach
                                 </tbody>
@@ -56,54 +45,6 @@
                     </div>
                 </div>
             </div>
-
-            {{-- View Facility Modal --}}
-        {{-- @foreach($appointments as $appt)
-        <div class="modal fade" id="appt{{$appt->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-          <div class="modal-dialog" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h4 class="modal-title" id="exampleModalLabel">
-                    <i class="la la-calendar-check-o"></i> {{ ucfirst($appt->type) }} appointment 
-                </h4>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div class="modal-body">
-                <div class="row">
-                        <div class="col-md-12">
-                            <div class="card">
-                                <div class="card-body">
-                                    <table class="table table-bordered table-striped">
-                                        <tr>
-                                            <th>Appointment Date:</th>
-                                            <td>{{ Carbon\Carbon::parse($appt->appt_date)->format('l jS \of F Y') }}</td>
-                                        </tr>
-                                        <tr>
-                                            <th>Case Manager involved:</th>
-                                            <td>{{ $appt->caseManager->name }}</td>
-                                        </tr>
-                                        <tr>
-                                            <th>Client involved:</th>
-                                            <td>
-                                                {{ $appt->client->name }} 
-                                                <span class="badge-pill badge-info">{{ $appt->client->status }}</span>
-                                            </td>
-                                        </tr>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-              </div>
-              {{-- <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              </div>
-            </div>
-          </div>
-        </div>
-        @endforeach --}} 
     </div>
 
     @endsection

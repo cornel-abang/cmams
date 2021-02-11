@@ -3,7 +3,7 @@
 @section('content')
 @include('beautymail::templates.widgets.articleStart', ['color' => 'black'])
 <h1>VL Results TAT Reminder - <strong>({{ $days }}-day{{ $days===1?'':'s' }})</strong></h1>
-	This is a reminder that the following client{{ $data->count()>1?'s':'' }}, whose information appear below, {{ $data->count()>1?'have':'has' }} Viral Load Result{{ $data->count()>1?'s':'' }} due in <strong>{{ $days }} Day{{ $days===1?'':'s' }}</strong> <strong>({{ \Carbon\Carbon::parse($due_date)->format('l jS \of F Y') }})</strong>.<br>Information enumerated below:
+	This is a reminder that the following client{{ $data->count()>1?'s':'' }}, whose information appear{{ $days===1?'s':'' }} below, {{ $data->count()>1?'have':'has' }} Viral Load Result{{ $data->count()>1?'s':'' }} due in <strong>{{ $days }} Day{{ $days===1?'':'s' }}</strong> <strong>({{ \Carbon\Carbon::parse($due_date)->format('l jS \of F Y') }})</strong>.<br>Information enumerated below:
 @include('beautymail::templates.widgets.articleEnd')
 
 @include('beautymail::templates.widgets.newfeatureStart', ['color'=>'#ffbf00'])

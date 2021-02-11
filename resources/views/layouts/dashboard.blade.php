@@ -89,14 +89,14 @@
 					    <a href="#!" class="nav-link "><span class="pcoded-micon"><i class="icofont icofont-file-alt"></i></span><span class="pcoded-mtext">Reports</span></a>
 					    <ul class="pcoded-submenu">
 					        <li><a href="{{route('daily')}}">Daily Report</a></li>
-					        <li>
+					        {{-- <li>
 							  <a href="#!" class="nav-link  down-icon"><span class="pcoded-micon"><i class="icofont icofont-ui-contact-list"></i></span>
 							  	<span class="pcoded-mtext">Tracking Records</span></a>
 							    <ul class="pcoded-submenu">
 							        <li><a href="{{route('add')}}">Add</a></li>
 							        <li><a href="{{route('tracking_reports')}}">View all</a></li>
 							    </ul>
-					        </li>
+					        </li> --}}
 					    </ul>
 					</li>
 					<li class="nav-item pcoded-hasmenu">
@@ -112,7 +112,7 @@
 					    <a href="#!" class="nav-link "><span class="pcoded-micon"><i class="fa fa-hospital-user"></i></span>
 					    	<span class="pcoded-mtext">Attendance</span></a>
 					    <ul class="pcoded-submenu">
-					        <li><a href="{{route('atts')}}">Today</a></li>
+					        <li><a href="{{route('atts')}}">This Month</a></li>
 					        <li><a href="{{route('permitted')}}">Permitted List </a></li>
 					    </ul>
 					</li>

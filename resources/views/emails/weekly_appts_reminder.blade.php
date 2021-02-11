@@ -28,7 +28,7 @@
 		################
 	@endforeach
 </table>
-<p><b>Please endeavor to meet all your appointments as they will be checked on CMAMS (Case Manager Analysis & Monitoring System) when reporting on due date.</b></p><br/>
+<p><b>Please endeavor to meet all your appointments as they will be checked on CMAMS (Quality Management & Accountability Monitoring System) when reporting on due date.</b></p><br/>
 <em style="font-weight: bold; font-size: 15px;">Have a wonderful week ahead.</em>
 @include('beautymail::templates.widgets.newfeatureEnd')
 @stop

@@ -39,14 +39,22 @@ class EACAlerts extends Command
      */
     public function handle()
     {
-        $newEAC = EACList::whereDate('last_vl_result', '>=', Carbon::parse('2021-01-01'))->get();
+        $newEAC = EACList::whereDate('last_vl_result', '>=', Carbon::parse('2021-01-01'))->limit(5)->get();
         if (!$newEAC->isEmpty()) {
             $beautymail = app()->make(\Snowfire\Beautymail\Beautymail::class);
             $beautymail->send('emails.gen_eac_alert', ['data'=>$newEAC], function($message)
             {
                 $message
-                    ->from('smtp@mailshunt.com','CMAMS - Fhi360')
-                    ->to('ekupnse16@gmail.com')
+                    ->from('smtp@mailshunt.com','Q-MAMS - Fhi360')
+                    ->to('ekupnse16@gmail.com', 'Ekupnse Cornelius')
+                    ->cc('pimohi@ahnigeria.org', 'Philip Imohi')
+                    ->cc('IAbah@ahnigeria.org', 'Ikechukwuka Abah')
+                    ->cc('bigmikeeneji@gmail.com', 'Michael Eneji')
+                    ->cc('osanwo@fhi360.org')
+                    ->cc('spandey@fhi360.org')
+                    ->cc('cobiora-okafo@fhi360.org')
+                    ->cc('feyam@ng.fhi360.org', 'Frank Eyam')
+                    ->cc('cobi@ahnigeria.org', 'Cajetan Obi')
                     ->subject('EAC Clients Alert');
             });
         }

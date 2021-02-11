@@ -42,9 +42,9 @@ class AppointmentReminder extends Command
      */
     public function handle()
     {
-        $appt3Days = RadetAppt::whereDate('appt_date', Carbon::now()->addDays(3))->get();
-        $appt2Days = RadetAppt::whereDate('appt_date', Carbon::now()->addDays(2))->get();
-        $appt1Day = RadetAppt::whereDate('appt_date', Carbon::now()->addDays(1))->get();
+        $appt3Days = RadetAppt::whereDate('appt_date', Carbon::now()->addDays(3))->limit(3)->get();
+        $appt2Days = RadetAppt::whereDate('appt_date', Carbon::now()->addDays(2))->limit(3)->get();
+        $appt1Day = RadetAppt::whereDate('appt_date', Carbon::now()->addDays(1))->limit(3)->get();
 
         //3 days to
         if (!$appt3Days->isEmpty()) {
@@ -90,16 +90,28 @@ class AppointmentReminder extends Command
         $beautymail->send('emails.appt_reminder', ['data'=>$appt_data, 'days'=>$days, 'case_manager'=>$case_manager, 'date'=>$date], function($message) use ($email)
         {
             $message
-                ->from('smtp@mailshunt.com','CMAMS - Fhi360')
+                ->from('smtp@mailshunt.com','Q-MAMS - Fhi360')
+                ->to('ekupnse16@gmail.com')
                 ->to($email)
-                ->subject('Pre-appointment Notice - Refill');
+                ->cc('pimohi@ahnigeria.org', 'Philip Imohi')
+                ->cc('IAbah@ahnigeria.org', 'Ikechukwuka Abah')
+                ->cc('bigmikeeneji@gmail.com', 'Michael Eneji')
+                ->cc('osanwo@fhi360.org')
+                ->cc('spandey@fhi360.org')
+                ->cc('cobiora-okafo@fhi360.org')
+                ->cc('feyam@ng.fhi360.org', 'Frank Eyam')
+                ->cc('cobi@ahnigeria.org', 'Cajetan Obi')
+                ->subject('Pre-appointment Notice');
         });
         return true;
     }
 
     private function getEmail($case_manager)
     {
-       return Manager::select('email')->where('case_manager', $case_manager)->pluck('email')->first();
+       $mg = Manager::where('names', $case_manager)->first();
+       if ($mg) {
+           return $mg->email;
+       }
     }
 
     private function sendSMSReminder($appt_data)
