@@ -1,4 +1,4 @@
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/handwhib/public_html/coords.handiman.ng/
+    - export DEPLOYPATH=/home/freeekzh/dhis.freepremiumbeats.com/
     - /bin/cp -R * $DEPLOYPATH
