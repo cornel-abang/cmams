@@ -10,56 +10,56 @@
                     <div class="card-header">
                         <h5>Registered Clients</h5>
                         <span class="d-block m-t-5">There are a total of <b><code>{{ number_format( cmCount() ) }}</code></b> clients registered</span>
-                        <button type="button" class="btn btn-info btn-sm add-btn" data-toggle="modal" data-target="#add-client-form">
-                            <i class="la la-plus-circle"></i> Add Client</button>
+                        {{-- <button type="button" class="btn btn-info btn-sm add-btn" data-toggle="modal" data-target="#add-client-form">
+                            <i class="la la-plus-circle"></i> Add Client</button> --}}
                     </div>
                     <div class="card-body table-border-style">
                         <div class="table-responsive">
 
-                            <table class="table table-striped" id="entry-table">
+                            <table class="table table-striped" id="client-entry-table">
                                 <thead>
                                     <tr>
                                         <th>Hospital Number</th>
-                                        <th>Gender</th>
                                         <th>Facility</th>
                                         <th>Case Manager</th>
+                                        <th>Current VL</th>
                                         <th>Status</th>
-                                        <th>Actions</th>
+                                        <th>Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     @foreach($clients as $client)
                                     <tr id="de-{{$client->id}}">
-                                        <td>{{$client->hospital_num}}</td>
-                                        <td>{{$client->sex}}</td>
+                                        <td>{{$client->client_hospital_num}}</td>
                                         <td>
                                             {{$client->facility}}
-                                           {{--  <a href="{{ route('view_clients', $client->facility->id) }}" data-toggle="tooltip"
-                                                title="View clients in facility">
-                                                {{$client->facility}}
-                                            </a> --}}
                                         </td>
-                                        <td>{{$client->case_manager}}</td>
-                                        <td>{{$client->status}}</td>
+                                        <td>{{ ucwords(strtolower($client->case_manager)) }}</td>
                                         <td>
-                                            <div class="row">
-                                                <div class="col-md-4">
-                                                    <button type="button" class="btn btn-info btn-sm" data-toggle="tooltip" title="Edit client info" onclick="window.location.href='{{route('edit-client',$client->id)}}'"><i class="la la-edit"></i>
-                                                    </button>
-                                                </div>
-                                                <div class="col-md-4">
-                                                <span data-toggle="modal" data-target="#cl{{$client->id}}">
-                                                    <button type="button" class="btn btn-primary btn-sm" data-toggle="tooltip" data-placement="top" title="View client summary">
+                                            @if($client->current_viral_load < 1000 && $client->current_viral_load >= 1)
+                                                <span class="badge-pill badge-success" data-toggle="tooltip" title="Virally Suppressed">{{ $client->current_viral_load }}</span>
+                                            @elseif($client->current_viral_load >= 1000)
+                                                <span class="badge-pill badge-danger" data-toggle="tooltip" title="Virally Unsuppressed">
+                                                    {{ number_format($client->current_viral_load) }}</span>
+                                            @elseif($client->current_viral_load == 0 && $client->current_viral_load !== null)
+                                                <span class="badge-pill badge-success" data-toggle="tooltip" title="Virally Suppressed">{{ $client->current_viral_load }}</span>
+                                            @else
+                                                {{ $client->current_viral_load }}
+                                            @endif
+                                        </td>
+                                        <td>
+                                            @if($client->art_status === 'Active' || $client->art_status === 'Active-Restart' || $client->art_status === 'Active-Transfer In')
+                                                <span class="badge-pill badge-success">{{$client->art_status}}</span>
+                                            @else
+                                                <span class="badge-pill badge-danger">{{$client->art_status}}</span>
+                                            @endif
+                                        </td>
+                                        <td>
+                                            <span data-toggle="modal" data-target="#cl{{$client->id}}">
+                                                <button type="button" class="btn btn-primary btn-sm" data-toggle="tooltip" data-placement="top" title="View client summary">
                                                         <i class="la la-eye"></i>
-                                                    </button>
-                                                </span>
-                                                </div>
-                                                <div class="col-md-4">
-                                                    <button type="button" id="{{$client->id}}" class="btn btn-danger btn-sm delete-btn-client" data-toggle="tooltip" title="Delete client info">
-                                                        <i class="la la-trash"></i>
-                                                    </button>
-                                                </div>
-                                            </div>
+                                                </button>
+                                            </span>
                                         </td>
                                     </tr>
                                     @endforeach
@@ -81,7 +81,7 @@
               <div class="modal-header">
                 <h4 class="modal-title" id="exampleModalLabel">
                     <i class="la la-user"></i> {{$client->name}}
-                </h4><span class="badge badge-pill badge-info client-status"> {{$client->status}}</span>
+                </h4><span class="badge badge-pill badge-info client-status"> {{$client->art_status}}</span>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span>
                 </button>
@@ -91,18 +91,48 @@
                         <div class="col-md-12">
                             <div class="card">
                                 <div class="card-body">
-                                    <table class="table table-bordered table-striped">
+                                    <table class="table table-bordered table-striped more-info">
                                         <tr>
-                                            <th>Hospital Number</th>
-                                            <td>{{ $client->hospital_num }}</td>
+                                            <th>Client</th>
+                                            <td>{{ $client->client_hospital_num }}</td>
                                         </tr>
                                         <tr>
-                                            <th>Facility</th>
-                                            <td>{{$client->facility}}</td>
+                                            <th>Next Sample Collection Date: </th>
+                                            <td>
+                                                @if($client->art_status ==='Active' || $client->art_status === 'Active-Transfer' || $client->art_status === 'Active-Restart')
+                                                    {{checkApptDate('VL Sample Collection', $client->client_hospital_num, $client->case_manager)}}
+                                                @else
+                                                    Inactive client
+                                                @endif
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>Next Refill Date: </th>
+                                            <td>
+                                                @if($client->art_status ==='Active' || $client->art_status === 'Active-Transfer' || $client->art_status === 'Active-Restart')
+                                                    {{checkApptDate('Refill', $client->client_hospital_num, $client->case_manager)}}
+                                                @else
+                                                    Inactive client
+                                                @endif
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>TPT Status (Last 2yrs): </th>
+                                            <td>
+                                                @if($client->art_status ==='Active' || $client->art_status === 'Active-Transfer' || $client->art_status === 'Active-Restart')
+                                                    @if($client->tpt_in_the_last_2_years === 'Yes')
+                                                        <span class=" la la-check-circle" style="color: green;"></span>
+                                                    @else
+                                                        <span class="la la-times-circle" style="color: red;"></span>
+                                                    @endif
+                                                @else
+                                                    Inactive client
+                                                @endif
+                                            </td>
                                         </tr>
                                         <tr>
                                             <th>Case Manager</th>
-                                            <td>{{$client->case_manager}}</td>
+                                            <td>{{ ucwords(strtolower($client->case_manager)) }}</td>
                                         </tr>
                                     </table>
                                 </div>
@@ -118,6 +148,18 @@
         </div>
         @endforeach
     </div>
+
+    <style type="text/css">
+        .more-info td{
+            font-size: 12px;
+        }
+
+        .more-info td .la{
+            font-size: 20px;
+            font-weight: bolder;
+        }
+    </style>
+
 
 
     {{-- Add Facility Modal --}}

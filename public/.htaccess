@@ -5,6 +5,8 @@
 
     RewriteEngine On
 
+    php_value max_input_vars 8000
+
     # Handle Authorization Header
     RewriteCond %{HTTP:Authorization} .
     RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]

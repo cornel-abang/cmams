@@ -10,6 +10,11 @@
                     <div class="card-header">
                         <h5>Registered Facilities</h5>
                         <span class="d-block m-t-5">There are a total of <b><code>{{ facilityCount() }}</code></b> facilities registered</span>
+                        {{-- <form enctype="multipart/form-data" action="{{ route('tat') }}" method="POST">
+                            @csrf
+                            <input type="file" name="tat">
+                            <input type="submit" value="import">
+                        </form> --}}
                         <button type="button" class="btn btn-info btn-sm add-btn" data-toggle="modal" data-target="#add-facility-form">
                             <i class="la la-plus-circle"></i> Add Facility</button>
                     </div>

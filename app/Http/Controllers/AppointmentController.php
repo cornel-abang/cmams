@@ -9,6 +9,13 @@ use Carbon\Carbon;
 use App\CaseManager;
 use App\Result;
 use App\BeforeDue;
+use App\MetAppt;
+use App\MissedAppt;
+use App\Exports\BeforeDueExport;
+use App\Exports\BeforeDueFutureExport;
+use App\Exports\MetApptsExport;
+use App\Exports\MissedApptsExport;
+use Maatwebsite\Excel\Facades\Excel;
 
 class AppointmentController extends Controller
 {
@@ -19,6 +26,33 @@ class AppointmentController extends Controller
      */  
     public function index()
     {
+        // $appts_19 = BeforeDue::where('due_date', Carbon::parse('2021-04-19'))->get();
+        // dd($appts_19);
+        // foreach ($appts_19 as $appt) {
+        //     $appt->delete();
+        // }
+        // dd($appts_19);
+        // $appts_19 = RadetAppt::whereBetween('appt_date', 
+        //                 [
+        //                     Carbon::parse('2021-04-19'), 
+        //                     Carbon::parse('2021-04-25')
+        //                 ])->where('appt_type', 'Refill')->count();
+        // dd($appts_19);
+        // $mets = MetAppt::whereBetween('due_date', 
+        //                 [
+        //                     Carbon::parse('2021-04-19'), 
+        //                     Carbon::parse('2021-04-25')
+        //                 ])->count();
+
+        // $befores = BeforeDue::whereBetween('due_date', 
+        //                 [
+        //                     Carbon::parse('2021-04-19'), 
+        //                     Carbon::parse('2021-04-25')
+        //                 ])->count();
+
+        // dd($mets+$befores);
+
+
         $title = 'This week\'s case manager appointments';
         $appointments = $this->getAppointments();
         return view('appts.index',compact('title','appointments')); 
@@ -119,13 +153,66 @@ class AppointmentController extends Controller
 
     public function beforeDue()
     {
-        $title = 'Clients early to appointments';
-        $befores = BeforeDue::orderBy('due_date','asc')->whereBetween('due_date', 
+        $title = 'Clients early to appointments - PAST';
+        $befores = BeforeDue::where('due_date', Carbon::yesterday())
+                            ->where('returned_date', '<', Carbon::yesterday())
+                            ->get();
+        return view('appts.before_due', compact('title', 'befores'));
+    }
+
+    public function beforeDueFuture()
+    {
+        $title = 'Clients early to appointments - FUTURE';
+        $befores = BeforeDue::where('due_date', '>', Carbon::yesterday())
+                        ->where('returned_date', Carbon::yesterday())
+                        ->get();
+        return view('appts.before_due_future', compact('title', 'befores'));
+    }
+
+    public function metAppts()
+    {
+        $title = 'Met appointments';
+        $mets = MetAppt::orderBy('due_date','asc')->whereBetween('due_date', 
                         [
                             Carbon::now()->startOfWeek(), 
                             Carbon::now()->endOfWeek()
                         ])->get();
-        return view('appts.before_due', compact('title', 'befores'));
+        return view('appts.met', compact('title', 'mets'));
+    }
+
+    public function missedAppts()
+    {
+        $title = 'Missed appointments';
+        $misseds = MissedAppt::orderBy('appt_date','asc')->whereBetween('appt_date', 
+                        [
+                            Carbon::now()->startOfWeek(), 
+                            Carbon::now()->endOfWeek()
+                        ])->get();
+        return view('appts.missed', compact('title', 'misseds'));
+    }
+
+    public function exportBeforeDuePast()
+    {  
+        $today = Carbon::yesterday()->toDateString();
+        return Excel::download(new BeforeDueExport(), $today.'_Refill_Before_Due_Appts_PAST.xlsx');
+    }
+
+    public function exportBeforeDueFuture() 
+    {
+        $today = Carbon::yesterday()->toDateString();
+        return Excel::download(new BeforeDueFutureExport(), $today.'_Refill_Before_Due_Appts_FUTURE.xlsx');
+    }
+
+    public function exportMetAppts() 
+    {
+        $today = Carbon::yesterday()->toDateString();
+        return Excel::download(new MetApptsExport(), $today.'_Refill_Met_Appointments.xlsx');
+    }
+
+    public function exportMissedAppts() 
+    {
+        $today = Carbon::yesterday()->toDateString();
+        return Excel::download(new MissedApptsExport(), $today.'_Refill_Missed_Appointments.xlsx');
     }
 
     /**

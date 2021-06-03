@@ -12,9 +12,11 @@
                         <span class="d-block m-t-5">
                             A total of <b><code>{{$befores->count()}}</code></b> clients have come in before due date so far.
                         </span>
-                        {{-- <button type="button" class="btn btn-info btn-sm add-btn" data-toggle="tooltip" 
-                        title="Upload new appointment schedule" onclick="window.location.href='{{route('add-appts')}}}'">
-                            <i class="la la-plus-circle"></i> Upload</button> --}}
+                        <button type="button" class="btn btn-info btn-sm add-btn">
+                            <a href="{{route('export-past')}}" style="color: white; font-weight: bold;">
+                                <i class="la la-download"></i> Export Today
+                            </a>
+                        </button>
                     </div>
                     <div class="card-body table-border-style">
                         <div class="table-responsive">

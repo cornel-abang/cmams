@@ -1,0 +1,508 @@
+,,,,,,,,,,,,Active-Transfer In,
+Facility,Hospital Num,Sex,ART Start Date (yyyy-mm-dd,Last Pickup Date (yyyy-mm-dd),Months of ARV Refill,Regimen at ART Start,Current ART Regimen,Date of Viral Load Sample Collection (yyyy-mm-dd),Current Viral Load (c/ml),Date of Current Viral Load (yyyy-mm-dd),Date of VL Result After VL Sample Collection (yyyy-mm-dd),Current ART Status,Case Manager
+cr Agbokim Primary Health Centre,CRS/004/025,Female,2018-11-26,2020-10-14,3,TDF-3TC-EFV,TDF-3TC-DTG,,,,,IIT,EFFIM SALLY EKEP
+cr Agbokim Primary Health Centre,CRS/004/062,Female,2020-06-08,2020-06-08,3,TDF-3TC-DTG,TDF-3TC-DTG,,,,,IIT,EFFIM SALLY EKEP
+cr Agbokim Primary Health Centre,CRS/004/064,Female,2020-06-18,2020-08-16,3,TDF-3TC-DTG,TDF-3TC-DTG,,,,,IIT,EFFIM SALLY EKEP
+cr Agbokim Primary Health Centre,CRS/004/065,Female,2020-06-19,2020-10-15,3,TDF-FTC-DTG,TDF-3TC-DTG,,,,,IIT,EFFIM SALLY EKEP
+cr Akamkpa General Hospital,0002283,Male,2019-04-01,2020-06-18,3,TDF-3TC-EFV,TDF-3TC-DTG,,,,,IIT,Enyam Janet
+cr Akamkpa General Hospital,0001098,Female,2016-06-27,2020-08-25,3,TDF-3TC-EFV,TDF-3TC-DTG,,,,,IIT,Enyam Janet
+cr Akamkpa General Hospital,0001098,Female,2017-11-16,2020-09-16,3,TDF-3TC-EFV,TDF-3TC-DTG,,,,,IIT,"EKURE, ATIM"
+cr Akamkpa General Hospital,0001730,Female,2016-06-22,2020-07-22,3,TDF-3TC-EFV,TDF-3TC-DTG,2020-02-13,40,2020-03-11,2020-03-11,IIT,Enyam Janet
+cr Akamkpa General Hospital,2347,Female,2019-08-12,2020-10-26,3,ABC-3TC-NVP,TDF-3TC-DTG,2021-02-15,20,2021-03-19,2021-03-19,IIT,NAOMI IDANG
+cr Akamkpa General Hospital,0642,Female,2012-01-31,2020-07-21,3,TDF-3TC-DTG,TDF-3TC-DTG,,,,,IIT,"ABUE, VERONICA"
+cr Akamkpa General Hospital,2353,Male,2019-08-13,2020-10-28,3,AZT-3TC-NVP,TDF-3TC-DTG,,,,,IIT,Enyam Janet
+cr Akamkpa General Hospital,1274,Female,2014-03-06,2020-11-26,2,ABC-3TC-EFV,TDF-3TC-DTG,2018-09-25,43529,2018-11-15,2018-11-15,IIT,"EKURE, ATIM"
+cr Akamkpa General Hospital,2119,Female,2018-04-12,2020-06-15,3,TDF-3TC-EFV,TDF-3TC-DTG,2020-01-30,26386,2020-02-17,2020-02-17,IIT,"ABUE, VERONICA"
+cr Akamkpa General Hospital,0001098,Female,2018-07-25,2020-07-22,3,TDF-3TC-EFV,TDF-3TC-DTG,,,,,IIT,"EKURE, ATIM"
+cr Akamkpa General Hospital,0772,Male,2012-08-01,2020-09-21,3,AZT-3TC-NVP,TDF-3TC-DTG,2018-04-23,150,2018-07-02,2018-07-02,IIT,"ABUE, VERONICA"
+cr Akamkpa General Hospital,00011,Female,2016-04-11,2020-10-05,3,TDF-3TC-EFV,TDF-3TC-DTG,,,,,IIT,Enyam Janet
+cr Akamkpa General Hospital,2475,Male,2020-09-29,2020-09-29,1,TDF-3TC-DTG,TDF-3TC-DTG,,,,,IIT,Enyam Janet
+cr Akamkpa General Hospital,0001098,Female,2020-08-26,2020-08-26,1,,TDF-3TC-DTG,,,,,IIT,Enyam Janet
+cr Akamkpa General Hospital,0001098,Female,2016-11-24,2020-07-08,3,TDF-3TC-EFV,TDF-3TC-DTG,2020-04-20,62.1,2020-05-20,2020-05-20,IIT,"ABUE, VERONICA"
+cr Akamkpa General Hospital,0001098,Male,2020-08-19,2020-08-23,3,TDF-3TC-DTG,TDF-3TC-DTG,,,,,IIT,Enyam Janet
+cr Akamkpa General Hospital,0001098,Female,2015-03-16,2020-07-06,3,TDF-3TC-EFV,TDF-3TC-EFV,2018-07-09,150,2018-07-09,2018-07-09,IIT,"EKURE, ATIM"
+cr Akamkpa General Hospital,2080,Female,2018-02-01,2020-07-13,3,TDF-3TC-EFV,TDF-3TC-DTG,2019-10-14,880,2019-11-30,2019-11-30,IIT,"EKURE, ATIM"
+cr Akamkpa General Hospital,0000008,Female,2020-02-27,2020-06-10,3,TDF-3TC-DTG,TDF-3TC-DTG,2020-02-25,107060,2020-03-12,2020-03-12,IIT,"EKURE, ATIM"
+cr Akamkpa General Hospital,0001098,Female,2014-02-18,2020-08-26,3,TDF-3TC-DTG,TDF-3TC-DTG,,,,,IIT,"ABUE, VERONICA"
+cr Akamkpa General Hospital,1800,Female,2016-08-22,2020-08-31,3,TDF-3TC-EFV,TDF-3TC-DTG,2018-07-23,150,2018-08-02,2018-08-02,IIT,"ABUE, VERONICA"
+cr Akamkpa General Hospital,0000005,Female,2016-02-16,2020-06-08,3,,TDF-3TC-DTG,,,,,IIT,"ABUE, VERONICA"
+cr Akamkpa General Hospital,0001098,Female,2020-08-12,2020-08-12,1,,TDF-3TC-DTG,,,,,IIT,Enyam Janet
+cr Akamkpa General Hospital,0886,Female,2016-01-12,2020-08-12,3,AZT-3TC-NVP,TDF-3TC-DTG,2020-05-04,71900,2020-05-20,2020-05-20,IIT,"EKURE, ATIM"
+cr Akamkpa General Hospital,0000003,Female,2019-10-01,2020-07-06,3,TDF-3TC-EFV,TDF-3TC-DTG,2018-07-11,150,2018-07-23,2018-07-23,IIT,"EKURE, ATIM"
+cr Akamkpa General Hospital,0001098,Male,2016-03-16,2020-09-07,2,TDF-3TC-EFV,TDF-3TC-DTG,,,,,IIT,Enyam Janet
+cr Akamkpa General Hospital,0001098,Male,2020-08-06,2020-08-06,1,,TDF-3TC-DTG,,,,,IIT,Enyam Janet
+cr Akamkpa General Hospital,1590,Female,2016-03-30,2020-11-26,2,TDF-3TC-EFV,TDF-3TC-DTG,2020-12-22,40,2021-01-22,2021-01-22,IIT,"EKURE, ATIM"
+cr Akamkpa General Hospital,0001098,Female,2017-10-09,2020-09-07,2,,AZT-3TC-NVP,,,,,IIT,Enyam Janet
+cr Akamkpa General Hospital,2106,Female,2018-03-28,2020-09-17,3,TDF-3TC-EFV,TDF-3TC-DTG,2020-02-27,23139,2020-03-25,2020-03-25,IIT,"ABUE, VERONICA"
+cr Akamkpa General Hospital,09486,Female,2018-10-16,2020-09-21,3,TDF-FTC-DTG,TDF-3TC-DTG,2020-03-18,84,2020-05-04,2020-05-04,IIT,"ABUE, VERONICA"
+cr Akamkpa General Hospital,0002480,Male,2020-10-22,2020-10-22,1,TDF-3TC-DTG,TDF-3TC-DTG,,,,,IIT,Enyam Janet
+cr Akamkpa General Hospital,07/01774,Female,2006-06-25,2020-10-19,3,D4T-3TC-NVP,TDF-3TC-DTG,,,,,IIT,"EKURE, ATIM"
+cr Akamkpa General Hospital,0000965,Female,2018-09-03,2020-10-14,3,TDF-3TC-EFV,TDF-3TC-DTG,,,,,IIT,"ABUE, VERONICA"
+cr Akamkpa General Hospital,0000003,Female,2019-12-10,2020-08-17,2,TDF-3TC-EFV,TDF-3TC-EFV,2019-02-16,151074,2019-12-19,2019-12-19,IIT,"ABUE, VERONICA"
+cr Akamkpa General Hospital,2376,Male,2019-09-30,2020-08-10,3,,TDF-3TC-DTG,2020-03-05,365,2020-03-25,2020-03-25,IIT,"ABUE, VERONICA"
+cr Akamkpa General Hospital,0757,Female,2011-08-24,2020-07-14,3,TDF-3TC-EFV,TDF-3TC-DTG,,,,,IIT,"ABUE, VERONICA"
+cr Akamkpa General Hospital,0002486,Male,2020-11-10,2020-11-10,1,TDF-3TC-DTG,TDF-3TC-DTG,,,,,IIT,Enyam Janet
+cr Akamkpa General Hospital,2407,Male,2017-05-03,2020-09-16,3,TDF-3TC-DTG,TDF-3TC-DTG,,,,,IIT,Enyam Janet
+cr Akamkpa General Hospital,0002487,Female,2020-11-10,2020-11-11,1,TDF-3TC-DTG,TDF-3TC-DTG,,,,,IIT,Enyam Janet
+cr Akamkpa General Hospital,1940,Female,2017-05-10,2020-11-26,2,TDF-3TC-EFV,TDF-3TC-DTG,2020-02-20,50,2020-03-13,2020-03-13,IIT,"ABUE, VERONICA"
+cr Akamkpa General Hospital,0343,Female,2009-01-08,2020-06-17,3,TDF-3TC-EFV,TDF-3TC-DTG,2020-03-16,193,2020-05-04,2020-05-04,IIT,Enyam Janet
+cr Akamkpa General Hospital,0002484,Male,2020-11-03,2020-11-03,1,,TDF-3TC-DTG,,,,,IIT,Enyam Janet
+cr Akamkpa General Hospital,0744,Male,2011-08-24,2020-06-04,3,TDF-3TC-EFV,TDF-3TC-DTG,,,,,IIT,"ABUE, VERONICA"
+cr Akamkpa General Hospital,0001098,Female,2020-06-29,2020-08-19,3,TDF-3TC-EFV,TDF-3TC-DTG,,,,,IIT,"ABUE, VERONICA"
+cr Akamkpa General Hospital,2303,Male,2019-04-22,2020-09-23,3,TDF-3TC-DTG,TDF-3TC-DTG,2020-03-30,40,2020-04-27,2020-04-27,IIT,"ABUE, VERONICA"
+cr Akamkpa General Hospital,2467,Male,2020-09-07,2020-10-05,3,TDF-3TC-DTG,TDF-3TC-DTG,,,,,IIT,Enyam Janet
+cr Akamkpa General Hospital,0001098,Female,2020-07-06,2020-09-02,3,TDF-3TC-EFV,TDF-3TC-DTG,,,,,IIT,"ABUE, VERONICA"
+cr Akamkpa General Hospital,0002483,Male,2020-10-28,2020-10-28,1,TDF-3TC-DTG,TDF-3TC-DTG,,,,,IIT,Enyam Janet
+cr Akamkpa General Hospital,2020,Female,2017-10-11,2020-06-10,3,TDF-3TC-EFV,TDF-3TC-DTG,,,,,IIT,Enyam Janet
+cr Akamkpa General Hospital,0002481,Male,2020-10-26,2020-10-26,1,TDF-3TC-DTG,TDF-3TC-DTG,,,,,IIT,Enyam Janet
+cr Akamkpa General Hospital,0002459,Male,2020-08-17,2020-09-09,3,TDF-3TC-DTG,TDF-3TC-DTG,,,,,IIT,Enyam Janet
+cr Akamkpa General Hospital,2402,Female,2020-02-18,2020-09-09,3,TDF-3TC-EFV,TDF-3TC-DTG,,,,,IIT,"ABUE, VERONICA"
+cr Akamkpa General Hospital,2168,Female,2018-07-16,2020-07-21,3,TDF-3TC-DTG,TDF-3TC-DTG,,,,,IIT,"ABUE, VERONICA"
+cr Akamkpa General Hospital,2403,Male,2020-02-18,2020-09-09,3,TDF-3TC-DTG,TDF-3TC-DTG,,,,,IIT,"ABUE, VERONICA"
+cr Akamkpa General Hospital,1174,Male,2013-11-19,2020-08-19,3,TDF-3TC-EFV,TDF-3TC-DTG,,,,,IIT,Enyam Janet
+cr Akamkpa General Hospital,1801,Male,2016-08-22,2020-08-31,3,TDF-3TC-EFV,TDF-3TC-DTG,2018-07-23,150,2018-08-02,2018-08-02,IIT,"ABUE, VERONICA"
+cr Akamkpa General Hospital,1878,Male,2017-01-10,2020-07-08,3,AZT-3TC-EFV,TDF-3TC-DTG,,,,,IIT,Enyam Janet
+cr Akamkpa General Hospital,007/2385,Male,2020-01-02,2020-07-15,3,TDF-3TC-DTG,TDF-3TC-DTG,,,,,IIT,"ABUE, VERONICA"
+cr Akamkpa General Hospital,2498,Female,2020-12-22,2020-12-22,1,TDF-3TC-DTG,TDF-3TC-DTG,,,,,IIT,Enyam Janet
+cr Akamkpa General Hospital,0000019,Male,2007-10-24,2020-06-24,3,,TDF-3TC-DTG,,,,,IIT,"EKURE, ATIM"
+cr Akamkpa General Hospital,0000002,Female,2018-06-14,2020-07-20,3,AZT-3TC-NVP,TDF-3TC-DTG,2019-09-25,43,2019-10-17,2019-10-17,IIT,"ABUE, VERONICA"
+cr Akamkpa General Hospital,0001098,Female,2016-06-15,2020-07-09,3,TDF-3TC-EFV,TDF-3TC-DTG,,,,,IIT,"ABUE, VERONICA"
+cr Akamkpa General Hospital,0002076,Female,2018-01-30,2020-11-19,2,TDF-3TC-EFV,TDF-3TC-DTG,2020-02-06,80012,2020-03-15,2020-03-15,IIT,"ABUE, VERONICA"
+cr Akamkpa General Hospital,1897,Male,2018-07-02,2020-08-10,3,TDF-3TC-EFV,TDF-3TC-DTG,,,,,IIT,Enyam Janet
+cr Akamkpa General Hospital,1470,Male,2016-10-31,2020-08-10,3,AZT-3TC-NVP,TDF-3TC-DTG,2018-07-16,36853,2018-07-26,2018-07-26,IIT,"EKURE, ATIM"
+cr Akamkpa General Hospital,0110,Female,2015-07-08,2020-10-14,2,TDF-3TC-EFV,TDF-3TC-DTG,,,,,IIT,"EKURE, ATIM"
+cr Akamkpa General Hospital,2476,Female,2020-10-06,2020-10-06,1,TDF-3TC-DTG,TDF-3TC-DTG,,,,,IIT,Enyam Janet
+cr Akamkpa General Hospital,0001098,Female,2019-10-21,2020-08-05,3,TDF-3TC-EFV,TDF-3TC-DTG,2020-08-06,20,2020-11-10,2020-11-10,IIT,Enyam Janet
+cr Akamkpa General Hospital,0001828,Female,2016-10-04,2020-10-29,3,TDF-3TC-EFV,TDF-3TC-DTG,2020-08-27,71,2020-09-28,2020-09-28,IIT,Enyam Janet
+cr Akamkpa General Hospital,2135,Female,2019-03-21,2020-10-28,3,TDF-3TC-EFV,TDF-3TC-DTG,2020-01-07,40,2020-01-31,2020-01-31,IIT,"ABUE, VERONICA"
+cr Akamkpa General Hospital,007/2131,Female,2018-05-21,2020-09-30,3,TDF-3TC-EFV,TDF-3TC-DTG,,,,,IIT,"EKURE, ATIM"
+cr Akamkpa General Hospital,1443,Female,2015-03-09,2020-08-19,3,AZT-3TC-NVP,TDF-3TC-DTG,2020-05-04,191,2020-05-20,2020-05-20,IIT,"ABUE, VERONICA"
+cr Akamkpa General Hospital,0002238,Female,2018-12-11,2020-08-06,3,AZT-3TC-NVP,TDF-3TC-DTG,,,,,IIT,"EKURE, ATIM"
+cr Akamkpa General Hospital,2274,Female,2020-07-08,2020-07-07,3,TDF-3TC-EFV,TDF-3TC-EFV,2019-12-13,40,2019-12-19,2019-12-19,IIT,"EKURE, ATIM"
+cr Akamkpa General Hospital,2478,Female,2020-10-13,2020-10-13,1,ABC-3TC-DTG,ABC-3TC-DTG,,,,,IIT,Enyam Janet
+cr Akamkpa General Hospital,2139,Female,2018-06-13,2020-09-09,3,TDF-3TC-EFV,TDF-3TC-DTG,,,,,IIT,Enyam Janet
+cr Akamkpa General Hospital,0005,Female,2007-09-19,2020-11-24,2,TDF-3TC-EFV,TDF-3TC-DTG,2019-10-22,306,2019-11-28,2019-11-28,IIT,Enyam Janet
+cr Akamkpa General Hospital,2464,Female,2020-08-27,2020-08-27,1,TDF-3TC-DTG,TDF-3TC-DTG,,,,,IIT,Enyam Janet
+cr Akamkpa General Hospital,1946,Male,2017-05-22,2020-08-14,3,TDF-3TC-EFV,TDF-3TC-DTG,2018-06-05,38376,2018-07-16,2018-07-16,IIT,Enyam Janet
+cr Akamkpa General Hospital,1880,Female,2018-01-12,2020-09-21,3,TDF-3TC-EFV,TDF-3TC-DTG,2019-01-17,2070619,2019-04-14,2019-04-14,IIT,"EKURE, ATIM"
+cr Akamkpa General Hospital,0000509,Female,2013-10-21,2020-10-07,3,TDF-3TC-EFV,TDF-3TC-DTG,,,,,IIT,Enyam Janet
+cr Akamkpa General Hospital,0800,Male,2012-02-14,2020-06-22,3,AZT-3TC-NVP,TDF-3TC-DTG,,,,,IIT,Enyam Janet
+cr Akamkpa General Hospital,007/1409,Male,2014-10-13,2020-09-28,3,AZT-3TC-NVP,TDF-3TC-DTG,,,,,IIT,"EKURE, ATIM"
+cr Akpabuyo St Joseph Hospital,CT-5020,Male,2019-10-02,2020-07-29,3,TDF-3TC-DTG,TDF-3TC-DTG,2020-02-06,54,2020-05-08,2020-05-08,IIT,Sama Edom
+cr Akpabuyo St Joseph Hospital,CT-7038,Female,2020-02-03,2020-06-18,3,TDF-3TC-DTG,TDF-3TC-DTG,,,,,IIT,Nwankwo Joy
+cr Akpabuyo St Joseph Hospital,0001987,Female,2015-08-08,2020-09-09,3,TDF-3TC-EFV,TDF-3TC-DTG,2020-07-23,20,2020-08-31,2020-08-31,IIT,Blessing Agube
+cr Akpabuyo St Joseph Hospital,CT-2569,Male,2017-10-24,2020-09-23,3,AZT-3TC-NVP,ABC-3TC-LPV/r,,,,,IIT,Nwankwo Joy
+cr Akpabuyo St Joseph Hospital,CT-2746,Female,2019-07-04,2020-06-17,3,TDF-3TC-DTG,TDF-3TC-DTG,2020-06-22,40,2020-08-20,2020-08-20,IIT,Blessing Agube
+cr Akpabuyo St Joseph Hospital,CT-1585,Female,2014-06-12,2020-06-26,3,TDF-3TC-EFV,TDF-3TC-DTG,2020-07-24,729,2020-08-31,2020-08-31,IIT,Nwankwo Joy
+cr Akpabuyo St Joseph Hospital,0001533,Female,2014-02-26,2020-08-28,3,TDF-3TC-EFV,TDF-3TC-DTG,,,,,IIT,Emmanuel Alfred
+cr Akpabuyo St Joseph Hospital,CT-8037I,Male,2020-03-09,2020-07-01,3,TDF-3TC-DTG,TDF-3TC-DTG,,,,,IIT,Eteng Joy E
+cr Akpabuyo St Joseph Hospital,CT-7006I,Male,2020-01-22,2020-05-27,6,TDF-3TC-DTG,TDF-3TC-DTG,,,,,IIT,Ofem Chidera P
+cr Akpabuyo St Joseph Hospital,0000487,Male,2012-03-28,2020-06-17,3,AZT-3TC-NVP,TDF-3TC-DTG,,,,,IIT,Eteng Joy E
+cr Akpabuyo St Joseph Hospital,CT-9110,Male,2020-06-02,2020-08-28,3,TDF-3TC-DTG,TDF-3TC-DTG,,,,,IIT,Faith Nkom
+cr Akpabuyo St Joseph Hospital,CT-9111,Female,2020-06-02,2020-08-26,3,TDF-3TC-DTG,TDF-3TC-DTG,,,,,IIT,Faith Nkom
+cr Akpabuyo St Joseph Hospital,0002050,Female,2015-08-12,2020-06-26,3,AZT-3TC-NVP,TDF-3TC-DTG,2020-07-23,20,2020-08-31,2020-08-31,IIT,Tecular F Anyawu
+cr Akpabuyo St Joseph Hospital,CT-9010I,Male,2020-04-21,2020-07-15,3,TDF-3TC-DTG,TDF-3TC-DTG,,,,,IIT,Nancy Sylvester
+cr Akpabuyo St Joseph Hospital,0000570,Male,2010-07-21,2020-06-30,3,AZT-3TC-NVP,TDF-3TC-DTG,2018-07-27,150,2018-07-27,2018-07-27,IIT,Blessing Agube
+cr Akpabuyo St Joseph Hospital,CT-9238,Male,2020-07-22,2020-07-22,3,TDF-3TC-DTG,TDF-3TC-DTG,,,,,IIT,Christopher B Okon
+cr Akpabuyo St Joseph Hospital,CT-8063I,Female,2020-03-19,2020-06-17,3,TDF-3TC-DTG,TDF-3TC-DTG,,,,,IIT,Faith Nkom
+cr Akpabuyo St Joseph Hospital,CT-6017,Female,2019-11-08,2020-06-26,3,TDF-3TC-DTG,TDF-3TC-DTG,,,,,IIT,Blessing Agube
+cr Akpet Central Cottage Hospital,0001179,Female,2018-01-09,2020-12-11,3,TDF-3TC-EFV,TDF-3TC-DTG,2020-09-01,40,2020-09-30,2020-09-30,IIT,Rosemary Echip
+cr Akpet Central Cottage Hospital,0001070,Male,2016-11-04,2020-07-20,3,TDF-3TC-EFV,TDF-3TC-DTG,2020-12-01,3020,2020-12-21,2020-12-21,IIT,Rosemary Echip
+cr Akpet Central Cottage Hospital,0000352,Female,2010-03-30,2020-05-05,6,D4T-3TC-NVP,TDF-3TC-DTG,2020-03-30,271,2020-06-18,2020-06-18,IIT,Rosemary Echip
+cr Anantigha Primary Health Centre,0000154,Male,2019-08-07,2020-09-04,6,TDF-3TC-DTG,TDF-3TC-DTG,2020-03-27,850,2020-05-13,2020-05-13,IIT,Angelo Brian War
+cr Anantigha Primary Health Centre,0189,Female,2020-07-27,2020-08-24,1,TDF-3TC-DTG,TDF-3TC-DTG,,,,,IIT,Angelo Brian War
+cr Bakor Medical centre ,0000066,Female,2017-09-06,2020-08-04,3,TDF-3TC-EFV,TDF-3TC-DTG,2020-01-30,40,2020-02-26,2020-02-26,IIT,Deborah Otei
+cr Calabar General Hospital,14583,Female,2020-10-05,2020-10-05,3,TDF-3TC-DTG,TDF-3TC-DTG,,,,,IIT,Ushie Vera Akpana
+cr Calabar General Hospital,141295TI,Female,2016-06-01,2020-12-09,3,TDF-3TC-EFV,TDF-3TC-DTG,2021-02-25,40,2021-03-19,2021-03-19,IIT,Egbe Elias John
+cr Goldie Clinic,4828/16,Male,2016-02-08,2021-02-05,1,TDF-3TC-EFV,TDF-3TC-DTG,2020-03-25,25588,2020-03-30,2020-03-30,IIT,Chioma  Ogar
+cr Goldie Clinic,6094/20,Male,2020-01-15,2020-11-16,1,TDF-3TC-DTG,TDF-3TC-DTG,2020-07-10,166000,2020-11-20,2020-11-20,IIT,Chioma  Ogar
+cr Holy Family Catholic Hospital,C014638,Male,2020-04-20,2020-12-04,3,ABC-3TC-LPV/r,ABC-3TC-DTG,2020-05-27,52,2020-09-30,2020-09-30,IIT,Ndep Mary
+cr Holy Family Catholic Hospital,0015068,Female,2020-11-16,2020-11-16,3,TDF-3TC-DTG,TDF-3TC-DTG,2021-02-23,40,2021-03-29,2021-03-29,IIT,EGON Margaret
+cr Holy Family Catholic Hospital,01747TI,Male,2020-08-07,2020-12-03,3,TDF-3TC-DTG,TDF-3TC-DTG,,,,,IIT,EGON Margaret
+cr Holy Family Catholic Hospital,C014871,Female,2020-08-20,2020-11-24,3,TDF-3TC-DTG,TDF-3TC-DTG,2020-12-09,179,2020-12-31,2020-12-31,IIT,Nicolas Egede
+cr Holy Family Catholic Hospital,C014762,Female,2020-07-07,2020-11-10,3,TDF-3TC-DTG,TDF-3TC-DTG,,,,,IIT,Nicolas Egede
+cr Holy Family Catholic Hospital,0005041,Male,2009-04-29,2020-12-09,3,TDF-3TC-EFV,TDF-3TC-DTG,2021-03-10,40,2020-09-30,,IIT,Etta Egbe Atim
+cr Holy Family Catholic Hospital,0015127,Female,2020-12-09,2020-12-09,3,TDF-3TC-DTG,TDF-3TC-DTG,,,,,IIT,EGON Margaret
+cr Holy Family Catholic Hospital,0014351,Female,2019-08-13,2020-12-10,3,TDF-3TC-DTG,TDF-3TC-DTG,2020-05-25,40,2020-09-30,2020-09-30,IIT,EGON Margaret
+cr Holy Family Catholic Hospital,0013959,Female,2017-09-11,2020-11-03,3,TDF-3TC-EFV,TDF-3TC-DTG,2020-11-03,23581,2020-11-24,2020-11-24,IIT,EGON Margaret
+cr Holy Family Catholic Hospital,0012622,Female,2014-10-06,2020-12-08,3,TDF-3TC-EFV,TDF-3TC-DTG,2020-05-21,459,2020-09-30,2020-09-30,IIT,Ade Uke Philips
+cr Holy Family Catholic Hospital,0014679,Female,2020-05-19,2020-12-09,3,TDF-3TC-DTG,TDF-3TC-DTG,,,,,IIT,Odu Maria
+cr Holy Family Catholic Hospital,0010590,Female,2012-12-06,2020-12-08,3,AZT-3TC-NVP,TDF-3TC-DTG,2020-05-21,610,2020-09-30,2020-09-30,IIT,Ade Uke Philips
+cr Holy Family Catholic Hospital,C015136,Male,2020-12-11,2020-12-11,3,TDF-3TC-DTG,TDF-3TC-DTG,2021-02-03,40,2021-03-02,2021-03-02,IIT,Enang Jovita Etung
+cr Holy Family Catholic Hospital,0014884CI,Female,2020-08-28,2020-12-10,3,TDF-3TC-DTG,TDF-3TC-DTG,2020-11-26,40,2020-12-15,2020-12-15,IIT,Owui Agom
+cr Holy Family Catholic Hospital,0014215,Male,2018-11-14,2020-12-08,3,TDF-3TC-EFV,TDF-3TC-DTG,2020-08-21,40,2020-09-30,2020-09-30,IIT,Odu Maria
+cr Holy Family Catholic Hospital,C014592,Female,2020-03-19,2020-12-07,3,TDF-3TC-DTG,TDF-3TC-DTG,2020-05-29,40,2020-06-30,2020-06-30,IIT,Nicolas Egede
+cr Holy Family Catholic Hospital,C014667,Female,2020-05-11,2020-12-03,3,TDF-3TC-DTG,TDF-3TC-DTG,2020-08-11,40,2020-09-24,2020-09-24,IIT,Ndep Mary
+cr Holy Family Catholic Hospital,C014556,Male,2020-02-24,2020-12-10,3,TDF-3TC-DTG,TDF-3TC-DTG,2020-12-07,40,2020-12-31,2020-12-31,IIT,Ndep Mary
+cr Holy Family Catholic Hospital,C014537,Female,2020-02-17,2020-12-10,3,TDF-3TC-DTG,TDF-3TC-DTG,2020-12-07,40,2020-12-31,2020-12-31,IIT,Ndep Mary
+cr Holy Family Catholic Hospital,C014952,Female,2020-09-27,2020-12-10,3,TDF-3TC-DTG,TDF-3TC-DTG,2020-12-03,73,2020-12-31,2020-12-31,IIT,Ndep Mary
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),040686,Female,2020-10-12,2020-12-10,3,TDF-3TC-DTG,TDF-3TC-DTG,2021-02-22,,,,Active,Jessiah Hanson
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),CRS47100065,Male,2014-03-23,2020-07-20,3,TDF-3TC-EFV,TDF-3TC-DTG,2019-10-30,27195,2019-12-02,2019-12-02,IIT,Jessiah Hanson
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),02627,Female,2020-12-11,2020-12-11,3,TDF-3TC-DTG,TDF-3TC-DTG,,,,,Active,Grace Okon
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),0001045,Female,2019-10-08,2020-12-10,3,,TDF-3TC-DTG,2020-08-10,332,2020-09-30,2020-09-30,Active-Restart,Glory Etim
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),0037256,Female,2017-05-07,2020-07-08,3,TDF-3TC-EFV,TDF-3TC-DTG,2020-09-13,40,2020-09-30,2020-09-30,IIT,Jessiah Hanson
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),02746,Female,2021-02-01,2021-02-09,1,TDF-3TC-DTG,TDF-3TC-DTG,,,,,Active,
+cr Ikot Effiong Otop Comprehensive Health Centre (UCTH Annex),CRS47100005,Female,2013-02-27,2020-07-20,3,AZT-3TC-NVP,TDF-3TC-DTG,2020-06-19,40,2020-08-21,2020-08-21,IIT,Jessiah Hanson
+cr Ikot Enebong Health Post,117/2020,Male,2020-04-02,2020-10-30,3,TDF-3TC-DTG,TDF-3TC-DTG,2020-11-18,72,2020-12-21,2020-12-21,IIT,Sandar Archibong
+cr Ikot Enebong Health Post,165/2020,Female,2020-04-28,2020-10-28,3,TDF-3TC-DTG,TDF-3TC-DTG,2020-09-14,290,2020-11-09,2020-11-09,IIT,Sandar Archibong
+cr Ikot Omin Poly Clinic,CRS/21/17/010,Female,2017-12-20,2020-09-29,1,TDF-3TC-EFV,TDF-3TC-DTG,,,,,IIT,
+cr Ikot Omin Poly Clinic,CRS/TI/001,Female,2020-10-05,2020-10-05,1,TDF-3TC-DTG,TDF-3TC-DTG,,,,,IIT,
+cr Ikot Omin Poly Clinic,CRS/21/17/056,Female,2020-09-23,2020-09-24,1,TDF-3TC-EFV,TDF-3TC-DTG,,,,,IIT,
+cr Ikot Omin Poly Clinic,TI/394/19,Male,2019-07-23,2020-09-23,1,TDF-3TC-EFV,ABC-3TC-EFV,,,,,IIT,IQUO INAH
+cr Katchuan Irruan Model Primary Health Centre,0000016,Male,2014-07-21,2020-10-14,2,TDF-3TC-EFV,TDF-3TC-DTG,,,,,IIT,
+cr Katchuan Irruan Model Primary Health Centre,0000303,Female,2019-12-02,2020-07-07,3,TDF-3TC-DTG,TDF-3TC-DTG,2020-08-06,146938,2020-09-16,2020-09-16,IIT,
+cr Katchuan Irruan Model Primary Health Centre,0000256,Male,2018-11-23,2020-09-22,1,TDF-3TC-DTG,TDF-3TC-DTG,2019-06-24,133,2019-07-23,2019-07-23,IIT,
+cr Katchuan Irruan Model Primary Health Centre,0000316,Male,2020-07-20,2020-07-20,3,TDF-3TC-DTG,TDF-3TC-DTG,,,,,IIT,
+cr Katchuan Irruan Model Primary Health Centre,0000186,Female,2017-12-15,2020-10-09,2,TDF-3TC-EFV,TDF-3TC-DTG,,,,,IIT,
+cr Katchuan Irruan Model Primary Health Centre,0070/TI,Female,2017-08-02,2020-10-16,2,TDF-3TC-EFV,TDF-3TC-DTG,,,,,IIT,
+cr Katchuan Irruan Model Primary Health Centre,0072/TI,Female,2006-10-24,2020-08-06,3,AZT-3TC-NVP,TDF-3TC-DTG,,,,,IIT,
+cr Katchuan Irruan Model Primary Health Centre,049B/TI,Female,2017-06-07,2020-07-22,2,TDF-3TC-EFV,TDF-3TC-DTG,,,,,IIT,
+cr Katchuan Irruan Model Primary Health Centre,0099/TI,Female,2014-05-05,2020-07-02,3,AZT-3TC-NVP,TDF-3TC-DTG,2020-04-02,30.9,2020-06-17,2020-06-17,IIT,
+cr Katchuan Irruan Model Primary Health Centre,0114/TI,Female,2019-06-12,2020-08-03,3,TDF-3TC-EFV,TDF-3TC-DTG,,,,,IIT,
+cr Katchuan Irruan Model Primary Health Centre,0000153,Female,2017-07-27,2020-10-12,2,TDF-3TC-EFV,TDF-3TC-DTG,2019-03-25,150,2019-04-25,2019-04-25,IIT,
+cr Katchuan Irruan Model Primary Health Centre,0000286,Female,2019-06-28,2020-10-28,2,TDF-3TC-EFV,TDF-3TC-DTG,2020-08-28,93,2020-09-19,2020-09-19,IIT,
+cr Katchuan Irruan Model Primary Health Centre,0050/TI,Female,2011-11-02,2020-06-18,3,AZT-3TC-NVP,TDF-3TC-DTG,2020-01-09,40,2020-01-21,2020-01-21,IIT,
+cr Katchuan Irruan Model Primary Health Centre,0036/TI,Female,2013-06-13,2020-07-28,3,AZT-3TC-NVP,TDF-3TC-DTG,2020-03-03,40,2020-04-21,2020-04-21,IIT,
+cr Katchuan Irruan Model Primary Health Centre,0000320,Female,2020-09-14,2020-09-14,3,TDF-3TC-DTG,TDF-3TC-DTG,,,,,IIT,
+cr Katchuan Irruan Model Primary Health Centre,0000137,Male,2017-01-25,2020-07-23,2,TDF-3TC-EFV,TDF-3TC-DTG,,,,,IIT,
+cr Katchuan Irruan Model Primary Health Centre,0000308,Female,2020-02-07,2020-08-10,3,TDF-3TC-DTG,TDF-3TC-DTG,2020-06-08,40,2020-07-28,2020-07-28,IIT,
+cr Katchuan Irruan Model Primary Health Centre,0000023,Female,2015-03-06,2020-09-17,3,TDF-3TC-EFV,TDF-3TC-DTG,2019-06-19,7928,2019-07-23,2019-07-23,IIT,
+cr Katchuan Irruan Model Primary Health Centre,0000048,Female,2015-01-03,2020-09-29,3,TDF-3TC-EFV,TDF-3TC-DTG,2020-03-16,40,2020-03-31,2020-03-31,IIT,
+cr Katchuan Irruan Model Primary Health Centre,0000182,Female,2017-12-12,2020-07-21,3,TDF-3TC-EFV,TDF-3TC-DTG,2020-01-15,40,2020-01-21,2020-01-21,IIT,
+cr Katchuan Irruan Model Primary Health Centre,0000289,Male,2019-06-28,2020-08-10,3,TDF-3TC-EFV,TDF-3TC-DTG,,,,,IIT,
+cr Katchuan Irruan Model Primary Health Centre,0000274,Female,2019-06-19,2020-08-10,3,TDF-3TC-EFV,TDF-3TC-DTG,2020-08-10,40,2020-09-16,2020-09-16,IIT,
+cr Katchuan Irruan Model Primary Health Centre,0000298,Female,2019-08-02,2020-09-07,3,TDF-3TC-EFV,TDF-3TC-DTG,,,,,IIT,
+cr Katchuan Irruan Model Primary Health Centre,0055/TI,Female,2009-02-03,2020-07-07,3,AZT-3TC-EFV,TDF-3TC-DTG,2020-02-10,339,2020-03-13,2020-03-13,IIT,
+cr Katchuan Irruan Model Primary Health Centre,0000165,Male,2017-09-11,2020-07-16,2,TDF-3TC-EFV,TDF-3TC-DTG,,,,,IIT,
+cr Katchuan Irruan Model Primary Health Centre,0000314,Female,2020-06-22,2020-07-28,3,TDF-3TC-DTG,TDF-3TC-DTG,,,,,IIT,
+cr Katchuan Irruan Model Primary Health Centre,0000110,Female,2017-01-04,2020-10-17,2,TDF-3TC-EFV,TDF-3TC-DTG,,,,,IIT,
+cr Katchuan Irruan Model Primary Health Centre,0000105,Female,2016-01-30,2020-07-23,2,TDF-3TC-EFV,TDF-3TC-DTG,2020-07-23,40,2020-08-31,2020-08-31,IIT,
+cr Katchuan Irruan Model Primary Health Centre,0000257,Female,2018-11-23,2020-09-22,1,TDF-3TC-DTG,TDF-3TC-DTG,2020-07-20,,2020-08-29,2020-08-29,IIT,
+cr Katchuan Irruan Model Primary Health Centre,0101/TI,Male,2015-04-15,2020-09-02,3,ABC-3TC-NVP,ABC-3TC-LPV/r,,,,,IIT,
+cr Katchuan Irruan Model Primary Health Centre,0000193,Female,2017-12-07,2020-09-17,3,TDF-3TC-EFV,TDF-3TC-DTG,2019-07-05,20,2019-08-07,2019-08-07,IIT,
+cr Katchuan Irruan Model Primary Health Centre,0000213,Male,2018-06-18,2020-06-15,3,TDF-3TC-EFV,TDF-3TC-DTG,,,,,IIT,
+cr Katchuan Irruan Model Primary Health Centre,0030/TI,Female,2009-08-02,2020-07-17,2,AZT-3TC-NVP,TDF-3TC-DTG,2020-08-13,40,2020-09-16,2020-09-16,IIT,
+cr Katchuan Irruan Model Primary Health Centre,0000306,Female,2020-01-08,2020-06-16,3,TDF-3TC-EFV,TDF-3TC-DTG,2020-07-01,20,2020-09-21,2020-09-21,IIT,
+cr Katchuan Irruan Model Primary Health Centre,0000319,Female,2020-08-19,2020-08-19,1,TDF-3TC-DTG,TDF-3TC-DTG,,,,,IIT,
+cr Katchuan Irruan Model Primary Health Centre,0000288,Female,2019-06-28,2020-06-16,3,TDF-3TC-EFV,TDF-3TC-DTG,,,,,IIT,
+cr Katchuan Irruan Model Primary Health Centre,058B/TI,Female,2008-06-18,2020-08-10,3,TDF-3TC-EFV,TDF-3TC-DTG,2020-05-11,223,2020-05-27,2020-05-27,IIT,
+cr Katchuan Irruan Model Primary Health Centre,0000071,Male,2015-05-18,2020-08-26,3,TDF-3TC-EFV,TDF-3TC-DTG,2019-11-04,40,2019-11-14,2019-11-14,IIT,
+cr Katchuan Irruan Model Primary Health Centre,00251/P,Male,2018-10-02,2020-08-27,3,AZT-3TC-NVP,AZT-3TC-NVP,2020-06-04,126947,2020-07-28,2020-07-28,IIT,
+cr Katchuan Irruan Model Primary Health Centre,0000102,Female,2016-01-28,2020-07-13,3,TDF-3TC-EFV,TDF-3TC-DTG,2020-01-10,40,2020-01-21,2020-01-21,IIT,
+cr Katchuan Irruan Model Primary Health Centre,0081/TI,Female,2014-06-18,2020-08-17,3,AZT-3TC-NVP,TDF-3TC-DTG,2020-08-17,40,2020-09-16,2020-09-16,IIT,
+cr Katchuan Irruan Model Primary Health Centre,0000262,Female,2019-03-04,2020-07-27,3,TDF-3TC-EFV,TDF-3TC-DTG,2019-10-17,82,2019-11-28,2019-11-28,IIT,
+cr Katchuan Irruan Model Primary Health Centre,0100/TI,Male,2015-01-04,2020-07-07,3,TDF-3TC-EFV,TDF-3TC-DTG,2020-06-22,819,2020-08-11,2020-08-11,IIT,
+cr Katchuan Irruan Model Primary Health Centre,0096/TI,Male,2018-07-11,2020-06-15,3,TDF-3TC-EFV,TDF-3TC-DTG,,,,,IIT,
+cr Katchuan Irruan Model Primary Health Centre,0000037,Female,2014-11-03,2020-07-15,3,TDF-3TC-EFV,TDF-3TC-DTG,2018-04-13,720,2018-07-09,2018-07-09,IIT,
+cr Katchuan Irruan Model Primary Health Centre,0000106,Female,2016-01-30,2020-07-23,2,TDF-3TC-EFV,TDF-3TC-DTG,2020-08-10,40,2020-09-16,2020-09-16,IIT,
+cr Katchuan Irruan Model Primary Health Centre,00207/P,Male,2018-04-17,2020-07-22,2,AZT-3TC-NVP,ABC+3TC+LPV/r,,,,,IIT,
+cr Katchuan Irruan Model Primary Health Centre,0008/TI,Female,2008-01-24,2020-09-17,3,TDF-3TC-EFV,TDF-3TC-DTG,2019-01-09,43,2019-04-17,2019-04-17,IIT,
+cr Katchuan Irruan Model Primary Health Centre,0000240,Female,2018-08-23,2020-06-15,3,TDF-3TC-EFV,TDF-3TC-DTG,2020-03-17,40,2020-03-31,2020-03-31,IIT,
+cr Katchuan Irruan Model Primary Health Centre,0000169,Female,2017-09-25,2020-10-14,2,TDF-3TC-EFV,TDF-3TC-DTG,,,,,IIT,
+cr Katchuan Irruan Model Primary Health Centre,0000252,Female,2018-10-16,2020-08-06,3,TDF-3TC-EFV,TDF-3TC-DTG,2020-01-13,78,2020-01-21,2020-01-21,IIT,
+cr Katchuan Irruan Model Primary Health Centre,0000080,Female,2015-06-19,2020-07-28,2,,TDF-3TC-DTG,,,,,IIT,
+cr Katchuan Irruan Model Primary Health Centre,0017/TI,Female,2009-01-01,2020-09-16,3,AZT-3TC-NVP,TDF-3TC-DTG,2020-03-04,40,2020-04-26,2020-04-26,IIT,
+cr Katchuan Irruan Model Primary Health Centre,0000285,Male,2019-06-27,2020-06-10,3,AZT-3TC-NVP,ABC-3TC-LPV/r,,,,,IIT,
+cr Katchuan Irruan Model Primary Health Centre,0000263,Male,2019-03-04,2020-07-27,3,TDF-3TC-DTG,TDF-3TC-DTG,,,,,IIT,
+cr Katchuan Irruan Model Primary Health Centre,0060/TI,Female,2014-10-03,2020-07-13,3,TDF-3TC-EFV,TDF-3TC-DTG,,,,,IIT,
+cr Katchuan Irruan Model Primary Health Centre,0000203,Female,2018-04-04,2020-07-15,2,TDF-3TC-EFV,TDF-3TC-DTG,2020-07-20,,2020-09-02,2020-09-02,IIT,
+cr Katchuan Irruan Model Primary Health Centre,0000198,Female,2018-02-05,2020-06-26,3,TDF-3TC-EFV,TDF-3TC-DTG,2020-06-26,40,2020-08-13,2020-08-13,IIT,
+cr Katchuan Irruan Model Primary Health Centre,0000088,Female,2016-07-04,2020-06-22,3,TDF-3TC-EFV,TDF-3TC-DTG,2019-08-14,110171,2019-08-28,2019-08-28,IIT,
+cr Katchuan Irruan Model Primary Health Centre,0000242,Male,2018-09-06,2020-09-17,3,TDF-3TC-EFV,TDF-3TC-DTG,2020-03-19,40,2020-04-23,2020-04-23,IIT,
+cr Katchuan Irruan Model Primary Health Centre,0000245,Female,2018-09-10,2020-09-07,3,D4T-3TC-EFV,TDF-3TC-DTG,2020-09-03,209,2020-09-28,2020-09-28,IIT,
+cr Katchuan Irruan Model Primary Health Centre,000P303,Male,2019-12-13,2020-09-02,3,AZT-3TC-NVP,ABC-3TC-LPV/r,2020-07-09,241,2020-08-29,2020-08-29,IIT,
+cr Katchuan Irruan Model Primary Health Centre,0068/TI,Female,2014-11-04,2020-07-06,3,AZT-3TC-NVP,TDF-3TC-DTG,2020-03-23,40,2020-04-23,2020-04-23,IIT,
+cr Katchuan Irruan Model Primary Health Centre,0004/TI,Female,2014-09-01,2020-07-07,3,AZT-3TC-NVP,TDF-3TC-DTG,2019-02-25,150,2019-03-28,2019-03-28,IIT,
+cr Katchuan Irruan Model Primary Health Centre,0013/TI,Male,2009-02-01,2020-07-06,3,AZT-3TC-EFV,TDF-3TC-DTG,2020-07-06,20,2020-09-19,2020-09-19,IIT,
+cr Katchuan Irruan Model Primary Health Centre,0082/TI,Male,2018-04-04,2020-07-20,2,TDF-3TC-EFV,TDF-3TC-DTG,2020-08-10,40,2020-09-16,2020-09-16,IIT,
+cr Katchuan Irruan Model Primary Health Centre,0006/TI,Female,2007-05-16,2020-07-14,3,AZT-3TC-NVP,TDF-3TC-DTG,2019-10-04,40,2019-11-28,2019-11-28,IIT,
+cr Katchuan Irruan Model Primary Health Centre,0000290,Female,2019-06-28,2020-08-10,3,TDF-3TC-EFV,TDF-3TC-DTG,2020-08-17,40,2020-09-16,2020-09-16,IIT,
+cr Katchuan Irruan Model Primary Health Centre,0024/TI,Female,2010-09-20,2020-08-10,3,AZT-3TC-EFV,TDF-3TC-DTG,2019-06-27,40,2019-08-09,2019-08-09,IIT,
+cr Katchuan Irruan Model Primary Health Centre,0000086,Female,2015-09-27,2020-07-28,3,TDF-3TC-EFV,TDF-3TC-DTG,2020-05-04,64.3,2020-06-02,2020-06-02,IIT,
+cr Katchuan Irruan Model Primary Health Centre,000262A,Female,2019-02-04,2020-09-03,3,TDF-3TC-DTG,TDF-3TC-DTG,2020-03-03,40,2020-04-21,2020-04-21,IIT,
+cr Katchuan Irruan Model Primary Health Centre,0047/TI,Male,2013-11-07,2020-07-16,3,TDF-3TC-EFV,TDF-3TC-DTG,2019-06-24,40,2019-07-23,2019-07-23,IIT,
+cr Katchuan Irruan Model Primary Health Centre,0000236,Female,2018-08-09,2020-08-24,3,TDF-3TC-EFV,TDF-3TC-DTG,2019-09-12,101,2019-10-11,2019-10-11,IIT,
+cr Katchuan Irruan Model Primary Health Centre,0113/TI,Male,2011-12-02,2020-07-02,3,AZT-3TC-NVP,TDF-3TC-DTG,2020-07-02,20,2020-09-21,2020-09-21,IIT,
+cr Katchuan Irruan Model Primary Health Centre,0000297,Female,2019-07-29,2020-07-27,3,TDF-3TC-EFV,TDF-3TC-DTG,,,,,IIT,
+cr Katchuan Irruan Model Primary Health Centre,0000140,Female,2017-02-01,2020-07-27,3,TDF-3TC-EFV,TDF-3TC-DTG,2019-10-24,40,2019-12-02,2019-12-02,IIT,
+cr Katchuan Irruan Model Primary Health Centre,0025/TI,Male,2008-06-05,2020-07-28,2,AZT-3TC-NVP,TDF-3TC-DTG,,,,,IIT,
+cr Katchuan Irruan Model Primary Health Centre,0000287,Male,2019-06-28,2020-07-20,2,TDF-3TC-DTG,TDF-3TC-DTG,,,,,IIT,
+cr Katchuan Irruan Model Primary Health Centre,0112/TI,Female,2012-08-01,2020-08-18,3,ABC-3TC-NVP,TDF-3TC-DTG,2020-08-17,40,2020-09-16,2020-09-16,IIT,
+cr Katchuan Irruan Model Primary Health Centre,0000291,Female,2019-06-28,2020-06-13,3,TDF-3TC-EFV,TDF-3TC-DTG,2020-08-17,40,2020-09-16,2020-09-16,IIT,
+cr Katchuan Irruan Model Primary Health Centre,0000085,Female,2015-08-04,2020-07-10,3,AZT-3TC-NVP,TDF-3TC-DTG,,,,,IIT,
+cr Katchuan Irruan Model Primary Health Centre,0000036,Female,2018-08-15,2020-08-26,3,TDF-3TC-EFV,TDF-3TC-DTG,2020-03-13,40,2020-03-31,2020-03-31,IIT,
+cr Katchuan Irruan Model Primary Health Centre,059/TIB,Female,2007-09-14,2020-07-02,3,AZT-3TC-NVP,TDF-3TC-DTG,2020-02-10,116,2020-03-13,2020-03-13,IIT,
+cr Katchuan Irruan Model Primary Health Centre,00305/P,Male,2019-12-13,2020-09-02,3,AZT-3TC-NVP,ABC-3TC-LPV/r,2020-07-09,241,2020-08-29,2020-08-29,IIT,
+cr Katchuan Irruan Model Primary Health Centre,0000243,Female,2018-09-10,2020-07-09,3,TDF-3TC-EFV,TDF-3TC-DTG,2019-03-26,150,2019-04-25,2019-04-25,IIT,
+cr Katchuan Irruan Model Primary Health Centre,0000150,Female,2017-05-30,2020-07-02,3,TDF-3TC-EFV,TDF-3TC-DTG,2020-07-02,20,2020-09-21,2020-09-21,IIT,
+cr Katchuan Irruan Model Primary Health Centre,061P/TI,Male,2014-05-20,2020-10-20,2,AZT-3TC-NVP,ABC-3TC-NVP,2020-02-04,1240,2020-04-02,2020-04-02,IIT,
+cr Katchuan Irruan Model Primary Health Centre,0010/TI,Male,2015-03-20,2020-09-03,3,AZT-3TC-NVP,TDF-3TC-DTG,,,,,IIT,
+cr Katchuan Irruan Model Primary Health Centre,0000148,Female,2017-04-24,2020-07-17,3,TDF-3TC-EFV,TDF-3TC-DTG,2020-01-20,56,2020-02-17,2020-02-17,IIT,
+cr Katchuan Irruan Model Primary Health Centre,0012/TI,Female,2014-06-05,2020-07-10,3,AZT-3TC-NVP,TDF-3TC-DTG,2019-10-04,40,2019-11-28,2019-11-28,IIT,
+cr Katchuan Irruan Model Primary Health Centre,0000309,Female,2020-02-27,2020-09-07,2,TDF-3TC-DTG,TDF-3TC-DTG,,,,,IIT,
+cr Katchuan Irruan Model Primary Health Centre,0000188,Female,2017-12-21,2020-08-11,3,TDF-3TC-EFV,TDF-3TC-DTG,,,,,IIT,
+cr Katchuan Irruan Model Primary Health Centre,0000005,Male,2014-07-25,2020-07-06,3,TDF-3TC-EFV,TDF-3TC-DTG,2020-07-06,51.9,2020-09-21,2020-09-21,IIT,
+cr Katchuan Irruan Model Primary Health Centre,0000101,Female,2016-01-29,2020-06-19,3,TDF-3TC-EFV,TDF-3TC-DTG,2019-04-05,150,2019-07-12,2019-07-12,IIT,
+cr Katchuan Irruan Model Primary Health Centre,0000267,Female,2019-04-25,2020-08-26,3,TDF-3TC-DTG,TDF-3TC-DTG,2019-10-28,191,2019-12-02,2019-12-02,IIT,
+cr Katchuan Irruan Model Primary Health Centre,0000183,Female,2017-12-12,2020-07-16,2,TDF-3TC-EFV,TDF-3TC-DTG,,,,,IIT,
+cr Katchuan Irruan Model Primary Health Centre,0000146,Female,2017-03-09,2020-07-16,2,TDF-3TC-EFV,TDF-3TC-DTG,,,,,IIT,
+cr Katchuan Irruan Model Primary Health Centre,0009/TI,Female,2015-03-18,2020-08-07,3,TDF-3TC-EFV,TDF-3TC-DTG,2018-04-20,150,2018-04-20,2018-04-20,IIT,
+cr Katchuan Irruan Model Primary Health Centre,0044/TI,Female,2013-10-31,2020-07-13,2,TDF-3TC-EFV,TDF-3TC-EFV,2019-03-15,150,2019-04-17,2019-04-17,IIT,
+cr Katchuan Irruan Model Primary Health Centre,0000039,Male,2015-05-27,2020-08-04,3,TDF-3TC-EFV,TDF-3TC-DTG,2020-02-17,40,2020-03-16,2020-03-16,IIT,
+cr Katchuan Irruan Model Primary Health Centre,0000055,Female,2015-03-14,2020-08-06,3,,TDF-3TC-DTG,,,,,IIT,
+cr Katchuan Irruan Model Primary Health Centre,0000152,Female,2017-07-10,2020-06-18,3,TDF-3TC-EFV,TDF-3TC-DTG,2019-10-15,40,2019-11-28,2019-11-28,IIT,
+cr Katchuan Irruan Model Primary Health Centre,0059/TIA,Male,2014-06-19,2020-07-13,3,AZT-3TC-NVP,TDF-3TC-DTG,,,,,IIT,
+cr Katchuan Irruan Model Primary Health Centre,0000295,Male,2019-07-16,2020-08-03,3,TDF-3TC-DTG,TDF-3TC-DTG,,,,,IIT,
+cr Katchuan Irruan Model Primary Health Centre,0080/TI,Female,2018-04-03,2020-10-02,3,TDF-3TC-EFV,TDF-3TC-DTG,,,,,IIT,
+cr Katchuan Irruan Model Primary Health Centre,0000317,Female,2020-07-23,2020-07-23,2,TDF-3TC-DTG,TDF-3TC-DTG,,,,,IIT,
+cr Katchuan Irruan Model Primary Health Centre,0000270,Female,2019-05-01,2020-09-07,3,TDF-3TC-EFV,TDF-3TC-DTG,2020-08-20,1277,2020-09-19,2020-09-19,IIT,
+cr Katchuan Irruan Model Primary Health Centre,0057/TI,Female,2017-03-09,2020-07-17,3,TDF-3TC-EFV,TDF-3TC-DTG,2020-02-24,181,2020-03-28,2020-03-28,IIT,
+cr Katchuan Irruan Model Primary Health Centre,0093/TI,Female,2017-02-15,2020-07-06,3,TDF-3TC-EFV,TDF-3TC-DTG,2020-03-23,40,2020-04-23,2020-04-23,IIT,
+cr Katchuan Irruan Model Primary Health Centre,0000156,Female,2017-08-04,2020-07-28,3,TDF-3TC-EFV,TDF-3TC-DTG,2019-10-22,40,2019-11-28,2019-11-28,IIT,
+cr Katchuan Irruan Model Primary Health Centre,0000266,Male,2019-03-20,2020-06-24,3,TDF-3TC-DTG,TDF-3TC-DTG,2020-03-18,40,2020-04-23,2020-04-23,IIT,
+cr Katchuan Irruan Model Primary Health Centre,00038/P,Female,2019-01-07,2020-06-18,3,AZT-3TC-NVP,TDF-3TC-DTG,2020-06-18,40,2020-08-11,2020-08-11,IIT,
+cr Katchuan Irruan Model Primary Health Centre,0019/TI,Female,2013-10-31,2020-07-27,3,AZT-3TC-EFV,TDF-3TC-DTG,2020-08-05,62,2020-09-16,2020-09-16,IIT,
+cr Mma Efa Health Centre,001/088/19,Female,2019-07-16,2020-06-08,3,TDF-3TC-DTG,TDF-3TC-DTG,,,,,IIT,Nancy Ndifon Ntui
+cr Mma Efa Health Centre,001/331/19,Male,2019-09-12,2020-06-10,3,TDF-3TC-DTG,TDF-3TC-DTG,2020-08-20,40,2020-09-30,2020-09-30,IIT,Glory  Osebi
+cr Mma Efa Health Centre,00/147/19,Male,2016-12-15,2020-11-26,3,TDF-3TC-EFV,TDF-3TC-DTG,2020-08-27,40,2020-09-30,2020-09-30,IIT,Edet Okon Edet
+cr Mma Efa Health Centre,001/313/19,Female,2019-09-03,2020-06-10,3,TDF-3TC-DTG,TDF-3TC-DTG,,,,,IIT,Nancy Ndifon Ntui
+cr Mma Efa Health Centre,001/390/19,Female,2019-09-23,2020-09-07,3,TDF-3TC-DTG,TDF-3TC-DTG,,,,,IIT,Paulinus  Mbeh  Okon
+cr Mma Efa Health Centre,001/164/19,Male,2019-08-18,2020-06-11,3,TDF-3TC-DTG,TDF-3TC-DTG,2020-06-25,689,2020-08-21,2020-08-21,IIT,Nancy Ndifon Ntui
+cr Mma Efa Health Centre,001/312/19,Female,2019-09-09,2020-08-11,3,TDF-3TC-DTG,TDF-3TC-DTG,,,,,IIT,Nancy Ndifon Ntui
+cr Mma Efa Health Centre,001/106/19,Female,2019-07-23,2020-08-10,4,TDF-3TC-DTG,TDF-3TC-DTG,,,,,IIT,VICTOR  BLESSING
+cr Mma Efa Health Centre,001/154/19,Female,2019-08-14,2020-06-10,3,TDF-3TC-DTG,TDF-3TC-DTG,2020-08-21,40,2020-09-30,2020-09-30,IIT,Nancy Ndifon Ntui
+cr Mma Efa Health Centre,001/769/20,Female,2020-06-09,2020-10-31,3,TDF-3TC-DTG,TDF-3TC-DTG,2020-12-21,40,2021-02-17,2021-02-17,IIT,VICTOR  BLESSING
+cr Mma Efa Health Centre,001/474/2/20,Female,2020-01-20,2020-09-23,2,TDF-3TC-DTG,TDF-3TC-DTG,,,,,IIT,Paulinus  Mbeh  Okon
+cr Mma Efa Health Centre,001/557/19,Male,2019-11-28,2020-11-17,3,TDF-3TC-DTG,TDF-3TC-DTG,2020-11-27,0,2020-12-16,2020-12-16,IIT,VICTOR  BLESSING
+cr Mma Efa Health Centre,001/440/19,Female,2019-09-25,2020-08-21,4,TDF-3TC-DTG,TDF-3TC-DTG,,,,,IIT,Paulinus  Mbeh  Okon
+cr Mma Efa Health Centre,001/359/19,Female,2019-09-09,2020-09-18,3,TDF-3TC-DTG,TDF-3TC-DTG,2020-08-17,40,2020-09-30,2020-09-30,IIT,Glory  Osebi
+cr Mma Efa Health Centre,001/386/19,Female,2019-09-23,2020-06-10,3,TDF-3TC-DTG,TDF-3TC-DTG,,,,,IIT,Paulinus  Mbeh  Okon
+cr Mma Efa Health Centre,001/659/20,Female,2020-03-24,2020-11-17,3,TDF-3TC-DTG,TDF-3TC-DTG,,,,,IIT,EGBE  LINDA
+cr Mma Efa Health Centre,001/146/19,Female,2019-08-15,2020-08-10,3,TDF-3TC-DTG,TDF-3TC-DTG,,,,,IIT,Edet Okon Edet
+cr Mma Efa Health Centre,001/624/20,Female,2020-02-25,2020-08-26,3,TDF-3TC-DTG,TDF-3TC-DTG,2020-05-04,20,2020-06-14,2020-06-14,IIT,OFEM  JAMES
+cr Mma Efa Health Centre,001/378/19,Female,2019-09-19,2020-06-08,3,TDF-3TC-DTG,TDF-3TC-DTG,,,,,IIT,Glory  Osebi
+cr Mma Efa Health Centre,001/195/19,Female,2019-08-21,2020-06-08,3,TDF-3TC-DTG,TDF-3TC-DTG,2020-08-26,40,2020-09-30,2020-09-30,IIT,Glory  Osebi
+cr Mma Efa Health Centre,001/107/19,Male,2019-07-23,2020-10-15,3,TDF-3TC-DTG,TDF-3TC-DTG,2020-07-29,73,2020-08-31,2020-08-31,IIT,VICTOR  BLESSING
+cr Mma Efa Health Centre,001/423/19,Male,2019-09-23,2020-09-14,3,TDF-3TC-DTG,TDF-3TC-DTG,2020-01-09,20,2020-09-30,2020-09-30,IIT,Paulinus  Mbeh  Okon
+cr Mma Efa Health Centre,001/143/19,Female,2019-08-13,2020-08-21,3,TDF-3TC-DTG,TDF-3TC-DTG,2020-06-23,40,2020-08-21,2020-08-21,IIT,Nancy Ndifon Ntui
+cr Mma Efa Health Centre,00/172/19,Male,2015-06-09,2020-09-01,3,TDF-3TC-EFV,TDF-3TC-DTG,,,,,IIT,ERNEST  EYAM
+cr Mma Efa Health Centre,001/559/19,Male,2019-11-28,2020-08-24,3,TDF-3TC-DTG,TDF-3TC-DTG,,,,,IIT,OCHELEBE  EMMANUEL
+cr Oban Health Centre,0000833,Female,2016-03-18,2020-11-19,3,TDF-3TC-EFV,TDF-3TC-DTG,,,,,IIT,Ojong  Eric  Oru
+cr Obubra General Hospital,CRS/009/0564,Female,2011-07-01,2020-08-28,3,AZT-3TC-NVP,TDF-3TC-DTG,2021-02-23,8081,2021-03-22,2021-03-22,IIT,Sunday Beatrice
+cr Obubra General Hospital,CRS/009/1671,Male,2019-05-21,2020-07-07,3,TDF-3TC-DTG,TDF-3TC-DTG,,,,,IIT,Sunday Beatrice
+cr Obubra General Hospital,CRS/009/0523,Female,2011-06-01,2020-07-06,3,AZT-3TC-NVP,TDF-3TC-DTG,2019-06-06,2182,2019-06-06,2019-06-06,IIT,Sunday Beatrice
+cr Obubra General Hospital,CRS/009/1245,Female,2015-10-15,2020-07-07,3,TDF-3TC-EFV,TDF-3TC-EFV,,,,,IIT,OTABA  IMOKE ODEY 
+cr Obubra General Hospital,CRS/009/0112,Female,2016-02-18,2020-07-09,3,AZT-3TC-NVP,TDF-3TC-DTG,2018-11-08,46926,2019-01-29,2019-01-29,IIT,Sunday Beatrice
+cr Obubra General Hospital,CRS/009/0922,Female,2016-07-14,2020-06-14,3,AZT-3TC-NVP,TDF-3TC-DTG,2020-03-19,5870,2020-03-19,2020-03-19,IIT,OTABA  IMOKE ODEY 
+cr Obubra General Hospital,CRS/009/1717,Male,2020-02-17,2020-06-12,3,TDF-3TC-DTG,TDF-3TC-DTG,,,,,IIT,ISETU BLESSING ETENG 
+cr Obubra General Hospital,CRS/009/01314,Male,2015-12-22,2020-06-15,3,AZT-3TC-NVP,TDF-3TC-DTG,2019-06-04,1259,2019-07-23,2019-07-23,IIT,ISETU BLESSING ETENG 
+cr Obubra General Hospital,CRS/009/1719,Female,2020-03-05,2020-06-11,3,TDF-3TC-DTG,TDF-3TC-DTG,,,,,IIT,ISETU BLESSING ETENG 
+cr Obubra General Hospital,CRS/009/1233,Female,2015-07-30,2020-07-16,2,AZT-3TC-NVP,TDF-3TC-DTG,,,,,IIT,Sunday Beatrice
+cr Obubra General Hospital,CRS/009/00781,Female,2018-01-16,2020-07-10,3,AZT-3TC-NVP,TDF-3TC-DTG,2019-07-10,292,2019-08-17,2019-08-17,IIT,Sunday Beatrice
+cr Obubra General Hospital,CRS/009/1498,Female,2017-06-15,2020-06-16,3,TDF-3TC-EFV,TDF-3TC-DTG,2020-06-16,362,2020-06-30,2020-06-30,IIT,OTABA  IMOKE ODEY 
+cr Obubra General Hospital,CRS/009/924,Female,2010-04-29,2020-07-07,3,AZT-3TC-NVP,TDF-3TC-DTG,,,,,IIT,OTABA  IMOKE ODEY 
+cr Obubra General Hospital,CRS/009/01185,Female,2016-02-04,2020-06-05,3,AZT-3TC-NVP,TDF-3TC-DTG,2019-12-05,137660,2020-01-22,2020-01-22,IIT,OTABA  IMOKE ODEY 
+cr Obubra General Hospital,CRS/009/1453,Male,2017-02-06,2020-08-29,3,AZT-3TC-NVP,TDF-3TC-DTG,2020-08-12,219,2020-10-12,2020-10-12,IIT,OTABA  IMOKE ODEY 
+cr Obubra General Hospital,CRS/009/0223,Female,2009-11-10,2020-06-22,3,TDF-3TC-NVP,TDF-3TC-DTG,,,,,IIT,ISETU BLESSING ETENG 
+cr Obubra General Hospital,CRS/009/0I649,Female,2019-02-07,2020-09-07,4,AZT-3TC-NVP,TDF-3TC-DTG,,,,,IIT,Sunday Beatrice
+cr Obubra General Hospital,CRS/009/1619,Male,2018-10-15,2020-07-07,3,TDF-3TC-EFV,TDF-3TC-DTG,,,,,IIT,OTABA  IMOKE ODEY 
+cr Obubra General Hospital,CRS/009/0089,Male,2008-08-05,2020-06-25,3,AZT-3TC-NVP,TDF-3TC-DTG,,,,,IIT,Sunday Beatrice
+cr Obubra General Hospital,CRS/009/4225,Male,2008-04-28,2020-07-09,3,AZT-3TC-NVP,TDF-3TC-DTG,2019-06-20,39,2019-06-20,2019-06-20,IIT,Sunday Beatrice
+cr Obubra General Hospital,CRS/009/352,Female,2010-06-08,2020-08-25,3,AZT-3TC-NVP,TDF-3TC-DTG,2019-10-15,40,2019-11-28,2019-11-28,IIT,Sunday Beatrice
+cr Obubra General Hospital,CRS/009/01261,Female,2015-07-09,2020-06-04,3,AZT-3TC-NVP,TDF-3TC-DTG,2020-04-02,52,2020-04-25,2020-04-25,IIT,Sunday Beatrice
+cr Obubra General Hospital,CRS/009/1086,Female,2019-11-19,2020-07-16,3,TDF-3TC-DTG,TDF-3TC-DTG,2020-09-23,61,2020-10-12,2020-10-12,IIT,Sunday Beatrice
+cr Obubra General Hospital,CRS/009/10487,Male,2012-09-13,2020-07-07,3,TDF-3TC-EFV,TDF-3TC-DTG,,,,,IIT,OTABA  IMOKE ODEY 
+cr Obubra General Hospital,CRS/009/01221,Female,2015-04-02,2020-09-17,3,AZT-3TC-NVP,TDF-3TC-DTG,2019-03-07,44180,2019-04-05,2019-04-05,IIT,Sunday Beatrice
+cr Obubra General Hospital,CRS/009/01682,Male,2019-07-09,2020-07-24,3,TDF-3TC-EFV,TDF-3TC-DTG,2020-05-28,40,2020-05-30,2020-05-30,IIT,ISETU BLESSING ETENG 
+cr Obubra General Hospital,CRS/009/2176,Female,2016-07-28,2020-07-07,3,,TDF-3TC-DTG,,,,,IIT,OTABA  IMOKE ODEY 
+cr Obubra General Hospital,CRS/009/422,Female,2012-08-16,2020-07-21,3,AZT-3TC-NVP,TDF-3TC-DTG,,,,,IIT,ISETU BLESSING ETENG 
+cr Obubra General Hospital,CRS/009/0897,Female,2017-07-20,2020-07-03,3,TDF-3TC-EFV,TDF-3TC-DTG,2018-08-30,120,2018-10-03,2018-10-03,IIT,Sunday Beatrice
+cr Obubra General Hospital,CRS/006/01713,Female,2006-09-19,2020-07-30,3,AZT-3TC-NVP,TDF-3TC-DTG,,,,,IIT,Sunday Beatrice
+cr Obubra General Hospital,CRS/009/0062,Female,2011-10-08,2020-06-18,3,AZT-3TC-NVP,TDF-3TC-EFV,,,,,IIT,Sunday Beatrice
+cr Obubra General Hospital,CRS/009/1399,Male,2016-07-07,2020-07-17,3,AZT-3TC-NVP,TDF-3TC-DTG,2020-04-23,298,2020-06-02,2020-06-02,IIT,Sunday Beatrice
+cr Obubra General Hospital,CRS/009/01686,Male,2019-07-24,2020-08-06,3,TDF-3TC-DTG,TDF-3TC-DTG,,,,,IIT,Sunday Beatrice
+cr Obubra General Hospital,crs/009/1761,Female,2020-11-24,2020-11-23,2,TDF-3TC-DTG,TDF-3TC-DTG,,,,,IIT,OTABA  IMOKE ODEY 
+cr Obubra General Hospital,CRS/005/20098,Female,2012-07-25,2020-07-09,3,TDF-3TC-EFV,TDF-3TC-EFV,,,,,IIT,Sunday Beatrice
+cr Obubra General Hospital,CRS/009/1222,Male,2015-04-02,2020-09-17,3,AZT-3TC-NVP,TDF-3TC-DTG,2019-03-07,847751,2019-04-05,2019-04-05,IIT,Sunday Beatrice
+cr Obubra General Hospital,CRS/009/11023,Female,2015-10-22,2020-08-03,3,AZT-3TC-NVP,TDF-3TC-DTG,2019-03-07,2403,2019-04-05,2019-04-05,IIT,ISETU BLESSING ETENG 
+cr Obubra General Hospital,CRS/009/01627,Male,2018-11-19,2020-07-02,3,TDF-3TC-EFV,TDF-3TC-DTG,,,,,IIT,OTABA  IMOKE ODEY 
+cr Obubra General Hospital,CRS/009/0999,Female,2014-01-30,2020-10-07,3,TDF-3TC-EFV,TDF-3TC-DTG,2019-11-21,40,2019-12-18,2019-12-18,IIT,ISETU BLESSING ETENG 
+cr Obubra General Hospital,CRS/009/1483,Male,2017-05-11,2020-07-07,3,TDF-3TC-EFV,TDF-3TC-EFV,2019-05-16,647195,2019-05-16,2019-05-16,IIT,OTABA  IMOKE ODEY 
+cr Obubra General Hospital,CRS/009/1567,Female,2018-03-15,2020-06-04,3,AZT-3TC-NVP,TDF-3TC-DTG,2019-08-13,21123,2020-08-29,2020-08-29,IIT,Sunday Beatrice
+cr Obubra General Hospital,CRS/009/1469,Male,2017-02-10,2020-08-20,3,AZT-3TC-NVP,TDF-3TC-DTG,2020-06-18,23700,2020-06-30,2020-06-30,IIT,Sunday Beatrice
+cr Obubra General Hospital,ABUJA/2735,Female,2020-02-12,2020-11-11,2,TDF-3TC-DTG,TDF-3TC-DTG,,,,,IIT,ISETU BLESSING ETENG 
+cr Obubra General Hospital,CRS/009/978,Female,2014-04-03,2020-07-09,3,TDF-3TC-EFV,TDF-3TC-DTG,,,,,IIT,Sunday Beatrice
+cr Obubra General Hospital,CRS/009/1727,Female,2020-04-08,2020-07-28,3,TDF-3TC-DTG,TDF-3TC-DTG,,,,,IIT,ISETU BLESSING ETENG 
+cr Obubra General Hospital,CRS/009/101327,Female,2016-01-23,2020-08-07,3,AZT-3TC-NVP,TDF-3TC-DTG,2020-04-23,406,2020-06-02,2020-06-02,IIT,Sunday Beatrice
+cr Obubra General Hospital,CRS/009/1692,Female,2019-09-12,2020-07-06,3,ABC-3TC-DTG,TDF-FTC-DTG,,,,,IIT,OTABA  IMOKE ODEY 
+cr Obubra General Hospital,CRS/009/01705,Female,2019-12-03,2020-06-16,3,TDF-3TC-DTG,TDF-3TC-DTG,,,,,IIT,Sunday Beatrice
+cr Obubra General Hospital,CRS/009/836,Female,2016-06-30,2020-08-20,3,TDF-3TC-EFV,TDF-3TC-DTG,2019-03-22,150,2019-03-22,2019-03-22,IIT,ISETU BLESSING ETENG 
+cr Obubra General Hospital,CRS/009/1730,Male,2020-04-21,2020-07-29,3,TDF-3TC-DTG,TDF-3TC-DTG,,,,,IIT,ISETU BLESSING ETENG 
+cr Obubra General Hospital,CRS/009/0028,Female,2008-04-17,2020-07-09,3,AZT-3TC-NVP,TDF-3TC-DTG,2020-04-09,125,2020-06-12,2020-06-12,IIT,Sunday Beatrice
+cr Obubra General Hospital,CRS/009/1549,Female,2018-01-29,2020-07-09,3,AZT-3TC-NVP,TDF-3TC-DTG,2019-04-05,2934,2019-04-05,2019-04-05,IIT,Sunday Beatrice
+cr Obubra General Hospital,CRS/009/1749,Male,2020-08-10,2020-09-08,4,TDF-3TC-DTG,TDF-3TC-DTG,,,,,IIT,OTABA  IMOKE ODEY 
+cr Obubra General Hospital,CRS/009/0613,Female,2017-11-01,2020-07-15,3,AZT-3TC-NVP,TDF-3TC-DTG,2019-09-03,40,2020-03-27,2020-03-27,IIT,ISETU BLESSING ETENG 
+cr Obubra General Hospital,CRS/009/01687,Female,2019-07-31,2020-06-08,3,TDF-3TC-DTG,TDF-3TC-DTG,2020-06-06,532369,2020-06-30,2020-06-30,IIT,ISETU BLESSING ETENG 
+cr Obubra General Hospital,CRS/009/01226,Female,2015-04-09,2020-07-16,3,AZT-3TC-NVP,TDF-3TC-DTG,2020-09-29,28,2020-10-12,2020-10-12,IIT,OTABA  IMOKE ODEY 
+cr Obubra General Hospital,CRS/003/00488,Female,2006-09-05,2020-12-23,1,AZT-3TC-NVP,TDF-3TC-DTG,2019-05-23,40,2019-07-23,2019-07-23,IIT,ISETU BLESSING ETENG 
+cr Obubra General Hospital,CRS/009/01331,Female,2016-04-21,2020-07-29,3,AZT-3TC-NVP,TDF-3TC-DTG,2019-11-07,27378,2019-11-28,2019-11-28,IIT,Sunday Beatrice
+cr Obubra General Hospital,CRS/009/1660,Female,2019-05-01,2020-07-07,3,TDF-3TC-EFV,TDF-3TC-DTG,,,,,IIT,OTABA  IMOKE ODEY 
+cr Obubra General Hospital,CRS/009/01590,Male,2018-06-27,2020-08-12,3,TDF-3TC-EFV,TDF-3TC-DTG,2021-03-08,40,2021-03-31,2021-03-31,IIT,ISETU BLESSING ETENG 
+cr Obubra General Hospital,CRS/009/1738,Male,2020-05-22,2020-08-13,3,TDF-3TC-DTG,TDF-3TC-DTG,,,,,IIT,Sunday Beatrice
+cr Obubra General Hospital,CRS/009/0884,Female,2020-07-15,2020-07-15,3,TDF-3TC-DTG,TDF-3TC-DTG,,,,,IIT,Sunday Beatrice
+cr Obubra General Hospital,HCT/011/04612,Male,2017-02-16,2020-10-01,3,AZT-3TC-NVP,TDF-3TC-DTG,2018-04-26,498788,2018-07-09,2018-07-09,IIT,Sunday Beatrice
+cr Obubra General Hospital,CRS/009/0998,Female,2015-04-09,2020-07-09,3,AZT-3TC-NVP,TDF-3TC-DTG,,,,,IIT,Sunday Beatrice
+cr Obubra General Hospital,CRS/009/1648,Female,2019-02-04,2020-07-07,3,AZT-3TC-NVP,TDF-3TC-DTG,,,,,IIT,OTABA  IMOKE ODEY 
+cr Obubra General Hospital,CRS/009/0113,Female,2008-09-14,2020-07-09,3,AZT-3TC-NVP,TDF-3TC-DTG,,,,,IIT,Sunday Beatrice
+cr Obubra General Hospital,CRS/009/3427,Female,2014-09-02,2020-07-23,3,AZT-3TC-EFV,TDF-3TC-DTG,2021-03-09,71,2021-03-31,2021-03-31,IIT,ISETU BLESSING ETENG 
+cr Obubra General Hospital,CRS/009/01369,Female,2020-05-22,2020-07-27,3,TDF-3TC-DTG,TDF-3TC-DTG,,,,,IIT,Sunday Beatrice
+cr Obubra General Hospital,CRS/009/1508,Female,2017-09-07,2020-07-09,3,AZT-3TC-NVP,TDF-3TC-DTG,,,,,IIT,Sunday Beatrice
+cr Obubra General Hospital,CRS/009/0609,Female,2011-11-17,2020-07-10,3,TDF-3TC-EFV,TDF-3TC-DTG,2020-04-13,147,2020-06-19,2020-06-19,IIT,Sunday Beatrice
+cr Obubra General Hospital,CRS/009/0785,Female,2016-02-28,2020-08-06,3,AZT-3TC-NVP,TDF-3TC-DTG,2019-07-25,40,2019-08-01,2019-08-01,IIT,Sunday Beatrice
+cr Obubra General Hospital,CRS/009/7004,Female,2019-12-16,2020-07-09,3,TDF-3TC-EFV,TDF-3TC-DTG,,,,,IIT,Sunday Beatrice
+cr Obubra General Hospital,CRS/009/2267,Female,2019-10-30,2020-07-07,3,TDF-3TC-DTG,TDF-3TC-DTG,,,,,IIT,OTABA  IMOKE ODEY 
+cr Obubra General Hospital,CRS/009/1347,Male,2016-03-08,2020-08-07,3,TDF-FTC-NVP,TDF-3TC-DTG,2020-02-06,52,2020-04-20,2020-04-20,IIT,Sunday Beatrice
+cr Obubra General Hospital,CRS/009/0417,Female,2007-09-03,2020-08-21,3,AZT-3TC-EFV,TDF-3TC-DTG,2019-12-03,486,2019-12-20,2019-12-20,IIT,ISETU BLESSING ETENG 
+cr Obubra General Hospital,CRS/009/0794,Male,2014-03-27,2020-07-07,3,AZT-3TC-NVP,TDF-3TC-DTG,2019-10-08,90705,2019-10-08,2019-10-08,IIT,OTABA  IMOKE ODEY 
+cr Obubra General Hospital,CRS/009/0461,Male,2013-08-02,2020-08-27,3,TDF-3TC-EFV,TDF-3TC-DTG,,,,,IIT,Sunday Beatrice
+cr Obubra General Hospital,CRS/004/2888,Female,2017-08-10,2020-06-30,3,TDF-3TC-EFV,TDF-3TC-DTG,2020-02-25,40,2020-03-30,2020-03-30,IIT,Sunday Beatrice
+cr Obubra General Hospital,CRS/009/01723,Male,2020-04-02,2020-07-30,3,TDF-3TC-DTG,TDF-3TC-DTG,,,,,IIT,Sunday Beatrice
+cr Obubra General Hospital,CRS/009/0460,Female,2011-02-01,2020-08-27,2,TDF-3TC-EFV,TDF-3TC-DTG,2018-08-09,545114,2018-08-16,2018-08-16,IIT,Sunday Beatrice
+cr Obubra General Hospital,CRS/009/0020,Male,2008-04-01,2020-08-11,3,AZT-3TC-NVP,TDF-3TC-DTG,2019-12-31,431,2020-01-27,2020-01-27,IIT,Sunday Beatrice
+cr Obubra General Hospital,CRS/009/0378,Male,2010-10-14,2020-07-21,3,AZT-3TC-NVP,TDF-3TC-DTG,,,,,IIT,Sunday Beatrice
+cr Obubra General Hospital,CRS/009/0886,Male,2014-04-22,2020-08-28,3,AZT-3TC-NVP,TDF-3TC-DTG,2019-03-07,11384,2019-04-05,2019-04-05,IIT,Sunday Beatrice
+cr Obubra General Hospital,CRS/009/0063,Male,2008-07-01,2020-06-18,3,AZT-3TC-NVP,TDF-3TC-EFV,,,,,IIT,ISETU BLESSING ETENG 
+cr Obubra General Hospital,CRS/009/1470,Male,2017-03-16,2020-08-20,3,AZT-3TC-NVP,TDF-3TC-DTG,2019-09-03,50417,2019-10-08,2019-10-08,IIT,ISETU BLESSING ETENG 
+cr Obubra General Hospital,CRS/009/1520,Male,2017-10-10,2020-07-02,3,AZT-3TC-NVP,TDF-3TC-DTG,2021-02-02,273,2021-03-16,2021-03-16,IIT,Sunday Beatrice
+cr Obubra General Hospital,CRS/009/0887,Female,2015-05-24,2020-08-13,3,AZT-3TC-NVP,TDF-3TC-DTG,2020-05-14,20,2020-06-02,2020-06-02,IIT,ISETU BLESSING ETENG 
+cr Obubra General Hospital,CRS/009/00154,Female,2008-12-01,2020-07-29,3,AZT-3TC-NVP,TDF-3TC-DTG,2019-07-09,75144,2019-08-16,2019-08-16,IIT,ISETU BLESSING ETENG 
+cr Obubra General Hospital,CRS/009/1668,Female,2019-05-16,2020-07-07,3,TDF-3TC-DTG,TDF-3TC-DTG,,,,,IIT,OTABA  IMOKE ODEY 
+cr Obubra General Hospital,CRS/009/1544,Female,2018-01-19,2020-06-24,3,AZT-3TC-NVP,TDF-3TC-DTG,2020-04-21,20,2020-06-02,2020-06-02,IIT,Sunday Beatrice
+cr Obubra General Hospital,CRS/009/01151,Female,2020-02-20,2020-07-07,3,TDF-3TC-DTG,TDF-3TC-DTG,,,,,IIT,Sunday Beatrice
+cr Obubra General Hospital,CRS/009/17008,Female,2019-12-13,2020-07-16,3,TDF-3TC-DTG,TDF-3TC-DTG,,,,,IIT,Sunday Beatrice
+cr Obubra General Hospital,CRS/009/1053,Male,2014-11-25,2020-09-28,3,AZT-3TC-NVP,TDF-3TC-DTG,2021-03-10,98,2021-03-31,2021-03-31,IIT,Sunday Beatrice
+cr Obubra General Hospital,CRS/009/1358,Female,2016-07-14,2020-06-19,3,AZT-3TC-NVP,TDF-3TC-EFV,2018-04-26,150,2018-04-26,2018-04-26,IIT,Sunday Beatrice
+cr Obubra General Hospital,CRS/009/1667,Female,2019-05-16,2020-07-07,3,TDF-3TC-DTG,TDF-3TC-EFV,,,,,IIT,OTABA  IMOKE ODEY 
+cr Obubra General Hospital,CRS/009/1700,Female,2019-11-04,2020-08-06,3,TDF-3TC-DTG,TDF-3TC-DTG,,,,,IIT,Sunday Beatrice
+cr Obubra General Hospital,CRS/009/0120,Female,2008-10-16,2020-07-09,3,AZT-3TC-NVP,TDF-3TC-DTG,2019-03-07,527278,2019-03-07,2019-03-07,IIT,Sunday Beatrice
+cr Obubra General Hospital,CRS/009/1644,Male,2019-02-04,2020-11-03,2,AZT-3TC-NVP,ABC-3TC-LPV/r,2020-07-07,1510000,2020-10-12,2020-10-12,IIT,ISETU BLESSING ETENG 
+cr Obubra General Hospital,CRS/009/10370,Female,2017-08-28,2020-07-09,3,TDF-3TC-EFV,TDF-3TC-EFV,,,,,IIT,OTABA  IMOKE ODEY 
+cr Obubra General Hospital,CRS/009/01455,Female,2017-02-06,2020-07-29,3,AZT-3TC-NVP,ABC-3TC-LPV/r,2019-04-05,150,2019-07-12,2019-07-12,IIT,Sunday Beatrice
+cr Obubra General Hospital,CRS/009/1599,Female,2018-07-25,2020-10-30,3,AZT-3TC-NVP,TDF-3TC-DTG,2019-02-26,151114,2019-03-28,2019-03-28,IIT,OTABA  IMOKE ODEY 
+cr Obubra General Hospital,CRS/009/0931,Female,2016-09-08,2020-08-13,3,AZT-3TC-NVP,TDF-3TC-DTG,2020-04-16,273000,2020-06-19,2020-06-19,IIT,Sunday Beatrice
+cr Obubra General Hospital,CRS/009/0721,Female,2017-05-18,2020-08-13,3,TDF-3TC-EFV,TDF-FTC-EFV,2018-12-18,20,2019-02-05,2019-02-05,IIT,Sunday Beatrice
+cr Obubra General Hospital,CRS/009/1120,Female,2015-01-13,2020-06-25,3,AZT-3TC-NVP,TDF-3TC-DTG,2020-06-25,40,2020-08-14,2020-08-14,IIT,Sunday Beatrice
+cr Obubra General Hospital,CRS/009/333545,Female,2015-02-12,2020-06-12,3,AZT-3TC-NVP,TDF-3TC-DTG,2020-09-10,50,2020-10-12,2020-10-12,IIT,Sunday Beatrice
+cr Obubra General Hospital,CRS/009/01475,Male,2017-04-13,2020-12-23,1,TDF-3TC-EFV,TDF-3TC-DTG,2018-05-10,107380,2018-11-09,2018-11-09,IIT,OTABA  IMOKE ODEY 
+cr Obubra General Hospital,CRS/009/1553,Female,2018-02-02,2020-08-27,3,AZT-3TC-NVP,TDF-3TC-DTG,2019-12-19,40,2020-01-27,2020-01-27,IIT,Sunday Beatrice
+cr Obubra General Hospital,CRS/009/1416,Female,2017-05-04,2020-10-23,3,AZT-3TC-NVP,TDF-3TC-DTG,2021-01-01,40,2021-03-16,2021-03-16,IIT,ISETU BLESSING ETENG 
+cr Police Hospital,0000195,Female,2021-01-26,2021-01-26,1,TDF-3TC-DTG,TDF-3TC-DTG,,,,,IIT,Mrs Itam Ikpi
+cr Police Hospital,0000126,Female,2018-10-23,2020-07-07,6,TDF-3TC-EFV,TDF-3TC-DTG,2019-05-15,20,2019-06-04,2019-06-04,IIT,Mrs Georgina Ekanem
+cr Police Hospital,0000066,Male,2017-11-01,2020-06-10,3,TDF-3TC-EFV,TDF-3TC-DTG,2019-05-13,43,2019-06-04,2019-06-04,IIT,Mark Imoke Ekpe
+cr Police Hospital,0000040,Male,2017-06-18,2020-12-07,3,TDF-3TC-EFV,TDF-3TC-DTG,2020-12-04,,,,IIT,Mark Imoke Ekpe
+cr Ugep General Hospital,0003853,Female,2018-10-24,2020-11-13,3,TDF-3TC-EFV,TDF-3TC-DTG,2019-06-12,40,2019-07-31,2019-07-31,IIT,OKOI SOLOMON
+cr University of Calabar Medical Centre,00123TI,Female,2017-01-24,2020-09-11,6,TDF-3TC-EFV,TDF-3TC-DTG,2021-01-07,400,2021-03-24,2021-03-24,IIT,David Emmanuel
+cr University of Calabar Medical Centre,0000104,Male,2018-10-07,2020-12-07,3,TDF-3TC-EFV,TDF-3TC-DTG,2019-10-16,40,2019-12-02,2019-12-02,IIT,Amaka Njoku
+cr University of Calabar Teaching Hospital,CRS0033459,Female,2011-01-10,2020-09-16,3,AZT-3TC-LPV/r,TDF-3TC-LPV/r,2020-12-03,400,2020-12-18,2020-12-18,IIT,Akepu Mercy Allowye
+cr University of Calabar Teaching Hospital,CRS00610411C,Female,2020-06-22,2020-09-11,3,TDF-3TC-DTG,TDF-3TC-DTG,2020-08-20,40,2020-09-30,2020-09-30,IIT,Nwogu Jennifer
+cr University of Calabar Teaching Hospital,CRS00608718,Female,2016-09-03,2020-12-17,1,ABC-3TC-AZT,TDF-3TC-DTG,2021-01-11,40,2021-03-26,2021-03-26,IIT,Ojong Eucharia Don
+cr University of Calabar Teaching Hospital,CRS00610349C,Female,2020-02-25,2020-08-19,1,TDF-3TC-DTG,ABC-3TC-DTG,2020-09-04,40,2020-09-29,2020-09-29,IIT,Uba Ikwo Asher
+cr University of Calabar Teaching Hospital,CRS00608574,Male,2016-04-04,2020-09-25,3,AZT-3TC-EFV,ABC-3TC-LPV/r,2020-08-07,40,2020-09-08,2020-09-08,IIT,Ojong Eucharia Don
+cr University of Calabar Teaching Hospital,CRS00609421,Female,2018-07-18,2020-07-27,3,TDF-3TC-EFV,TDF-3TC-DTG,2019-09-05,40,2019-09-23,2019-09-23,IIT,Joseph Ekpenyong
+cr University of Calabar Teaching Hospital,CRS00609626,Female,2019-04-25,2020-08-13,3,TDF-3TC-DTG,TDF-3TC-DTG,2020-02-20,40,2020-03-17,2020-03-17,IIT,Darlene Ibimi
+cr University of Calabar Teaching Hospital,CRS00609207,Female,2017-10-23,2020-09-04,3,AZT-3TC-NVP,ABC-3TC-DTG,2019-09-06,40,2019-10-07,2019-10-07,IIT,Ojong Eucharia Don
+cr University of Calabar Teaching Hospital,CRS00609288,Female,2018-02-02,2020-10-16,2,AZT-3TC-NVP,TDF-3TC-DTG,2020-11-20,7923,2020-12-15,2020-12-15,IIT,Ojong Eucharia Don
+cr University of Calabar Teaching Hospital,CRS00602794,Female,2007-10-07,2020-11-27,3,TDF-FTC-EFV,ABC-3TC-ATV/r,2021-02-25,40,2019-09-23,,IIT,Mary Ezeala
+cr University of Calabar Teaching Hospital,CRS00606092,Male,2011-11-30,2020-09-14,3,TDF-3TC-EFV,TDF-3TC-DTG,2020-12-18,20,2020-12-31,2020-12-31,IIT,Felicity Uko
+cr University of Calabar Teaching Hospital,CRS00609602,Male,2019-03-22,2020-09-11,3,AZT-3TC-NVP,TDF-3TC-DTG,2020-11-23,79,2021-01-29,2021-01-29,IIT,Felicity Uko
+cr University of Calabar Teaching Hospital,CRS00609933,Male,2020-02-19,2020-09-10,3,TDF-3TC-EFV,TDF-3TC-DTG,2020-08-27,40,2020-09-29,2020-09-29,IIT,Felicity Uko
+cr University of Calabar Teaching Hospital,CRS00610343C,Female,2020-02-14,2020-11-27,3,TDF-3TC-DTG,TDF-3TC-DTG,2020-09-04,40,2020-09-29,2020-09-29,IIT,Nwogu Jennifer
+cr University of Calabar Teaching Hospital,CRS00610470C,Female,2020-09-09,2020-09-09,1,ABC-3TC-DTG,ABC-3TC-DTG,,,,,IIT,Nwogu Jennifer
+cr University of Calabar Teaching Hospital,CRS00610346C,Female,2020-02-18,2020-07-31,3,TDF-3TC-DTG,TDF-3TC-DTG,2020-08-18,40,2020-09-30,2020-09-30,IIT,Nwogu Jennifer
+cr University of Calabar Teaching Hospital,CRS00601262,Female,2009-12-01,2020-08-13,2,TDF-FTC-LPV/r,TDF-3TC-LPV/r,2020-08-27,20,2020-08-31,2020-08-31,IIT,Mary Ezeala
+cr University of Calabar Teaching Hospital,CRS00609937,Female,2020-02-20,2020-09-10,3,TDF-3TC-DTG,TDF-3TC-DTG,,,,,IIT,Felicity Uko
+cr University of Calabar Teaching Hospital,CRS00609424,Male,2018-07-20,2020-08-18,3,ABC-3TC-EFV,TDF-3TC-DTG,2019-08-28,40,2019-09-23,2019-09-23,IIT,Racheal Ndifon
+cr University of Calabar Teaching Hospital,CRS00610091,Female,2020-12-15,2020-12-15,2,TDF-3TC-DTG,TDF-3TC-DTG,2021-02-12,20,2021-02-24,2021-02-24,IIT,Maryann Obi
+cr University of Calabar Teaching Hospital,CRS00609231,Female,2017-11-10,2020-09-08,3,AZT-3TC-NVP,ABC-3TC-LPV/r,,,,,IIT,Ojong Eucharia Don
+cr University of Calabar Teaching Hospital,CRS00605642,Female,2011-06-06,2020-09-14,2,AZT-3TC-NVP,ABC-3TC-DTG,2020-08-28,40,2020-09-29,2020-09-29,IIT,Mary Ezeala
+cr University of Calabar Teaching Hospital,FCTA47001965,Male,2004-09-13,2020-11-20,3,AZT-3TC-NVP,TDF-3TC-ATV/r,,,,,IIT,Darlene Ibimi
+cr University of Calabar Teaching Hospital,CRS00605157,Female,2010-12-14,2020-12-03,3,AZT-3TC-NVP,TDF-3TC-DTG,2021-01-13,40,2021-03-17,2021-03-17,IIT,Felicity Uko
+cr University of Calabar Teaching Hospital,CRS00606836,Male,2012-12-03,2020-09-07,3,AZT-3TC-ABC,TDF-3TC-DTG,2020-08-21,40,2020-09-30,2020-09-30,IIT,Enang Agbor Enun
+cr University of Calabar Teaching Hospital,CRS00609852C,Female,2019-08-27,2020-06-22,3,TDF-3TC-DTG,TDF-3TC-DTG,2020-09-08,40,2020-09-29,2020-09-29,IIT,Uba Ikwo Asher
+cr University of Calabar Teaching Hospital,CRS00608457,Female,2016-01-07,2020-09-25,3,AZT-3TC-NVP,TDF-3TC-DTG,2020-07-14,40,2020-09-30,2020-09-30,IIT,Racheal Ndifon
+cr University of Calabar Teaching Hospital,CRS00610481C,Female,2020-11-29,2020-11-29,3,TDF-3TC-DTG,TDF-3TC-DTG,2021-01-21,40,2021-03-17,2021-03-17,IIT,Nwogu Jennifer
+cr University of Calabar Teaching Hospital,CRS00213393TI,Male,2019-05-17,2020-11-13,3,TDF-3TC-DTG,TDF-3TC-DTG,2020-12-17,40,2021-02-11,2021-02-11,IIT,Ojong Eucharia Don
+cr University of Calabar Teaching Hospital,CRS00609512,Female,2018-11-16,2020-08-18,3,ABC-3TC-EFV,TDF-3TC-DTG,,,,,IIT,Joseph Ekpo-mkpang
+cr University of Calabar Teaching Hospital,CRS00610024,Female,2020-08-13,2020-08-13,1,TDF-3TC-DTG,TDF-3TC-DTG,2020-08-24,140,2020-09-07,2020-09-07,IIT,Kingsley Ndifon
+cr University of Calabar Teaching Hospital,CRS00607054,Female,2013-02-12,2020-08-11,6,AZT-3TC-NVP,TDF-3TC-DTG,2020-08-24,20,2020-08-31,2020-08-31,IIT,Darlene Ibimi
+cr University of Calabar Teaching Hospital,CRS00600917,Male,2006-05-13,2020-12-04,3,AZT-3TC-LPV/r,TDF-3TC-DTG,2021-02-01,2692,2021-03-17,2021-03-17,IIT,Mary Ezeala
+cr University of Calabar Teaching Hospital,CRS00609897C,Male,2019-08-26,2020-06-22,3,TDF-3TC-DTG,TDF-3TC-DTG,,,,,IIT,Nwogu Jennifer
+cr University of Calabar Teaching Hospital,CRS00610421C,Female,2020-07-01,2020-07-01,3,TDF-3TC-DTG,TDF-3TC-DTG,,,,,IIT,Uba Ikwo Asher
+cr University of Calabar Teaching Hospital,CRS00608327,Female,2015-11-02,2020-06-24,3,TDF-3TC-EFV,TDF-3TC-DTG,2020-08-24,20,2020-08-31,2020-08-31,IIT,Racheal Ndifon
+cr University of Calabar Teaching Hospital,CRS00609398,Female,2018-07-03,2020-06-26,3,ABC-3TC-EFV,TDF-3TC-DTG,2020-08-27,40,2020-09-29,2020-09-29,IIT,Darlene Ibimi
+cr University of Calabar Teaching Hospital,CRS0020954TI,Female,2005-11-09,2020-09-28,3,TDF-3TC-EFV,TDF-3TC-DTG,2020-08-21,40,2020-09-30,2020-09-30,IIT,Darlene Ibimi
+cr University of Calabar Teaching Hospital,CRS00604033,Male,2009-06-01,2020-09-26,1,TDF-3TC-LPV/r,TDF-3TC-LPV/r,2019-10-02,20,2019-11-18,2019-11-18,IIT,Mary Ezeala
+cr University of Calabar Teaching Hospital,00005082,Female,2006-04-04,2020-07-30,3,AZT-3TC-NVP,TDF-3TC-DTG,2020-12-18,20,2020-12-31,2020-12-31,IIT,Maryann Obi
+cr University of Calabar Teaching Hospital,CRS00602433,Female,2013-10-08,2020-10-02,1,TDF-FTC-EFV,TDF-3TC-DTG,2020-07-15,40,2020-09-30,2020-09-30,IIT,Gobini Usang
+cr University of Calabar Teaching Hospital,CRS00609295,Female,2018-02-09,2020-12-06,3,ABC-3TC-EFV,TDF-3TC-DTG,2018-02-09,1036903,2018-03-08,2018-03-08,IIT,Felicity Uko
+cr University of Calabar Teaching Hospital,CRS00610357C,Female,2020-03-16,2020-06-22,3,TDF-3TC-DTG,TDF-3TC-DTG,,,,,IIT,Uba Ikwo Asher
+cr University of Calabar Teaching Hospital,CRS00601036,Female,2009-06-22,2020-10-06,3,AZT-3TC-NVP,TDF-3TC-DTG,2019-08-01,20,2019-08-09,2019-08-09,IIT,Maryann Obi
+cr University of Calabar Teaching Hospital,CRS0085027,Male,2014-01-16,2020-11-12,3,TDF-FTC-EFV,TDF-3TC-DTG,2021-02-26,40,2021-03-25,2021-03-25,IIT,Enang Agbor Enun
+cr University of Calabar Teaching Hospital,CRS00609150,Female,2017-08-27,2020-06-30,3,AZT-3TC-NVP,TDF-3TC-DTG,2020-08-24,1299,2020-09-30,2020-09-30,IIT,Felicity Uko
+cr University of Calabar Teaching Hospital,CRS00609367,Male,2018-05-01,2020-09-24,3,AZT-3TC-NVP,TDF-3TC-DTG,,,,,IIT,Ojong Eucharia Don
+cr University of Calabar Teaching Hospital,AKSSLH230,Male,2013-03-17,2020-12-04,2,AZT-3TC-NVP,TDF-3TC-LPV/r,2020-07-28,235000,2020-09-30,2020-09-30,IIT,Maryann Obi
+cr University of Calabar Teaching Hospital,CRS00609889,Female,2019-12-20,2020-08-27,3,TDF-3TC-DTG,TDF-3TC-DTG,,,,,IIT,Felicity Uko
+cr University of Calabar Teaching Hospital,CRS00609998,Male,2020-07-02,2020-12-04,3,TDF-3TC-DTG,TDF-3TC-DTG,2020-08-21,40,2020-09-29,2020-09-29,IIT,Racheal Ndifon
+cr University of Calabar Teaching Hospital,CRS00608706,Female,2016-07-21,2020-10-20,3,AZT-3TC-NVP,TDF-3TC-DTG,2020-08-24,40,2020-08-28,2020-08-28,IIT,Ojong Eucharia Don
+cr University of Calabar Teaching Hospital,CRS0089449TI,Female,2020-02-05,2020-11-26,3,ABC-3TC-DTG,TDF-3TC-DTG,2020-09-03,87,2020-09-29,2020-09-29,IIT,Darlene Ibimi
+cr University of Calabar Teaching Hospital,CRS00609642,Male,2019-05-02,2020-09-09,3,ABC-3TC-LPV/r,ABC-3TC-LPV/r,2020-08-18,40,2020-09-30,2020-09-30,IIT,Ojong Eucharia Don
+cr University of Calabar Teaching Hospital,CRS00805027,Male,2015-09-07,2020-10-13,3,TDF-3TC-EFV,TDF-3TC-DTG,2021-03-01,40,2020-09-30,,IIT,Maryann Obi
+cr University of Calabar Teaching Hospital,CRS00608951,Male,2017-03-03,2020-12-11,1,TDF-3TC-EFV,TDF-3TC-DTG,2020-11-10,40,2020-12-15,2020-12-15,IIT,Felicity Uko
+cr University of Calabar Teaching Hospital,CRS00609360,Female,2018-04-16,2020-09-10,2,AZT-3TC-NVP,ABC-3TC-DTG,2019-09-05,20,2019-09-29,2019-09-29,IIT,Ojong Eucharia Don
+cr University of Calabar Teaching Hospital,CRS00609650,Male,2019-05-10,2020-07-02,3,TDF-3TC-DTG,TDF-3TC-DTG,2019-08-01,790,2019-08-09,2019-08-09,IIT,Joseph Ekpenyong
+cr University of Calabar Teaching Hospital,LAG01500023,Female,2015-03-30,2020-06-22,3,TDF-3TC-EFV,TDF-3TC-DTG,2019-04-29,77,2019-04-29,2019-04-29,IIT,Akepu Mercy Allowye
+cr University of Calabar Teaching Hospital,CRS00603898,Female,2016-05-06,2020-12-03,3,TDF-3TC-EFV,TDF-3TC-DTG,2020-02-10,40,2020-03-16,2020-03-16,IIT,Akepu Mercy Allowye
+cr University of Calabar Teaching Hospital,CRS00607365,Male,2013-07-28,2020-06-26,3,TDF-3TC-EFV,TDF-3TC-DTG,2020-07-27,40,2020-09-30,2020-09-30,IIT,Darlene Ibimi
+cr University of Calabar Teaching Hospital,CRS00609269,Male,2018-01-23,2020-07-29,3,AZT-3TC-NVP,TDF-3TC-DTG,2019-08-30,40,2019-10-07,2019-10-07,IIT,Darlene Ibimi
+cr University of Calabar Teaching Hospital,CRS00609997,Female,2020-06-25,2020-10-13,1,ABC-3TC-DTG,ABC-3TC-DTG,2020-08-21,40,2020-09-30,2020-09-30,IIT,Racheal Ndifon
+cr University of Calabar Teaching Hospital,CRS00608583,Female,2016-04-12,2020-10-06,2,TDF-3TC-EFV,TDF-3TC-DTG,2020-04-01,40,2020-05-14,2020-05-14,IIT,Joseph Ekpo-mkpang
+cr University of Calabar Teaching Hospital,CRS00601611,Male,2019-09-18,2020-09-11,2,ABC-3TC-NVP,ABC-3TC-LPV/r,2020-10-21,400,2020-12-18,2020-12-18,IIT,Ojong Eucharia Don
+cr University of Calabar Teaching Hospital,CRS00601572,Female,2019-09-18,2020-09-11,2,ABC-3TC-LPV/r,ABC-3TC-LPV/r,2020-10-22,400,2020-12-18,2020-12-18,IIT,Ojong Eucharia Don
+cr University of Calabar Teaching Hospital,CRS00608779,Male,2016-09-17,2020-11-20,3,AZT-3TC-NVP,ABC-3TC-LPV/r,2020-12-14,40,2021-01-29,2021-01-29,IIT,Ojong Eucharia Don
+cr University of Calabar Teaching Hospital,TA001177943,Male,2017-01-04,2020-07-21,3,TDF-3TC-EFV,TDF-3TC-DTG,2020-02-04,40,2020-02-18,2020-02-18,IIT,Akepu Mercy Allowye
+cr University of Calabar Teaching Hospital,CRS00610049,Male,2020-10-07,2020-10-15,1,ABC-3TC-DTG,ABC-3TC-DTG,2020-12-16,40,2021-01-29,2021-01-29,IIT,Joseph Ekpenyong
+cr University of Calabar Teaching Hospital,CRS00609615,Female,2019-03-29,2020-09-24,3,TDF-3TC-DTG,TDF-3TC-DTG,2020-08-18,40,2020-09-30,2020-09-30,IIT,Felicity Uko
+cr University of Calabar Teaching Hospital,CRS00609987,Female,2020-06-01,2020-08-31,3,TDF-3TC-DTG,TDF-3TC-DTG,2020-08-20,40,2020-09-30,2020-09-30,IIT,Darlene Ibimi
+cr University of Calabar Teaching Hospital,CRS00610039,Female,2020-09-23,2020-09-23,1,TDF-3TC-DTG,TDF-3TC-DTG,,,,,IIT,Darlene Ibimi
+cr University of Calabar Teaching Hospital,CRS00610038,Male,2020-09-23,2020-09-23,1,TDF-3TC-DTG,TDF-3TC-DTG,,,,,IIT,Darlene Ibimi
+cr University of Calabar Teaching Hospital,CRS00607973,Female,2015-01-27,2020-08-25,3,TDF-3TC-EFV,TDF-3TC-DTG,2020-01-14,40,2020-02-13,2020-02-13,IIT,Enang Agbor Enun
+cr University of Calabar Teaching Hospital,CRS00609992,Male,2020-06-10,2020-09-11,3,ABC-3TC-DTG,ABC-3TC-DTG,2020-08-20,40,2020-09-30,2020-09-30,IIT,Darlene Ibimi
+cr University of Calabar Teaching Hospital,CRS00609034,Female,2017-05-10,2020-10-20,3,TDF-3TC-EFV,TDF-3TC-DTG,2020-08-24,20,2020-08-31,2020-08-31,IIT,Racheal Ndifon
+cr University of Calabar Teaching Hospital,CRS00609989,Male,2020-06-05,2020-07-30,3,TDF-3TC-DTG,TDF-3TC-DTG,2020-12-03,40,2020-12-18,2020-12-18,IIT,Darlene Ibimi
+cr University of Calabar Teaching Hospital,CRS00609930,Female,2020-02-21,2020-09-10,3,TDF-3TC-DTG,TDF-3TC-DTG,2020-08-27,40,2020-09-29,2020-09-29,IIT,Felicity Uko
+cr University of Calabar Teaching Hospital,CRS00600532,Male,2006-05-27,2020-07-30,3,AZT-3TC-EFV,TDF-3TC-DTG,2020-12-03,400,2020-12-18,2020-12-18,IIT,Racheal Ndifon
+cr University of Calabar Teaching Hospital,CRS00606185,Male,2017-03-16,2020-06-16,6,AZT-3TC-NVP,TDF-3TC-DTG,2019-09-05,115,2019-09-29,2019-09-29,IIT,Darlene Ibimi
+cr University of Calabar Teaching Hospital,CRS00609714,Female,2019-07-12,2020-09-11,3,TDF-3TC-DTG,TDF-3TC-DTG,2020-11-23,169,2021-01-29,2021-01-29,IIT,Felicity Uko
+cr University of Calabar Teaching Hospital,CRS00610114,Female,2021-01-28,2021-01-28,1,TDF-3TC-DTG,TDF-3TC-DTG,,,,,IIT,
+cr University of Calabar Teaching Hospital,CRS00610080,Male,2020-12-11,2020-12-11,1,ABC-3TC-DTG,ABC-3TC-DTG,,,,,IIT,Maryann Obi
+cr University of Calabar Teaching Hospital,CRS00608515,Female,2016-02-11,2020-12-10,3,AZT-3TC-NVP,ABC-3TC-DTG,2020-08-24,409280,2020-08-31,2020-08-31,IIT,Kingsley Ndifon
+cr University of Calabar Teaching Hospital,CRS00607000,Male,2013-02-04,2020-07-20,3,AZT-3TC-NVP,ABC-3TC-ATV/r,2020-02-12,40,2020-03-16,2020-03-16,IIT,Enang Agbor Enun
+cr University of Calabar Teaching Hospital,CRS00609780C,Male,2019-08-21,2020-06-24,3,TDF-3TC-DTG,TDF-3TC-DTG,2020-08-25,40,2020-09-28,2020-09-28,IIT,Uba Ikwo Asher
+cr University of Calabar Teaching Hospital,CRS00609698,Male,2020-09-25,2020-11-12,3,TDF-3TC-DTG,TDF-3TC-DTG,2020-12-17,,,,IIT,Ojong Eucharia Don
+cr University of Calabar Teaching Hospital,CRS00600336,Male,2005-11-24,2020-11-16,2,AZT-3TC-LPV/r,TDF-3TC-LPV/r,2020-09-12,78,2020-09-30,2020-09-30,IIT,Maryann Obi
+cr University of Calabar Teaching Hospital,CRS00609915,Male,2020-01-28,2020-06-22,3,ABC-3TC-EFV,TDF-3TC-DTG,2020-01-22,580,2020-02-18,2020-02-18,IIT,Kingsley Ndifon
+cr University of Calabar Teaching Hospital,CRS00610288C,Female,2019-10-04,2020-06-30,3,TDF-3TC-DTG,TDF-3TC-DTG,2020-09-07,40,2020-09-29,2020-09-29,IIT,Nwogu Jennifer
+cr University of Calabar Teaching Hospital,CRS00610116,Female,2021-02-01,2021-02-01,1,TDF-3TC-DTG,TDF-3TC-DTG,2021-03-08,40,2021-03-31,2021-03-31,IIT,Maryann Obi
+cr University of Calabar Teaching Hospital,CRS00601677,Male,2016-12-22,2020-09-16,3,AZT-3TC-NVP,TDF-3TC-DTG,2020-10-21,400,2020-12-18,2020-12-18,IIT,Ojong Eucharia Don
+cr University of Calabar Teaching Hospital,CRS00604250,Male,2015-10-14,2020-06-22,3,AZT-3TC-NVP,ABC-3TC-DTG,2020-03-19,40,2020-03-27,2020-03-27,IIT,Darlene Ibimi
+cr University of Calabar Teaching Hospital,CRS00609272,Female,2018-01-17,2020-12-08,3,TDF-3TC-EFV,TDF-3TC-DTG,2021-03-08,48,2021-03-31,2021-03-31,IIT,Darlene Ibimi
+cr University of Calabar Teaching Hospital,CRS00609925,Male,2020-01-30,2020-11-24,3,TDF-3TC-DTG,TDF-3TC-DTG,,,,,IIT,Mary Ezeala
+cr University of Calabar Teaching Hospital,CRS00601797,Male,2008-08-14,2020-08-18,3,TDF-FTC-NVP,TDF-3TC-DTG,2020-08-18,40,2020-09-30,2020-09-30,IIT,Joseph Ekpenyong
+cr University of Calabar Teaching Hospital,CRS0030P114TI,Female,2007-02-27,2020-10-20,1,AZT-3TC-NVP,TDF-3TC-DTG,2020-08-15,32,2020-09-30,2020-09-30,IIT,Ojong Eucharia Don
+cr University of Calabar Teaching Hospital,CRS00609913,Male,2020-01-22,2020-06-22,3,TDF-3TC-DTG,TDF-3TC-DTG,,,,,IIT,Kingsley Ndifon
+cr University of Calabar Teaching Hospital,CRS00609433,Female,2018-08-09,2020-06-22,3,TDF-3TC-EFV,TDF-3TC-DTG,2020-08-20,40,2020-09-30,2020-09-30,IIT,Racheal Ndifon
+cr University of Calabar Teaching Hospital,CRS00610451C,Male,2020-08-07,2020-08-07,3,TDF-3TC-DTG,TDF-3TC-DTG,,,,,IIT,Uba Ikwo Asher
+cr University of Calabar Teaching Hospital,CRS00610109,Male,2021-01-22,2021-01-22,1,TDF-3TC-DTG,TDF-3TC-DTG,,,,,IIT,Darlene Ibimi
+cr University of Calabar Teaching Hospital,CRS00609661,Female,2019-05-27,2020-06-30,3,TDF-3TC-EFV,TDF-3TC-DTG,2020-08-20,40,2020-09-30,2020-09-30,IIT,Joseph Ekpenyong
+cr University of Calabar Teaching Hospital,ABA8180TI,Female,2010-08-26,2020-08-18,3,AZT-3TC-NVP,TDF-3TC-DTG,2020-08-18,48,2020-09-30,2020-09-30,IIT,Gobini Usang
+cr University of Calabar Teaching Hospital,CRS00609898,Female,2020-01-09,2020-06-22,3,TDF-3TC-DTG,TDF-3TC-DTG,,,,,IIT,Kingsley Ndifon

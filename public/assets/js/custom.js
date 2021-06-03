@@ -1,5 +1,6 @@
 "use strict";
 (function ($) {
+  // alert("HERE")
   $(document).ready(function () {
     if (page_data.client_reg_valid_fail) {
       $("#add-client-form").modal("show");
@@ -34,6 +35,13 @@
 
     $("#entry-table").DataTable({
       ordering: true,
+     
+    });
+
+    $("#client-entry-table").DataTable({
+      ordering: true,
+      paginate: false,
+      info: false
      
     });
 
@@ -734,4 +742,358 @@
     $("#timestamp").text(time);
     $(displayModal).modal("show");
   });
+
+  $(document).on("change", '.indicator', function(){
+    let sn = $(this).data('sn');
+    let obj = $(this);
+    let greater_than = $(this).data('greater');
+    let fromClass = $(this).data('from');
+    let pointerClass = $(this).data('demo');
+
+    if (greater_than != 0) {
+      let total =  Number( $(this).val() );
+
+      //get all the sibling input fields
+      // $('.tag_'+sn).each(function(){
+      //   total = total + Number( $(this).val() );
+      // });
+
+      //compare against the value of the total of greater than
+      let greaterTotal = 0;
+      greaterTotal = Number( $(fromClass+'.tag_'+greater_than+'.'+pointerClass).val() );
+
+      if (total > greaterTotal) {
+        showError(obj, sn);
+      }else{
+        hideError(sn, obj);
+      }
+    }
+  });
+
+  function showError(obj, sn){
+    //push into error array
+    errors.push(sn);
+
+    $(obj).addClass('errorSig');
+    //disable the next button
+    // $('.actions ul li:first').next().find('a').attr('href', '#');
+    $(obj).next().removeClass('errorHide');
+    //change question btn color
+    let qst_btn = $('.btn_'+sn);
+    qst_btn.removeClass('btn-primary');
+    qst_btn.addClass('btn-danger');
+
+    errorEntry(obj);//add errror indicator to preview screen
+  }
+
+  function hideError(sn, obj){
+    //delete this error pointer
+    errors.pop();
+
+    $(obj).removeClass('errorSig');
+    $(obj).next().addClass('errorHide');
+
+    // $('.indicator_'+sn).each(function(){
+    //   $(this).removeClass('errorSig');
+    //   $(this).next().addClass('errorHide');
+    // });
+
+    //change question btn color
+    let qst_btn = $('.btn_'+sn);
+    qst_btn.removeClass('btn-danger');
+    qst_btn.addClass('btn-primary');
+
+    errorEntry(obj, true);//remove error indicator from preview
+    
+    //enable the next button
+    if (errors.length < 1) {
+      $('.actions ul li:first').next().find('a').attr('href', '#next');
+    }
+  }
+
+  function errorEntry(obj, rem = false){
+    let tag = $(obj).data('tag');
+    let fromClass = $(obj).data('from'); 
+    let pointerClass = $(obj).data('pointer');
+    let indicator = $(obj).data('indicator');
+
+    switch(tag){
+      case 'first':
+      let elem_first = $('#first-95 '+indicator+' '+fromClass+' span'+pointerClass);
+      if (rem) {
+        elem_first.removeClass('badge-danger');
+        elem_first.addClass('badge-secondary');
+      }else{
+        elem_first.removeClass('badge-secondary');
+        elem_first.addClass('badge-danger');
+      }
+      break;
+
+      case 'second':
+      let elem_sec = $('#second-95 '+indicator+' '+fromClass+' span'+pointerClass);
+      if (rem) {
+        elem_sec.removeClass('badge-danger');
+        elem_sec.addClass('badge-secondary');
+      }else{
+        elem_sec.removeClass('badge-secondary');
+        elem_sec.addClass('badge-danger');
+      }
+      break;
+
+      case 'third':
+      let elem_third = $('#third-95 '+indicator+' '+fromClass+' span'+pointerClass);
+      if (rem) {
+        elem_third.removeClass('badge-danger');
+        elem_third.addClass('badge-success');
+      }else{
+        elem_third.removeClass('badge-secondary');
+        elem_third.addClass('badge-danger');
+      }
+      break;
+
+      case 'tb_hiv':
+      let elem_tb = $('#tb_hiv '+indicator+' '+fromClass+' span'+pointerClass);
+      if (rem) {
+        elem_tb.removeClass('badge-danger');
+        elem_tb.addClass('badge-secondary');
+      }else{
+        elem_tb.removeClass('badge-secondary');
+        elem_tb.addClass('badge-danger');
+      }
+      break;
+
+      case 'prep_gbv':
+      let elem_pg = $('#prep_gbv '+indicator+' '+fromClass+' span'+pointerClass);
+      if (rem) {
+        elem_pg.removeClass('badge-danger');
+        elem_pg.addClass('badge-secondary');
+      }else{
+        elem_pg.removeClass('badge-secondary');
+        elem_pg.addClass('badge-danger');
+      }
+      break;
+
+      case 'cervicsl_cancer':
+      let elem_c_c = $('#cervical_cancer '+indicator+' '+fromClass+' span'+pointerClass);
+      if (rem) {
+        elem_c_c.removeClass('badge-danger');
+        elem_c_c.addClass('badge-secondary');
+      }else{
+        elem_c_c.removeClass('badge-secondary');
+        elem_c_c.addClass('badge-danger');
+      }
+      break;
+
+      case 'hivst':
+      let elem_hivst = $('#hst '+indicator+' '+fromClass+' span'+pointerClass);
+      if (rem) {
+        elem_hivst.removeClass('badge-danger');
+        elem_hivst.addClass('badge-secondary');
+      }else{
+        elem_hivst.removeClass('badge-secondary');
+        elem_hivst.addClass('badge-danger');
+      }
+      break;
+
+      case 'hts_recent':
+      let elem_hts = $('#hts_rec '+indicator+' '+fromClass+' span'+pointerClass);
+      if (rem) {
+        elem_hts.removeClass('badge-danger');
+        elem_hts.addClass('badge-secondary');
+      }else{
+        elem_hts.removeClass('badge-secondary');
+        elem_hts.addClass('badge-danger');
+      }
+      break;
+
+      case 'index_testing':
+      let elem_i_testing = $('#i_testing '+indicator+' '+fromClass+' span'+pointerClass);
+      if (rem) {
+        elem_i_testing.removeClass('badge-danger');
+        elem_i_testing.addClass('badge-secondary');
+      }else{
+        elem_i_testing.removeClass('badge-secondary');
+        elem_i_testing.addClass('badge-danger');
+      }
+      break;
+
+      case 'hiv_self_testing':
+      let elem_s_testing = $('#hiv_self_testing '+indicator+' '+fromClass+' span'+pointerClass);
+      if (rem) {
+        elem_s_testing.removeClass('badge-danger');
+        elem_s_testing.addClass('badge-secondary');
+      }else{
+        elem_s_testing.removeClass('badge-secondary');
+        elem_s_testing.addClass('badge-danger');
+      }
+      break;
+
+      default:
+
+    }
+  }
+
+  $(document).on('change', '.elem_21_22v', function(){
+    let sn = $(this).data('sn');
+    let greater21 = 0;
+    let greater22v = 0;
+    let obj = $(this);
+    let fromClass = $(this).data('from');
+    let pointerClass = $(this).data('demo');
+
+    greater21 = Number( $(fromClass+'.tag_21'+'.'+pointerClass).val() );
+    greater21 = Number( $(fromClass+'.tag_21'+'.'+pointerClass).val() );
+    let total = Number( $(this).val() );
+
+      if (total > greater21) {
+       showError(obj, sn);
+       return false;
+      }else if(total <= greater21){
+        hideError(sn, obj);
+      }
+
+      if (total > greater22v) {
+       showError(obj, sn);
+      }else{
+        hideError(sn, obj);
+      }
+  });
+
+  $(document).on('change', '.i_28_29', function(){
+    let sn = $(this).data('sn');
+    let greater21 = 0;
+    let greater22v = 0;
+    let obj = $(this);
+    let fromClass = $(this).data('from');
+    let pointerClass = $(this).data('demo');
+
+    i_27 = Number( $(fromClass+'.tag_27'+'.'+pointerClass).val() );
+    i_28 = Number( $(fromClass+'.tag_28'+'.'+pointerClass).val() );
+    i_29 = Number( $(this).val() );
+
+    greaterTotal = i_28+i_29;
+
+      if (greaterTotal != i_27) {
+       showSpecialError(obj, sn);
+      }else{
+        hideSpecialError(sn, obj);
+      }
+  });
+
+  function showSpecialError(obj, sn){
+    //push into error array
+    errors.push(sn);
+
+    $(obj).addClass('errorSig');
+    //hide the next button
+    // $('.actions ul li:first').next().find('a').attr('href', '#');
+    $(obj).next().removeClass('errorHide');
+    $(obj).next().text('Indicator 29 + Indicator 28 must be equal to indicator 27');
+    //change question btn color
+    let qst_btn = $('.btn_'+sn);
+    qst_btn.removeClass('btn-primary');
+    qst_btn.addClass('btn-danger');
+
+    errorEntry(obj);//add errror indicator to preview screen
+  }
+
+  function hideSpecialError(sn, obj){
+    //delete this error pointer
+    errors.pop();
+
+    $(obj).removeClass('errorSig');
+    $(obj).next().addClass('errorHide');
+
+    // $('.indicator_'+sn).each(function(){
+    //   $(this).removeClass('errorSig');
+    //   $(this).next().addClass('errorHide');
+    // });
+
+    //change question btn color
+    let qst_btn = $('.btn_'+sn);
+    qst_btn.removeClass('btn-danger');
+    qst_btn.addClass('btn-primary');
+
+    errorEntry(obj, true);//remove error indicator from preview
+    
+    //show the next button
+    if (errors.length < 1) {
+      $('.actions ul li:first').next().find('a').attr('href', '#next');
+    }
+  }
+
+  $(document).on('change', '.prev_in', function(){
+    let tag = $(this).data('tag');
+    let fromClass = $(this).data('from'); 
+    let pointerClass = $(this).data('pointer');
+    let indicator = $(this).data('indicator');
+    let val = $(this).val();
+
+    switch(tag){
+      case 'first':
+      $('#first-95 '+indicator+' '+fromClass+' span'+pointerClass).text(val);
+      break;
+
+      case 'second':
+      $('#second-95 '+indicator+' '+fromClass+' span'+pointerClass).text(val);
+      break;
+
+      case 'third':
+      $('#third-95 '+indicator+' '+fromClass+' span'+pointerClass).text(val);
+      break;
+
+      case 'tb_hiv':
+      $('#tb_hiv '+indicator+' '+fromClass+' span'+pointerClass).text(val);
+      break;
+
+      case 'prep_gbv':
+      $('#prep_gbv '+indicator+' '+fromClass+' span'+pointerClass).text(val);
+      break;
+
+      case 'cervicsl_cancer':
+      $('#cervical_cancer '+indicator+' '+fromClass+' span'+pointerClass).text(val);
+      break;
+
+      case 'hivst':
+      $('#hst '+indicator+' '+fromClass+' span'+pointerClass).text(val);
+      break;
+
+      case 'hts_recent':
+      $('#hts_rec '+indicator+' '+fromClass+' span'+pointerClass).text(val);
+      break;
+
+      case 'index_testing':
+      $('#i_testing '+indicator+' '+fromClass+' span'+pointerClass).text(val);
+      break;
+
+      case 'hiv_self_testing':
+      $('#hiv_self_testing '+indicator+' '+fromClass+' span'+pointerClass).text(val);
+      break;
+
+      default:
+
+    }
+  });
+
+  /*######################################
+  * TAT Record Tracker JS Area Starts Here
+  *#######################################
+  */
+
+ $(document).on('change', '.record', function(){
+  let that = $(this);
+  let id = $(that).data('id');
+  let key = $(that).attr('name');
+  let val = $(that).val();
+
+  $.ajax({
+        type: "GET",
+        url: page_data.routes.save_tat,
+        data: { id, key, val, _token: page_data.csrf_token },
+        success: function (data) {
+          $(that).val(val);
+          // alert('Saved');
+        },
+    });
+ });
 })(jQuery);

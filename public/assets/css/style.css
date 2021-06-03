@@ -8,6 +8,7 @@ File: style.css
 =================================================================================== */
 /* cyrillic-ext */
 @import url(plugins/animate.min.css);
+
 .client-count{
   font-weight: bolder;
   font-size: 15px;

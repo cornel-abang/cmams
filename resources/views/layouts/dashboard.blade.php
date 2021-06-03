@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>CMAMS - {{ !empty($title) ? $title : __('app.dashboard') }}</title>
+    <title>QMAMS - {{ !empty($title) ? $title : __('app.dashboard') }}</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -80,10 +80,10 @@
 					    	<i class="icofont icofont-file-alt"></i></span><span class="pcoded-mtext">Radet Import</span></a>
 					</li>
 
-					<li class="nav-item">
+					{{-- <li class="nav-item">
 					    <a href="{{route('vlc')}}" class="nav-link "><span class="pcoded-micon">
 					    	<i class="icofont icofont-file-alt"></i></span><span class="pcoded-mtext">VLC Turnaround</span></a>
-					</li>
+					</li> --}}
 
 					<li class="nav-item pcoded-hasmenu">
 					    <a href="#!" class="nav-link "><span class="pcoded-micon"><i class="icofont icofont-file-alt"></i></span><span class="pcoded-mtext">Reports</span></a>
@@ -100,12 +100,29 @@
 					    </ul>
 					</li>
 					<li class="nav-item pcoded-hasmenu">
+					    <a href="#!" class="nav-link "><span class="pcoded-micon"><i class="icofont icofont-file-alt"></i></span><span class="pcoded-mtext">TAT Tracker</span></a>
+					    <ul class="pcoded-submenu">
+					        <li><a href="{{route('tat.compare')}}">Compare Results</a></li>
+					        {{-- <li>
+							  <a href="#!" class="nav-link  down-icon"><span class="pcoded-micon"><i class="icofont icofont-ui-contact-list"></i></span>
+							  	<span class="pcoded-mtext">Tracking Records</span></a>
+							    <ul class="pcoded-submenu">
+							        <li><a href="{{route('add')}}">Add</a></li>
+							        <li><a href="{{route('tracking_reports')}}">View all</a></li>
+							    </ul>
+					        </li> --}}
+					    </ul>
+					</li>
+					<li class="nav-item pcoded-hasmenu">
 					    <a href="#!" class="nav-link "><span class="pcoded-micon"><i class="icofont icofont-calendar"></i></span>
 					    	<span class="pcoded-mtext">Appointments</span></a>
 					    <ul class="pcoded-submenu">
-					        <li><a href="{{route('add-appts')}}">Add</a></li>
+					        {{-- <li><a href="{{route('add-appts')}}">Add</a></li> --}}
 					        <li><a href="{{route('appointments')}}">View all </a></li>
-					        <li><a href="{{ route('before') }}">Before Due</a></li>
+					        <li><a href="{{route('met')}}">Met </a></li>
+					        <li><a href="{{ route('before') }}">Pre-appointment Refills <strong>Past</strong></a></li>
+					        <li><a href="{{ route('before_future') }}">Pre-appointment Refills <strong>Future</strong></a></li>
+					        <li><a href="{{route('missed')}}">Missed </a></li>
 					    </ul>
 					</li>
 					<li class="nav-item pcoded-hasmenu">
@@ -181,6 +198,7 @@
     <script src="{{asset('assets/js/pcoded.min.js')}}"></script>
     {{-- Custom Js file --}}
     <script src="{{asset('assets/js/custom.js')}}"></script>
+    <script src="{{asset('assets/js/freeze.js')}}"></script>
 
     {{-- Datatbales --}}
     {{-- <link rel="stylesheet" href="{{asset('assets/DataTable/datatables.min.css') }}">

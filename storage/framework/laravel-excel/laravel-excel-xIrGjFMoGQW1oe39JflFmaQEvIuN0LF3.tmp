@@ -1,0 +1,170 @@
+sn,data,special,not_greater_than,validation_text,Tag
+1,Facility New OPD Attendance,only_facilities,,,first
+2,Number of clients screened for HIV using HIV risk assessment form,,,,first
+3,Number of clients Eligible for HIV test ( from HIV screening tool),,2,Clients eligible for HIV test from screening tool cannot be greater than actual clients screened.,first
+4,Number of individuals who received HIV Testing Services (HTS) and received their test results (GEN Pop - OPD),,,,first
+5,Number of people tested HIV Positive & received results (GEN Pop - OPD),,4,Number of positives who received results cannot be greater than number tested (GEN Pop - OPD).,first
+6,Number of individuals who received HIV Testing Services (HTS) and received their test results (GEN Pop - VCT),,,,first
+7,Number of people tested HIV Positive & received results (GEN Pop - VCT),,6,Number of positives who received results cannot be greater than number tested (GEN Pop - VCT).,first
+8,Number of individuals who received HIV Testing Services (HTS) and received their test results (INPATIENT),,,,first
+9,Number of people tested HIV Positive & received results (INPATIENT),,8,Number of positives who received results cannot be greater than number tested (INPATIENT).,first
+10,Number of individuals who received HIV Testing Services (HTS) and received their test results (PMTCT - ANC),,,,first
+11,Number of people tested HIV Positive & received results (PMTCT - ANC),,10,Number of positives who received results cannot be greater than number tested (PMTCT - ANC).,first
+12,Number of individuals who received HIV Testing Services (HTS) and received their test results (PMTCT_POST ANC - L&D + PNC + PREGNANT WOMEN RETESTED AFTER INITIAL HIV NEGATIVE TEST),,,,first
+,,,,,first
+13,Number of people tested HIV Positive & received results (PMTCT_POST ANC - L&D + PNC + PREGNANT WOMEN RETESTED WHO SEROVONVERTED TO HIV POSITIVE AFTER INITIAL HIV NEGATIVE TEST),,12,Number of positives who received results cannot be greater than number tested (PMTCT_POST ANC - L&D + PNC + PREGNANT WOMEN RETESTED WHO SEROVONVERTED TO HIV POSITIVE AFTER INITIAL HIV NEGATIVE TEST).,first
+14,Number of individuals who received HIV Testing Services (HTS) and received their test results (OTHERS -MALNUTRITION + FP + BLOOD BANK),,,,first
+15,Number of people tested HIV Positive & received results (OTHERS - MALNUTRITION + FP + BLOOD BANK),,14,Number of positives who received results cannot be greater than number tested (OTHERS - MALNUTRITION + FP + BLOOD BANK).,first
+16,Number of individuals who received HIV Testing Services (HTS) and received their test results (STI),,,,first
+17,Number of people tested HIV Positive & received results (STI),,16,Number of positives who received results cannot be greater than number tested (STI),first
+18,Number of individuals who received HIV Testing Services (HTS) and received their test results (TB),,,,first
+19,Number of people tested HIV Positive & received results (TB),tx_positive,18,Number of positives who received results cannot be greater than number tested (TB),first
+20,Number of adults and children newly enrolled on antiretroviral therapy (ART),tx_new,,,first
+21,Index Testing Services Cascade,,,,
+21i,Index cases offered Index Couselling & Testing (ICT),,,,index_testing
+21ii,Index cases accepted  Index Couselling & Testing (ICT),, 21i,Index cases accepted ICT cannot be greater than index cases offered ICT ,index_testing
+21iii,Number of contacts (Partners) elicited,,,,index_testing
+21iv,Number of contacts (Biological children) enumerated,less_than_15,,,index_testing
+21v,Contacts tested: New positive,,,,index_testing
+21vi,Contacts tested: New negative,,,,index_testing
+21vii,Contacts identified as known positive,,,,index_testing
+21viii,Number of HIV-positive partners who were successfully enrolled in HIV care and treatment,, 21v,Positive partners successfully enrolled into care cannot be greater than Partners/Contacts tested positive.,index_testing
+21ix,Number of HIV-positive biological children who were successfully enrolled in HIV care and treatment,less_than_15, 21iv,Positive biological children successfully enrolled into care cannot be greater than biological children enumerated.,index_testing
+22,Number of infants born to HIV positive mothers whose blood samples were taken for DNA PCR test with 12 months of birth,,,,first
+23,Number of HIV PCR results received for babies whose samples were taken within 12 months that are positive,,,,first
+24,Number of HEI positive infants linked to care, not_greater_than_22_23,,,first
+,seecond 95%,,,,
+25,Number of adults and children currently receiving antiretroviral therapy (ART) (Cumulative),not_less_than_20,,,second
+26,Number of ART clients expected to attend the clinic for ART refills,,,,second
+27,Number of ART clients who kept to their ART refill appointment,,26,Number of clients who met their ART refill appointments cannot be greater than number of clients expected.,second
+28,Number of clients who defaulted the scheduled ARV refill appointment,,26,Number of clients who missed their ARV refill appointments cannot be greater than number of clients expected.,second
+28i,Known dead,,,,second
+28ii,Undocumented patient transfer,,,,second
+28iii,Not reached (Client could not be contacted),,,,second
+28iv,Reached and agreed to return to care ,,,,second
+28v,Returned on the next scheduled appointment,,,,second
+28vi,Number of ART clients who came for ART refills - Unscheduled,,,,second
+30,Number of ART patients with no clinical contact or ART drug pickup >28 days since their last expected clinical contact and were tracked,,,,second
+30i,LTFU - On treatment for < 3months,,,,second
+30iv,LTFU - On treatment for > 3months,,,,second
+,third 95%,,,,
+31,Number of Clients eligible for Viral Load test (Cumulative),,,,third
+32,Number of viral Load samples sent (Cumulative),,31,Number of viral load samples sent cannot be greater than number of clients eligible for viral load sample collection (Cumulative),third
+33,Number of viral Load results received (Cumulative),,,,third
+34,Number of viral Load results <1000 c/ml (Cumulative),,33,Number of viral load results < 1000 c/m cannot be greater than number of viral load results received (Cumulative).,third
+35a,Number of clients with unsurpressed VL result commenced on EAC (Cumulative),,,,third
+35b,Number of VL results received for clients that completed EAC (Cumulative),, 35a,Number of VL results received for clients that completed EAC cannot be greater than unsupressed results received (Cumulative).,third
+35c,Number of VL results with suppressed viral load (< 1000 copies/ml) received for clients that completed EAC (Cumulative),,33,Number of suppressed results received for clients that completed EAC cannot be greater than number of viral load results received.,third
+35d,Number of clients switched to another regimen line,,,,third
+36a,Number of Clients who were screened for TB (ART Clinic),,,,tb
+36b,Number of household contacts of registered TB patients screened for TB,,,,tb
+36c,Number of Clients screened Positive (ART Clinic),,36a,Number of clients screened positive for TB cannot be greater than number of clients screened for TB (ART Clinic),tb
+36d,Number of household contacts screened positive,,36b,Number of household contacts screened positive cannot be greater than number of household contacts registered TB patients screened for TB,tb
+37,Number of ART patients eligible for IPT,,25,Number of ART patients eligible for IPT cannot be greater than number of clients currently receiving ART (Cummulative),tb
+38,Number of ART patients who started a course of TB preventive therapy (INH),,37,Number of ART patients who started a course of TB preventive therapy cannot be greater than number of ART patients eligible for IPT,tb
+39,Number of ART patients who started a course of TB preventive therapy (INH) 6months prior and completed,,,,tb
+40,Number of patients on MMD {Multi Month Dispensing} (<3 months) - DMOC (Cumulative),,25,Number of patients on MMD (<3 months)  cannot be greater than number of clients currently receiving ART (Cummulative),second
+41,Number of patients on MMD {Multi Month Dispensing} (3 - 5 months) - DMOC (Cumulative),,25,Number of patients on MMD (3 - 5 months)  cannot be greater than number of clients currently receiving ART (Cummulative),second
+42,Number of patients on MMD {Multi Month Dispensing} (6 months) - DMOC (Cumulative),,25,Number of patients on MMD (6 months)  cannot be greater than number of clients currently receiving ART (Cummulative),second
+43,Number of patients initiated on CARC {Community ARV Refill Club} - DMOC (Cumulative),,25,Number of patients initiated on CARC cannot be greater than number of clients currently receiving ART (Cummulative),second
+44,Number of patients initiated on CPARP {Community Pharmacy ARV Refill Program} - DMOC (Cumulative),,25,Number of patients initiated on CPARP cannot be greater than number of clients currently receiving ART (Cummulative),second
+45,Number of patients on CARGs (Community ART Refill Groups)  - DMOC (Cumulative),,25,Number of patients initiated on CARGs cannot be greater than number of clients currently receiving ART (Cummulative),second
+46,Number of patients on Adolescents Refill Clubs  - DMOC (Cumulative),,25,Number of patients on Adolescent Refill Clubs  cannot be greater than number of clients currently receiving ART (Cummulative),second
+47,Number of patients on Fast-track model - DMOC (Cumulative),,25,Number of patients on Fast-track model  cannot be greater than number of clients currently receiving ART (Cummulative),second
+48,Number of Adult Patients newly initiated on ART with TLD,,25,Number of Adult Patients newly initiated on ART with TLD  cannot be greater than number of clients currently receiving ART (Cummulative),second
+49,Number of Adult Patients currently on ART transitioned from AZT/3TC/NVP to TLD (Cumulative),,25,Number of Adult Patients currently on ART transitioned from AZT/3TC/NVP to TLD (Cumulative)  cannot be greater than number of clients currently receiving ART (Cummulative),second
+50,Number of Adult Patients currently on ART transitioned from TDF/3TC/EFV to TLD (Cumulative),,25,Number of Adult Patients currently on ART transitioned from TDF/3TC/EFV to TLD (Cumulative)  cannot be greater than number of clients currently receiving ART (Cummulative),second
+51,Total number of PLHIVs currently on TLD (Cumulative),,25,Total number of PLHIVs currently on TLD cannot be greater than number of clients currently receiving ART (Cummulative),second
+52,Number of discordant partners,,,,prep_gbv
+53,Number of discordant partners counseled and offered PrEP,,52,Number of discordant partners counseled and offered PrEP cannot be greater than number of discordant partners,prep_gbv
+54,Number of discordant partners accepted PrEP,,53,Number of discordant partners accepted PrEP cannot be greater than number offered PrEP,prep_gbv
+55,Number of discordant partners newly enrolled on oral antiretroviral pre-exposure prophylaxis (PrEP),,54,Number of discordant partners newly enrolled on oral antiretroviral pre-exposure prophylaxis (PrEP) cannot be greater than number of discordant partners accepted PrEP,prep_gbv
+56,Total number of persons currently on oral antiretroviral pre-exposure prophylaxis (PrEP),,,,prep_gbv
+57,Number of female PLHIVs who attended clinic and eligible for cervical cancer screening,,,,cervicsl_cancer
+58,Number of female PLHIV who screened Negative for Cervical Cancer,,57,Number of female PLHIV who screened Negative for Cervical Cancer cannot be greater than number of PLHIVs females who attended clinic and eligible for cervical cancer screening,cervicsl_cancer
+59,Number of female PLHIV who screened Positive for precancerous lesions of the Cervix,,57,Number of female PLHIV who screened Positive for precancerous lesions of the Cervix cannot be greater than number of PLHIVs females who attended clinic and eligible for cervical cancer screening,cervicsl_cancer
+60,Number of female PLHIV with suspicious cancerous lesions,,57,Number of female PLHIV with suspicious cancerous lesions cannot be greater than number of PLHIVs females who attended clinic and eligible for cervical cancer screening,cervicsl_cancer
+61,Number of female PLHIVs referred for treatment for precancerous lesions of the cervix,,59,Number of female PLHIVs referred for treatment cannot be greater than  the number of female PLHIV who screened Positive for precancerous lesions of the Cervix,cervicsl_cancer
+62,Number of female PLHIV treated for precancerous lesions of the cervix,,61,Number of female PLHIV treated for precancerous lesions of the cervix cannot be greater than number of female PLHIVs referred for treatment for precancerous lesions of the cervix,cervicsl_cancer
+63,Number of clients screened for IPV,,,,prep_gbv
+64,Number of clients referred for IPV services,,63,Number of clients referred for IPV services cannot be greater than number of clients screened for IPV,prep_gbv
+65,GEND_NORM-GBV,,,,prep_gbv
+66,GEND_GBV,,,,
+67,GEND_GBV_SEXUAL POST RAPE CARE, 68_67_equal_66,,,prep_gbv
+68,GEND_GBV_PHYSICAL and/or EMOTIONAL, 68_67_equal_66,,,prep_gbv
+69,PrEP_NEW-Screened for GBV Others population,,,,prep_gbv
+70,PrEP_NEW-Screened for GBV Pregnant Women,,,,prep_gbv
+71,PrEP_NEW-Identified_as_having_experienced_GBV Others population,,,,prep_gbv
+72,PrEP_NEW-Identified_as_having_experienced_GBV Pregnant Women,,,,prep_gbv
+73,PrEP_NEW-Referred_to_clinical_and-or_non_clinical_GBV_services Others population,,,,prep_gbv
+74,PrEP_NEW-Referred_to_clinical_and-or_non_clinical_GBV_services Pregnant Women,,,,prep_gbv
+75,PrEP_CURR-GBV Others population,,,,prep_gbv
+76,PrEP_CURR-GBV Pregnant Women,,,,prep_gbv
+77,INDEX_Screened_for_GBV Others population,,,,prep_gbv
+78,INDEX_Screened_for_GBV Pregnant Women,,,,prep_gbv
+79,INDEX_Identified_as_having_experienced_GBV Others population,,,,prep_gbv
+80,,,,,prep_gbv
+81,INDEX_Identified_as_having_experienced_GBV Pregnant Women,,,,prep_gbv
+82,INDEX_Referred_to_clinical_and-or_non_clinical_GBV_services Others population,,,,prep_gbv
+83,INDEX_Referred_to_clinical_and-or_non_clinical_GBV_services Pregnant Women,,,,prep_gbv
+84,TX_NEW_Screened_for_GBV Others population,,,,prep_gbv
+85,TX_NEW_Screened_for_GBV Pregnant Women,,,,prep_gbv
+86,TX_NEW_Identified_as_having_experienced_GBV Others population,,,,prep_gbv
+87,TX_NEW_Identified_as_having_experienced_GBV Pregnant Women,,,,prep_gbv
+88,TX_NEW_Referred_to_clinical_and-or_non_clinical_GBV_services Others population,,,,prep_gbv
+89,TX_PVLS_D_Screened_for_GBV Others population,,,,prep_gbv
+90,TX_PVLS_D_Screened_for_GBV Pregnant Women,,,,prep_gbv
+91,TX_PVLS_D_Identified_as_having_experienced_GBV Others population,,,,prep_gbv
+92,TX_PVLS_D_Identified_as_having_experienced_GBV Pregnant Women,,,,prep_gbv
+93,TX_PVLS_D_Referred_to_clinical_and-or_non_clinical_GBV_services Others population,,,,prep_gbv
+94,TX_PVLS_D_Referred_to_clinical_and-or_non_clinical_GBV_services Pregnant Women,,,,prep_gbv
+95,Number of individual HIVST kits distributed (Directly assisted),,,,hivst
+96,Number of individual HIVST kits distributed (Unassisted),,,,hivst
+97,Number of individual reporting HIVST results_Positive,,,,hivst
+98,Number of individual reporting HIVST results_Negative,,,,hivst
+99,Number of individual reporting HIVST results_Indeterminate,,,,hivst
+100,Number of individuals reporting reactive HIVST results referred for confirmatory test (HTS) who received HIV positive test results,,97,Number of individuals reporting reactive HIVST results referred for confirmatory test (HTS) who received HIV positive test results cannot be greater than number of individual reporting HIVST result_Positive,hivst
+101,Number of individuals with confirmed HIV-positive results who are successfully linked with HIV care and treatment,,100,Number of individuals with confirmed HIV-positive results who are successfully linked with HIV care and treatment cannot be greater than  Number of individuals reporting reactive HIVST results referred for confirmatory test (HTS) who received HIV positive test results,hivst
+102,HTS_RECENT - Recent,,,,hts_recent
+103,HTS_RECENT - Long-Term,,,,hts_recent
+104,HTS_RECENT - Negative,,,,hts_recent
+105,HTS_RECENT - Invalid,,,,hts_recent
+106,COVID-19 _ Number of PLHIV Eligible for ARV Refills (ARV_REFILL_ELIG) - Daily,,,,second
+107,COVID-19 _ Number of PLHIV who received refills for <3 months (Daily),,,,second
+108,COVID-19 _ Number of PLHIV who received refills for 3 - 5 months (Daily),,,,second
+109,COVID-19 _ Number of PLHIV who received refills for 6 months and above (Daily),,,,second
+110,COVID-19 _ Number of 30-packs of ARV available (ARV_30) - Daily,,,,second
+111,COVID-19 _ Number of 90-packs of ARV available (ARV_90) - Daily,,,,second
+112,COVID-19 _ Number of 180-packs of ARV available (ARV_180) - Daily,,,,second
+113,COVID-19 _ Number of persons eligible for PrEP Refills (PREP_REFILL_ELIG) - Daily,,,,prep_gbv
+114,COVID-19 _ Number of persons who received PrEP refills for 1 month - (Daily),,,,prep_gbv
+115,COVID-19 _ Number of persons who received PrEP refills for 2 months - (Daily),,,,prep_gbv
+116,COVID-19 _ Number of persons who received PrEP refills for 3 months (Daily),,,,prep_gbv
+117,COVID-19 _ Number of PLHIV eligible for Viral-load test (VL_ELIG_SAMPLE) - Daily,,,,third
+118,COVID-19 _ Number of PLHIV whose samples were taken (Daily),,,,third
+119,Number of ART patients with no clinical contact or ART drug pickup >28 days since their last expected clinical contact and were tracked,,,,second
+120,BTC _  Number of clients line listed as LTFU (>28 days) - FY20,,,,second
+121,BTC _ Number of clients LTFU with only telephone number on record,,,,second
+122,BTC _ Number of clients LTFU with only physical address on record,,,,second
+123,BTC _ Number of clients LTFU with no registered telephone number or physical address,,,,second
+124,BTC _ Number of clients LTFU contacted via telephone,,,,second
+125,BTC _ Number of clients LTFU contacted via telephone scheduled to return to care,,,,second
+126,BTC _ Number of clients LTFU contacted via telephone back to care or restarted on ART,,,,second
+127,BTC _ Number of clients LTFU contacted via telephone stopped treatment,,,,second
+128,BTC _ Number of clients LTFU contacted via telephone transferred out,,,,second
+129,BTC _ Number of clients LTFU contacted via telephone relocated/migrated,,,,second
+130,BTC _ Number of clients LTFU contacted via telephone that are declared dead,,,,second
+131,BTC _ Number of clients LTFU contacted via telephone not reached,,,,second
+132,BTC _ Number of clients LTFU contacted via physical address,,,,second
+133,BTC _ Number of clients LTFU contacted via physical address scheduled to return to care,,,,second
+134,BTC _ Number of clients LTFU contacted via physical address back to care or restarted on ART,,,,second
+135,BTC _ Number of clients LTFU contacted via physical address stopped treatment,,,,second
+136,BTC _ Number of clients LTFU contacted via physical address transferred out,,,,second
+137,BTC _ Number of clients LTFU contacted via physical address relocated/migrated,,,,second
+138,BTC _ Number of clients LTFU contacted via physical address that are declared dead,,,,second
+139,BTC _ Number of clients LTFU contacted via physical address not reached,,,,second
+ ,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,

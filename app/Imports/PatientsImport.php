@@ -2,7 +2,7 @@
 
 namespace App\Imports;
 ini_set('max_execution_time', 0);
-use App\Patient;
+use App\PatientList;
 use Maatwebsite\Excel\Concerns\ToModel;
 use Maatwebsite\Excel\Concerns\WithHeadingRow;
 use Maatwebsite\Excel\Concerns\WithBatchInserts;
@@ -18,22 +18,27 @@ class PatientsImport implements ToModel, WithHeadingRow
     public function model(array $row)
     {
         // dd($row);
-        return Patient::Create([
+        return PatientList::Create([
             'hospital_num'  => $row['hospital_num'],
-            'status'        => $row['current_art_status'],
-            'case_manager'  => $row['case_manager'] ? $row['case_manager'] : 'No Case Manager',
+            'status'        => 'Active',
+            'name'          => $row['surname'].' '.$row['other_names'],
+            // 'p_identifier'  => $row['patient_id'],
+            'facility_hospital_number' => $row['facility_hospital_number'],
+            // 'p_unique_identifier'   => $row['unique_id'],
+            'sex'           => $row['sex'],
+            'date_of_birth' => \Carbon\Carbon::parse($row['date_of_birth_yyyy_mm_dd']),
             'facility'      => $row['facility'] ? $row['facility'] : 'None'
         ]);
     }
 
     // public function batchSize(): int
     // {
-    //     return 1000;
+    //     return 100;
     // }
 
     // public function chunkSize(): int
     // {
-    //     return 1000;
+    //     return 100;
     // }
 }
 

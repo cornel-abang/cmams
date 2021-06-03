@@ -1,0 +1,33 @@
+Data,Tag
+Facility New OPD Attendance,attendance
+Number of clients screened for HIV using HIV risk assessment form,hiv_testing
+Number of clients Eligible for HIV test ( from HIV screening tool),hiv_testing
+Number of individuals who received HIV Testing Services (HTS) and received their test results (GEN Pop - OPD),hiv_testing
+Number of people tested HIV Positive & received results (GEN Pop - OPD),hiv_testing
+Number of individuals who received HIV Testing Services (HTS) and received their test results (GEN Pop - VCT),hiv_testing
+Number of people tested HIV Positive & received results (GEN Pop - VCT),hiv_testing
+Number of individuals who received HIV Testing Services (HTS) and received their test results (INPATIENT),hiv_testing
+Number of people tested HIV Positive & received results (INPATIENT),hiv_testing
+Number of individuals who received HIV Testing Services (HTS) and received their test results (PMTCT - ANC),hiv_testing
+Number of pregnant women with previously known HIV status at ANC,hiv_testing
+Number of people tested HIV Positive & received results (PMTCT - ANC),hiv_testing
+Number of individuals who received HIV Testing Services (HTS) and received their test results (PMTCT_POST ANC - L&D + PNC + PREGNANT WOMEN RETESTED AFTER INITIAL HIV NEGATIVE TEST),hiv_testing
+,hiv_testing
+Number of people tested HIV Positive & received results (PMTCT_POST ANC - L&D + PNC + PREGNANT WOMEN RETESTED WHO SEROVONVERTED TO HIV POSITIVE AFTER INITIAL HIV NEGATIVE TEST),hiv_testing
+Number of individuals who received HIV Testing Services (HTS) and received their test results (OTHERS -MALNUTRITION + FP + BLOOD BANK),hiv_testing
+,hiv_testing
+Number of people tested HIV Positive & received results (OTHERS - MALNUTRITION + FP + BLOOD BANK),hiv_testing
+Number of individuals who received HIV Testing Services (HTS) and received their test results (STI),hiv_testing
+Number of people tested HIV Positive & received results (STI),hiv_testing
+Number of individuals who received HIV Testing Services (HTS) and received their test results (TB),hiv_testing
+Number of people tested HIV Positive & received results (TB),hiv_testing
+Number of adults and children newly enrolled on antiretroviral therapy (ART),new_enrollment
+Index Testing Services Cascade,ict
+Index cases offered Index Couselling & Testing (ICT),ict
+Index cases accepted  Index Couselling & Testing (ICT),ict
+Number of contacts (Partners) elicited,ict
+Number of contacts (Biological children) enumerated,ict
+Contacts tested: New positive,ict
+Contacts tested: New negative,ict
+Contacts identified as known positive,ict
+Number of HIV-positive partners who were successfully enrolled in HIV care and treatment,ict

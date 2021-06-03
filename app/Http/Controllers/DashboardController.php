@@ -16,7 +16,7 @@ class DashboardController extends Controller
 {
     public function index()
     {   
-        // dd(Carbon::now()->setTimezone('WAT')->format('g:i A'));
+        // dd(Carbon::yesterday());
     	$title = 'FHI360 admin area';
     	$facilities 	= Facility::all();
     	$case_managers	= Manager::all();

@@ -70,7 +70,7 @@
             <div class="col-xl-6 col-md-12">
                 <div class="card table-card">
                     <div class="card-header">
-                        <h5>This week's case managers' leaderboard <span id="set">(Top Performaners)</span></h5>
+                        <h5>This week's case managers' leaderboard <span id="set">(Top Performers)</span></h5>
                         <div class="card-header-right">
                             <div class="btn-group card-option">
                                 <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

@@ -19,7 +19,7 @@ Route::get('/', function () {
 })->name('home');
 
 Route::get('login', function(){
-	return view('welcome');
+	return view('q-login');
 });
 
 Route::get('attendance', function(){
@@ -35,6 +35,12 @@ Route::post('check_attendance', 'CaseManagerController@attendance')->name('check
 Route::post('facility/coordinates', 'FacilityController@saveCoords')->name('save.coords');
 
 Route::post('login', 'UserController@login')->name('login');
+
+// Dhis Access Routes
+Route::get('dhis', 'DhisController@index')->name('dhis');
+Route::post('dhis', 'DhisController@save');
+Route::post('import-dhis', 'DhisController@importData')->name('indicators');
+// Route::get('dhis-login', 'DhisController@login');
 
 Route::group(['middleware'=>'auth:web'], function(){
 	Route::group(['prefix'=>'fhi360'], function(){
@@ -112,11 +118,30 @@ Route::group(['middleware'=>'auth:web'], function(){
 		Route::get('verify_appt/{cm_id}', 'AppointmentController@verifyAppt')->name('verify_appt');
 		Route::get('vlc', 'AppointmentController@vlc')->name('vlc');
 		Route::get('before_due', 'AppointmentController@beforeDue')->name('before');
+		Route::get('before_future', 'AppointmentController@beforeDueFuture')->name('before_future');
+		Route::get('met', 'AppointmentController@metAppts')->name('met');
+		Route::get('missed', 'AppointmentController@missedAppts')->name('missed');
+		// EXPORTS
+		Route::get('export-past', 'AppointmentController@exportBeforeDuePast')->name('export-past');
+		Route::get('export-future', 'AppointmentController@exportBeforeDueFuture')->name('export-future');
+		Route::get('export-met', 'AppointmentController@exportMetAppts')->name('export-met');
+		Route::get('export-missed', 'AppointmentController@exportMissedAppts')->name('export-missed');
 	});
 
 	Route::group(['prefix' => 'radet_file'], function(){
 		Route::get('upload_radet', 'RadetController@uploadRadet')->name('upload.radet');
 		Route::post('radet/import', 'RadetController@importRadetFile')->name('import.radet');
+	});
+
+	Route::group(['prefix' => 'tat'], function(){
+		Route::get('records', 'TATController@index')->name('tat.show');
+		Route::get('save_tat', 'TATController@saveRecord')->name('save_tat');
+
+		Route::post('add-tat', 'TATController@import')->name('tat');
+		Route::post('single_tat', 'TATController@addTAT')->name('tat.single');
+		Route::post('add-patients', 'TATController@importPatients')->name('patients');
+		Route::get('compare-results', 'TATController@showImport')->name('tat.compare');
+		Route::post('compare-results', 'TATController@uploadCopies');
 	});
 
 	//Add vLC Results

@@ -6,6 +6,8 @@ use Carbon\Carbon;
 use App\Facility;
 use App\Attendance;
 use App\Patient;
+use App\Radet;
+use App\RadetAppt;
 /**
  * @return mixed
  * Custom functions made by Cornel
@@ -39,7 +41,9 @@ if ( ! function_exists('pageJsonData')){
             'checked_in'                  => session('checked_in'),
             'checked_out'                 => session('checked_out'),
             'case_manager'                => session('case_manager'),
-            'checked_twice'               => session('checked_twice')
+            'checked_twice'               => session('checked_twice'),
+            'soft_uploaded'               => session('soft-uploaded'),
+            'hard_uploaded'               => session('hard-uploaded')
         ];
 
         $routeLists = \Illuminate\Support\Facades\Route::getRoutes();
@@ -230,21 +234,43 @@ function managersClients($manager)
     return Patient::where('case_manager', $manager)->get();
 }
 
+function checkApptDate($type, $client, $cm)
+{
+    $appt = RadetAppt::where('client_hospital_num', $client)
+                  ->where('appt_type', $type)
+                  ->where('case_manager', $cm)
+                  ->latest()
+                  ->first();
+    if ($appt) {
+        return Carbon::parse($appt->appt_date)->format('l jS \of F Y');
+    }
+
+    return 'Not set yet';
+}
+
 function clientsAnalyzer($case_mg, $status)
 {
     if ($status === 'Active') {
-        $active = Patient::where('status','Active')
-                      ->where('case_manager',$case_mg)
-                      ->count();
+        // $active = Patient::where('status','Active')
+        //               ->where('case_manager',$case_mg)
+        //               ->count();
 
-        $activeR = Patient::where('status','Active-Restart')
-                           ->where('case_manager', $case_mg)
-                           ->count();
+        // $activeR = Patient::where('status','Active-Restart')
+        //                    ->where('case_manager', $case_mg)
+        //                    ->count();
 
-        $activeTI = Patient::where('status','Active-Transfer In')
-                           ->where('case_manager', $case_mg)
-                           ->count();
-        return $active+$activeR+$activeTI;
+        // $activeTI = Patient::where('status','Active-Transfer In')
+        //                    ->where('case_manager', $case_mg)
+        //                    ->count();
+        // return $active+$activeR+$activeTI;
+         return Radet::whereDate('created_at', Carbon::parse('2021-02-09 09:20:45'))
+                        ->where('case_manager', $case_mg)
+                        ->where(function($q){
+                            $q->where('art_status', 'Active')
+                                ->orWhere('art_status', 'Active-Restart')
+                                ->orWhere('art_status', 'Active-Transfer In');
+                        }) 
+                        ->count();
     }
 
     return Patient::where('case_manager', $case_mg)
