@@ -36,8 +36,8 @@ class RadetImport implements ToModel, WithHeadingRow, WithBatchInserts, WithChun
             'date_of_current_viral_load' => Carbon::parse($row['date_of_current_viral_load_yyyy_mm_dd']),
             'case_manager'         => $row['case_manager'],
             'current_viral_load'   => $row['current_viral_load_cml'],
-            'regimen_at_art_start' => $row['regimen_at_art_start'],
-            'current_regimen'      => $row['current_art_regimen'],
+            'regimen_at_art_start' => $row['regimen_at_art_start']?$row['regimen_at_art_start']:null,
+            'current_regimen'      => $row['current_art_regimen']?$row['current_art_regimen']:null,
             'last_vl_result'       => Carbon::parse($row['date_of_vl_result_after_vl_sample_collection_yyyy_mm_dd']),
             'created_at'           => Carbon::parse('2021-04-19 11:08:49')
         ]);

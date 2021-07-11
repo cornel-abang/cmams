@@ -8,6 +8,7 @@ use App\Facility;
 use App\Patient;
 use App\Radet;
 use App\CaseManager;
+use App\PatientList;
 use App\Imports\PatientsImport;
 use Maatwebsite\Excel\Facades\Excel;
 
@@ -20,12 +21,11 @@ class ClientController extends Controller
      */
     public function index()
     {
-        // dd(\Carbon\Carbon::parse('2021-02-10'));
         $title = 'All Clients';
-        $clients = Radet::whereDate('created_at', \Carbon\Carbon::parse('2021-02-05 08:07:15'))
-                        ->orderBy('client_hospital_num', 'asc')->paginate(20);
+        $clients = PatientList::paginate(20);
         $facilities = Facility::all();
         $case_managers = CaseManager::all();
+        // dd($clients);
         return view('clients.index', compact('title','clients','facilities','case_managers'));
     }
 

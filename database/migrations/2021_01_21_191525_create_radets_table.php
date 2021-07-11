@@ -15,7 +15,7 @@ class CreateRadetsTable extends Migration
     {
         Schema::create('radets', function (Blueprint $table) {
             $table->id();
-            $table->string('client_hospital_num');
+            $table->string('client_hospital_num')->nullable();
             $table->date('last_pickup_date')->nullable();
             $table->integer('months_of_refil')->nullable();
             $table->string('facility')->nullable();

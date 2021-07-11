@@ -1,17 +1,15 @@
-@extends('layouts.dashboard')
-@section('content')
-@section('sweet-alert-area')
-    <script src="{{asset('assets/js/sweetalert2.js')}}" defer></script>
-@endsection
+<?php $__env->startSection('content'); ?>
+<?php $__env->startSection('sweet-alert-area'); ?>
+    <script src="<?php echo e(asset('assets/js/sweetalert2.js')); ?>" defer></script>
+<?php $__env->stopSection(); ?>
 
 <!-- [ stiped-table ] start -->
             <div class="col-xl-12">
                 <div class="card">
                     <div class="card-header">
                         <h5>Registered Clients</h5>
-                        <span class="d-block m-t-5">There are a total of <b><code>{{ number_format( cmCount() ) }}</code></b> clients registered</span>
-                        {{-- <button type="button" class="btn btn-info btn-sm add-btn" data-toggle="modal" data-target="#add-client-form">
-                            <i class="la la-plus-circle"></i> Add Client</button> --}}
+                        <span class="d-block m-t-5">There are a total of <b><code><?php echo e(number_format( cmCount() )); ?></code></b> clients registered</span>
+                        
                     </div>
                     <div class="card-body table-border-style">
                         <div class="table-responsive">
@@ -22,50 +20,41 @@
                                         <th>Hospital Number</th>
                                         <th>Facility</th>
                                         <th>Case Manager</th>
-                                        {{-- <th>Current VL</th> --}}
+                                        
                                         <th>Status</th>
                                         <th>Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach($clients as $client)
-                                    <tr id="de-{{$client->id}}">
-                                        <td>{{$client->hospital_num}}</td>
+                                    <?php $__currentLoopData = $clients; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $client): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                    <tr id="de-<?php echo e($client->id); ?>">
+                                        <td><?php echo e($client->hospital_num); ?></td>
                                         <td>
-                                            {{$client->facility}}
+                                            <?php echo e($client->facility); ?>
+
                                         </td>
-                                        <td>{{ ucwords(strtolower($client->case_manager)) }}</td>
-                                        {{-- <td>
-                                            @if($client->current_viral_load < 1000 && $client->current_viral_load >= 1)
-                                                <span class="badge-pill badge-success" data-toggle="tooltip" title="Virally Suppressed">{{ $client->current_viral_load }}</span>
-                                            @elseif($client->current_viral_load >= 1000)
-                                                <span class="badge-pill badge-danger" data-toggle="tooltip" title="Virally Unsuppressed">
-                                                    {{ number_format($client->current_viral_load) }}</span>
-                                            @elseif($client->current_viral_load == 0 && $client->current_viral_load !== null)
-                                                <span class="badge-pill badge-success" data-toggle="tooltip" title="Virally Suppressed">{{ $client->current_viral_load }}</span>
-                                            @else
-                                                {{ $client->current_viral_load }}
-                                            @endif
-                                        </td> --}}
+                                        <td><?php echo e(ucwords(strtolower($client->case_manager))); ?></td>
+                                        
                                         <td>
-                                            @if($client->status === 'Active' || $client->status === 'Active-Restart' || $client->art_status === 'Active-Transfer In')
-                                                <span class="badge-pill badge-success">{{$client->status}}</span>
-                                            @else
-                                                <span class="badge-pill badge-danger">{{$client->status}}</span>
-                                            @endif
+                                            <?php if($client->status === 'Active' || $client->status === 'Active-Restart' || $client->art_status === 'Active-Transfer In'): ?>
+                                                <span class="badge-pill badge-success"><?php echo e($client->status); ?></span>
+                                            <?php else: ?>
+                                                <span class="badge-pill badge-danger"><?php echo e($client->status); ?></span>
+                                            <?php endif; ?>
                                         </td>
                                         <td>
-                                            <span data-toggle="modal" data-target="#cl{{$client->id}}">
+                                            <span data-toggle="modal" data-target="#cl<?php echo e($client->id); ?>">
                                                 <button type="button" class="btn btn-primary btn-sm" data-toggle="tooltip" data-placement="top" title="View client summary">
                                                         <i class="la la-eye"></i>
                                                 </button>
                                             </span>
                                         </td>
                                     </tr>
-                                    @endforeach
+                                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                                 </tbody>
                             </table>
-                             {{ $clients->links() }}
+                             <?php echo e($clients->links()); ?>
+
                         </div>
                     </div>
                 </div>
@@ -73,15 +62,16 @@
 
 
 
-            {{-- View Facility Modal --}}
-        @foreach($clients as $client)
-        <div class="modal fade" id="cl{{$client->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            
+        <?php $__currentLoopData = $clients; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $client): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+        <div class="modal fade" id="cl<?php echo e($client->id); ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog" role="document">
             <div class="modal-content">
               <div class="modal-header">
                 <h4 class="modal-title" id="exampleModalLabel">
-                    <i class="la la-user"></i> {{$client->name}}
-                </h4><span class="badge badge-pill badge-info client-status"> {{$client->art_status}}</span>
+                    <i class="la la-user"></i> <?php echo e($client->name); ?>
+
+                </h4><span class="badge badge-pill badge-info client-status"> <?php echo e($client->art_status); ?></span>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span>
                 </button>
@@ -94,45 +84,47 @@
                                     <table class="table table-bordered table-striped more-info">
                                         <tr>
                                             <th>Client</th>
-                                            <td>{{ $client->client_hospital_num }}</td>
+                                            <td><?php echo e($client->client_hospital_num); ?></td>
                                         </tr>
                                         <tr>
                                             <th>Next Sample Collection Date: </th>
                                             <td>
-                                                @if($client->art_status ==='Active' || $client->art_status === 'Active-Transfer' || $client->art_status === 'Active-Restart')
-                                                    {{checkApptDate('VL Sample Collection', $client->client_hospital_num, $client->case_manager)}}
-                                                @else
+                                                <?php if($client->art_status ==='Active' || $client->art_status === 'Active-Transfer' || $client->art_status === 'Active-Restart'): ?>
+                                                    <?php echo e(checkApptDate('VL Sample Collection', $client->client_hospital_num, $client->case_manager)); ?>
+
+                                                <?php else: ?>
                                                     Inactive client
-                                                @endif
+                                                <?php endif; ?>
                                             </td>
                                         </tr>
                                         <tr>
                                             <th>Next Refill Date: </th>
                                             <td>
-                                                @if($client->art_status ==='Active' || $client->art_status === 'Active-Transfer' || $client->art_status === 'Active-Restart')
-                                                    {{checkApptDate('Refill', $client->client_hospital_num, $client->case_manager)}}
-                                                @else
+                                                <?php if($client->art_status ==='Active' || $client->art_status === 'Active-Transfer' || $client->art_status === 'Active-Restart'): ?>
+                                                    <?php echo e(checkApptDate('Refill', $client->client_hospital_num, $client->case_manager)); ?>
+
+                                                <?php else: ?>
                                                     Inactive client
-                                                @endif
+                                                <?php endif; ?>
                                             </td>
                                         </tr>
                                         <tr>
                                             <th>TPT Status (Last 2yrs): </th>
                                             <td>
-                                                @if($client->art_status ==='Active' || $client->art_status === 'Active-Transfer' || $client->art_status === 'Active-Restart')
-                                                    @if($client->tpt_in_the_last_2_years === 'Yes')
+                                                <?php if($client->art_status ==='Active' || $client->art_status === 'Active-Transfer' || $client->art_status === 'Active-Restart'): ?>
+                                                    <?php if($client->tpt_in_the_last_2_years === 'Yes'): ?>
                                                         <span class=" la la-check-circle" style="color: green;"></span>
-                                                    @else
+                                                    <?php else: ?>
                                                         <span class="la la-times-circle" style="color: red;"></span>
-                                                    @endif
-                                                @else
+                                                    <?php endif; ?>
+                                                <?php else: ?>
                                                     Inactive client
-                                                @endif
+                                                <?php endif; ?>
                                             </td>
                                         </tr>
                                         <tr>
                                             <th>Case Manager</th>
-                                            <td>{{ ucwords(strtolower($client->case_manager)) }}</td>
+                                            <td><?php echo e(ucwords(strtolower($client->case_manager))); ?></td>
                                         </tr>
                                     </table>
                                 </div>
@@ -140,13 +132,11 @@
                         </div>
                     </div>
               </div>
-              {{-- <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              </div> --}}
+              
             </div>
           </div>
         </div>
-        @endforeach
+        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
     </div>
 
     <style type="text/css">
@@ -162,7 +152,7 @@
 
 
 
-    {{-- Add Facility Modal --}}
+    
             <!-- Modal -->
             <div class="modal fade" id="add-client-form" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
               <div class="modal-dialog" role="document">
@@ -180,69 +170,69 @@
                                 <div class="single-tab"><i class="la la-file-o"> Single Facilty</i></div>
                                 <div class="bulk-tab"><i class="la la-files-o"></i> Bulk Upload</div>
                             </div>
-                            <form action="{{route('add-client')}}" method="post" enctype="multipart/form-data">
-                                @csrf
+                            <form action="<?php echo e(route('add-client')); ?>" method="post" enctype="multipart/form-data">
+                                <?php echo csrf_field(); ?>
                                 <div class="single-upload">
                                 <div class="back-arrow"><i class="la la-long-arrow-left"></i></div>
                                     <div class="form-group row">
                                         <label for="inputEmail3" class="col-sm-3 col-form-label">Client Name</label>
                                         <div class="col-sm-9">
-                                            <input type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{old('name')}}">
-                                            @if ($errors->has('name'))
+                                            <input type="text" class="form-control<?php echo e($errors->has('name') ? ' is-invalid' : ''); ?>" name="name" value="<?php echo e(old('name')); ?>">
+                                            <?php if($errors->has('name')): ?>
                                                 <span class="invalid-feedback" role="alert">
-                                                    <strong>{{ $errors->first('name') }}</strong>
+                                                    <strong><?php echo e($errors->first('name')); ?></strong>
                                                 </span>
-                                            @endif
+                                            <?php endif; ?>
                                         </div>
                                     </div>
                                    <div class="form-group row">
                                         <label for="inputEmail3" class="col-sm-3 col-form-label">Client ID</label>
                                         <div class="col-sm-9">
-                                            <input type="text" class="form-control{{ $errors->has('clientID') ? ' is-invalid' : '' }}" name="clientID" value="{{old('clientID')}}">
-                                            @if ($errors->has('clientID'))
+                                            <input type="text" class="form-control<?php echo e($errors->has('clientID') ? ' is-invalid' : ''); ?>" name="clientID" value="<?php echo e(old('clientID')); ?>">
+                                            <?php if($errors->has('clientID')): ?>
                                                 <span class="invalid-feedback" role="alert">
-                                                    <strong>{{ $errors->first('clientID') }}</strong>
+                                                    <strong><?php echo e($errors->first('clientID')); ?></strong>
                                                 </span>
-                                            @endif
+                                            <?php endif; ?>
                                         </div>
                                     </div>
                                     <div class="form-group row">
                                         <label for="inputEmail3" class="col-sm-3 col-form-label">Phone Number</label>
                                         <div class="col-sm-9">
-                                            <input type="phone" class="form-control{{ $errors->has('phone') ? ' is-invalid' : '' }}" name="phone" value="{{old('phone')}}">
-                                            @if ($errors->has('phone'))
+                                            <input type="phone" class="form-control<?php echo e($errors->has('phone') ? ' is-invalid' : ''); ?>" name="phone" value="<?php echo e(old('phone')); ?>">
+                                            <?php if($errors->has('phone')): ?>
                                                 <span class="invalid-feedback" role="alert">
-                                                    <strong>{{ $errors->first('phone') }}</strong>
+                                                    <strong><?php echo e($errors->first('phone')); ?></strong>
                                                 </span>
-                                            @endif
+                                            <?php endif; ?>
                                         </div>
                                     </div>
                                     <div class="form-group row">
                                         <label for="inputEmail3" class="col-sm-3 col-form-label">Phone Number OPC (Optional)</label>
                                         <div class="col-sm-9">
-                                            <input type="phone" class="form-control{{ $errors->has('opc_phone') ? ' is-invalid' : '' }}" name="opc_phone" value="{{old('opc_phone')}}">
-                                            @if ($errors->has('opc_phone'))
+                                            <input type="phone" class="form-control<?php echo e($errors->has('opc_phone') ? ' is-invalid' : ''); ?>" name="opc_phone" value="<?php echo e(old('opc_phone')); ?>">
+                                            <?php if($errors->has('opc_phone')): ?>
                                                 <span class="invalid-feedback" role="alert">
-                                                    <strong>{{ $errors->first('opc_phone') }}</strong>
+                                                    <strong><?php echo e($errors->first('opc_phone')); ?></strong>
                                                 </span>
-                                            @endif
+                                            <?php endif; ?>
                                         </div>
                                     </div>
                                     <div class="form-group row">
                                         <label for="inputEmail3" class="col-sm-3 col-form-label">Residential Address</label>
                                         <div class="col-sm-9">
-                                            <input type="text" class="form-control{{ $errors->has('address') ? ' is-invalid' : '' }}" name="address" value="{{old('address')}}">
-                                            @if ($errors->has('address'))
+                                            <input type="text" class="form-control<?php echo e($errors->has('address') ? ' is-invalid' : ''); ?>" name="address" value="<?php echo e(old('address')); ?>">
+                                            <?php if($errors->has('address')): ?>
                                                 <span class="invalid-feedback" role="alert">
-                                                    <strong>{{ $errors->first('address') }}</strong>
+                                                    <strong><?php echo e($errors->first('address')); ?></strong>
                                                 </span>
-                                            @endif
+                                            <?php endif; ?>
                                         </div>
                                     </div>
                                     <div class="form-group row">
                                         <label for="inputEmail3" class="col-sm-3 col-form-label">Status</label>
                                         <div class="col-sm-9">
-                                            <select class="form-control{{ $errors->has('status') ? ' is-invalid' : '' }} select-or-search" name="status" value="{{old('status')}}" selected="{{old('status')}}" placeholder="Pick a status">
+                                            <select class="form-control<?php echo e($errors->has('status') ? ' is-invalid' : ''); ?> select-or-search" name="status" value="<?php echo e(old('status')); ?>" selected="<?php echo e(old('status')); ?>" placeholder="Pick a status">
                                                 <option>...</option>
                                                 <option value="Active">Active</option>
                                                 <option value="Dead">Dead</option>
@@ -250,41 +240,41 @@
                                                 <option value="Lost to Follow Up">Lost to Follow Up</option>
                                                 <option value="Stop Treatment">Stop Treatment</option>
                                             </select>
-                                            @if ($errors->has('status'))
+                                            <?php if($errors->has('status')): ?>
                                                 <span class="invalid-feedback" role="alert">
-                                                    <strong>{{ $errors->first('status') }}</strong>
+                                                    <strong><?php echo e($errors->first('status')); ?></strong>
                                                 </span>
-                                            @endif
+                                            <?php endif; ?>
                                         </div>
                                     </div>
                                     <div class="form-group row">
                                         <label for="inputEmail3" class="col-sm-3 col-form-label">Facility</label>
                                         <div class="col-sm-9">
-                                            <select class="form-control{{ $errors->has('facility') ? ' is-invalid' : '' }} select-or-search sel_facility" name="facility" value="{{old('facility')}}" selected="{{old('facility')}}" placeholder="Pick a facility">
+                                            <select class="form-control<?php echo e($errors->has('facility') ? ' is-invalid' : ''); ?> select-or-search sel_facility" name="facility" value="<?php echo e(old('facility')); ?>" selected="<?php echo e(old('facility')); ?>" placeholder="Pick a facility">
                                                 <option>...</option>
-                                                @foreach($facilities as $fac)
-                                                <option value="{{$fac->id}}">{{$fac->name}}</option>
-                                                @endforeach
+                                                <?php $__currentLoopData = $facilities; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $fac): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                                <option value="<?php echo e($fac->id); ?>"><?php echo e($fac->name); ?></option>
+                                                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                                             </select>
-                                            @if ($errors->has('facility'))
+                                            <?php if($errors->has('facility')): ?>
                                                 <span class="invalid-feedback" role="alert">
-                                                    <strong>{{ $errors->first('facility') }}</strong>
+                                                    <strong><?php echo e($errors->first('facility')); ?></strong>
                                                 </span>
-                                            @endif
+                                            <?php endif; ?>
                                         </div>
                                     </div>
-                                    <img src="{{asset('assets/images/loading.gif')}}" class="loading-img">
+                                    <img src="<?php echo e(asset('assets/images/loading.gif')); ?>" class="loading-img">
                                         <div class="input-group mb-3 col-sm-12">
                                             <div class="input-group-prepend">
                                                 <label class="input-group-text" for="inputGroupSelect01">Assign Case Manager</label>
                                             </div>
-                                            <select class="custom-select{{ $errors->has('case_manager') ? ' is-invalid' : '' }} case_managers_select" name="case_manager" selected="{{old('case_manager')}}" id="inputGroupSelect01" title="{{route('find_case_managers')}}" placeholder="Pick a case manager">
+                                            <select class="custom-select<?php echo e($errors->has('case_manager') ? ' is-invalid' : ''); ?> case_managers_select" name="case_manager" selected="<?php echo e(old('case_manager')); ?>" id="inputGroupSelect01" title="<?php echo e(route('find_case_managers')); ?>" placeholder="Pick a case manager">
                                             </select>
-                                            @if ($errors->has('case_manager'))
+                                            <?php if($errors->has('case_manager')): ?>
                                                 <span class="invalid-feedback" role="alert">
-                                                    <strong>{{ $errors->first('case_manager') }}</strong>
+                                                    <strong><?php echo e($errors->first('case_manager')); ?></strong>
                                                 </span>
-                                            @endif
+                                            <?php endif; ?>
                                         </div>
                                     <div class="form-group row">
                                         <div class="col-sm-10">
@@ -299,12 +289,12 @@
                                                 <label class="input-group-text">Upload CSV</label>
                                             </div>
                                             <div class="custom-file">
-                                                <input type="file" class="custom-file-input{{ $errors->has('bulk-client') ? ' is-invalid' : '' }}" id="inputGroupFile01" name="bulk-client">
-                                                 @if ($errors->has('bulk-client'))
+                                                <input type="file" class="custom-file-input<?php echo e($errors->has('bulk-client') ? ' is-invalid' : ''); ?>" id="inputGroupFile01" name="bulk-client">
+                                                 <?php if($errors->has('bulk-client')): ?>
                                                 <span class="invalid-feedback" role="alert">
-                                                    <strong>{{ $errors->first('bulk-client') }}</strong>
+                                                    <strong><?php echo e($errors->first('bulk-client')); ?></strong>
                                                 </span>
-                                                @endif
+                                                <?php endif; ?>
                                                 <span class="custom-file-label" for="inputGroupFile01">Choose file</span>
                                             </div>
                                         </div>
@@ -320,5 +310,7 @@
                 </div>
               </div>
             </div>
-            {{-- Add Facility Modal ends --}}
-    @endsection
+            
+    <?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('layouts.dashboard', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\laragon\www\qmams\resources\views/clients/index.blade.php ENDPATH**/ ?>

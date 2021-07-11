@@ -19,7 +19,6 @@ class CreatePatientListsTable extends Migration
             $table->string('status')->nullable();
             $table->string('case_manager')->nullable();
             $table->string('facility')->nullable();
-            $table->string('name')->nullable();
             $table->string('facility_hospital_number')->nullable();
             $table->string('sex')->nullable();
             $table->date('date_of_birth')->nullable();

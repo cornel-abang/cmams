@@ -5,7 +5,7 @@ use App\RadetDailyPerformance;
 use Carbon\Carbon;
 use App\Facility;
 use App\Attendance;
-use App\Patient;
+use App\PatientList;
 use App\Radet;
 use App\RadetAppt;
 /**
@@ -423,7 +423,7 @@ if (! function_exists('__facilities')) {
 
 function cmCount()
 {
-    return Patient::count();
+    return PatientList::count();
 }
 
 function facilityCount()

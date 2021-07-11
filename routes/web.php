@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
 	// dd(Hash::make('@cmams22+'));
-    return view('welcome');
+    return view('q-login');
 })->name('home');
 
 Route::get('login', function(){

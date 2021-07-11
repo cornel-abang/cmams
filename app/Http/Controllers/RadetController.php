@@ -42,7 +42,7 @@ class RadetController extends Controller
         Excel::import(new RadetImport, $file);
         $todays_radet = $this->getTodaysRadet();
 
-        // deduce and save the next appointments
+        // check and save the next appointments
         $this->saveAppointments($todays_radet);
 
         session()->flash('success', 'Upload complete');
@@ -52,7 +52,7 @@ class RadetController extends Controller
 
     public function getTodaysRadet()
     {
-        return Radet::whereDate('created_at', Carbon::parse('2021-04-19 11:08:49'))->get();
+        return Radet::whereDate('created_at', Carbon::today())->get();
     }
 
     public function saveAppointments($todays_radet)
@@ -62,7 +62,7 @@ class RadetController extends Controller
 
             if (!empty($appt->last_pickup_date)) {
                 //save refill appointments
-                if ( Carbon::parse($appt->last_pickup_date)->equalTo( Carbon::parse('2021-04-19') ) ) {
+                if ( Carbon::parse($appt->last_pickup_date)->equalTo( Carbon::yesterday() ) ) {
                     $new_appt = new RadetAppt;
                     $new_appt->appt_type            = 'Refill';
                     $new_appt->client_hospital_num  = $appt->client_hospital_num;
@@ -75,7 +75,7 @@ class RadetController extends Controller
 
             // save VL expected VL Results
             if (!empty($appt->date_of_viral_load)) {
-                if ( Carbon::parse($appt->date_of_viral_load)->equalTo( Carbon::parse('2021-04-19') ) ) {
+                if ( Carbon::parse($appt->date_of_viral_load)->equalTo( Carbon::today() ) ) {
                     //save result exp date
                     $result = new Result;
                     $result->due_date = Carbon::parse($appt->date_of_viral_load)->addDays(14);
