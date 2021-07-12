@@ -1,4 +1,4 @@
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/freeekzh/dhis.freepremiumbeats.com/
+    - export DEPLOYPATH=/home/fhicvaas/public_html/
     - /bin/cp -R * $DEPLOYPATH
