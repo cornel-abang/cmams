@@ -14,7 +14,7 @@
         "fruitcake/laravel-cors": "^1.0",
         "guzzlehttp/guzzle": "^6.3",
         "intergo/sms.to-laravel-lumen": "^0.0.28",
-        "laravel/framework": "^7.0",
+        "laravel/framework": "^8.71",
         "laravel/tinker": "^2.0",
         "maatwebsite/excel": "^3.1",
         "snowfire/beautymail": "^1.1",
