@@ -11,7 +11,7 @@ class Manager extends Model
 
     public function clients()
     {
-    	return Patient::where('case_manager',$this->names)->get();
+    	return PatientList::where('case_manager',$this->names)->get();
     }
 
     public function clientsPaginate()
@@ -26,7 +26,7 @@ class Manager extends Model
 
     public function performances()
     {
-        return RadetPerformance::where('case_manager',$this->names)->get();
+        return RadetPerformance::where('case_manager',$this->names.' '.$this->surname)->get();
     }
 
     public function appointments()

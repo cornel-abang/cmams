@@ -313,23 +313,25 @@ class CaseManagerController extends Controller
             session()->flash('case_manager', $request->case_manager);
             session()->flash('checked_out', true);
             return redirect()->back();
-        }elseif ($checkedIn && Carbon::parse($checkedIn->checkoutTime)->greaterThan(Carbon::parse($checkedIn->checkInTime))) {
+        }
+        if ($checkedIn && Carbon::parse($checkedIn->checkoutTime)->greaterThan(Carbon::parse($checkedIn->checkInTime))) {
             session()->flash('case_manager', $request->case_manager);
             session()->flash('checked_twice', true);
             return redirect()->back();
         }
         
+        $att_time = Carbon::now()->setTimezone('WAT');
         $att = new Attendance;
         $att->title = $title;
         $att->case_manager = $request->case_manager;
         $att->facility = $request->facility;
         $att->coordinates  = $request->longitude.', '.$request->latitude;
         $att->checkInImg = $imageName;
-        $att->checkInTime = Carbon::now()->setTimezone('WAT');
+        $att->checkInTime = $att_time;
         $att->save();
 
         //save checkout time to be equal to checkin time for validation puposes
-        $att->checkoutTime = Carbon::parse($att->checkInTime);
+        $att->checkoutTime = $att_time->subHour(); // For some weird reason, this adds an hour unless you call ->subHour()
         $att->save();
 
         session()->flash('case_manager', $request->case_manager);

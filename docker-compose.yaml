@@ -1,0 +1,51 @@
+version: "3.8"
+services:
+  qmams_app:
+    container_name: qmams_app
+    build:
+      context: .
+      dockerfile: ./docker/php/Dockerfile
+    expose:
+      - 9000
+    volumes:
+      - .:/usr/src/app
+      - ./public:/usr/src/app/public
+    depends_on:
+      - qmams_db
+    networks:
+      - app_network
+
+  qmams_nginx:
+    container_name: qmams_nginx
+    build:
+      context: .
+      dockerfile: ./docker/nginx/Dockerfile
+    volumes:
+      - ./public:/usr/src/app/public
+    ports:
+      - 8000:80
+    depends_on:
+      - qmams_app
+    environment:
+      NGINX_FPM_HOST: qmams_app
+      NGINX_ROOT: /usr/src/app/public
+    networks:
+      - app_network
+
+  qmams_db:
+    container_name: qmams_db
+    image: postgres:10.1
+    restart: always
+    volumes:
+      - ./storage/db-data:/var/lib/mysql
+    ports:
+      - 3303:3303
+    environment:
+      POSTGRES_DB: qmams
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    networks:
+      - app_network
+networks:
+  app_network:
+    driver: bridge

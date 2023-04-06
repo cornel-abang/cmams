@@ -273,7 +273,7 @@ function clientsAnalyzer($case_mg, $status)
                         ->count();
     }
 
-    return Patient::where('case_manager', $case_mg)
+    return PatientList::where('case_manager', $case_mg)
                     ->where('status', $status)
                     ->count();
 }

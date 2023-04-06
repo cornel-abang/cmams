@@ -15,7 +15,7 @@ class Facility extends Model
 
     public function clients()
     {
-    	return Patient::where('facility',$this->name)->get();
+    	return PatientList::where('facility',$this->name)->get();
     }
 
     public function clientsPaginate()

@@ -10,6 +10,7 @@ use App\Radet;
 use App\CaseManager;
 use App\PatientList;
 use App\Imports\PatientsImport;
+use App\Manager;
 use Maatwebsite\Excel\Facades\Excel;
 
 class ClientController extends Controller
@@ -24,7 +25,7 @@ class ClientController extends Controller
         $title = 'All Clients';
         $clients = PatientList::paginate(20);
         $facilities = Facility::all();
-        $case_managers = CaseManager::all();
+        $case_managers = Manager::all();
         // dd($clients);
         return view('clients.index', compact('title','clients','facilities','case_managers'));
     }

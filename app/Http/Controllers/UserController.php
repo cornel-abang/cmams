@@ -13,8 +13,8 @@ class UserController extends Controller
      */
     public function login(Request $request)
     {
-        if (auth()->attempt(['email'=>$request->email, 
-                           'password'=>$request->password])) {
+        if (auth()->attempt(['email'=> $request->email, 
+                           'password'=> $request->password])) {
             return redirect(route('dashboard'));
             // return redirect()->intended(); 
         }

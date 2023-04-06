@@ -2,18 +2,18 @@
 
 <head>
     <title>Case Manager Attendance Tracker</title>
-    <script src="{{asset('assets/js/vendor-all.min.js')}}"></script>
-    <link rel="stylesheet" href="{{asset('assets/css/plugins/bootstrap.min.css')}}">
-    <script src="{{asset('assets/js/sweetalert2.js')}}" defer></script>
+    <script src="<?php echo e(asset('assets/js/vendor-all.min.js')); ?>"></script>
+    <link rel="stylesheet" href="<?php echo e(asset('assets/css/plugins/bootstrap.min.css')); ?>">
+    <script src="<?php echo e(asset('assets/js/sweetalert2.js')); ?>" defer></script>
     <script type='text/javascript'>
-        var page_data = {!! pageJsonData() !!};
+        var page_data = <?php echo pageJsonData(); ?>;
     </script>
 </head>
 
 <body>
     <div class="jumbotron" style="margin-top:20px;padding:20px;">
     <div class="header">
-      <img src="{{asset('assets/images/logo-dark.png')}}" alt="" class="logo-thumb"> 
+      <img src="<?php echo e(asset('assets/images/logo-dark.png')); ?>" alt="" class="logo-thumb"> 
       <h3>FHI360 - Case Manager Analysis & Monitoring System</h3> 
       <h5>Attendance Tracker and Verifier</h5>
       <i class="badge badge-primary">Please make sure you're in the facility and the image is clear enough</i>
@@ -30,25 +30,25 @@
         </div>    
     
         <div class="col-md-6"> 
-            <form id="att_frm" method="POST" action="{{route('check_attendance')}}" enctype="multipart/formdata">
-            @csrf     
+            <form id="att_frm" method="POST" action="<?php echo e(route('check_attendance')); ?>" enctype="multipart/formdata">
+            <?php echo csrf_field(); ?>     
                 <!-- Webcam video snapshot -->    
                 <canvas style="border:solid 1px #ddd;background-color:white;" id="canvas" width="475" height="475"></canvas>
                 <div class="form-group col-lg-6">
-                    {{-- <input type="text" name="case_manager" placeholder="Enter case manager name" class="form-control" id="mg_name"> --}}
+                    
                 </div>
                 <div class="form-group col-md-6">
                     <select name="facility" class="form-control" id="facility">
                       <option value="">--Select facility--</option>
-                      @foreach( __facilities() as $facility)
-                        <option value="{{$facility->name}}" class="fac-option">{{ $facility->name }}</option>
-                      @endforeach
+                      <?php $__currentLoopData = __facilities(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $facility): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                        <option value="<?php echo e($facility->name); ?>" class="fac-option"><?php echo e($facility->name); ?></option>
+                      <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                     </select>
                 </div>
                 <div class="form-group col-md-6">
                     <select name="case_manager" class="form-control" id="mg_name">
                       <option value="">--Case Manager--</option>
-                      {{-- Case Managers --}}
+                      
                     </select>
                 </div>
                 <input type="hidden" name="cm_img" value="" id="img_area">
@@ -256,8 +256,8 @@ else {
   ipLookUp()
 }
 </script>
-<script src="{{asset('assets/js/plugins/bootstrap.min.js')}}"></script>  
-<script src="{{asset('assets/js/custom.js')}}"></script>  
+<script src="<?php echo e(asset('assets/js/plugins/bootstrap.min.js')); ?>"></script>  
+<script src="<?php echo e(asset('assets/js/custom.js')); ?>"></script>  
 </body>
 
-</html>
+</html><?php /**PATH /Users/cornel/Documents/Projects/cmams/resources/views/attendance/tracker.blade.php ENDPATH**/ ?>

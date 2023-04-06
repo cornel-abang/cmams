@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-	// dd(Hash::make('@cmams22+'));
+	// dd(Hash::make("godsplan22"));
     return view('q-login');
 })->name('home');
 
@@ -42,7 +42,7 @@ Route::post('dhis', 'DhisController@save');
 Route::post('import-dhis', 'DhisController@importData')->name('indicators');
 // Route::get('dhis-login', 'DhisController@login');
 
-Route::group(['middleware'=>'auth:web'], function(){
+// Route::group(['middleware'=>'auth:web'], function(){
 	Route::group(['prefix'=>'fhi360'], function(){
 		Route::get('dashboard', 'DashboardController@index')->name('dashboard');
 		Route::get('chart_data','DashboardController@getChartData')->name('chart_data');
@@ -158,4 +158,4 @@ Route::group(['middleware'=>'auth:web'], function(){
 
 	//Analyse 
 	Route::get('analyse', 'RadetController@evalPerformance')->name('analyse');
-});
+// });

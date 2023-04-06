@@ -1,8 +1,7 @@
-@extends('layouts.dashboard')
-@section('content')
-@section('sweet-alert-area')
-    <script src="{{asset('assets/js/sweetalert2.js')}}" defer></script>
-@endsection
+<?php $__env->startSection('content'); ?>
+<?php $__env->startSection('sweet-alert-area'); ?>
+    <script src="<?php echo e(asset('assets/js/sweetalert2.js')); ?>" defer></script>
+<?php $__env->stopSection(); ?>
 
 
 
@@ -11,7 +10,7 @@
                 <div class="card">
                     <div class="card-header">
                         <h5>Registered Case Managers</h5>
-                        <span class="d-block m-t-5">There are a total of <b><code>{{$case_managers->count()}}</code></b> case manager(s) registered</span>
+                        <span class="d-block m-t-5">There are a total of <b><code><?php echo e($case_managers->count()); ?></code></b> case manager(s) registered</span>
                         <button type="button" class="btn btn-info btn-sm add-btn" data-toggle="modal" data-target="#add-case-manager-form">
                             <i class="la la-plus-circle"></i> Add Case Manager</button>
                     </div>
@@ -30,80 +29,79 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach($case_managers as $case_mg)
-                                    <tr id="de-{{$case_mg->id}}">
-                                        <td>{{$case_mg->id}}</td>
-                                        <td>{{$case_mg->names}} {{$case_mg->surname}}</td>
-                                        <td>{{$case_mg->facility??'None'}}</td>
+                                    <?php $__currentLoopData = $case_managers; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $case_mg): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                    <tr id="de-<?php echo e($case_mg->id); ?>">
+                                        <td><?php echo e($case_mg->id); ?></td>
+                                        <td><?php echo e($case_mg->names); ?> <?php echo e($case_mg->surname); ?></td>
+                                        <td><?php echo e($case_mg->facility??'None'); ?></td>
                                         <td>
-                                            @if($case_mg->clients()->count() > 0)
-                                                <a href="{{route('view_clients_cm', $case_mg->id)}}" data-toggle="tooltip"
-                                                    title="View clients assigned to {{$case_mg->name}}">
-                                                    {{$case_mg->clients()->count()}}
+                                            <?php if($case_mg->clients()->count() > 0): ?>
+                                                <a href="<?php echo e(route('view_clients_cm', $case_mg->id)); ?>" data-toggle="tooltip"
+                                                    title="View clients assigned to <?php echo e($case_mg->name); ?>">
+                                                    <?php echo e($case_mg->clients()->count()); ?>
+
                                                 </a>
-                                            @else
-                                                {{$case_mg->clients()->count()}}
-                                            @endif
+                                            <?php else: ?>
+                                                <?php echo e($case_mg->clients()->count()); ?>
+
+                                            <?php endif; ?>
                                         </td>
                                         <td>
-                                            @if(cm_performance($case_mg) > 69)
+                                            <?php if(cm_performance($case_mg) > 69): ?>
                                                     <span class="badge-pill badge-success">
-                                                @elseif(cm_performance($case_mg) > 49 && 
-                                                        cm_performance($case_mg) < 70)
+                                                <?php elseif(cm_performance($case_mg) > 49 && 
+                                                        cm_performance($case_mg) < 70): ?>
                                                     <span class="badge-pill badge-info">
-                                                @elseif(cm_performance($case_mg) < 50)
+                                                <?php elseif(cm_performance($case_mg) < 50): ?>
                                                     <span class="badge-pill badge-danger">
-                                            @endif
-                                            {{ cm_performance($case_mg) }}%
+                                            <?php endif; ?>
+                                            <?php echo e(cm_performance($case_mg)); ?>%
                                             </span>
                                         </td>
                                         <td>
                                             <div class="row">
                                                 <div class="col-md-4">
-                                                    <button type="button" class="btn btn-info btn-sm" data-toggle="tooltip" title="Edit case manager" onclick="window.location.href='{{route('edit-case_mg',$case_mg->id)}}'"><i class="la la-edit"></i>
+                                                    <button type="button" class="btn btn-info btn-sm" data-toggle="tooltip" title="Edit case manager" onclick="window.location.href='<?php echo e(route('edit-case_mg',$case_mg->id)); ?>'"><i class="la la-edit"></i>
                                                     </button>
                                                 </div>
                                                 <div class="col-md-4">
-                                                <span data-toggle="modal" data-target="#mg{{$case_mg->id}}">
+                                                <span data-toggle="modal" data-target="#mg<?php echo e($case_mg->id); ?>">
                                                     <button type="button" class="btn btn-primary btn-sm" data-toggle="tooltip" data-placement="top" title="View case manager">
                                                         <i class="la la-eye"></i>
                                                     </button>
                                                 </span>
                                                 </div>
                                                 <div class="col-md-4">
-                                                <span data-toggle="modal" data-target="#ts{{$case_mg->id}}">
+                                                <span data-toggle="modal" data-target="#ts<?php echo e($case_mg->id); ?>">
                                                     <button type="button" class="btn btn-secondary btn-sm" data-toggle="tooltip" data-placement="top" title="View timesheet">
                                                         <i class="la la-calendar-week"></i>
                                                     </button>
                                                 </span>
                                                 </div>
-                                                {{-- <div class="col-md-4">
-                                                    <button type="button" id="{{$case_mg->id}}" class="btn btn-danger btn-sm delete-btn-cm" data-toggle="tooltip" title="Delete case manager" ><i class="la la-trash"></i>
-                                                    </button>
-                                                </div> --}}
+                                                
                                             </div>
                                         </td>
                                     </tr>
-                                    @endforeach
+                                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                                 </tbody>
                             </table>
-                            {{-- {{ $case_managers->links() }} --}}
+                            
                         </div>
                     </div>
                 </div>
             </div>
 
-            {{-- View Facility Modal --}}
-        @foreach($case_managers as $case_mg)
-        <div class="modal fade" id="mg{{$case_mg->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            
+        <?php $__currentLoopData = $case_managers; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $case_mg): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+        <div class="modal fade" id="mg<?php echo e($case_mg->id); ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog" role="document">
             <div class="modal-content">
               <div class="modal-header">
                 <h3 class="modal-title cm_view-title" id="exampleModalLabel">
-                    {{-- <i class="la la-briefcase-medical"></i> --}}
-                       {{--  <img class="img-radius case-mg-photo-view" src="{{asset('assets/images/uploads/'.$case_mg->profile_photo)}}" alt="User-Profile-Image"> --}}
+                    
+                       
                         <div class="user-details manager-name">
-                            <div id="more-details">{{$case_mg->names}}</div>
+                            <div id="more-details"><?php echo e($case_mg->names); ?></div>
                         </div>
                 </h3>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -118,39 +116,41 @@
                                     <table class="table table-bordered table-striped">
                                         <tr>
                                             <th>Email Address</th>
-                                            <td>{{ $case_mg->email }}</td>
+                                            <td><?php echo e($case_mg->email); ?></td>
                                         </tr>
                                         <tr>
                                             <th>Phone No.</th>
-                                            <td>{{ $case_mg->phone }}</td>
+                                            <td><?php echo e($case_mg->phone); ?></td>
                                         </tr>
                                         <tr>
                                             <th>Facility</th>
                                             <td>
-                                                @if(strlen($case_mg->facility) >= 30)
-                                                    {!!substr($case_mg->facility,0,20).' <span style="color: #4680ff;">...</span> '.substr($case_mg->facility,-6)!!}
-                                                @else
-                                                    {{ $case_mg->facility??'None' }}
-                                                @endif
+                                                <?php if(strlen($case_mg->facility) >= 30): ?>
+                                                    <?php echo substr($case_mg->facility,0,20).' <span style="color: #4680ff;">...</span> '.substr($case_mg->facility,-6); ?>
+
+                                                <?php else: ?>
+                                                    <?php echo e($case_mg->facility??'None'); ?>
+
+                                                <?php endif; ?>
                                             </td>
                                         </tr>
                                         <tr>
                                             <th>No. of Clients</th>
                                             <td>
-                                                <span class="client-count">{{ $case_mg->clients()->count() }}</span><br/>
+                                                <span class="client-count"><?php echo e($case_mg->clients()->count()); ?></span><br/>
                                                 <div class="clients-analytica">
-                                                    <span class="badge-pill badge-success">Active: {{ clientsAnalyzer($case_mg->names, 'Active') }}</span>
+                                                    <span class="badge-pill badge-success">Active: <?php echo e(clientsAnalyzer($case_mg->names, 'Active')); ?></span>
                                                     <br/>
-                                                    <span class="badge-pill badge-info">Transferred Out: {{ clientsAnalyzer($case_mg->names, 'Transferred Out') }}</span><br/>
-                                                    <span class="badge-pill badge-secondary">IIT: {{ clientsAnalyzer($case_mg->names, 'LTFU') }}</span><br/>
-                                                    <span class="badge-pill badge-warning">Stopped: {{ clientsAnalyzer($case_mg->names, 'Stopped') }}</span><br/>
-                                                    <span class="badge-pill badge-danger">Dead: {{ clientsAnalyzer($case_mg->names, 'Dead') }}</span>
+                                                    <span class="badge-pill badge-info">Transferred Out: <?php echo e(clientsAnalyzer($case_mg->names, 'Transferred Out')); ?></span><br/>
+                                                    <span class="badge-pill badge-secondary">IIT: <?php echo e(clientsAnalyzer($case_mg->names, 'LTFU')); ?></span><br/>
+                                                    <span class="badge-pill badge-warning">Stopped: <?php echo e(clientsAnalyzer($case_mg->names, 'Stopped')); ?></span><br/>
+                                                    <span class="badge-pill badge-danger">Dead: <?php echo e(clientsAnalyzer($case_mg->names, 'Dead')); ?></span>
                                                 </div>
                                             </td>
                                         </tr>
                                         <tr>
                                             <th>Avg. Performance</th>
-                                            <td>{{ cm_performance($case_mg) }}%</td>
+                                            <td><?php echo e(cm_performance($case_mg)); ?>%</td>
                                         </tr>
                                     </table>
                                 </div>
@@ -158,28 +158,26 @@
                         </div>
                     </div>
               </div>
-              {{-- <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              </div> --}}
+              
             </div>
           </div>
         </div>
-        @endforeach
+        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 
-        {{-- Timesheet --}}
-         @foreach($case_managers as $case_mg)
-        <div class="modal fade" id="ts{{$case_mg->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        
+         <?php $__currentLoopData = $case_managers; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $case_mg): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+        <div class="modal fade" id="ts<?php echo e($case_mg->id); ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog" role="document">
             <div class="modal-content">
               <div class="modal-header">
                 <h3 class="modal-title cm_view-title" id="exampleModalLabel">
-                    {{-- <i class="la la-briefcase-medical"></i> --}}
-                       {{--  <img class="img-radius case-mg-photo-view" src="{{asset('assets/images/uploads/'.$case_mg->profile_photo)}}" alt="User-Profile-Image"> --}}
+                    
+                       
                         <div class="user-details manager-name">
-                            <div id="more-details">{{$case_mg->names}}<br>
+                            <div id="more-details"><?php echo e($case_mg->names); ?><br>
                                 <em style="font-size: 13px">Work Timesheet</em>
                             </div>
-                            <button class="btn btn-info la la-cloud-download-alt" onclick="window.location.href='{{ route('timesheet', $case_mg->id) }}'"> Download</button>
+                            <button class="btn btn-info la la-cloud-download-alt" onclick="window.location.href='<?php echo e(route('timesheet', $case_mg->id)); ?>'"> Download</button>
                         </div>
                 </h3>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -192,38 +190,36 @@
                             <div class="card">
                                 <div class="card-body">
                                     <table class="table table-bordered table-striped">
-                                        @foreach($case_mg->timesheets() as $time)
+                                        <?php $__currentLoopData = $case_mg->timesheets(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $time): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                             <tr>
-                                                <th>{{ $time->created_at->format('l jS \of F Y') }}</th>
+                                                <th><?php echo e($time->created_at->format('l jS \of F Y')); ?></th>
                                                 <td>
-                                                    @if(\Carbon\Carbon::parse($time->checkoutTime)->diffInHours($time->checkInTime) > 0)
+                                                    <?php if(\Carbon\Carbon::parse($time->checkoutTime)->diffInHours($time->checkInTime) > 0): ?>
                                                         <span>
-                                                            {{ \Carbon\Carbon::parse($time->checkoutTime)->diffInHours($time->checkInTime) }} Hour(s)
+                                                            <?php echo e(\Carbon\Carbon::parse($time->checkoutTime)->diffInHours($time->checkInTime)); ?> Hour(s)
                                                         </span>
-                                                        @else
+                                                        <?php else: ?>
                                                         <span>
-                                                            {{ gmdate('H:i:s', \Carbon\Carbon::parse($time->checkoutTime)->diffInSeconds($time->checkInTime)) }} - 0 Hours
+                                                            <?php echo e(gmdate('H:i:s', \Carbon\Carbon::parse($time->checkoutTime)->diffInSeconds($time->checkInTime))); ?> - 0 Hours
                                                         </span>
-                                                    @endif
+                                                    <?php endif; ?>
                                                 </td>
                                             </tr>
-                                        @endforeach
+                                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                                     </table>
                                 </div>
                             </div>
                         </div>
                     </div>
               </div>
-              {{-- <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              </div> --}}
+              
             </div>
           </div>
         </div>
-        @endforeach
+        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
     </div>
 
-    {{-- Add Facility Modal --}}
+    
             <!-- Modal -->
             <div class="modal fade" id="add-case-manager-form" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
               <div class="modal-dialog" role="document">
@@ -237,55 +233,55 @@
                   <div class="modal-body">
                     <div class="row">
                        <div class="col-md-12">
-                            <form action="{{route('add-case-manager')}}" method="post" enctype="multipart/form-data">
-                                @csrf
+                            <form action="<?php echo e(route('add-case-manager')); ?>" method="post" enctype="multipart/form-data">
+                                <?php echo csrf_field(); ?>
                                 <div class="form-group row">
                                     <label for="inputEmail3" class="col-sm-3 col-form-label">Full Name</label>
                                     <div class="col-sm-9">
-                                        <input type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{old('name')}}" placeholder="surname firstname middlename">
-                                        @if ($errors->has('name'))
+                                        <input type="text" class="form-control<?php echo e($errors->has('name') ? ' is-invalid' : ''); ?>" name="name" value="<?php echo e(old('name')); ?>" placeholder="surname firstname middlename">
+                                        <?php if($errors->has('name')): ?>
                                             <span class="invalid-feedback" role="alert">
-                                                <strong>{{ $errors->first('name') }}</strong>
+                                                <strong><?php echo e($errors->first('name')); ?></strong>
                                             </span>
-                                        @endif
+                                        <?php endif; ?>
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <label for="inputEmail3" class="col-sm-3 col-form-label">Email Address</label>
                                     <div class="col-sm-9">
-                                        <input type="text" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{old('email')}}">
-                                        @if ($errors->has('email'))
+                                        <input type="text" class="form-control<?php echo e($errors->has('email') ? ' is-invalid' : ''); ?>" name="email" value="<?php echo e(old('email')); ?>">
+                                        <?php if($errors->has('email')): ?>
                                             <span class="invalid-feedback" role="alert">
-                                                <strong>{{ $errors->first('email') }}</strong>
+                                                <strong><?php echo e($errors->first('email')); ?></strong>
                                             </span>
-                                        @endif
+                                        <?php endif; ?>
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <label for="inputEmail3" class="col-sm-3 col-form-label">Phone Number</label>
                                     <div class="col-sm-9">
-                                        <input type="text" class="form-control{{ $errors->has('phone') ? ' is-invalid' : '' }}" name="phone" value="{{old('phone')}}">
-                                        @if ($errors->has('phone'))
+                                        <input type="text" class="form-control<?php echo e($errors->has('phone') ? ' is-invalid' : ''); ?>" name="phone" value="<?php echo e(old('phone')); ?>">
+                                        <?php if($errors->has('phone')): ?>
                                             <span class="invalid-feedback" role="alert">
-                                                <strong>{{ $errors->first('phone') }}</strong>
+                                                <strong><?php echo e($errors->first('phone')); ?></strong>
                                             </span>
-                                        @endif
+                                        <?php endif; ?>
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <label for="inputEmail3" class="col-sm-3 col-form-label">Facility</label>
                                     <div class="col-sm-9">
-                                        <select class="form-control{{ $errors->has('facility') ? ' is-invalid' : '' }} select-or-search" name="facility" value="{{old('facility')}}" selected="{{old('facility')}}" placeholder="Pick a facility">
+                                        <select class="form-control<?php echo e($errors->has('facility') ? ' is-invalid' : ''); ?> select-or-search" name="facility" value="<?php echo e(old('facility')); ?>" selected="<?php echo e(old('facility')); ?>" placeholder="Pick a facility">
                                             <option>...</option>
-                                            @foreach($facilities as $fac)
-                                            <option value="{{$fac->id}}">{{$fac->name}}</option>
-                                            @endforeach
+                                            <?php $__currentLoopData = $facilities; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $fac): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                            <option value="<?php echo e($fac->id); ?>"><?php echo e($fac->name); ?></option>
+                                            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                                         </select>
-                                            @if ($errors->has('facility'))
+                                            <?php if($errors->has('facility')): ?>
                                             <span class="invalid-feedback" role="alert">
-                                                <strong>{{ $errors->first('facility') }}</strong>
+                                                <strong><?php echo e($errors->first('facility')); ?></strong>
                                             </span>
-                                        @endif
+                                        <?php endif; ?>
                                     </div>
                                 </div>
                                 <div class="input-group mb-3 col-sm-12">
@@ -293,12 +289,12 @@
                                             <label class="input-group-text">Profile Photo</label>
                                         </div>
                                         <div class="custom-file">
-                                            <input type="file" class="custom-file-input{{ $errors->has('profile_photo') ? ' is-invalid' : '' }}" id="inputGroupFile01" name="profile_photo" required="">
-                                             @if ($errors->has('profile_photo'))
+                                            <input type="file" class="custom-file-input<?php echo e($errors->has('profile_photo') ? ' is-invalid' : ''); ?>" id="inputGroupFile01" name="profile_photo" required="">
+                                             <?php if($errors->has('profile_photo')): ?>
                                             <span class="invalid-feedback" role="alert">
-                                                <strong>{{ $errors->first('profile_photo') }}</strong>
+                                                <strong><?php echo e($errors->first('profile_photo')); ?></strong>
                                             </span>
-                                            @endif
+                                            <?php endif; ?>
                                             <span class="custom-file-label" for="inputGroupFile01">Choose file</span>
                                         </div>
                                     </div>
@@ -313,5 +309,7 @@
                 </div>
               </div>
             </div>
-            {{-- Add Facility Modal ends --}}
-    @endsection
+            
+    <?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('layouts.dashboard', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH /Users/cornel/Documents/Projects/cmams/resources/views/case_manager/index.blade.php ENDPATH**/ ?>

@@ -31,12 +31,12 @@ class RadetController extends Controller
 
     public function importRadetFile(Request $request) 
     {
-    	$rules = ['radet-file' => ['required','mimes:csv,txt,xlsx'] ];
-        $validator = validator()->make($request->all(), $rules);
+    	// $rules = ['radet-file' => ['required','mimes:csv,txt,xlsx'] ];
+        // $validator = validator()->make($request->all(), $rules);
 
-        if ($validator->fails()) {
-           return redirect()->back()->withInput($request->input())->withErrors($validator);
-        }
+        // if ($validator->fails()) {
+        //    return redirect()->back()->withInput($request->input())->withErrors($validator);
+        // }
 
         $file = $request->file('radet-file');
         Excel::import(new RadetImport, $file);
