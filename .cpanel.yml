@@ -1,4 +1,4 @@
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/gfnadiig/public_html/
+    - export DEPLOYPATH=/home/gfnadiig/gmams.gfnahi.com/
     - /bin/cp -R * $DEPLOYPATH
