@@ -1,6 +1,11 @@
-Quality Management & Accountability Monitoring System - QMAMS
+## Case Management & Accountability Monitoring System - CMAMS
 
-This is a tool for Managing the Quality of service offered by FHI360, a nonprofit human development organization. 
+This is a tool for Managing the Quality of service offered by FHI360, 
+a nonprofit human development organization. 
 More here: https://www.fhi360.org/about-us
 
-Essentially, it is a system for monitoring, managing, and evaluating the daily working activities of Case Managers in the Cross River State district. 
+## What is CMAMS?
+
+CMAMS is designed to provide adequate Human Resource Management & Optimization.
+A single system that helps the organization keep an eye on key progress indicators 
+and cut down on endless manual processes, within the organization - entrenching automation.
